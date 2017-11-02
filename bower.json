@@ -22,7 +22,7 @@
     "url": "https://github.com/chrispauley/hros_payroll"
   },
   "devDependencies": {
-    "payroll": "https://github.com/HROpen/Payroll.git#Payroll-Draft",
-    "common": "https://github.com/HROpen/Common.git#WorkRelationshipLifeCycle"
+    "common": "https://github.com/HROpen/Common.git#WorkRelationshipLifeCycle",
+    "payroll": "https://github.com/HROpen/Payroll.git#Payroll-Draft"
   }
 }
