@@ -21265,11 +21265,53 @@ var Nav = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "li",
-                null,
+                { className: "dropdown" },
                 _react2.default.createElement(
                   "a",
-                  { href: "payroll.html" },
-                  "Payroll"
+                  { className: "dropdown-toggle",
+                    "data-toggle": "dropdown", href: "" },
+                  "Payroll ",
+                  _react2.default.createElement("span", { className: "caret" })
+                ),
+                _react2.default.createElement(
+                  "ul",
+                  { className: "dropdown-menu" },
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "WorkRelationshipLifecyle"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "Deductions"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "Payment Instruction"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "StatutoryInstructions"
+                    )
+                  )
                 )
               ),
               _react2.default.createElement(
@@ -21461,7 +21503,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Home = function Home() {
   return _react2.default.createElement(
     'div',
-    { className: 'row' },
+    { className: 'row', style: { marginTop: '50px' } },
     _react2.default.createElement(
       'div',
       { className: 'col-md-12',

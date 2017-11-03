@@ -21265,11 +21265,53 @@ var Nav = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "li",
-                null,
+                { className: "dropdown" },
                 _react2.default.createElement(
                   "a",
-                  { href: "payroll.html" },
-                  "Payroll"
+                  { className: "dropdown-toggle",
+                    "data-toggle": "dropdown", href: "" },
+                  "Payroll ",
+                  _react2.default.createElement("span", { className: "caret" })
+                ),
+                _react2.default.createElement(
+                  "ul",
+                  { className: "dropdown-menu" },
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "WorkRelationshipLifecyle"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "Deductions"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "Payment Instruction"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "StatutoryInstructions"
+                    )
+                  )
                 )
               ),
               _react2.default.createElement(
@@ -21494,34 +21536,127 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var About = function About() {
   return _react2.default.createElement(
     'div',
-    { className: 'row' },
+    { className: 'row', style: { marginTop: '50px' } },
     _react2.default.createElement(
       'div',
-      { className: 'col-md-12 col-sm-6' },
+      { className: 'jumbotron' },
+      _react2.default.createElement(
+        'h1',
+        null,
+        'About '
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'This is an independently developed web application to facilatate the development of the HROS Payroll Standard.'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        _react2.default.createElement(
+          'a',
+          { className: 'btn btn-primary btn-sm',
+            href: 'https://github.com/chrispauley/hros_payroll',
+            role: 'button' },
+          'GitHub Repo'
+        )
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'row' },
       _react2.default.createElement(
         'div',
-        { className: 'panel panel-default' },
+        { className: 'col-sm-4' },
         _react2.default.createElement(
-          'div',
-          { className: 'panel-heading' },
-          _react2.default.createElement(
-            'h2',
-            null,
-            'About'
-          )
+          'h3',
+          null,
+          'HR Open Standards'
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'panel-body' },
+          'p',
+          null,
+          'Would you like to participate in developing the Payroll standard?'
+        ),
+        _react2.default.createElement('img', { src: 'hropen_logosq.png', alt: '' }),
+        _react2.default.createElement(
+          'ul',
+          { className: 'fa-ul' },
           _react2.default.createElement(
-            'p',
+            'li',
             null,
-            'Interesting about-info here.'
+            _react2.default.createElement(
+              'a',
+              { href: 'http://hropenstandards.org/' },
+              'HR Open'
+            )
           ),
           _react2.default.createElement(
-            'a',
-            { href: 'https://github.com/chrispauley/hros_payroll' },
-            'GitHub Repo'
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { target: '_new', href: 'https://github.com/chrispauley/chrispauley' },
+              _react2.default.createElement('i', { id: 'social-fb', className: 'fa fa-github-square fa-1x social fa-fw' }),
+              'HROpen Repos'
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'col-sm-4' },
+        _react2.default.createElement(
+          'h2',
+          null,
+          'This WebApp'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'This application was built using the HTML5, Bootstrap 3.3.7, React 16'
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'col-sm-4' },
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Chris Pauley'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Hire Me! I am currently looking for gainful employment. I am interested in a full time permanent position.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'I am an experienced schema editor for XSD, JSON Schema, and RDBMS. '
+        ),
+        _react2.default.createElement(
+          'ul',
+          { className: 'fa-ul' },
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { target: '_new', href: 'https://www.linkedin.com/in/christopherpauley/' },
+              _react2.default.createElement('i', { id: 'social-fb', className: 'fa fa-linkedin-square fa-1x social fa-fw' }),
+              'LinkedIn'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { target: '_new', href: 'https://github.com/chrispauley/chrispauley' },
+              _react2.default.createElement('i', { id: 'social-fb', className: 'fa fa-github-square fa-1x social fa-fw' }),
+              'My Repos'
+            )
           )
         )
       )

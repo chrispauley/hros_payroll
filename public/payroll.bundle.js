@@ -21279,11 +21279,53 @@ var Nav = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "li",
-                null,
+                { className: "dropdown" },
                 _react2.default.createElement(
                   "a",
-                  { href: "payroll.html" },
-                  "Payroll"
+                  { className: "dropdown-toggle",
+                    "data-toggle": "dropdown", href: "" },
+                  "Payroll ",
+                  _react2.default.createElement("span", { className: "caret" })
+                ),
+                _react2.default.createElement(
+                  "ul",
+                  { className: "dropdown-menu" },
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "WorkRelationshipLifecyle"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "Deductions"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "Payment Instruction"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payroll.html" },
+                      "StatutoryInstructions"
+                    )
+                  )
                 )
               ),
               _react2.default.createElement(
@@ -21814,6 +21856,13 @@ var Payroll = function (_React$Component) {
   _createClass(Payroll, [{
     key: 'render',
     value: function render() {
+      var personName = this.state.data.personName;
+
+
+      if (personName !== null) {
+        personName = _react2.default.createElement(_PersonNameTypeForm2.default, this.state.data);
+      }
+
       return _react2.default.createElement(
         'div',
         { className: 'row' },
@@ -21865,7 +21914,9 @@ var Payroll = function (_React$Component) {
                 )
               )
             )
-          )
+          ),
+          _react2.default.createElement('hr', null),
+          personName
         )
       );
     }
@@ -21958,6 +22009,7 @@ var PersonNameTypeForm = function (_React$Component) {
       isLoading: false,
       errors: {}
     });
+    console.log(_this.state);
     return _this;
   }
 
@@ -22009,7 +22061,7 @@ var PersonNameTypeForm = function (_React$Component) {
         _react2.default.createElement(_TextFieldGroup2.default, { label: 'Qualification Affix Code', onChange: this.onChange, value: qualificationAffixCode, field: 'qualificationAffixCode' }),
         _react2.default.createElement(_TextFieldGroup2.default, { label: 'Title Affix Code', onChange: this.onChange, value: titleAffixCode, field: 'titleAffixCode' }),
         _react2.default.createElement(_TextFieldGroup2.default, { label: 'Initials', onChange: this.onChange, value: initials, field: 'initials' }),
-        _react2.default.createElement(_TextFieldGroup2.default, { label: 'language', onChange: this.onChange, value: language, field: 'language' }),
+        _react2.default.createElement(_TextFieldGroup2.default, { label: 'language', onChange: this.onChange, value: language ? language : '', field: 'language' }),
         _react2.default.createElement(
           'div',
           { className: 'btn-group' },
@@ -22049,6 +22101,25 @@ PersonNameTypeForm.propTypes = {
   titleAffixCode: _propTypes2.default.string,
   initials: _propTypes2.default.string,
   language: _propTypes2.default.string
+};
+
+PersonNameTypeForm.defaultProps = {
+  data: {
+    formattedName: '',
+    legal: '',
+    given: '',
+    preffered: '',
+    middle: '',
+    family: '',
+    alias: '',
+    formerFamily: '',
+    preferredSalutationCode: '',
+    generationAffixCode: '',
+    qualificationAffixCode: '',
+    titleAffixCode: '',
+    initials: '',
+    language: 'en'
+  }
 };
 
 function validateInput(data) {
