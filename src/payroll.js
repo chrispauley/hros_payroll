@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import PayrollPage from './pages/Payroll';
+import PayrollPage from './pages/PayrollPage';
 import Nav from './pages/Nav'
 import Footer from './pages/Footer'
 

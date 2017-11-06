@@ -39,7 +39,8 @@ class Nav extends React.Component {
                 <div className="navbar-collapse " id="top-navbar">
                   <ul className="nav navbar-nav">
                     <li><a href='index.html'>Index</a></li>
-                    <li className='dropdown'>
+                    <li><a href='payroll.html'>Payment Instructions</a></li>
+                    {/* <li className='dropdown'>
                       <a className='dropdown-toggle'
                           data-toggle='dropdown' href=''>Payroll <span className='caret'></span></a>
                           <ul className='dropdown-menu'>
@@ -48,7 +49,7 @@ class Nav extends React.Component {
                             <li><a href='payroll.html'>Payment Instruction</a></li>
                             <li><a href='payroll.html'>StatutoryInstructions</a></li>
                           </ul>
-                    </li>
+                    </li> */}
 
                     <li><a href='jschemaframe.html'>JSchema</a></li>
                   </ul>

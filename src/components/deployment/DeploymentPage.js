@@ -10,7 +10,7 @@ import ShowJsonText from '../../common/ShowJsonText';
 // const resolvedSchema = require('json-schema-loader!../../../schema/common/json/base/DateType.json');
 const pageInfo = {
   heading: "DeploymentType",
-  description: "Date representation according ISO 8601 standard.",
+  description: "DeploymentType data",
   hostedSchema: 'http://hropen.us-west-2.elasticbeanstalk.com/schema-dev/json/common/profile/DeploymentType#'
 }
 
