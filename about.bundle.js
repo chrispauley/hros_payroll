@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 63);
+/******/ 	return __webpack_require__(__webpack_require__.s = 70);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -21411,7 +21411,14 @@ exports.default = Footer;
 /* 60 */,
 /* 61 */,
 /* 62 */,
-/* 63 */
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21425,7 +21432,7 @@ var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _About = __webpack_require__(64);
+var _About = __webpack_require__(71);
 
 var _About2 = _interopRequireDefault(_About);
 
@@ -21457,7 +21464,7 @@ _reactDom2.default.render(_react2.default.createElement(_Footer2.default, footer
 _reactDom2.default.render(_react2.default.createElement(_About2.default, null), document.querySelector('main'));
 
 /***/ }),
-/* 64 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21536,7 +21543,7 @@ var About = function About() {
             null,
             _react2.default.createElement(
               'a',
-              { target: '_new', href: 'https://github.com/chrispauley/chrispauley' },
+              { target: '_new', href: 'https://github.com/hropen/Payroll' },
               _react2.default.createElement('i', { id: 'social-fb', className: 'fa fa-github-square fa-1x social fa-fw' }),
               'HROpen Repos'
             )
@@ -21573,7 +21580,7 @@ var About = function About() {
         _react2.default.createElement(
           'p',
           null,
-          'I am an experienced schema editor for XSD, JSON Schema, and RDBMS. '
+          'I am an experienced schema editor for XSD, JSON Schemas, and RDBMS\'s. '
         ),
         _react2.default.createElement(
           'ul',

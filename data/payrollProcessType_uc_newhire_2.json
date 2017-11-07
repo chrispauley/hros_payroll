@@ -1,0 +1,31 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "2",
+      "description": "John is a 1st party contractor who is working directly for the company for 6 months."
+    },
+    "alternateIds": [{ "schemeId": "CompanyDocId", "value": "001a" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "John Johnson",
+            "given": "John",
+            "family": "Johnson",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0002" }
+        }
+    }
+
+}
