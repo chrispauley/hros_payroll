@@ -1,0 +1,10 @@
+{
+    "payee": {
+        "personName": [],
+        "personLegal": {
+            "legalId": {
+                "value": ""
+            }
+        }
+    }
+}

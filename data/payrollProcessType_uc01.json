@@ -1,0 +1,91 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": { "schemeId": "CompanyDocId", "value": "001" },
+    "alternateIds": [{ "schemeId": "CompanyDocId", "value": "001a" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "George Smith",
+            "given": "George",
+            "family": "Smith",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-8999" }
+        }
+    },
+
+
+    "deployment": {
+        "workLocation": {
+            "id": { "schemeId": "companyLocId", "value": "121" }
+        }
+    },
+
+    "deductionInstructions": [{
+        "deductionId": { "value": "1" },
+        "code": "Charity",
+        "name": "The company matching charity.",
+
+        "deductionCycleCode": "Month",
+        "processingSequence": 1,
+        "deduction": { "amount": { "value": 15, "currency": "USD"} },
+        "deductionGoal": {
+            "id": {"schemeId": "CompanyCharityPlan", "value": "1"},
+            "limitAmount": {"value": 100, "currency": "USD"}
+        },
+
+        "validFrom": "2017-10-31",
+        "validTo": "2018-12-31"
+    }],
+
+
+    "paymentInstructions": [{
+            "id": { "value": "101" },
+            "processingSequence": 1,
+            "payment": {
+                "paymentType": "Direct Deposit",
+                "amount": { "value": 2000, "currency": "USD" },
+                "remainingBalanceIndicator": false
+            },
+            "paymentMethod": {
+                "code": "EFT",
+                "payrollDepositAccount": {
+                    "type": "Checking",
+                    "description": "Personal Checking Account",
+                    "nameOnAccount": "George Smith",
+                    "accountId": "1222-888-1",
+                    "bankRoutingId": "12345678"
+                }
+            }
+        },
+        {
+            "id": { "value": "102" },
+            "processingSequence": 2,
+            "payment": {
+                "paymentType": "Direct Deposit",
+                "amount": { "value": 200, "currency": "USD" },
+                "remainingBalanceIndicator": true
+            },
+            "paymentMethod": {
+                "code": "EFT",
+                "payrollDepositAccount": {
+                    "type": "Savings",
+                    "description": "Personal Savings Account",
+                    "nameOnAccount": "George Smith",
+                    "accountId": "1222-444-2",
+                    "bankRoutingId": "12345678"
+                }
+            }
+        }
+
+    ]
+}
