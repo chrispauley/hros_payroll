@@ -29,9 +29,9 @@
     "shortid": "^2.2.8"
   },
   "scripts": {
-    "build": "webpack",
     "start": "webpack-dev-server --inline",
-    "build:prod": "webpack && cp -R public build",
+    "build": "webpack && cp -R public/. build/",
+    "clean": "rm -rf build/ && mkdir build",
     "predeploy": "npm run build",
     "deploy": "NODE_ENV=production && gh-pages -d build"
   },
