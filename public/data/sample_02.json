@@ -1,10 +1,26 @@
 {
-    "payee": {
-        "personName": [],
-        "personLegal": {
-            "legalId": {
-                "value": ""
-            }
-        }
+  "payee": {
+    "personName": [],
+    "personLegal": {
+      "legalId": {
+        "value": ""
+      }
     }
+  },
+  "statuatoryInstructions": [{
+    "USTaxInstructions": [{
+      "validFrom": "2017-11-06",
+      "validTo": "2017-12-31",
+      "federalTaxWithholdingInstructions": [
+        "1 - federalTaxWithholdingInstruction"
+      ],
+      "stateTaxWithholdingInstructions": [
+        "1 - stateTaxWithholdingInstruction",
+        "2 - stateTaxWithholdingInstruction"
+      ],
+      "localTaxWithholdingInstructions": [
+        "1 - localTaxWithholdingInstruction"
+      ]
+    }]
+  }]
 }
