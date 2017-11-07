@@ -1,29 +1,33 @@
 import React, {Component} from 'react';
-
+import IdentifierTypeRow from '../common/IdentifierTypeRow';
+import PaymentAmountRow from './PaymentAmountRow';
+import PaymentMethodRow from './PaymentMethodRow';
 
 class PaymentInstruction extends Component {
   constructor(props) {
     super(props);
-    console.log('props', props);
   }
 
   render() {
-    var idRowJsx = null;
+    var idRowJsx, paymentJsx, paymentMethodJsx = null;
+    var { id, payment, paymentMethod, processingSequence } = this.props;
+    idRowJsx = id ? ( <IdentifierTypeRow {...id} /> ): null;
+    paymentJsx = payment ? ( <PaymentAmountRow {...payment} /> ) : null;
 
+    paymentMethodJsx = paymentMethod ? ( <PaymentMethodRow {...paymentMethod} /> ) : null;
     return (
       <table className='table table-condensed table-bordered'>
         <caption>PaymentInstruction</caption>
-        <thead>
-          <tr>
-            <th className='col-xs-1'>id</th>
-            <th className='col-xs-1'>payment</th>
-            <th className='col-xs-1'>paymentMethod</th>
-            <th className='col-xs-3'>sequence</th>
-          </tr>
-        </thead>
         <tbody>
-            <tr><td>{this.props.processingSequence}</td></tr>
-
+            <tr>
+              <th className='col-xs-1'>Id: </th><td>{idRowJsx}</td>
+            </tr>
+            <tr>
+              <th className='col-xs-1'>Amount: </th><td>{paymentJsx}</td>
+            </tr>
+            <tr>
+              <th className='col-xs-1'>Method: </th><td>{paymentMethodJsx}</td>
+            </tr>
         </tbody>
       </table>
     );

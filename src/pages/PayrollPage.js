@@ -3,14 +3,10 @@ import DropLoader from "../components/utils/DropLoader";
 
 import DataSelectPanel from '../components/common/DataSelectPanel'
 // import PartyTypeHeader from '../common/PartyTypeHeader'
+import DeductionInstructionsPanel from '../components/deductionInstruction/DeductionInstructionsPanel'
 import PaymentInstructionsPanel from '../components/paymentInstruction/PaymentInstructionsPanel'
+import StatuatoryInstructionsPanel from '../components/statutoryInstruction/StatuatoryInstructionsPanel'
 
-function isEmpty(obj) {
-  if (Object.getOwnPropertyNames(obj).length == 0) {
-    console.log('empty');
-    return true;}
-  else { console.log('not empty'); return false;}
-}
 
 class PayrollPage extends Component {
   constructor(props) {
@@ -66,7 +62,7 @@ class PayrollPage extends Component {
 
 
   render() {
-    var {paymentInstructions} = this.state.processInstance;
+    var {paymentInstructions, deductionInstructions, statuatoryInstructions } = this.state.processInstance;
     var {party} = this.state.processInstance;
     return (
       <div>
@@ -91,7 +87,14 @@ class PayrollPage extends Component {
         <hr/>
 
         { paymentInstructions ?
-        (<PaymentInstructionsPanel {...this.state.processInstance.paymentInstructions} />)
+        (<PaymentInstructionsPanel {...this.state.processInstance} />)
+        : null }
+        { deductionInstructions ?
+        ( <DeductionInstructionsPanel {...this.state.processInstance} />)
+        : null }
+
+        { statuatoryInstructions ?
+        ( <StatuatoryInstructionsPanel {...this.state.processInstance} />)
         : null }
 
         {/* <DropLoader onChange={this.handleDropFileInput}/> */}
