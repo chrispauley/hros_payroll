@@ -31,11 +31,6 @@ class PersonLegalTypeForm
   }
 
   isValid = () => {
-    // const {errors, isValid} = validateInput(this.state);
-    // if (!isValid) {
-    //   this.setState({errors});
-    // }
-    // return isValid;
   }
 
   onClickValidate = () => {
@@ -48,11 +43,6 @@ class PersonLegalTypeForm
 
   onSubmit(e) {
     e.preventDefault();
-
-    // if (this.isValid()) {
-    //   this.setState({errors: {}, isLoading: true});
-    //   this.setState({isLoading: false});
-    // }
   }
 
 

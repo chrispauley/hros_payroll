@@ -3,9 +3,12 @@ import DropLoader from "../components/utils/DropLoader";
 
 import DataSelectPanel from '../components/common/DataSelectPanel'
 // import PartyTypeHeader from '../common/PartyTypeHeader'
+import NounPanel from '../components/noun/NounPanel';
 import DeductionInstructionsPanel from '../components/deductionInstruction/DeductionInstructionsPanel'
 import PaymentInstructionsPanel from '../components/paymentInstruction/PaymentInstructionsPanel'
 import StatuatoryInstructionsPanel from '../components/statutoryInstruction/StatuatoryInstructionsPanel'
+
+import PayeePanel from '../components/payee/PayeePanel';
 
 
 class PayrollPage extends Component {
@@ -13,11 +16,14 @@ class PayrollPage extends Component {
     super(props);
     this.state = {
       items: [],
+      offset: 5,
+      page: 1,
       processInstance: {}
     }
   }
 
   handleClick = (e) => {
+    // console.log('PayrollPage.handleClick()');
     // Fetch data for e.value
     e.preventDefault();
     fetch(e.target.href)
@@ -62,29 +68,23 @@ class PayrollPage extends Component {
 
 
   render() {
-    var {paymentInstructions, deductionInstructions, statuatoryInstructions } = this.state.processInstance;
+    var {documentId, paymentInstructions, deductionInstructions, statuatoryInstructions, payee } = this.state.processInstance;
     var {party} = this.state.processInstance;
+
     return (
       <div>
 
-        <div className='panel-group'>
-          <div className='panel panel-default'>
-            <h4 className="panel-title">
-                <a href="#processInstance-list" data-toggle="collapse">Pick a Payroll Process instance here.</a>
-                <i className='caret'></i>
-            </h4>
-            <div id="processInstance-list" className="panel-collapse collapse">
-              <div className='panel-body'>
-                <DataSelectPanel {...this.state} onClick={this.handleClick.bind(this)}/>
-              </div>
-              <div className="panel-footer">
-                [pagination-links-go-here]
-              </div>
+        <DataSelectPanel {...this.state} onClick={this.handleClick.bind(this)}/>
 
-            </div>
-          </div>
-        </div>
         <hr/>
+        {
+          documentId ?
+          (<NounPanel {...this.state.processInstance} />)
+          : null }
+          
+        { payee ?
+          (<PayeePanel {...this.state.processInstance}/> )
+          : null }
 
         { paymentInstructions ?
         (<PaymentInstructionsPanel {...this.state.processInstance} />)
@@ -96,6 +96,8 @@ class PayrollPage extends Component {
         { statuatoryInstructions ?
         ( <StatuatoryInstructionsPanel {...this.state.processInstance} />)
         : null }
+
+
 
         {/* <DropLoader onChange={this.handleDropFileInput}/> */}
         {/* {party ? (   <PartyTypeHeader {...party} /> ) : null }

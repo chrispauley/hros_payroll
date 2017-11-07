@@ -1,0 +1,33 @@
+table {
+  color: rgba(255, 255, 255, .8);
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-collapse: collapse;
+  font-size: .9em;
+  background-color: rgba(63, 142, 191, .9);
+}
+
+table td {
+  padding: 5px 12px;
+}
+
+table thead tr {
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  background-color: rgba(0, 10, 255, 0.2);
+}
+
+table thead td {
+  white-space: nowrap;
+  font-size: .7em;
+  text-transform: capitalize;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+table tbody td:nth-child(1) {
+  color: #fff;
+  font-weight: bold;
+}

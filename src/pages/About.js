@@ -19,7 +19,7 @@ const About = () => (
         <img src='hropen_logosq.png' alt=''/>
         <ul className='fa-ul'>
           <li><a href='http://hropenstandards.org/'>HR Open</a></li>
-          <li><a target='_new' href='https://github.com/chrispauley/chrispauley'>
+          <li><a target='_new' href='https://github.com/hropen/Payroll'>
             <i id="social-fb" className="fa fa-github-square fa-1x social fa-fw"></i>
             HROpen Repos</a>
           </li>
@@ -35,7 +35,7 @@ const About = () => (
         <h2>Chris Pauley</h2>
         <p>Hire Me! I am currently looking for gainful employment. I am interested in a full time permanent position.
         </p>
-        <p>I am an experienced schema editor for XSD, JSON Schema, and RDBMS. </p>
+        <p>I am an experienced schema editor for XSD, JSON Schemas, and RDBMS's. </p>
         <ul className='fa-ul'>
           <li><a target='_new' href='https://www.linkedin.com/in/christopherpauley/'>
             <i id="social-fb" className="fa fa-linkedin-square fa-1x social fa-fw"></i>

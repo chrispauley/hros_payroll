@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import TextAreaFieldGroup from './TextAreaFieldGroup';
+import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import Validator from 'validator';
 import isEmpty from 'lodash/isEmpty';
 
