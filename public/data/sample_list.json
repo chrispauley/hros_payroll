@@ -1,14 +1,91 @@
-[
-  { "formattedName": "Noun only, no data.",
-    "link": "data/noun_only.json"
-  },
-  { "formattedName": "Sample 1",
-    "link": "data/sample_01.json"
-  },
-  { "formattedName": "Sample 2",
-    "link": "data/sample_02.json"
-  },
-  { "formattedName": "payrollProcessType_uc01",
-    "link": "data/payrollProcessType_uc01.json"
-  }
+[{
+        "sequence": 1,
+        "formattedName": "Noun only, no data.",
+        "link": "data/noun_only.json"
+    },
+    {
+        "sequence": 2,
+        "formattedName": "Sample 1",
+        "link": "data/sample_01.json"
+    },
+    {
+        "sequence": 3,
+        "formattedName": "Sample 2",
+        "link": "data/sample_02.json"
+    },
+    {
+        "sequence": 4,
+        "formattedName": "payrollProcessType_uc01",
+        "link": "data/payrollProcessType_uc01.json"
+    },
+    {
+        "sequence": 5,
+        "formattedName": "uc_newhire_1",
+        "link": "data/payrollProcessType_uc_newhire_1.json"
+    },
+    {
+        "sequence": 6,
+        "formattedName": "uc_newhire_2",
+        "link": "data/payrollProcessType_uc_newhire_2.json"
+    },
+    {
+        "sequence": 7,
+        "formattedName": "uc_newhire_2",
+        "link": "data/payrollProcessType_uc_newhire_3.json"
+    },
+    {
+        "sequence": 8,
+        "formattedName": "uc_newhire_2",
+        "link": "data/payrollProcessType_uc_newhire_4.json"
+    },
+    {
+        "sequence": 9,
+        "formattedName": "uc_payment_details_1",
+        "link": "data/payrollProcessType_uc_payment_details_1.json"
+    },
+    {
+        "sequence": 10,
+        "formattedName": "uc_rehire_1",
+        "link": "data/payrollProcessType_uc_rehire_1.json"
+    },
+    {
+        "sequence": 11,
+        "formattedName": "uc_rehire_2",
+        "link": "data/payrollProcessType_uc_rehire_2.json"
+    },
+    {
+        "sequence": 12,
+        "formattedName": "uc_rehire_3",
+        "link": "data/payrollProcessType_uc_rehire_3.json"
+    },
+    {
+        "sequence": 13,
+        "formattedName": "uc_rehire_4",
+        "link": "data/payrollProcessType_uc_rehire_4.json"
+    },
+    {
+        "sequence": 14,
+        "formattedName": "uc_payment_details_2",
+        "link": "data/payrollProcessType_uc_payment_details_2.json"
+    },
+    {
+        "sequence": 15,
+        "formattedName": "uc_payment_details_3",
+        "link": "data/payrollProcessType_uc_payment_details_3.json"
+    },
+    {
+        "sequence": 16,
+        "formattedName": "uc_payment_details_4",
+        "link": "data/payrollProcessType_uc_payment_details_4.json"
+    },
+    {
+        "sequence": 17,
+        "formattedName": "uc_payment_details_5",
+        "link": "data/payrollProcessType_uc_payment_details_5.json"
+    },
+    {
+        "sequence": 18,
+        "formattedName": "uc_payment_details_6",
+        "link": "data/payrollProcessType_uc_payment_details_6.json"
+    }
 ]

@@ -18,7 +18,8 @@
             "nameType": "legal"
         }],
 
-        "personlegal": {
+        "personLegal": {
+            "passportId": {"schemeId": "passport", "value": "0123456789"},
             "id": { "schemeId": "ssn", "value": "123-45-8999" }
         }
     },
