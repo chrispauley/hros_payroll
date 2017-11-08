@@ -10,22 +10,21 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "11",
-      "description": "Mary works for a small manufacturing company in the Midwest."
+      "value": "22",
+      "description": "Marcelo is an important sale manager in his company."
     },
-    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "3" }],
+    "alternateIds": [{ "schemeId": "uc_termination", "value": "4" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "Mary Hill",
-            "given": "Mary",
-            "family": "Hill",
+            "formattedName": "Marcelo Santiago",
+            "given": "Marcelo",
+            "family": "Santiago",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0011" }
-        }
+            "id": { "schemeId": "ssn", "value": "123-45-0022"
     }
 
 }

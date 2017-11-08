@@ -10,23 +10,21 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "1",
-      "description": "Mary is a new employee at ABC corporation."
+      "value": "30",
+      "description": "Mary is promoted from a Associate Nurse and was paid hourly and is now a Registered Nurse and is salaried."
     },
-    "alternateIds": [{ "schemeId": "uc_newhire", "value": "1" }],
+    "alternateIds": [{ "schemeId": "uc_deployment", "value": "3" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "Mary Smith",
+            "formattedName": "Mary Hart",
             "given": "Mary",
-            "family": "Smith",
+            "family": "Hart",
             "nameType": "legal"
         }],
 
-        "personLegal": {
-            "passportId": {"schemeId": "passport", "value": "0123456789"},
-            "id": { "schemeId": "ssn", "value": "123-45-0001" }
-        }
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0030"
     }
 
 }

@@ -10,22 +10,21 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "11",
-      "description": "Mary works for a small manufacturing company in the Midwest."
+      "value": "35",
+      "description": "Gary selects 2 times life insurance and they are 45 years old."
     },
-    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "3" }],
+    "alternateIds": [{ "schemeId": "uc_benefits", "value": "3" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "Mary Hill",
-            "given": "Mary",
-            "family": "Hill",
+            "formattedName": "Gary Morrison",
+            "given": "Gary",
+            "family": "Morrison",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0011" }
-        }
+            "id": { "schemeId": "ssn", "value": "123-45-0035"
     }
 
 }

@@ -10,22 +10,21 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "11",
-      "description": "Mary works for a small manufacturing company in the Midwest."
+      "value": "37",
+      "description": "Fred works as an executive in a US company which offers free (tot he employee) 5 times Life Insurance coverage."
     },
-    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "3" }],
+    "alternateIds": [{ "schemeId": "uc_benefits", "value": "5" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "Mary Hill",
-            "given": "Mary",
-            "family": "Hill",
+            "formattedName": "Kim Duncan",
+            "given": "Kim",
+            "family": "Duncan",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0011" }
-        }
+            "id": { "schemeId": "ssn", "value": "123-45-0037"
     }
 
 }

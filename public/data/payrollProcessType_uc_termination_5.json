@@ -1,0 +1,19 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "23",
+      "description": "A ski resort company , noticing the lack of snow and bad weather perspectives, decides that the season is ended and lays off an important part of seasonal employees."
+    },
+    "alternateIds": [{ "schemeId": "uc_termination", "value": "5" }],
+
+
+}

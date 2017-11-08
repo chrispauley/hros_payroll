@@ -10,22 +10,21 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "11",
-      "description": "Mary works for a small manufacturing company in the Midwest."
+      "value": "18",
+      "description": "John works for Company A that is Acquired by Company B. He is switched from being paid by Company A to Company B on the 1st June 2017."
     },
-    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "3" }],
+    "alternateIds": [{ "schemeId": "uc_transfer", "value": "4" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "Mary Hill",
-            "given": "Mary",
-            "family": "Hill",
+            "formattedName": "John Watkins",
+            "given": "John",
+            "family": "Watkins",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0011" }
-        }
+            "id": { "schemeId": "ssn", "value": "123-45-0018"
     }
 
 }

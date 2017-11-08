@@ -10,21 +10,21 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "11",
-      "description": "Mary works for a small manufacturing company in the Midwest."
+      "value": "16",
+      "description": "Wendy is seconded to the Paris, France Office for 2 years from her home office in the US."
     },
-    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "3" }],
+    "alternateIds": [{ "schemeId": "uc_transfer", "value": "2" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "Mary Hill",
-            "given": "Mary",
-            "family": "Hill",
+            "formattedName": "Wendy Roberts",
+            "given": "Wendy",
+            "family": "Roberts",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0011" }
+            "id": { "schemeId": "ssn", "value": "123-45-0016" }
         }
     }
 

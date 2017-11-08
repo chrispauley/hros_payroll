@@ -13,7 +13,7 @@
       "value": "4",
       "description": "Graham is a temporary agency working covering a 6 week maternity absence."
     },
-    "alternateIds": [{ "schemeId": "CompanyDocId", "value": "001a" }],
+    "alternateIds": [{ "schemeId": "uc_newhire", "value": "4" }],
 
     "payee": {
         "personName": [{
