@@ -10,7 +10,7 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "8",
+      "value": "9",
       "description": "The state of Washington mandates that all higher education workers elect direct deposit for payment."
     },
     "alternateIds": [{ "schemeId": "uc_payment_details", "value": "1" }],
@@ -24,7 +24,7 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0008" }
+            "id": { "schemeId": "ssn", "value": "123-45-0009" }
         }
     }
 

@@ -10,7 +10,7 @@
     "documentId": {
         "schemeAgencyId": "HROPEN",
         "schemeId": "PayrollUseCase",
-        "value": "11",
+        "value": "12",
         "description": "Holly's job requires that she travel 70% of the time."
     },
     "alternateIds": [{ "schemeId": "uc_payment_details", "value": "4" }],
@@ -24,7 +24,7 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0011" }
+            "id": { "schemeId": "ssn", "value": "123-45-0012" }
         }
     }
 }

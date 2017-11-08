@@ -10,7 +10,7 @@
     "documentId": {
         "schemeAgencyId": "HROPEN",
         "schemeId": "PayrollUseCase",
-        "value": "16",
+        "value": "14",
         "description": "John is from France but has been working in the US for many years."
     },
     "alternateIds": [{ "schemeId": "uc_payment_details", "value": "6" }],
@@ -24,7 +24,7 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0016" }
+            "id": { "schemeId": "ssn", "value": "123-45-0014" }
         }
     }
 }
