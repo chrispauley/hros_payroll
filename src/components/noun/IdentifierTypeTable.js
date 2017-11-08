@@ -16,7 +16,7 @@ class IdentifierTypeTable extends Component {
           <thead>
             <tr>
               {schemeId ? (<th>SchemeId</th>) : ''}
-              {value ? (<th>Value</th>) : ''}
+              <th>Value</th>
               {schemeLink ? (<th>SchemeLink</th>) : ''}
               {schemeAgencyId ? (<th>SchemeAgencyId</th>) : ''}
               {agencyUri ? (<th>agencyUri</th>) : ''}
@@ -27,7 +27,7 @@ class IdentifierTypeTable extends Component {
           <tbody>
             <tr>
               {schemeId ? (<td>{schemeId}</td>) : ''}
-              {value ? (<td>{value}</td>) : ''}
+              <td>{value}</td>
               {schemeLink ? (<td>{schemeLink}</td>) : ''}
               {schemeAgencyId ? (<td>{schemeAgencyId}</td>) : ''}
               {agencyUri ? (<td>{agencyUri}</td>) : ''}
