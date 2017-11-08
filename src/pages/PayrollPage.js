@@ -4,11 +4,12 @@ import DropLoader from "../components/utils/DropLoader";
 import DataSelectPanel from '../components/common/DataSelectPanel'
 // import PartyTypeHeader from '../common/PartyTypeHeader'
 import NounPanel from '../components/noun/NounPanel';
+import PayeePanel from '../components/payee/PayeePanel';
+import DeploymentPanel from '../components/deployment/DeploymentPanel';
+
 import DeductionInstructionsPanel from '../components/deductionInstruction/DeductionInstructionsPanel'
 import PaymentInstructionsPanel from '../components/paymentInstruction/PaymentInstructionsPanel'
 import StatuatoryInstructionsPanel from '../components/statutoryInstruction/StatuatoryInstructionsPanel'
-
-import PayeePanel from '../components/payee/PayeePanel';
 
 
 class PayrollPage extends Component {
@@ -68,7 +69,8 @@ class PayrollPage extends Component {
 
 
   render() {
-    var {documentId, paymentInstructions, deductionInstructions, statuatoryInstructions, payee } = this.state.processInstance;
+    var {documentId, payee, deployment, paymentInstructions,
+      deductionInstructions, statuatoryInstructions } = this.state.processInstance;
     var {party} = this.state.processInstance;
 
     return (
@@ -81,7 +83,11 @@ class PayrollPage extends Component {
           documentId ?
           (<NounPanel {...this.state.processInstance} />)
           : null }
-          
+
+        { deployment ?
+          (<DeploymentPanel {...this.state.deployment } />)
+        : null }
+
         { payee ?
           (<PayeePanel {...this.state.processInstance}/> )
           : null }
