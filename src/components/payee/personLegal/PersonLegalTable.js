@@ -4,7 +4,7 @@ import IdentifierTable from '../../noun/IdentifierTypeTable';
 class PersonLegalTable extends React.Component {
   constructor(props) {
     super(props);
-    console.log('PersonLegalTable', props);
+    // console.log('PersonLegalTable', props);
   }
 
   render() {
@@ -17,7 +17,7 @@ class PersonLegalTable extends React.Component {
           { passportId ?
             (<tr>
                 <th>PassportId:</th>
-                <td><IdentifierTable {...passportId} /></td>
+                {/* <td><IdentifierTable {...passportId} /></td> */}
               </tr>)
             : '' }
 

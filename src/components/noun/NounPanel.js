@@ -30,8 +30,9 @@ class NounPanel extends Component {
             <div className='panel-body'>
 
               <div className='noun'>
-                {this.props.documentId ? (<IdentifierTypeTable {...this.props.documentId} />) : null}
-                {this.props.alternateIds ? (<AlternateIdsTable {...this.props} />) : null }
+                {/* ISSUES WITH IdentifierTypeTable */}
+                {/* {this.props.documentId ? (<IdentifierTypeTable {...this.props.documentId} />) : null}
+                {this.props.alternateIds ? (<AlternateIdsTable {...this.props} />) : null } */}
                 {this.props.dataProtectionPolicy ? (<DataProtectionPolicy {...this.props.dataProtectionPolicy} />) : null }
                 {this.props.language ? (<p>{this.props.language}</p>) : null}
               </div>

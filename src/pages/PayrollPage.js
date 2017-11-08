@@ -6,6 +6,7 @@ import DataSelectPanel from '../components/common/DataSelectPanel'
 import NounPanel from '../components/noun/NounPanel';
 import PayeePanel from '../components/payee/PayeePanel';
 import DeploymentPanel from '../components/deployment/DeploymentPanel';
+import WorkRelationshipPanel from '../components/workRelationshipLifecyle/WorkRelationshipPanel';
 
 import DeductionInstructionsPanel from '../components/deductionInstruction/DeductionInstructionsPanel'
 import PaymentInstructionsPanel from '../components/paymentInstruction/PaymentInstructionsPanel'
@@ -69,7 +70,7 @@ class PayrollPage extends Component {
 
 
   render() {
-    var {documentId, payee, deployment, paymentInstructions,
+    var {documentId, payee, deployment, workRelationshipLifeCycle, paymentInstructions,
       deductionInstructions, statuatoryInstructions } = this.state.processInstance;
     var {party} = this.state.processInstance;
 
@@ -85,8 +86,13 @@ class PayrollPage extends Component {
           : null }
 
         { deployment ?
-          (<DeploymentPanel {...this.state.deployment } />)
+          (<DeploymentPanel {...this.state.processInstance } />)
         : null }
+
+        { workRelationshipLifeCycle ?
+          (<WorkRelationshipPanel {...this.state.processInstance } />)
+        : null }
+
 
         { payee ?
           (<PayeePanel {...this.state.processInstance}/> )

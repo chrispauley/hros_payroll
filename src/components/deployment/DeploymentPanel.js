@@ -11,48 +11,71 @@ class Deployment extends Component {
   }
 
   render() {
-//     var {payee} = this.props;
-//     var {personName, personLegal } = payee;
-//     var personNamesJsx = null;
-// console.log('personLegal', payee);
-//     if ( personName && personName.length > 0) {
-//       personNamesJsx = personName.map( (item, i) => {
-//         var fname = item.formattedName;
-//         return (<span key={shortid.generate()}> {fname} </span>)
-//       });
-//     }
+
+    var {deployment} = this.props;
+    var {
+      workerAssignmentSource,
+      workLocation,
+      communication,
+      resourceRelationshipCode,
+      organizationIds,
+      job,
+      position,
+      scheduledHours,
+      assignmentReasonCode,
+      fullTimeEquivalentRatio,
+      wageHourLawCoverageIndicator,
+      effectivePeriod,
+      employeeReportingCode,
+      wageHourLawCoverageCountryCode,
+      laborBargainingUnitIndicator,
+      newHireProbationaryIndicator,
+      organization,
+      license,
+      certification
+    } = deployment;
 
     return (
 
       <div className='panel-group'>
         <div className='panel panel-default'>
           <h4 className="panel-title">
-              <a href="#deployment-data" data-toggle="collapse">Deployment</a>
-              <i className='caret'></i>
+            <a href="#deployment-data" data-toggle="collapse">Deployment</a>
+            <i className='caret'></i>
           </h4>
           <div id="deployment-data" className="panel-collapse collapse">
             <div className='panel-body'>
 
               <div>
                 <div className='row well'>
-                  <div className='col-md-4'>
+                  <div className='col-md-12'>
                     {/* This should be a list of tables. */}
-                    <h4>Deployment</h4>
+                    {workerAssignmentSource
+                      ? (
+                        <div>
+                          <span className='caption'>workerAssignmentSource:
+                          </span>
+                          <b>sourceCode:
+                          </b>
+                          {workerAssignmentSource.sourceCode}
+                          <b>homeCountry:
+                          </b>
+                          {workerAssignmentSource.homeCountry}
+                          <b>hostCountry:
+                          </b>
+                          {workerAssignmentSource.hostCountry}
+                        </div>
+                      )
+                      : null}
+
                   </div>
                 </div>
 
-                {/* { personLegal ?
-                ( <div className='row'>
-                    <PersonLegalTable {...personLegal} />
-                  </div>)
-                : '' } */}
 
               </div>
 
-
             </div>
-            <div className="panel-footer">
-            </div>
+            <div className="panel-footer"></div>
 
           </div>
         </div>
