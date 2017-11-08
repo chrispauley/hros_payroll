@@ -13,7 +13,6 @@
       "value": "10",
       "description": "ABC corporation requires all workers to receive payment via a pay card."
     },
-    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "3" }],
-
+    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "3" }]
 
 }

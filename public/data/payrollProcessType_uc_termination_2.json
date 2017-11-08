@@ -24,7 +24,7 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0020"
+            "id": { "schemeId": "ssn", "value": "123-45-0020"}
+        }
     }
-
 }

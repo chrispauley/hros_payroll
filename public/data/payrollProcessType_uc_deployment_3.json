@@ -8,10 +8,10 @@
         }]
     },
     "documentId": {
-      "schemeAgencyId": "HROPEN",
-      "schemeId": "PayrollUseCase",
-      "value": "30",
-      "description": "Mary is promoted from a Associate Nurse and was paid hourly and is now a Registered Nurse and is salaried."
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "30",
+        "description": "Mary is promoted from a Associate Nurse and was paid hourly and is now a Registered Nurse and is salaried."
     },
     "alternateIds": [{ "schemeId": "uc_deployment", "value": "3" }],
 
@@ -24,7 +24,7 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0030"
+            "id": { "schemeId": "ssn", "value": "123-45-0030" }
+        }
     }
-
 }

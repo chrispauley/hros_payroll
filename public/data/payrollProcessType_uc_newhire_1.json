@@ -8,10 +8,10 @@
         }]
     },
     "documentId": {
-      "schemeAgencyId": "HROPEN",
-      "schemeId": "PayrollUseCase",
-      "value": "1",
-      "description": "Mary is a new employee at ABC corporation."
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "1",
+        "description": "Mary is a new employee at ABC corporation."
     },
     "alternateIds": [{ "schemeId": "uc_newhire", "value": "1" }],
 
@@ -24,9 +24,8 @@
         }],
 
         "personLegal": {
-            "passportId": {"schemeId": "passport", "value": "0123456789"},
+            "passportId": { "schemeId": "passport", "value": "0123456789" },
             "id": { "schemeId": "ssn", "value": "123-45-0001" }
         }
     }
-
 }

@@ -8,10 +8,10 @@
         }]
     },
     "documentId": {
-      "schemeAgencyId": "HROPEN",
-      "schemeId": "PayrollUseCase",
-      "value": "37",
-      "description": "Fred works as an executive in a US company which offers free (tot he employee) 5 times Life Insurance coverage."
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "37",
+        "description": "Fred works as an executive in a US company which offers free (tot he employee) 5 times Life Insurance coverage."
     },
     "alternateIds": [{ "schemeId": "uc_benefits", "value": "5" }],
 
@@ -24,7 +24,7 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0037"
+            "id": { "schemeId": "ssn", "value": "123-45-0037" }
+        }
     }
-
 }

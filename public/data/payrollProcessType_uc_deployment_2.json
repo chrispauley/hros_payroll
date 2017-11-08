@@ -8,10 +8,10 @@
         }]
     },
     "documentId": {
-      "schemeAgencyId": "HROPEN",
-      "schemeId": "PayrollUseCase",
-      "value": "29",
-      "description": "John works in Nevada and he is transferred to a work site Oregon."
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "29",
+        "description": "John works in Nevada and he is transferred to a work site Oregon."
     },
     "alternateIds": [{ "schemeId": "uc_deployment", "value": "2" }],
 
@@ -24,7 +24,7 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0029"
+            "id": { "schemeId": "ssn", "value": "123-45-0029" }
+        }
     }
-
 }

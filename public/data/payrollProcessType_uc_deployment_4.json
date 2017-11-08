@@ -8,10 +8,10 @@
         }]
     },
     "documentId": {
-      "schemeAgencyId": "HROPEN",
-      "schemeId": "PayrollUseCase",
-      "value": "31",
-      "description": "Susan is working as Math Teacher and takes on a second role as the Baseball Coach."
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "31",
+        "description": "Susan is working as Math Teacher and takes on a second role as the Baseball Coach."
     },
     "alternateIds": [{ "schemeId": "uc_deployment", "value": "4" }],
 
@@ -24,7 +24,7 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0031"
+            "id": { "schemeId": "ssn", "value": "123-45-0031" }
+        }
     }
-
 }
