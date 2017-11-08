@@ -8,10 +8,10 @@
         }]
     },
     "documentId": {
-      "schemeAgencyId": "HROPEN",
-      "schemeId": "PayrollUseCase",
-      "value": "27",
-      "description": "Hugo lives and works in New Jersey. After five years on the job, he decides to move to Pennsylvania and commute to his job in NJ."
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "27",
+        "description": "Hugo lives and works in New Jersey. After five years on the job, he decides to move to Pennsylvania and commute to his job in NJ."
     },
     "alternateIds": [{ "schemeId": "uc_address_change", "value": "1" }],
 
@@ -24,7 +24,11 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0027"
+            "id": {
+                "schemeId": "ssn",
+                "value": "123-45-0027"
+            }
+        }
     }
 
 }

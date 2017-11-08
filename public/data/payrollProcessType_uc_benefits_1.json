@@ -8,10 +8,10 @@
         }]
     },
     "documentId": {
-      "schemeAgencyId": "HROPEN",
-      "schemeId": "PayrollUseCase",
-      "value": "33",
-      "description": "John selects to purchase Employer sponsored medical coverage for their family and the rate for that selection from the premium table is $280 per a 2 weekly pay period."
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "33",
+        "description": "John selects to purchase Employer sponsored medical coverage for their family and the rate for that selection from the premium table is $280 per a 2 weekly pay period."
     },
     "alternateIds": [{ "schemeId": "uc_benefits", "value": "1" }],
 
@@ -24,7 +24,7 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0033"
+            "id": { "schemeId": "ssn", "value": "123-45-0033" }
+        }
     }
-
 }
