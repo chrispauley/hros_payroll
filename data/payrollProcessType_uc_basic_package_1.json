@@ -10,21 +10,22 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "2",
-      "description": "John is a 1st party contractor who is working directly for the company for 6 months."
+      "value": "40",
+      "description": "Bryan joins a company with an annual salary of $35,663."
     },
-    "alternateIds": [{ "schemeId": "uc_newhire", "value": "2" }],
+    "alternateIds": [{ "schemeId": "uc_basic_package", "value": "1" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "John Johnson",
-            "given": "John",
-            "family": "Johnson",
+            "formattedName": "Bryan McGuire",
+            "given": "Bryan",
+            "family": "McGuire",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0002" }
+            "id": { "schemeId": "ssn", "value": "123-45-0040"}
         }
     }
+
 }

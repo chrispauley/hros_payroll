@@ -10,21 +10,21 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "2",
-      "description": "John is a 1st party contractor who is working directly for the company for 6 months."
+      "value": "20",
+      "description": "Sue informed her company that she decided to retire."
     },
-    "alternateIds": [{ "schemeId": "uc_newhire", "value": "2" }],
+    "alternateIds": [{ "schemeId": "uc_termination", "value": "2" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "John Johnson",
-            "given": "John",
-            "family": "Johnson",
+            "formattedName": "Sue Freeman",
+            "given": "Sue",
+            "family": "Freeman",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0002" }
+            "id": { "schemeId": "ssn", "value": "123-45-0020"}
         }
     }
 }

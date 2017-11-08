@@ -10,21 +10,21 @@
     "documentId": {
         "schemeAgencyId": "HROPEN",
         "schemeId": "PayrollUseCase",
-        "value": "14",
-        "description": "John is from France but has been working in the US for many years."
+        "value": "33",
+        "description": "John selects to purchase Employer sponsored medical coverage for their family and the rate for that selection from the premium table is $280 per a 2 weekly pay period."
     },
-    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "6" }],
+    "alternateIds": [{ "schemeId": "uc_benefits", "value": "1" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "John Kelly",
+            "formattedName": "John Pearson",
             "given": "John",
-            "family": "Kelly",
+            "family": "Pearson",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0014" }
+            "id": { "schemeId": "ssn", "value": "123-45-0033" }
         }
     }
 }

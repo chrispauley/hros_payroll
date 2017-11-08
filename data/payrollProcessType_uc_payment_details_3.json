@@ -10,10 +10,10 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "9",
+      "value": "11",
       "description": "Mary works for a small manufacturing company in the Midwest."
     },
-    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "2" }],
+    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "3" }],
 
     "payee": {
         "personName": [{
@@ -24,7 +24,7 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0009" }
+            "id": { "schemeId": "ssn", "value": "123-45-0011" }
         }
     }
 

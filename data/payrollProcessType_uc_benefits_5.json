@@ -10,21 +10,21 @@
     "documentId": {
         "schemeAgencyId": "HROPEN",
         "schemeId": "PayrollUseCase",
-        "value": "12",
-        "description": "Holly's job requires that she travel 70% of the time."
+        "value": "37",
+        "description": "Fred works as an executive in a US company which offers free (tot he employee) 5 times Life Insurance coverage."
     },
-    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "4" }],
+    "alternateIds": [{ "schemeId": "uc_benefits", "value": "5" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "Holly Anderson",
-            "given": "Holly",
-            "family": "Anderson",
+            "formattedName": "Kim Duncan",
+            "given": "Kim",
+            "family": "Duncan",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0012" }
+            "id": { "schemeId": "ssn", "value": "123-45-0037" }
         }
     }
 }

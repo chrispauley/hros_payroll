@@ -10,21 +10,22 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "2",
-      "description": "John is a 1st party contractor who is working directly for the company for 6 months."
+      "value": "15",
+      "description": "Dave is permanently relocated from the UK to the US to work on a new project."
     },
-    "alternateIds": [{ "schemeId": "uc_newhire", "value": "2" }],
+    "alternateIds": [{ "schemeId": "uc_transfer", "value": "1" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "John Johnson",
-            "given": "John",
-            "family": "Johnson",
+            "formattedName": "Dave McCormick",
+            "given": "Dave",
+            "family": "McCormick",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0002" }
+            "id": { "schemeId": "ssn", "value": "123-45-0015" }
         }
     }
+
 }

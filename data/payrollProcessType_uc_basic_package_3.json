@@ -10,21 +10,21 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "2",
-      "description": "John is a 1st party contractor who is working directly for the company for 6 months."
+      "value": "42",
+      "description": "Eric works night shift with an annual salary of $22,000 and a shift allowance of $400 a week."
     },
-    "alternateIds": [{ "schemeId": "uc_newhire", "value": "2" }],
+    "alternateIds": [{ "schemeId": "uc_basic_package", "value": "3" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "John Johnson",
-            "given": "John",
-            "family": "Johnson",
+            "formattedName": "Eric Stevenson",
+            "given": "Eric",
+            "family": "Stevenson",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0002" }
+            "id": { "schemeId": "ssn", "value": "123-45-0042" }
         }
     }
 }

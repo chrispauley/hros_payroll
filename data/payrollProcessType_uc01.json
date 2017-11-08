@@ -19,15 +19,56 @@
         }],
 
         "personLegal": {
-            "passportId": {"schemeId": "passport", "value": "0123456789"},
+            "passportId": { "schemeId": "passport", "value": "0123456789" },
             "id": { "schemeId": "ssn", "value": "123-45-8999" }
         }
     },
 
 
     "deployment": {
+        "workerAssignmentSource": {
+            "sourceCode": "Inpatriate",
+            "homeCountry": "GB",
+            "hostCountry": "US"
+        },
         "workLocation": {
-            "id": { "schemeId": "companyLocId", "value": "121" }
+            "id": { "schemeId": "companyLocId", "value": "121" },
+            "name": "",
+            "code": "",
+            "description": { "value": "This is the workLocation" },
+            "typeCode": "Headquarters",
+            "fieldRemoteWorkerIndicator": false,
+            "virtualWorkerIndicator": false
+        },
+        "communication": {
+            "web": [{ "url": "http://www.example.com" }]
+        }
+    },
+
+    "workRelationshipLifeCycle": {
+        "contract": {
+            "contractNumber": { "schemeId": "companyX", "value": "1112221" },
+            "contractStartDate": "2017-11-08",
+            "contractEndDate": "2018-12-31",
+            "workRelationShipType": "contractor",
+            "addendum": ["2018-01-01"]
+        },
+        "hire": {
+            "typeHire": "new",
+            "hireDate": "2017-11-08",
+            "acquisitionDate": "2017-11-08",
+            "adjustedHireDate": "2017-11-08",
+            "dutyEntryDate": "2017-11-08",
+            "originalHireDate": "2017-11-08",
+            "serviceStartDates": ["2017-11-08"]
+        },
+        "leaveOfAbsence": "This is the leave of absence.",
+        "termination": {
+            "terminationDate": "2017-11-08",
+            "lastWorkedDate": "2017-11-08",
+            "lastPaidDate": "2017-11-08",
+            "reasonCode": { "schemeId": "HROS_Payroll", "value": "quit" },
+            "terminationPaymentInformation": ""
         }
     },
 
@@ -38,10 +79,10 @@
 
         "deductionCycleCode": "Month",
         "processingSequence": 1,
-        "deduction": { "amount": { "value": 15, "currency": "USD"} },
+        "deduction": { "amount": { "value": 15, "currency": "USD" } },
         "deductionGoal": {
-            "id": {"schemeId": "CompanyCharityPlan", "value": "1"},
-            "limitAmount": {"value": 100, "currency": "USD"}
+            "id": { "schemeId": "CompanyCharityPlan", "value": "1" },
+            "limitAmount": { "value": 100, "currency": "USD" }
         },
 
         "validFrom": "2017-10-31",

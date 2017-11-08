@@ -10,9 +10,10 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "10",
-      "description": "ABC corporation requires all workers to receive payment via a pay card."
+      "value": "24",
+      "description": "The company encounters economical difficulties and decides to lay off 150 employees dispatched in several locations."
     },
-    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "3" }]
+    "alternateIds": [{ "schemeId": "uc_termination", "value": "6" }]
+
 
 }

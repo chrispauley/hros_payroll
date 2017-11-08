@@ -10,7 +10,7 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "6",
+      "value": "5",
       "description": "Simon left the organization on the 10th June 1998 and has now been recruited back and starts his new job 15th April 2017."
     },
     "alternateIds": [{ "schemeId": "uc_rehire", "value": "1" }],
@@ -24,7 +24,7 @@
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0006" }
+            "id": { "schemeId": "ssn", "value": "123-45-0005" }
         }
     }
 

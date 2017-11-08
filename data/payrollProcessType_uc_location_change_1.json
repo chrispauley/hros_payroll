@@ -10,21 +10,21 @@
     "documentId": {
       "schemeAgencyId": "HROPEN",
       "schemeId": "PayrollUseCase",
-      "value": "2",
-      "description": "John is a 1st party contractor who is working directly for the company for 6 months."
+      "value": "33",
+      "description": "Hayleigh works for a company in Buffalo, New York."
     },
-    "alternateIds": [{ "schemeId": "uc_newhire", "value": "2" }],
+    "alternateIds": [{ "schemeId": "uc_location_change", "value": "3" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "John Johnson",
-            "given": "John",
-            "family": "Johnson",
+            "formattedName": "Hayleigh Snyder",
+            "given": "Hayleigh",
+            "family": "Snyder",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0002" }
+            "id": { "schemeId": "ssn", "value": "123-45-0033"}
         }
     }
 }

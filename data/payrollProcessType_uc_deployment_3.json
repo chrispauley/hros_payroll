@@ -10,21 +10,21 @@
     "documentId": {
         "schemeAgencyId": "HROPEN",
         "schemeId": "PayrollUseCase",
-        "value": "12",
-        "description": "Holly's job requires that she travel 70% of the time."
+        "value": "30",
+        "description": "Mary is promoted from a Associate Nurse and was paid hourly and is now a Registered Nurse and is salaried."
     },
-    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "4" }],
+    "alternateIds": [{ "schemeId": "uc_deployment", "value": "3" }],
 
     "payee": {
         "personName": [{
-            "formattedName": "Holly Anderson",
-            "given": "Holly",
-            "family": "Anderson",
+            "formattedName": "Mary Hart",
+            "given": "Mary",
+            "family": "Hart",
             "nameType": "legal"
         }],
 
         "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0012" }
+            "id": { "schemeId": "ssn", "value": "123-45-0030" }
         }
     }
 }
