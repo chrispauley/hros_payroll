@@ -9,31 +9,32 @@ class IdentifierTypeTable extends Component {
   }
   render() {
     var {schemeId, value, schemeVersionId, schemeAgencyId, description, schemeLink, agencyUri } = this.props;
+    var { caption } = this.props;
 
     return (
       <div className='identifierTypeTable'>
         <table className='table'>
+          <caption>{caption && caption}</caption>
           <thead>
             <tr>
-              {schemeId ? (<th>SchemeId</th>) : ''}
+              <th>SchemeId</th>
               <th>Value</th>
-              {schemeLink ? (<th>SchemeLink</th>) : ''}
-              {schemeAgencyId ? (<th>SchemeAgencyId</th>) : ''}
-              {agencyUri ? (<th>agencyUri</th>) : ''}
-              {schemeVersionId ? (<th>schemeVersionId</th>) : ''}
-              {description ? (<th>Description</th>) : ''}
+              <th>SchemeLink</th>
+              <th>SchemeAgencyId</th>
+              <th>agencyUri</th>
+              <th>schemeVersionId</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              {schemeId ? (<td>{schemeId}</td>) : ''}
-              <td>{value}</td>
-              {schemeLink ? (<td>{schemeLink}</td>) : ''}
-              {schemeAgencyId ? (<td>{schemeAgencyId}</td>) : ''}
-              {agencyUri ? (<td>{agencyUri}</td>) : ''}
-              {schemeVersionId ? (<td>{schemeVersionId}</td>) : ''}
-              {description ? (<td>{description}</td>) : ''}
+              <td>{schemeId && schemeId}</td>
+              <td>{value && value}</td>
+              <td>{schemeLink && schemeLink}</td>
+              <td>{schemeAgencyId && schemeAgencyId}</td>
+              <td>{agencyUri && agencyUri}</td>
+              <td>{schemeVersionId && schemeVersionId}</td>
             </tr>
+            <tr><th>Description:</th><td colSpan='5'>{description && description}</td></tr>
           </tbody>
         </table>
       </div>
