@@ -14,12 +14,12 @@ class PersonLegalTable extends React.Component {
       <table className='table'>
         <caption>PersonLegal</caption>
         <tbody>
-          { passportId ?
+          { passportId &&
             (<tr>
-                <th>PassportId:</th>
-                {/* <td><IdentifierTable {...passportId} /></td> */}
+                {/* <th>PassportId:</th> */}
+                <td><IdentifierTable {...passportId} caption='PassportId' /></td>
               </tr>)
-            : '' }
+          }
 
         </tbody>
       </table>

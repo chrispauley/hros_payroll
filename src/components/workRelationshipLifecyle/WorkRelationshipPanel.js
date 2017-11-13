@@ -28,7 +28,7 @@ class WorkRelationshipPanel extends Component {
       <div className='panel-group' onClick={(e) => this.handleToggle(e)}>
         <div className='panel panel-default'>
           <h4 className="panel-title">
-            <a href="#workrelationship-panel" data-toggle="collapse">WorkRelationshipPanel</a>
+            <a href="#workrelationship-panel" data-toggle="collapse">Work Relationship</a>
             <i className='caret'></i>
           </h4>
           <div id="workrelationship-panel" className="panel-collapse collapse">
