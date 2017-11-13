@@ -26,6 +26,15 @@
         "personlegal": {
             "id": { "schemeId": "ssn", "value": "123-45-0004" }
         }
+    },
+
+    "workRelationshipLifeCycle": {
+        "contract": {
+            "workRelationShipType": "contractor",
+            "contractStartDate": "2017-11-30",
+            "contractEndDate": "2018-05-30",
+            "contractNumber": {"schemeId": "Company1", "value": "CTR0003"}
+        }
     }
 
 }

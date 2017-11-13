@@ -27,5 +27,13 @@
             "passportId": { "schemeId": "passport", "value": "0123456789" },
             "id": { "schemeId": "ssn", "value": "123-45-0001" }
         }
+    },
+    
+    "workRelationshipLifeCycle": {
+        "hire": {
+            "typeHire": "new",
+            "hireDate": "2017-10-30",
+            "originalHireDate": "2017-10-30"
+        }
     }
 }
