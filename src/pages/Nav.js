@@ -28,7 +28,7 @@ class Nav extends React.Component {
             <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
               <div className="container">
                 <div className="navbar-header">
-                  <div className="navbar-brand">HROS Payroll</div>
+                  <div className="navbar-brand">HROS Payroll 4.2</div>
                   <button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)}>
                     <span className="sr-only">Toggle navigation</span>
                     <span className="icon-bar"></span>
@@ -56,7 +56,7 @@ class Nav extends React.Component {
 
                   <ul className='nav navbar-nav navbar-right'>
                     <li><a href='about.html'>About</a></li>
-                    <li><a href=''><User name={this.props.name}/></a></li>
+                    <li><a href='about.html'><User name={this.props.name}/></a></li>
                   </ul>
 
                 </div>
