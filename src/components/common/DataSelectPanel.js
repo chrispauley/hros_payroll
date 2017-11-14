@@ -1,51 +1,54 @@
 import React, {Component} from 'react';
 import shortid from 'shortid';
+import Pagination from './Pagination';
 
 
 class DataSelectPanel extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isCollapsed: false,
       items: props.items,
-      offset: props.offset,
-      page: props.page,
-      isCollapsed: false
+      pageOfItems: [],
+      initialPage: 1
     }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      items: nextProps.items,
+      pageOfItems: nextProps.items.slice(0,6) })
+  }
+
+  onChangePage = (pageOfItems) => {
+      // update state with new page of items
+      this.setState({ pageOfItems: pageOfItems });
   }
 
   handleClick = (e) => {
     this.setState({ isCollapsed: !this.state.isCollapsed })
     this.props.onClick(e);
+    e.stopPropagation();
   }
 
   handleToggle = (e) => {
     e.preventDefault();
     this.setState({ isCollapsed: !this.state.isCollapsed })
+    e.stopPropagation();
   }
 
   render() {
-    var list = this.props.items.map((item, i) => {
+
+    var list = this.state.pageOfItems.map((item, i) => {
       // console.log("i: ", i, item);
       return (
         <li key={i}>
           <a href={item.link} onClick={this.handleClick.bind(this)}>
-            {item.name}
-          </a> <span><a className='btn btn-primary btn-sm' href={item.link} target='_new'>json</a></span>
+             {item.name}
+          </a>
         </li>
       )
     });
-
-    var paginationJsx = null;
-    var totalPages = this.props.items.length;
-
-    var pageList = this.props.items.map( (item, i) => {
-      return (
-        <li key={shortid.generate()} className={`${this.state.page} == i ? 'active' : ''`}>
-          <a href=''>{i}</a>
-        </li>
-      )
-    });
-    paginationJsx = ( <ul className='pagination'>{pageList}</ul>);
 
     const { isCollapsed } = this.state;
 
@@ -64,7 +67,8 @@ class DataSelectPanel extends Component {
               </div>
             </div>
             <div className="panel-footer">
-              {/* [pagination-links-go-here]{paginationJsx} */}
+              <Pagination items={this.state.items} onChangePage={this.onChangePage} />
+
             </div>
 
           </div>
