@@ -953,8 +953,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 15 */,
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
@@ -989,6 +988,7 @@ if (process.env.NODE_ENV !== 'production') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
+/* 16 */,
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3120,7 +3120,7 @@ var hyphenateStyleName = __webpack_require__(24);
 var emptyFunction = __webpack_require__(2);
 var camelizeStyleName = __webpack_require__(26);
 var performanceNow = __webpack_require__(28);
-var propTypes = __webpack_require__(16);
+var propTypes = __webpack_require__(15);
 var emptyObject = __webpack_require__(5);
 var checkPropTypes = __webpack_require__(7);
 var shallowEqual = __webpack_require__(11);
@@ -21233,7 +21233,7 @@ var Nav = function (_React$Component) {
             _react2.default.createElement(
               "div",
               { className: "navbar-brand" },
-              "HROS Payroll"
+              "HROS Payroll 4.2"
             ),
             _react2.default.createElement(
               "button",
@@ -21299,7 +21299,7 @@ var Nav = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                   "a",
-                  { href: "" },
+                  { href: "about.html" },
                   _react2.default.createElement(User, { name: this.props.name })
                 )
               )

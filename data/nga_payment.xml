@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nga:ProcessPayServ xmlns:nga="http://www.ngahr.com/ngapexxml/1" xmlns:oa="http://www.openapplications.org/oagis/9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.ngahr.com/ngapexxml/1 " xmlns:hr="http://www.hr-xml.org/3">
+
+
+	<nga:ProcessPayServEmp systemEnvironmentCode="Production" releaseID="1.14" languageCode="en-US">
+		<oa:ApplicationArea>
+			<oa:Sender>
+				<oa:LogicalID>Z02-US002-1002</oa:LogicalID>
+				<oa:ComponentID>PAYROLL</oa:ComponentID>
+				<oa:ReferenceID>SalesDemo</oa:ReferenceID>
+				<oa:ConfirmationCode>Always</oa:ConfirmationCode>
+			</oa:Sender>
+			<oa:CreationDateTime>2016-11-19T07:24:00+00:00</oa:CreationDateTime>
+			<oa:BODID/>
+		</oa:ApplicationArea>
+		<nga:DataArea>
+			<oa:Process>
+				<oa:ActionCriteria>
+					<oa:ActionExpression actionCode="ADD"/>
+				</oa:ActionCriteria>
+			</oa:Process>
+
+
+
+			<nga:PayServEmp>
+				<hr:IndicativeData>
+					<hr:IndicativePersonDossier>
+						<hr:IndicativePerson validFrom="2017-08-31">
+							<hr:PersonID>DGUS092601</hr:PersonID>
+							<hr:PersonLegalID>667092601</hr:PersonLegalID>
+							<hr:PersonName>
+								<hr:FormattedName>Richard T Garrett</hr:FormattedName>
+								<oa:GivenName>Rich</oa:GivenName>
+								<hr:PreferredName>Bob</hr:PreferredName>
+								<hr:MiddleName>The</hr:MiddleName>
+								<hr:FamilyName>Garrett</hr:FamilyName>
+								<hr:FormerFamilyName>Smith</hr:FormerFamilyName>
+								<hr:PreferredSalutationCode/>
+								<hr:GenerationAffixCode>Snr</hr:GenerationAffixCode>
+								<hr:QualificationAffixCode>Dr</hr:QualificationAffixCode>
+								<hr:TitleAffixCode>II</hr:TitleAffixCode>
+								<hr:PersonNameInitials>RTG</hr:PersonNameInitials>
+								<hr:AlternateScriptPersonName>
+									<hr:FormattedName>Another Name Here</hr:FormattedName>
+								</hr:AlternateScriptPersonName>
+							</hr:PersonName>
+							<hr:Communication>
+								<hr:ChannelCode>Telephone</hr:ChannelCode>
+								<hr:UseCode>Personal</hr:UseCode>
+								<oa:DialNumber>5087839902</oa:DialNumber>
+							</hr:Communication>
+							<hr:Communication>
+								<hr:ChannelCode>Email</hr:ChannelCode>
+								<hr:UseCode>Business</hr:UseCode>
+								<oa:URI>rich.garrett092601@yopmail.com</oa:URI>
+							</hr:Communication>
+							<hr:Communication>
+								<hr:Address type="home" validFrom="2017-08-31">
+									<oa:LineOne>12 Driftwood Road</oa:LineOne>
+									<oa:CitySubDivisionName/>
+									<oa:CityName>Santa Clara</oa:CityName>
+									<oa:CountrySubDivisionCode>California</oa:CountrySubDivisionCode>
+									<hr:CountryCode>US</hr:CountryCode>
+									<oa:PostalCode>95054</oa:PostalCode>
+								</hr:Address>
+							</hr:Communication>
+							<hr:BirthDate>1986-04-08</hr:BirthDate>
+							<hr:BirthPlace>
+								<oa:CityName>Bristol</oa:CityName>
+								<oa:CountrySubDivisionCode>South</oa:CountrySubDivisionCode>
+								<hr:CountryCode>GB</hr:CountryCode>
+							</hr:BirthPlace>
+							<hr:GenderCode>Male</hr:GenderCode>
+							<hr:CertifiedMaritalStatus>
+								<hr:MaritalStatusCode>Married</hr:MaritalStatusCode>
+							</hr:CertifiedMaritalStatus>
+							<hr:PrimaryLanguageCode>English (United States)</hr:PrimaryLanguageCode>
+							<hr:CitizenshipCountryCode>GB</hr:CitizenshipCountryCode>
+						</hr:IndicativePerson>
+						<hr:IndicativeEmployee validFrom="2017-08-31">
+							<hr:EmployeeID>DGUS092601US002</hr:EmployeeID>
+							<hr:EmployeeGroupCode>1-80</hr:EmployeeGroupCode>
+						</hr:IndicativeEmployee>
+						<hr:IndicativeEmployment>
+							<hr:EmploymentLifecycle validFrom="2017-08-31">
+								<hr:Hire>
+									<hr:HireTypeCode>HIRNEW</hr:HireTypeCode>
+									<hr:HireDate>2017-08-31</hr:HireDate>
+									<hr:OriginalHireDate>2017-08-31</hr:OriginalHireDate>
+								</hr:Hire>
+							</hr:EmploymentLifecycle>
+						</hr:IndicativeEmployment>
+						<hr:IndicativeDeployment validFrom="2017-08-31">
+							<hr:DeploymentOrganization>
+								<hr:OrganizationIdentifiers>
+									<hr:OrganizationID>ZZUS</hr:OrganizationID>
+								</hr:OrganizationIdentifiers>
+							</hr:DeploymentOrganization>
+							<hr:WorkLocation>
+								<hr:LocationID>0001 Chicago</hr:LocationID>
+								<hr:Address>
+									<oa:CityName>Chicago</oa:CityName>
+									<oa:CountrySubDivisionCode>IL</oa:CountrySubDivisionCode>
+									<hr:CountryCode>US</hr:CountryCode>
+									<oa:PostalCode>99999</oa:PostalCode>
+								</hr:Address>
+							</hr:WorkLocation>
+							<hr:Job>
+								<oa:JobTitle>Senior Consultant</oa:JobTitle>
+							</hr:Job>
+							<hr:IndicativePosition>
+								<hr:PositionTitle>Director, Information Technology</hr:PositionTitle>
+							</hr:IndicativePosition>
+							<hr:Schedule>
+								<hr:ScheduledHours scheduleBasis="Week">40</hr:ScheduledHours>
+								<hr:ScheduledHours scheduleBasis="PayCycle">173.33</hr:ScheduledHours>
+								<hr:ScheduledDays scheduleBasis="Week">5</hr:ScheduledDays>
+							</hr:Schedule>
+							<hr:WorkLevelCode>FullTime</hr:WorkLevelCode>
+							<hr:FullTimeEquivalentRatio>1.0</hr:FullTimeEquivalentRatio>
+						</hr:IndicativeDeployment>
+						<hr:PayCycleRemuneration validFrom="2017-08-31">
+							<hr:PayGroupCode>X1</hr:PayGroupCode>
+						</hr:PayCycleRemuneration>
+					</hr:IndicativePersonDossier>
+				</hr:IndicativeData>
+				<nga:PayServEmpExtension>
+					<nga:PaymentInstructions validFrom="2017-08-31">
+						<nga:PaymentType>MAIN</nga:PaymentType>
+						<nga:LocalPaymentType>Local</nga:LocalPaymentType>
+						<nga:PaymentMethod>BANK_DOM</nga:PaymentMethod>
+						<nga:DirectDepositAccount>
+							<hr:TypeCode>DDA</hr:TypeCode>
+							<hr:BankRoutingID>121122676</hr:BankRoutingID>
+							<hr:AccountID>44255235324534345</hr:AccountID>
+							<nga:IBAN/>
+							<hr:CountryCode>US</hr:CountryCode>
+							<hr:CurrencyCode>USD</hr:CurrencyCode>
+						</nga:DirectDepositAccount>
+					</nga:PaymentInstructions>
+					<nga:PaymentInstructions validFrom="2017-08-31">
+						<nga:PaymentType>OTHER</nga:PaymentType>
+						<nga:PaymentMethod>BANK_DOM</nga:PaymentMethod>
+						<hr:PaymentTypeCode>Amount</hr:PaymentTypeCode>
+						<nga:Amount>100</nga:Amount>
+						<nga:DirectDepositAccount>
+							<hr:TypeCode>DDA</hr:TypeCode>
+							<hr:BankRoutingID>121122676</hr:BankRoutingID>
+							<hr:AccountID>4425523534345</hr:AccountID>
+							<nga:IBAN/>
+							<hr:CountryCode>US</hr:CountryCode>
+							<hr:CurrencyCode>USD</hr:CurrencyCode>
+						</nga:DirectDepositAccount>
+					</nga:PaymentInstructions>
+					<nga:PaymentInstructions validFrom="2017-08-31">
+						<nga:PaymentType>OTHER</nga:PaymentType>
+						<nga:PaymentMethod>BANK_DOM</nga:PaymentMethod>
+						<hr:PaymentTypeCode>Amount</hr:PaymentTypeCode>
+						<nga:Amount>150</nga:Amount>
+						<nga:DirectDepositAccount>
+							<hr:TypeCode>DDA</hr:TypeCode>
+							<hr:BankRoutingID>121122676</hr:BankRoutingID>
+							<hr:AccountID>556677884324</hr:AccountID>
+							<nga:IBAN/>
+							<hr:CountryCode>US</hr:CountryCode>
+							<hr:CurrencyCode>USD</hr:CurrencyCode>
+						</nga:DirectDepositAccount>
+					</nga:PaymentInstructions>
+					<nga:CostAssignment validFrom="2017-08-31">
+						<nga:CostCenterCode>DMO_US_1</nga:CostCenterCode>
+						<oa:Percentage>20</oa:Percentage>
+					</nga:CostAssignment>
+					<nga:CostAssignment validFrom="2017-08-31">
+						<nga:CostCenterCode>DMO_US_2</nga:CostCenterCode>
+						<oa:Percentage>30</oa:Percentage>
+					</nga:CostAssignment>
+					<nga:CostAssignment validFrom="2017-08-31">
+						<nga:CostCenterCode>DMO_US_3</nga:CostCenterCode>
+						<oa:Percentage>40</oa:Percentage>
+					</nga:CostAssignment>
+					<nga:CostAssignment validFrom="2017-08-31">
+						<nga:CostCenterCode>DMO_US_4</nga:CostCenterCode>
+						<oa:Percentage>10</oa:Percentage>
+					</nga:CostAssignment>
+					<nga:PayScales validFrom="2017-08-31">
+						<nga:PayScaleType>Mngt</nga:PayScaleType>
+						<nga:PayScaleGroup>Management</nga:PayScaleGroup>
+						<nga:PayScaleLevel>Management</nga:PayScaleLevel>
+					</nga:PayScales>
+					<nga:DateSpecifications>
+						<nga:Date DateType="Type1">2017-08-31</nga:Date>
+						<nga:Date DateType="Type2">2017-08-31</nga:Date>
+						<nga:Date DateType="Type3">2017-08-31</nga:Date>
+						<nga:Date DateType="Type4">2017-08-31</nga:Date>
+					</nga:DateSpecifications>
+					<nga:Approvers>
+						<nga:Approver Type="GENERAL">DGUS112205</nga:Approver>
+						<nga:Approver Type="TIME">DGUS120503</nga:Approver>
+						<nga:Approver Type="TIME">DGUS112207</nga:Approver>
+						<nga:Approver Type="TIME">DGUS112203</nga:Approver>
+					</nga:Approvers>
+					<nga:ContractElements>
+						<nga:ContractType>Contract A</nga:ContractType>
+						<nga:ContractEndDate>2018-02-01</nga:ContractEndDate>
+					</nga:ContractElements>
+					<nga:ContractElements>
+						<nga:ContractType>Contract B</nga:ContractType>
+						<nga:ContractEndDate>2018-03-01</nga:ContractEndDate>
+					</nga:ContractElements>
+					<nga:PayrollSpecificGroupings>
+						<nga:PayrollSpecificGrouping1>PG001</nga:PayrollSpecificGrouping1>
+						<nga:PayrollSpecificGrouping2>PG002</nga:PayrollSpecificGrouping2>
+						<nga:PayrollSpecificGrouping3>PG003</nga:PayrollSpecificGrouping3>
+						<nga:PayrollSpecificGrouping4>PG004</nga:PayrollSpecificGrouping4>
+						<nga:PayrollSpecificGrouping5>PG005</nga:PayrollSpecificGrouping5>
+					</nga:PayrollSpecificGroupings>
+					<nga:AlternateIdentifiers>
+						<nga:AlternateID Type="Benefits">BEN092601</nga:AlternateID>
+						<nga:AlternateID Type="Pensions">PEN092601</nga:AlternateID>
+						<nga:AlternateID Type="Time">TIME092601</nga:AlternateID>
+					</nga:AlternateIdentifiers>
+				</nga:PayServEmpExtension>
+				<nga:PayServEmpPayElements>
+					<nga:PayElement validFrom="2015-01-08">
+						<hr:ID>1044</hr:ID>
+						<nga:PayElementType>RECURRING</nga:PayElementType>
+						<nga:Amount>50000</nga:Amount>
+						<hr:CurrencyCode>USD</hr:CurrencyCode>
+					</nga:PayElement>
+					<nga:PayElement validFrom="2015-01-08">
+						<hr:ID>Base</hr:ID>
+						<nga:PayElementType>RECURRING</nga:PayElementType>
+						<nga:Amount>600000</nga:Amount>
+						<hr:CurrencyCode>USD</hr:CurrencyCode>
+					</nga:PayElement>
+					<nga:PayElement validFrom="2015-01-08">
+						<hr:ID>CarA</hr:ID>
+						<nga:PayElementType>RECURRING</nga:PayElementType>
+						<nga:Amount>6000</nga:Amount>
+						<hr:CurrencyCode>USD</hr:CurrencyCode>
+					</nga:PayElement>
+				</nga:PayServEmpPayElements>
+
+			</nga:PayServEmp>
+
+		</nga:DataArea>
+	</nga:ProcessPayServEmp>
+
+</nga:ProcessPayServ>
