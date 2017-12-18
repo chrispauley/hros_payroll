@@ -1,26 +1,33 @@
 {
-  "payee": {
     "personName": [],
     "personLegal": {
-      "legalId": {
-        "value": ""
-      }
-    }
-  },
-  "statuatoryInstructions": [{
-    "USTaxInstructions": [{
-      "validFrom": "2017-11-06",
-      "validTo": "2017-12-31",
-      "federalTaxWithholdingInstructions": [
-        "1 - federalTaxWithholdingInstruction"
-      ],
-      "stateTaxWithholdingInstructions": [
-        "1 - stateTaxWithholdingInstruction",
-        "2 - stateTaxWithholdingInstruction"
-      ],
-      "localTaxWithholdingInstructions": [
-        "1 - localTaxWithholdingInstruction"
-      ]
+        "legalId": {
+            "value": ""
+        }
+    },
+    "statuatoryInstructions": [{
+        "USTaxInstructions": [{
+            "validFrom": "2017-11-06",
+            "validTo": "2017-12-31",
+            "federalTaxWithholdingInstructions": [
+                "1 - federalTaxWithholdingInstruction"
+            ],
+            "stateTaxWithholdingInstructions": [
+                "1 - stateTaxWithholdingInstruction",
+                "2 - stateTaxWithholdingInstruction"
+            ],
+            "localTaxWithholdingInstructions": [
+                "1 - localTaxWithholdingInstruction"
+            ]
+        }]
+    }],
+    "alternateIds": [{
+        "value": "sample_02",
+        "schemeId": "hros_payroll",
+        "schemeLink": "data/sample_02.json",
+        "description": "This is a sample file for the hros_payroll application to view PayrollProcessType noun instances.",
+        "schemeAgencyId": "HROS Payroll Workgroup",
+        "schemeVersionId": "4.0",
+        "agencyUri": "https://chrispauley.github.io/hros_payroll/"
     }]
-  }]
 }

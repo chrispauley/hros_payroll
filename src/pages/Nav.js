@@ -28,7 +28,7 @@ class Nav extends React.Component {
             <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
               <div className="container">
                 <div className="navbar-header">
-                  <div className="navbar-brand">HROS Payroll 4.2</div>
+                  <div className="navbar-brand">HROS Payroll 4.0</div>
                   <button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)}>
                     <span className="sr-only">Toggle navigation</span>
                     <span className="icon-bar"></span>

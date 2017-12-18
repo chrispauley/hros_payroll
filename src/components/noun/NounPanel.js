@@ -31,7 +31,7 @@ class NounPanel extends Component {
 
               <div className='noun'>
                 {this.props.documentId ? (<IdentifierTypeTable {...this.props.documentId} caption='documentId' />) : null}
-                {/* {this.props.alternateIds ? (<AlternateIdsTable {...this.props} />) : null }  */}
+                {this.props.alternateIds ? (<AlternateIdsTable {...this.props} />) : null } 
                 {this.props.dataProtectionPolicy ? (<DataProtectionPolicy {...this.props.dataProtectionPolicy} />) : null }
                 {this.props.language ? (<p>{this.props.language}</p>) : null}
               </div>

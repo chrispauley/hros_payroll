@@ -14,7 +14,7 @@ class AlternateIds extends Component {
           <tr key={index}>
               <td>{schemeId}</td>
               <td>{value}</td>
-              <td>{schemeLink}</td>
+              <td><a href={schemeLink} target='_new'>{schemeLink}</a></td>
               <td>{schemeAgencyId}</td>
               <td>{agencyUri}</td>
               <td>{description}</td>

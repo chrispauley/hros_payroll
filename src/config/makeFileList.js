@@ -1,7 +1,10 @@
 var globArray = require('glob-array');
 var writeJsonFile = require('write-json-file');
 
+// From the project root, run:
+// node ./src/config/makeFileList.js
 //
+
 var addFileList = (arr, pattern) => {
   var {afiles, mapped} = [];
   var globOptions = {};
@@ -9,18 +12,16 @@ var addFileList = (arr, pattern) => {
   mapped = aFiles.map((item, index) => {
     var sub = item.split('/');
     var val = sub[sub.length - 2];
+    filename = sub[sub.length - 1];
     return {
-      displaySequence: index + 1,
-      filePath: item.substr(2),
-      link: 'data/' + item.substr(item.lastIndexOf("/") + 1)
+      id: index + 1,
+      displayName: filename.substring(0, filename.lastIndexOf('.')),
+      projectPath: item.substr(2),
+      publicPath: 'data/' + item.substr(item.lastIndexOf("/") + 1)
     }
   });
   arr.push(...mapped);
 }
-
-var jsonFile = {
-  samples: []
-};
 
 var pattern = [
   './public/data/noun_only.json',
@@ -53,6 +54,12 @@ var pattern = [
   './public/data/payrollProcessType_uc_travel_*.json'
 ];
 
+
+var jsonFile = {
+  samples: []
+};
+
 addFileList(jsonFile.samples, pattern);
 // console.log('json:', jsonFile);
-writeJsonFile('./public/data/fileList.json', jsonFile);
+writeJsonFile('./public/data/fileList.json', jsonFile.samples);
+console.log('Done.');

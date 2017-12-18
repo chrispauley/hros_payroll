@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-src/schema
+#src/schema
 
 # testing
 /coverage

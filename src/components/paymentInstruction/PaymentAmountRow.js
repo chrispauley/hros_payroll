@@ -13,16 +13,16 @@ class PaymentAmountRow extends Component {
       <table>
         <thead>
           <tr>
-             { paymentType ?  (<th className='col-xs-1'>paymentType</th>) : null }
-             { value ?  (<th className='col-xs-1'>Amount</th>) : null }
-            { remainingBalanceIndicator ? (<th className='col-xs-1'>Remaining Balance</th>) : null }
+             { paymentType &&  (<th className='col-xs-1'>paymentType</th>) }
+             { value &&  (<th className='col-xs-1'>Amount</th>) }
+            { remainingBalanceIndicator && (<th className='col-xs-1'>Remaining Balance</th>) }
           </tr>
         </thead>
         <tbody>
           <tr>
-            {paymentType ? ( <td>{paymentType}</td> ) : null }
-            { value ?  (<td>{value} {currency}</td>) : null }
-            { remainingBalanceIndicator ? (<td>{remainingBalanceIndicator}</td>) : null }
+            {paymentType && ( <td>{paymentType}</td> ) }
+            { value &&  (<td>{value} {currency}</td>) }
+            { remainingBalanceIndicator && (<td>{remainingBalanceIndicator}</td>) }
           </tr>
         </tbody>
       </table>

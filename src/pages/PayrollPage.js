@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import DropLoader from "../components/utils/DropLoader";
 
 import DataSelectPanel from '../components/common/DataSelectPanel'
-// import PartyTypeHeader from '../common/PartyTypeHeader'
 import NounPanel from '../components/noun/NounPanel';
 import PayeePanel from '../components/payee/PayeePanel';
 import DeploymentPanel from '../components/deployment/DeploymentPanel';
@@ -25,7 +24,6 @@ class PayrollPage extends Component {
   }
 
   handleClick = (e) => {
-    // console.log('PayrollPage.handleClick()');
     // Fetch data for e.value
     e.preventDefault();
     fetch(e.target.href)
@@ -41,15 +39,15 @@ class PayrollPage extends Component {
     // Fetch local data
     var that = this;
     var result = [];
-    fetch('data/sample_list.json', {
+    fetch('data/fileList.json', {
       method: 'get'
     }).then(function(response) {
       return response.json();
     }).then(function(j){
       j.forEach( (item) => {
         result.push({
-          name: item.formattedName,
-          link: item.link });
+          name: item.displayName,
+          link: item.publicPath });
       })
     })
     .then(function(){
@@ -57,6 +55,7 @@ class PayrollPage extends Component {
     })
     .catch(function(err) {
       // Error :(
+      setState({error: err});
       console.log(err);
     });
   }
@@ -68,11 +67,14 @@ class PayrollPage extends Component {
     this.setState({ processInstance: data });
   }
 
+  handleViewDataClick = () => {
+    this.setState({showJSONData: true})
+  }
+
 
   render() {
     var {documentId, payee, deployment, workRelationshipLifeCycle, paymentInstructions,
       deductionInstructions, statuatoryInstructions } = this.state.processInstance;
-    var {party} = this.state.processInstance;
 
     return (
       <div>
@@ -80,43 +82,49 @@ class PayrollPage extends Component {
         <DataSelectPanel {...this.state} onClick={this.handleClick.bind(this)}/>
 
         <hr/>
+
         {
-          documentId ?
-          (<NounPanel {...this.state.processInstance} />)
-          : null }
+          documentId &&
+          (<NounPanel {...this.state.processInstance} />) }
 
-        { deployment ?
-          (<DeploymentPanel {...this.state.processInstance } />)
-        : null }
+        { deployment &&
+          (<DeploymentPanel {...this.state.processInstance } />) }
 
-        { workRelationshipLifeCycle ?
-          (<WorkRelationshipPanel {...this.state.processInstance } />)
-        : null }
+        { workRelationshipLifeCycle &&
+          (<WorkRelationshipPanel {...this.state.processInstance } />) }
 
 
-        { payee ?
-          (<PayeePanel {...this.state.processInstance}/> )
-          : null }
+        { payee &&
+          (<PayeePanel {...this.state.processInstance}/> ) }
 
-        { paymentInstructions ?
-        (<PaymentInstructionsPanel {...this.state.processInstance} />)
-        : null }
-        { deductionInstructions ?
-        ( <DeductionInstructionsPanel {...this.state.processInstance} />)
-        : null }
+        { paymentInstructions &&
+        (<PaymentInstructionsPanel {...this.state.processInstance} />) }
 
-        { statuatoryInstructions ?
-        ( <StatuatoryInstructionsPanel {...this.state.processInstance} />)
-        : null }
+        { deductionInstructions &&
+        ( <DeductionInstructionsPanel {...this.state.processInstance} />) }
+
+        { statuatoryInstructions &&
+        ( <StatuatoryInstructionsPanel {...this.state.processInstance} />) }
 
 
 
         {/* <DropLoader onChange={this.handleDropFileInput}/> */}
-        {/* {party ? (   <PartyTypeHeader {...party} /> ) : null }
-        { packages ? (<PackagePanel {...this.state.catalog} />) : null} */}
+        {
+          isEmpty(!this.state.processInstance) &&
+          (<button type='button'
+            className='btn btn-default' onClick={this.handleViewDataClick}>View JSON</button>)
+        }
+        { this.state.showJSONData &&
+          (<div><pre><code>{JSON.stringify(this.state.processInstance, null, 2)}</code></pre></div>)
+        }
+
       </div>
     );
   }
 }
 
 export default PayrollPage;
+
+function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+}

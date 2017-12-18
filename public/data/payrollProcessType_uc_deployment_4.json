@@ -15,16 +15,16 @@
     },
     "alternateIds": [{ "schemeId": "uc_deployment", "value": "4" }],
 
-    "payee": {
-        "personName": [{
-            "formattedName": "Susan Pierce",
-            "given": "Susan",
-            "family": "Pierce",
-            "nameType": "legal"
-        }],
 
-        "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0031" }
-        }
+    "personName": [{
+        "formattedName": "Susan Pierce",
+        "given": "Susan",
+        "family": "Pierce",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0031" }
     }
+
 }

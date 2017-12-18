@@ -1,274 +1,302 @@
-{
-	"samples": [
-		{
-			"id": 1,
-			"filePath": "public/data/noun_only.json",
-			"link": "data/noun_only.json"
-		},
-		{
-			"id": 2,
-			"filePath": "public/data/sample_01.json",
-			"link": "data/sample_01.json"
-		},
-		{
-			"id": 3,
-			"filePath": "public/data/sample_02.json",
-			"link": "data/sample_02.json"
-		},
-		{
-			"id": 4,
-			"filePath": "public/data/sample_list.json",
-			"link": "data/sample_list.json"
-		},
-		{
-			"id": 5,
-			"filePath": "public/data/payrollProcessType_uc01.json",
-			"link": "data/payrollProcessType_uc01.json"
-		},
-		{
-			"id": 6,
-			"filePath": "public/data/payrollProcessType_uc_newhire_1.json",
-			"link": "data/payrollProcessType_uc_newhire_1.json"
-		},
-		{
-			"id": 7,
-			"filePath": "public/data/payrollProcessType_uc_newhire_2.json",
-			"link": "data/payrollProcessType_uc_newhire_2.json"
-		},
-		{
-			"id": 8,
-			"filePath": "public/data/payrollProcessType_uc_newhire_3.json",
-			"link": "data/payrollProcessType_uc_newhire_3.json"
-		},
-		{
-			"id": 9,
-			"filePath": "public/data/payrollProcessType_uc_newhire_4.json",
-			"link": "data/payrollProcessType_uc_newhire_4.json"
-		},
-		{
-			"id": 10,
-			"filePath": "public/data/payrollProcessType_uc_rehire_1.json",
-			"link": "data/payrollProcessType_uc_rehire_1.json"
-		},
-		{
-			"id": 11,
-			"filePath": "public/data/payrollProcessType_uc_rehire_2.json",
-			"link": "data/payrollProcessType_uc_rehire_2.json"
-		},
-		{
-			"id": 12,
-			"filePath": "public/data/payrollProcessType_uc_rehire_3.json",
-			"link": "data/payrollProcessType_uc_rehire_3.json"
-		},
-		{
-			"id": 13,
-			"filePath": "public/data/payrollProcessType_uc_rehire_4.json",
-			"link": "data/payrollProcessType_uc_rehire_4.json"
-		},
-		{
-			"id": 14,
-			"filePath": "public/data/payrollProcessType_uc_transfer_1.json",
-			"link": "data/payrollProcessType_uc_transfer_1.json"
-		},
-		{
-			"id": 15,
-			"filePath": "public/data/payrollProcessType_uc_transfer_2.json",
-			"link": "data/payrollProcessType_uc_transfer_2.json"
-		},
-		{
-			"id": 16,
-			"filePath": "public/data/payrollProcessType_uc_transfer_3.json",
-			"link": "data/payrollProcessType_uc_transfer_3.json"
-		},
-		{
-			"id": 17,
-			"filePath": "public/data/payrollProcessType_uc_transfer_4.json",
-			"link": "data/payrollProcessType_uc_transfer_4.json"
-		},
-		{
-			"id": 18,
-			"filePath": "public/data/payrollProcessType_uc_termination_1.json",
-			"link": "data/payrollProcessType_uc_termination_1.json"
-		},
-		{
-			"id": 19,
-			"filePath": "public/data/payrollProcessType_uc_termination_2.json",
-			"link": "data/payrollProcessType_uc_termination_2.json"
-		},
-		{
-			"id": 20,
-			"filePath": "public/data/payrollProcessType_uc_termination_3.json",
-			"link": "data/payrollProcessType_uc_termination_3.json"
-		},
-		{
-			"id": 21,
-			"filePath": "public/data/payrollProcessType_uc_termination_4.json",
-			"link": "data/payrollProcessType_uc_termination_4.json"
-		},
-		{
-			"id": 22,
-			"filePath": "public/data/payrollProcessType_uc_termination_5.json",
-			"link": "data/payrollProcessType_uc_termination_5.json"
-		},
-		{
-			"id": 23,
-			"filePath": "public/data/payrollProcessType_uc_termination_6.json",
-			"link": "data/payrollProcessType_uc_termination_6.json"
-		},
-		{
-			"id": 24,
-			"filePath": "public/data/payrollProcessType_uc_termination_7.json",
-			"link": "data/payrollProcessType_uc_termination_7.json"
-		},
-		{
-			"id": 25,
-			"filePath": "public/data/payrollProcessType_uc_payment_details_1.json",
-			"link": "data/payrollProcessType_uc_payment_details_1.json"
-		},
-		{
-			"id": 26,
-			"filePath": "public/data/payrollProcessType_uc_payment_details_2.json",
-			"link": "data/payrollProcessType_uc_payment_details_2.json"
-		},
-		{
-			"id": 27,
-			"filePath": "public/data/payrollProcessType_uc_payment_details_3.json",
-			"link": "data/payrollProcessType_uc_payment_details_3.json"
-		},
-		{
-			"id": 28,
-			"filePath": "public/data/payrollProcessType_uc_payment_details_4.json",
-			"link": "data/payrollProcessType_uc_payment_details_4.json"
-		},
-		{
-			"id": 29,
-			"filePath": "public/data/payrollProcessType_uc_payment_details_5.json",
-			"link": "data/payrollProcessType_uc_payment_details_5.json"
-		},
-		{
-			"id": 30,
-			"filePath": "public/data/payrollProcessType_uc_payment_details_6.json",
-			"link": "data/payrollProcessType_uc_payment_details_6.json"
-		},
-		{
-			"id": 31,
-			"filePath": "public/data/payrollProcessType_uc_name_change_1.json",
-			"link": "data/payrollProcessType_uc_name_change_1.json"
-		},
-		{
-			"id": 32,
-			"filePath": "public/data/payrollProcessType_uc_address_change_1.json",
-			"link": "data/payrollProcessType_uc_address_change_1.json"
-		},
-		{
-			"id": 33,
-			"filePath": "public/data/payrollProcessType_uc_deployment_1.json",
-			"link": "data/payrollProcessType_uc_deployment_1.json"
-		},
-		{
-			"id": 34,
-			"filePath": "public/data/payrollProcessType_uc_deployment_2.json",
-			"link": "data/payrollProcessType_uc_deployment_2.json"
-		},
-		{
-			"id": 35,
-			"filePath": "public/data/payrollProcessType_uc_deployment_3.json",
-			"link": "data/payrollProcessType_uc_deployment_3.json"
-		},
-		{
-			"id": 36,
-			"filePath": "public/data/payrollProcessType_uc_deployment_4.json",
-			"link": "data/payrollProcessType_uc_deployment_4.json"
-		},
-		{
-			"id": 37,
-			"filePath": "public/data/payrollProcessType_uc_deployment_5.json",
-			"link": "data/payrollProcessType_uc_deployment_5.json"
-		},
-		{
-			"id": 38,
-			"filePath": "public/data/payrollProcessType_uc_location_change_1.json",
-			"link": "data/payrollProcessType_uc_location_change_1.json"
-		},
-		{
-			"id": 39,
-			"filePath": "public/data/payrollProcessType_uc_location_change_2.json",
-			"link": "data/payrollProcessType_uc_location_change_2.json"
-		},
-		{
-			"id": 40,
-			"filePath": "public/data/payrollProcessType_uc_location_change_3.json",
-			"link": "data/payrollProcessType_uc_location_change_3.json"
-		},
-		{
-			"id": 41,
-			"filePath": "public/data/payrollProcessType_uc_location_change_4.json",
-			"link": "data/payrollProcessType_uc_location_change_4.json"
-		},
-		{
-			"id": 42,
-			"filePath": "public/data/payrollProcessType_uc_benefits_1.json",
-			"link": "data/payrollProcessType_uc_benefits_1.json"
-		},
-		{
-			"id": 43,
-			"filePath": "public/data/payrollProcessType_uc_benefits_2.json",
-			"link": "data/payrollProcessType_uc_benefits_2.json"
-		},
-		{
-			"id": 44,
-			"filePath": "public/data/payrollProcessType_uc_benefits_3.json",
-			"link": "data/payrollProcessType_uc_benefits_3.json"
-		},
-		{
-			"id": 45,
-			"filePath": "public/data/payrollProcessType_uc_benefits_4.json",
-			"link": "data/payrollProcessType_uc_benefits_4.json"
-		},
-		{
-			"id": 46,
-			"filePath": "public/data/payrollProcessType_uc_benefits_5.json",
-			"link": "data/payrollProcessType_uc_benefits_5.json"
-		},
-		{
-			"id": 47,
-			"filePath": "public/data/payrollProcessType_uc_benefits_6.json",
-			"link": "data/payrollProcessType_uc_benefits_6.json"
-		},
-		{
-			"id": 48,
-			"filePath": "public/data/payrollProcessType_uc_basic_package_1.json",
-			"link": "data/payrollProcessType_uc_basic_package_1.json"
-		},
-		{
-			"id": 49,
-			"filePath": "public/data/payrollProcessType_uc_basic_package_2.json",
-			"link": "data/payrollProcessType_uc_basic_package_2.json"
-		},
-		{
-			"id": 50,
-			"filePath": "public/data/payrollProcessType_uc_basic_package_3.json",
-			"link": "data/payrollProcessType_uc_basic_package_3.json"
-		},
-		{
-			"id": 51,
-			"filePath": "public/data/payrollProcessType_uc_basic_package_4.json",
-			"link": "data/payrollProcessType_uc_basic_package_4.json"
-		},
-		{
-			"id": 52,
-			"filePath": "public/data/payrollProcessType_uc_recurring_allowance_1.json",
-			"link": "data/payrollProcessType_uc_recurring_allowance_1.json"
-		},
-		{
-			"id": 53,
-			"filePath": "public/data/payrollProcessType_uc_recurring_allowance_2.json",
-			"link": "data/payrollProcessType_uc_recurring_allowance_2.json"
-		},
-		{
-			"id": 54,
-			"filePath": "public/data/payrollProcessType_uc_recurring_quotas_1.json",
-			"link": "data/payrollProcessType_uc_recurring_quotas_1.json"
-		}
-	]
-}
+[
+	{
+		"id": 1,
+		"displayName": "noun_only",
+		"projectPath": "public/data/noun_only.json",
+		"publicPath": "data/noun_only.json"
+	},
+	{
+		"id": 2,
+		"displayName": "sample_01",
+		"projectPath": "public/data/sample_01.json",
+		"publicPath": "data/sample_01.json"
+	},
+	{
+		"id": 3,
+		"displayName": "sample_02",
+		"projectPath": "public/dataschemeLink/sample_02.json",
+		"publicPath": "data/sample_02.json"
+	},
+	{
+		"id": 4,
+		"displayName": "sample_list",
+		"projectPath": "public/data/sample_list.json",
+		"publicPath": "data/sample_list.json"
+	},
+	{ 
+		"id": 5,
+		"displayName": "payrollProcessType_uc01",
+		"projectPath": "public/data/payrollProcessType_uc01.json",
+		"publicPath": "data/payrollProcessType_uc01.json"
+	},
+	{
+		"id": 6,
+		"displayName": "payrollProcessType_uc_rehire_1",
+		"projectPath": "public/data/payrollProcessType_uc_rehire_1.json",
+		"publicPath": "data/payrollProcessType_uc_rehire_1.json"
+	},
+	{
+		"id": 7,
+		"displayName": "payrollProcessType_uc_rehire_2",
+		"projectPath": "public/data/payrollProcessType_uc_rehire_2.json",
+		"publicPath": "data/payrollProcessType_uc_rehire_2.json"
+	},
+	{
+		"id": 8,
+		"displayName": "payrollProcessType_uc_rehire_3",
+		"projectPath": "public/data/payrollProcessType_uc_rehire_3.json",
+		"publicPath": "data/payrollProcessType_uc_rehire_3.json"
+	},
+	{
+		"id": 9,
+		"displayName": "payrollProcessType_uc_rehire_4",
+		"projectPath": "public/data/payrollProcessType_uc_rehire_4.json",
+		"publicPath": "data/payrollProcessType_uc_rehire_4.json"
+	},
+	{
+		"id": 10,
+		"displayName": "payrollProcessType_uc_transfer_1",
+		"projectPath": "public/data/payrollProcessType_uc_transfer_1.json",
+		"publicPath": "data/payrollProcessType_uc_transfer_1.json"
+	},
+	{
+		"id": 11,
+		"displayName": "payrollProcessType_uc_transfer_2",
+		"projectPath": "public/data/payrollProcessType_uc_transfer_2.json",
+		"publicPath": "data/payrollProcessType_uc_transfer_2.json"
+	},
+	{
+		"id": 12,
+		"displayName": "payrollProcessType_uc_transfer_3",
+		"projectPath": "public/data/payrollProcessType_uc_transfer_3.json",
+		"publicPath": "data/payrollProcessType_uc_transfer_3.json"
+	},
+	{
+		"id": 13,
+		"displayName": "payrollProcessType_uc_transfer_4",
+		"projectPath": "public/data/payrollProcessType_uc_transfer_4.json",
+		"publicPath": "data/payrollProcessType_uc_transfer_4.json"
+	},
+	{
+		"id": 14,
+		"displayName": "payrollProcessType_uc_termination_1",
+		"projectPath": "public/data/payrollProcessType_uc_termination_1.json",
+		"publicPath": "data/payrollProcessType_uc_termination_1.json"
+	},
+	{
+		"id": 15,
+		"displayName": "payrollProcessType_uc_termination_2",
+		"projectPath": "public/data/payrollProcessType_uc_termination_2.json",
+		"publicPath": "data/payrollProcessType_uc_termination_2.json"
+	},
+	{
+		"id": 16,
+		"displayName": "payrollProcessType_uc_termination_3",
+		"projectPath": "public/data/payrollProcessType_uc_termination_3.json",
+		"publicPath": "data/payrollProcessType_uc_termination_3.json"
+	},
+	{
+		"id": 17,
+		"displayName": "payrollProcessType_uc_termination_4",
+		"projectPath": "public/data/payrollProcessType_uc_termination_4.json",
+		"publicPath": "data/payrollProcessType_uc_termination_4.json"
+	},
+	{
+		"id": 18,
+		"displayName": "payrollProcessType_uc_termination_5",
+		"projectPath": "public/data/payrollProcessType_uc_termination_5.json",
+		"publicPath": "data/payrollProcessType_uc_termination_5.json"
+	},
+	{
+		"id": 19,
+		"displayName": "payrollProcessType_uc_termination_6",
+		"projectPath": "public/data/payrollProcessType_uc_termination_6.json",
+		"publicPath": "data/payrollProcessType_uc_termination_6.json"
+	},
+	{
+		"id": 20,
+		"displayName": "payrollProcessType_uc_termination_7",
+		"projectPath": "public/data/payrollProcessType_uc_termination_7.json",
+		"publicPath": "data/payrollProcessType_uc_termination_7.json"
+	},
+	{
+		"id": 21,
+		"displayName": "payrollProcessType_uc_payment_details_1",
+		"projectPath": "public/data/payrollProcessType_uc_payment_details_1.json",
+		"publicPath": "data/payrollProcessType_uc_payment_details_1.json"
+	},
+	{
+		"id": 22,
+		"displayName": "payrollProcessType_uc_payment_details_2",
+		"projectPath": "public/data/payrollProcessType_uc_payment_details_2.json",
+		"publicPath": "data/payrollProcessType_uc_payment_details_2.json"
+	},
+	{
+		"id": 23,
+		"displayName": "payrollProcessType_uc_payment_details_3",
+		"projectPath": "public/data/payrollProcessType_uc_payment_details_3.json",
+		"publicPath": "data/payrollProcessType_uc_payment_details_3.json"
+	},
+	{
+		"id": 24,
+		"displayName": "payrollProcessType_uc_payment_details_4",
+		"projectPath": "public/data/payrollProcessType_uc_payment_details_4.json",
+		"publicPath": "data/payrollProcessType_uc_payment_details_4.json"
+	},
+	{
+		"id": 25,
+		"displayName": "payrollProcessType_uc_payment_details_5",
+		"projectPath": "public/data/payrollProcessType_uc_payment_details_5.json",
+		"publicPath": "data/payrollProcessType_uc_payment_details_5.json"
+	},
+	{
+		"id": 26,
+		"displayName": "payrollProcessType_uc_payment_details_6",
+		"projectPath": "public/data/payrollProcessType_uc_payment_details_6.json",
+		"publicPath": "data/payrollProcessType_uc_payment_details_6.json"
+	},
+	{
+		"id": 27,
+		"displayName": "payrollProcessType_uc_name_change_1",
+		"projectPath": "public/data/payrollProcessType_uc_name_change_1.json",
+		"publicPath": "data/payrollProcessType_uc_name_change_1.json"
+	},
+	{
+		"id": 28,
+		"displayName": "payrollProcessType_uc_address_change_1",
+		"projectPath": "public/data/payrollProcessType_uc_address_change_1.json",
+		"publicPath": "data/payrollProcessType_uc_address_change_1.json"
+	},
+	{
+		"id": 29,
+		"displayName": "payrollProcessType_uc_deployment_1",
+		"projectPath": "public/data/payrollProcessType_uc_deployment_1.json",
+		"publicPath": "data/payrollProcessType_uc_deployment_1.json"
+	},
+	{
+		"id": 30,
+		"displayName": "payrollProcessType_uc_deployment_2",
+		"projectPath": "public/data/payrollProcessType_uc_deployment_2.json",
+		"publicPath": "data/payrollProcessType_uc_deployment_2.json"
+	},
+	{
+		"id": 31,
+		"displayName": "payrollProcessType_uc_deployment_3",
+		"projectPath": "public/data/payrollProcessType_uc_deployment_3.json",
+		"publicPath": "data/payrollProcessType_uc_deployment_3.json"
+	},
+	{
+		"id": 32,
+		"displayName": "payrollProcessType_uc_deployment_4",
+		"projectPath": "public/data/payrollProcessType_uc_deployment_4.json",
+		"publicPath": "data/payrollProcessType_uc_deployment_4.json"
+	},
+	{
+		"id": 33,
+		"displayName": "payrollProcessType_uc_deployment_5",
+		"projectPath": "public/data/payrollProcessType_uc_deployment_5.json",
+		"publicPath": "data/payrollProcessType_uc_deployment_5.json"
+	},
+	{
+		"id": 34,
+		"displayName": "payrollProcessType_uc_location_change_1",
+		"projectPath": "public/data/payrollProcessType_uc_location_change_1.json",
+		"publicPath": "data/payrollProcessType_uc_location_change_1.json"
+	},
+	{
+		"id": 35,
+		"displayName": "payrollProcessType_uc_location_change_2",
+		"projectPath": "public/data/payrollProcessType_uc_location_change_2.json",
+		"publicPath": "data/payrollProcessType_uc_location_change_2.json"
+	},
+	{
+		"id": 36,
+		"displayName": "payrollProcessType_uc_location_change_3",
+		"projectPath": "public/data/payrollProcessType_uc_location_change_3.json",
+		"publicPath": "data/payrollProcessType_uc_location_change_3.json"
+	},
+	{
+		"id": 37,
+		"displayName": "payrollProcessType_uc_location_change_4",
+		"projectPath": "public/data/payrollProcessType_uc_location_change_4.json",
+		"publicPath": "data/payrollProcessType_uc_location_change_4.json"
+	},
+	{
+		"id": 38,
+		"displayName": "payrollProcessType_uc_benefits_1",
+		"projectPath": "public/data/payrollProcessType_uc_benefits_1.json",
+		"publicPath": "data/payrollProcessType_uc_benefits_1.json"
+	},
+	{
+		"id": 39,
+		"displayName": "payrollProcessType_uc_benefits_2",
+		"projectPath": "public/data/payrollProcessType_uc_benefits_2.json",
+		"publicPath": "data/payrollProcessType_uc_benefits_2.json"
+	},
+	{
+		"id": 40,
+		"displayName": "payrollProcessType_uc_benefits_3",
+		"projectPath": "public/data/payrollProcessType_uc_benefits_3.json",
+		"publicPath": "data/payrollProcessType_uc_benefits_3.json"
+	},
+	{
+		"id": 41,
+		"displayName": "payrollProcessType_uc_benefits_4",
+		"projectPath": "public/data/payrollProcessType_uc_benefits_4.json",
+		"publicPath": "data/payrollProcessType_uc_benefits_4.json"
+	},
+	{
+		"id": 42,
+		"displayName": "payrollProcessType_uc_benefits_5",
+		"projectPath": "public/data/payrollProcessType_uc_benefits_5.json",
+		"publicPath": "data/payrollProcessType_uc_benefits_5.json"
+	},
+	{
+		"id": 43,
+		"displayName": "payrollProcessType_uc_benefits_6",
+		"projectPath": "public/data/payrollProcessType_uc_benefits_6.json",
+		"publicPath": "data/payrollProcessType_uc_benefits_6.json"
+	},
+	{
+		"id": 44,
+		"displayName": "payrollProcessType_uc_basic_package_1",
+		"projectPath": "public/data/payrollProcessType_uc_basic_package_1.json",
+		"publicPath": "data/payrollProcessType_uc_basic_package_1.json"
+	},
+	{
+		"id": 45,
+		"displayName": "payrollProcessType_uc_basic_package_2",
+		"projectPath": "public/data/payrollProcessType_uc_basic_package_2.json",
+		"publicPath": "data/payrollProcessType_uc_basic_package_2.json"
+	},
+	{
+		"id": 46,
+		"displayName": "payrollProcessType_uc_basic_package_3",
+		"projectPath": "public/data/payrollProcessType_uc_basic_package_3.json",
+		"publicPath": "data/payrollProcessType_uc_basic_package_3.json"
+	},
+	{
+		"id": 47,
+		"displayName": "payrollProcessType_uc_basic_package_4",
+		"projectPath": "public/data/payrollProcessType_uc_basic_package_4.json",
+		"publicPath": "data/payrollProcessType_uc_basic_package_4.json"
+	},
+	{
+		"id": 48,
+		"displayName": "payrollProcessType_uc_recurring_allowance_1",
+		"projectPath": "public/data/payrollProcessType_uc_recurring_allowance_1.json",
+		"publicPath": "data/payrollProcessType_uc_recurring_allowance_1.json"
+	},
+	{
+		"id": 49,
+		"displayName": "payrollProcessType_uc_recurring_allowance_2",
+		"projectPath": "public/data/payrollProcessType_uc_recurring_allowance_2.json",
+		"publicPath": "data/payrollProcessType_uc_recurring_allowance_2.json"
+	},
+	{
+		"id": 50,
+		"displayName": "payrollProcessType_uc_recurring_quotas_1",
+		"projectPath": "public/data/payrollProcessType_uc_recurring_quotas_1.json",
+		"publicPath": "data/payrollProcessType_uc_recurring_quotas_1.json"
+	}
+]

@@ -23,6 +23,6 @@
   },
   "devDependencies": {
     "common": "https://github.com/HROpen/Common.git#WorkRelationshipLifeCycle",
-    "payroll": "https://github.com/HROpen/Payroll.git#PaymentInstructionArray"
+    "payroll": "https://github.com/HROpen/Payroll.git#AddNouns"
   }
 }

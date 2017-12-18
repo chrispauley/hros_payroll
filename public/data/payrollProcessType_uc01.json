@@ -7,24 +7,41 @@
             "policy": "Read"
         }]
     },
-    "documentId": { "schemeId": "CompanyDocId", "value": "001" },
-    "alternateIds": [{ "schemeId": "CompanyDocId", "value": "001a" }],
+    "documentId": {
+        "schemeId": "CompanyDocId",
+        "value": "001"
+    },
+    "alternateIds": [{
+            "schemeId": "CompanyDocId",
+            "value": "001a"
+        },
+        {
+            "value": "payrollProcessType_uc01",
+            "schemeId": "hros_payroll",
+            "schemeLink": "data/payrollProcessType_uc01.json",
+            "description": "This is a sample file for the hros_payroll application to view PayrollProcessType noun instances.",
+            "schemeAgencyId": "HROS Payroll Workgroup",
+            "schemeVersionId": "4.2",
+            "agencyUri": "https://chrispauley.github.io/hros_payroll/"
+        }
+    ],
 
-    "payee": {
-        "personName": [{
-            "formattedName": "George Smith",
-            "given": "George",
-            "family": "Smith",
-            "nameType": "legal"
-        }],
-
-        "personLegal": {
-            "passportId": { "schemeId": "passport", "value": "0123456789" },
-            "id": { "schemeId": "ssn", "value": "123-45-8999" }
+    "personName": [{
+        "formattedName": "George Smith",
+        "given": "George",
+        "family": "Smith",
+        "nameType": "legal"
+    }],
+    "personLegal": {
+        "passportId": {
+            "schemeId": "passport",
+            "value": "0123456789"
+        },
+        "id": {
+            "schemeId": "ssn",
+            "value": "123-45-8999"
         }
     },
-
-
     "deployment": {
         "workerAssignmentSource": {
             "sourceCode": "Inpatriate",
@@ -32,26 +49,43 @@
             "hostCountry": "US"
         },
         "workLocation": {
-            "id": { "schemeId": "companyLocId", "value": "121" },
+            "id": {
+                "schemeId": "companyLocId",
+                "value": "121"
+            },
             "name": "",
             "code": "",
-            "description": { "value": "This is the workLocation" },
+            "description": {
+                "value": "This is the workLocation"
+            },
             "typeCode": "Headquarters",
             "fieldRemoteWorkerIndicator": false,
-            "virtualWorkerIndicator": false
+            "virtualWorkerIndicator": false,
+            "address": {
+                "line": "123 Main St",
+                "city": "Newtown",
+                "countrySubDivisions": [{"type": "state", "value": "New Jersey"}],
+                "postalCode": "08590"
+            }
         },
         "communication": {
-            "web": [{ "url": "http://www.example.com" }]
+            "web": [{
+                "url": "http://www.example.com"
+            }]
         }
     },
-
     "workRelationshipLifeCycle": {
         "contract": {
-            "contractNumber": { "schemeId": "companyX", "value": "1112221" },
+            "contractNumber": {
+                "schemeId": "companyX",
+                "value": "1112221"
+            },
             "contractStartDate": "2017-11-08",
             "contractEndDate": "2018-12-31",
             "workRelationShipType": "contractor",
-            "addendum": ["2018-01-01"]
+            "addendum": [
+                "2018-01-01"
+            ]
         },
         "hire": {
             "typeHire": "new",
@@ -60,42 +94,60 @@
             "adjustedHireDate": "2017-11-08",
             "dutyEntryDate": "2017-11-08",
             "originalHireDate": "2017-11-08",
-            "serviceStartDates": ["2017-11-08"]
+            "serviceStartDates": [
+                "2017-11-08"
+            ]
         },
         "leaveOfAbsence": "This is the leave of absence.",
         "termination": {
             "terminationDate": "2017-11-08",
             "lastWorkedDate": "2017-11-08",
             "lastPaidDate": "2017-11-08",
-            "reasonCode": { "schemeId": "HROS_Payroll", "value": "quit" },
+            "reasonCode": {
+                "schemeId": "HROS_Payroll",
+                "value": "quit"
+            },
             "terminationPaymentInformation": ""
         }
     },
-
     "deductionInstructions": [{
-        "deductionId": { "value": "1" },
+        "deductionId": {
+            "value": "1"
+        },
         "code": "Charity",
         "name": "The company matching charity.",
-
         "deductionCycleCode": "Month",
         "processingSequence": 1,
-        "deduction": { "amount": { "value": 15, "currency": "USD" } },
-        "deductionGoal": {
-            "id": { "schemeId": "CompanyCharityPlan", "value": "1" },
-            "limitAmount": { "value": 100, "currency": "USD" }
+        "deduction": {
+            "amount": {
+                "value": 15,
+                "currency": "USD"
+            }
         },
-
+        "deductionGoal": {
+            "id": {
+                "schemeId": "CompanyCharityPlan",
+                "value": "1"
+            },
+            "limitAmount": {
+                "value": 100,
+                "currency": "USD"
+            }
+        },
         "validFrom": "2017-10-31",
         "validTo": "2018-12-31"
     }],
-
-
     "paymentInstructions": [{
-            "id": { "value": "101" },
+            "id": {
+                "value": "101"
+            },
             "processingSequence": 1,
             "payment": {
                 "paymentType": "Direct Deposit",
-                "amount": { "value": 2000, "currency": "USD" },
+                "amount": {
+                    "value": 2000,
+                    "currency": "USD"
+                },
                 "remainingBalanceIndicator": false
             },
             "paymentMethod": {
@@ -110,11 +162,16 @@
             }
         },
         {
-            "id": { "value": "102" },
+            "id": {
+                "value": "102"
+            },
             "processingSequence": 2,
             "payment": {
                 "paymentType": "Direct Deposit",
-                "amount": { "value": 200, "currency": "USD" },
+                "amount": {
+                    "value": 200,
+                    "currency": "USD"
+                },
                 "remainingBalanceIndicator": true
             },
             "paymentMethod": {
@@ -128,6 +185,5 @@
                 }
             }
         }
-
     ]
 }

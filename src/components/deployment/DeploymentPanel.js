@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import shortid from 'shortid';
+import WorkLocationTable from './WorkLocationTable'
 
 class Deployment extends Component {
   constructor(props) {
@@ -47,29 +48,32 @@ class Deployment extends Component {
             <div className='panel-body'>
 
               <div>
-                <div className='row well'>
+                <div className='row'>
                   <div className='col-md-12'>
                     {/* This should be a list of tables. */}
-                    {workerAssignmentSource
-                      ? (
-                        <div>
-                          <span className='caption'>workerAssignmentSource:
-                          </span>
-                          <b>sourceCode:
-                          </b>
-                          {workerAssignmentSource.sourceCode}
-                          <b>homeCountry:
-                          </b>
-                          {workerAssignmentSource.homeCountry}
-                          <b>hostCountry:
-                          </b>
-                          {workerAssignmentSource.hostCountry}
-                        </div>
-                      )
-                      : null}
-
+                    {workerAssignmentSource && (
+                        <table className='table table-condensed table-bordered'>
+                          <thead><tr>
+                            <th className='col-xs-1'>Source</th>
+                            <th>Home Country</th>
+                            <th>Host Country</th>
+                          </tr></thead>
+                          <tbody>
+                            <tr>
+                              <td>{workerAssignmentSource.sourceCode}</td>
+                              <td>{workerAssignmentSource.homeCountry}</td>
+                              <td>{workerAssignmentSource.hostCountry}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      ) }
                   </div>
                 </div>
+
+                { workLocation &&
+                  (<div className='row'>
+                    <WorkLocationTable {...workLocation} />
+                  </div>)}
 
 
               </div>

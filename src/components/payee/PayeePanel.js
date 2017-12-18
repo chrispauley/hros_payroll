@@ -14,10 +14,9 @@ class PayeePanel extends Component {
   }
 
   render() {
-    var {payee} = this.props;
-    var {personName, personLegal } = payee;
+    var {personName, personLegal } = this.props;
     var personNamesJsx = null;
-console.log('personLegal', payee);
+
     if ( personName && personName.length > 0) {
       personNamesJsx = personName.map( (item, i) => {
         var fname = item.formattedName;
@@ -44,11 +43,10 @@ console.log('personLegal', payee);
                   </div>
                 </div>
 
-                { personLegal ?
+                { personLegal &&
                 ( <div className='row'>
                     <PersonLegalTable {...personLegal} />
-                  </div>)
-                : '' }
+                  </div>) }
 
               </div>
 
