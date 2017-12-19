@@ -1,10 +1,18 @@
 {
-    "payee": {
-        "personName": [],
-        "personLegal": {
-            "legalId": {
-                "value": ""
-            }
+
+    "personName": [],
+    "personLegal": {
+        "legalId": {
+            "value": ""
         }
-    }
+    },
+    "alternateIds": [{
+        "value": "sample_01",
+        "schemeId": "hros_payroll",
+        "schemeLink": "data/sample_01.json",
+        "description": "This is a sample file for the hros_payroll application to view PayrollProcessType noun instances.",
+        "schemeAgencyId": "HROS Payroll Workgroup",
+        "schemeVersionId": "4.0",
+        "agencyUri": "https://chrispauley.github.io/hros_payroll/"
+    }]
 }

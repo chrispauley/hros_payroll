@@ -8,23 +8,22 @@
         }]
     },
     "documentId": {
-      "schemeAgencyId": "HROPEN",
-      "schemeId": "PayrollUseCase",
-      "value": "20",
-      "description": "Sue informed her company that she decided to retire."
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "20",
+        "description": "Sue informed her company that she decided to retire."
     },
     "alternateIds": [{ "schemeId": "uc_termination", "value": "2" }],
 
-    "payee": {
-        "personName": [{
-            "formattedName": "Sue Freeman",
-            "given": "Sue",
-            "family": "Freeman",
-            "nameType": "legal"
-        }],
 
-        "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0020"}
-        }
+    "personName": [{
+        "formattedName": "Sue Freeman",
+        "given": "Sue",
+        "family": "Freeman",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0020" }
     }
 }

@@ -1,0 +1,116 @@
+{
+
+    "personName": [{
+        "formattedName": "Richard T Garrett",
+        "given": "Richard",
+        "family": "Garrett",
+        "nameType": "legal",
+        "preferred": "Bob",
+        "middle": "The",
+        "formerFamily": "Smith",
+        "preferredSalutationCode": "",
+        "generationAffixCode": "Snr",
+        "qualificationAffixCode": "Dr",
+        "titleAffixCode": "II",
+        "initials": "RTG",
+        "legal": "Richard The Garrett",
+        "alias": "",
+        "NOTES": "AlternateScriptPersonName not in v4.1"
+    }],
+    "personlegal": {
+        "birthDate": "1986-04-08",
+        "birthPlace": "Bristol - NOTE: missing city, countrysubdiv, countrycode",
+        "gender": "male",
+        "maritalStatus": "Married",
+        "NOTE": "missing PrimaryLanguageCode"
+    },
+
+    "workRelationshipLifecycle": {
+        "hire": {
+            "typeHire": "new",
+            "hireDate": "2017-08-31",
+            "originalHireDate": "2017-08-31"
+        }
+    },
+
+    "deployment": {
+        "communication": {
+            "phone": [{
+                "useCode": "Personal",
+                "formattedNumber": "+1 5087839902"
+            }],
+            "email": [{
+                "useCode": "Business",
+                "address": "rich.garrett092601@yopmail.com"
+            }],
+
+            "address": [{
+                "useCode": "home",
+                "line": "12 Driftwood Road",
+                "city": "Santa Clara",
+                "postalCode": "95054",
+                "countryCode": "US",
+                "countrySubDivisions": [{
+                    "type": "State",
+                    "value": "CA"
+                }]
+            }]
+        },
+        "organizationIds": [
+            { "schemeId": "EmployeeID", "value": "DGUS092601US002" }
+        ],
+        "workLocation": {
+            "id": { "schemeId": "LocationID", "value": "0001 Chicago" },
+            "typeCode": "",
+            "address": {
+                "city": "Chicago",
+                "postalCode": "99999",
+                "countryCode": "US",
+                "countrySubDivisions": [{
+                    "type": "State",
+                    "value": "IL"
+                }]
+            }
+        },
+
+        "job": {
+            "id": { "schemeId": "", "value": "" },
+            "title": "Senior Consultant",
+            "remunerationBasisCode": "",
+            "positionScheduleType": "FullTime",
+            "positionTypeCode": "DirectHire",
+            "careerLevelCode": ""
+        },
+
+        "scheduledHours": {
+            "value": 40,
+            "multiplier": 1,
+            "unitCode": "WEE",
+            "NOTES": [
+                "Missing: scheduleBasis=PayCycle>173.33",
+                "Missing: scheduleBasis=Week>5"
+            ]
+        },
+
+        "position": {
+            "id": { "schemeId": "", "value": "" },
+            "title": "Director, Information Technology",
+            "remunerationBasisCode": "",
+            "positionScheduleType": ""
+        },
+
+        "fullTimeEquivalentRatio": 1,
+
+        "NOTES": ["Missing <hr:PayCycleRemuneration",
+                "nga:PaymentInstructions paymentInstruction spec is currently in development",
+                "nga:CostAssignment does not have a place in the spec at this time.",
+                "nga:PayScales is not defined in the spec.",
+                "nga:DateSpecifications is not defined in the spec.",
+                "nga:Approvers is not defined in the spec.",
+                "nga:ContractElements is not defined in the spec.",
+                "nga:AlternateIdentifiers is not defined in the spec.",
+                "nga:PayServEmpPayElements "
+        ]
+
+    }
+}

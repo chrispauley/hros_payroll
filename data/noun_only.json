@@ -1,42 +1,50 @@
 {
-  "documentId": {
-    "value": "004",
-    "schemeId": "hros_payroll",
-    "schemeLink": "data/noun_only.json",
-    "description": "This is the description for this identifier.",
-    "schemeAgencyId": "The organization that created this identifier.",
-    "schemeVersionId": "1.0",
-    "agencyUri": "/about"
-
-  },
-  "alternateIds": [{
-      "schemeId": "PayrollActor_1",
-      "value": "PR1-0123456789"
-    },
-    {
-      "schemeId": "PayrollActor_2",
-      "value": "PR2-0123456789"
-    }
-  ],
-  "uri": "data/noun_only.json",
-  "language": "en-US",
-
-  "dataProtectionPolicy": {
-    "geoRestrictions": [
-      {
-        "country": "NO",
-        "policy": "Read"
-      },
-      {
-        "country": "DK",
-        "policy": "Read"
-      },
-      {
-        "country": "FI",
-        "policy": "Read"
-      }
-    ],
-    "retentionDate": "2017-12-31",
-    "retentionDays": 365
-  }
+	"documentId": {
+		"value": "004",
+		"schemeId": "hros_payroll",
+		"schemeLink": "data/noun_only.json",
+		"description": "This is the description for this identifier.",
+		"schemeAgencyId": "The organization that created this identifier.",
+		"schemeVersionId": "1.0",
+		"agencyUri": "/about"
+	},
+	"alternateIds": [
+		{
+			"schemeId": "developerTest",
+			"value": "noun-only"
+		},
+		{
+			"schemeId": "PayrollActor_2",
+			"value": "PR2-0123456789"
+		},
+		{
+			"value": "noun_only",
+			"schemeId": "hros_payroll",
+			"schemeLink": "data/noun_only.json",
+			"description": "This is a sample file for the hros_payroll application to view PayrollProcessType noun instances.",
+			"schemeAgencyId": "HROS Payroll Workgroup",
+			"schemeVersionId": "4.2",
+			"agencyUri": "https://chrispauley.github.io/hros_payroll/"
+		}
+	],
+	"uri": "data/noun_only.json",
+	"language": "en-US",
+	"dataProtectionPolicy": {
+		"geoRestrictions": [
+			{
+				"country": "NO",
+				"policy": "Read"
+			},
+			{
+				"country": "DK",
+				"policy": "Read"
+			},
+			{
+				"country": "FI",
+				"policy": "Read"
+			}
+		],
+		"retentionDate": "2017-12-31",
+		"retentionDays": 365
+	}
 }
