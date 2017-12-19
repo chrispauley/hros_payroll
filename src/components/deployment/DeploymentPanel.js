@@ -12,7 +12,7 @@ class Deployment extends Component {
   }
 
   render() {
-
+    if (true) return (<span>debugging</span>);
     var {deployment} = this.props;
     var {
       workerAssignmentSource,

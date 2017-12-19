@@ -23,6 +23,7 @@ class WorkRelationshipPanel extends Component {
   render() {
     var {workRelationshipLifeCycle} = this.props;
     var {contract, hire, leaveOfAbsence, termination} = workRelationshipLifeCycle;
+    if (!workRelationshipLifeCycle) return null;
 
     return (
       <div className='panel-group' onClick={(e) => this.handleToggle(e)}>
@@ -33,21 +34,17 @@ class WorkRelationshipPanel extends Component {
           </h4>
           <div id="workrelationship-panel" className="panel-collapse collapse">
             <div className='panel-body'>
-              { contract ? (
-                <ContractTable {...contract} />
-              ) : null }
+              { contract && (
+                <ContractTable {...contract} /> )}
 
-              { hire ? (
-                <HireTable {...hire} />
-              ) : null }
+              { hire && (
+                <HireTable {...hire} /> )}
 
-              { leaveOfAbsence ? (
-                <p>{leaveOfAbsence}</p>
-              ) : null }
+              { leaveOfAbsence && (
+                <p>{leaveOfAbsence}</p> )}
 
-              { termination ? (
-                <TerminationTable {...termination} />
-              ) : null }
+              { termination && (
+                <TerminationTable {...termination} /> )}
             </div>
             <div className="panel-footer"></div>
 

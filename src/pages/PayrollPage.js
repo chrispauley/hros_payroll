@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {getPayrollInstructionInstance, getPayrollInstructions } from '../actions/payrollActions';
 import DropLoader from "../components/utils/DropLoader";
 
 import DataSelectPanel from '../components/common/DataSelectPanel'
@@ -26,38 +28,13 @@ class PayrollPage extends Component {
   handleClick = (e) => {
     // Fetch data for e.value
     e.preventDefault();
-    fetch(e.target.href)
-       .then((res) => res.json()
-       .then((resData) => {
-          this.setState({ processInstance: resData });
-          // console.log(this.state);
-        }
-     ));
+    this.props.getPayrollInstructionInstance(e.target.href);
   }
 
   componentDidMount() {
-    // Fetch local data
-    var that = this;
-    var result = [];
-    fetch('data/fileList.json', {
-      method: 'get'
-    }).then(function(response) {
-      return response.json();
-    }).then(function(j){
-      j.forEach( (item) => {
-        result.push({
-          name: item.displayName,
-          link: item.publicPath });
-      })
-    })
-    .then(function(){
-      that.setState({items: result})
-    })
-    .catch(function(err) {
-      // Error :(
-      setState({error: err});
-      console.log(err);
-    });
+    // console.log('componentDidMount');
+    var url = 'data/fileList.json';
+    this.props.getPayrollInstructions(url);
   }
 
   componentWillUnmount() {
@@ -73,49 +50,50 @@ class PayrollPage extends Component {
 
 
   render() {
+    var {error, processInstance} = this.props.payrollReducer;
     var {documentId, payee, deployment, workRelationshipLifeCycle, paymentInstructions,
-      deductionInstructions, statuatoryInstructions } = this.state.processInstance;
+      deductionInstructions, statuatoryInstructions } = this.props.payrollReducer.processInstance;
 
     return (
       <div>
 
-        <DataSelectPanel {...this.state} onClick={this.handleClick.bind(this)}/>
+        {error && (<div className='col-md-12'><span style={{color:'red'}}>Error loading data </span><hr/></div>) }
+        <DataSelectPanel {...this.props.payrollReducer} onClick={this.handleClick.bind(this)}/>
 
         <hr/>
 
         {
           documentId &&
-          (<NounPanel {...this.state.processInstance} />) }
+          (<NounPanel {...processInstance} />) }
 
         { deployment &&
-          (<DeploymentPanel {...this.state.processInstance } />) }
+          (<DeploymentPanel {...processInstance } />) }
 
         { workRelationshipLifeCycle &&
-          (<WorkRelationshipPanel {...this.state.processInstance } />) }
-
+          (<WorkRelationshipPanel {...processInstance } />) }
 
         { payee &&
-          (<PayeePanel {...this.state.processInstance}/> ) }
+          (<PayeePanel {...processInstance}/> ) }
 
         { paymentInstructions &&
-        (<PaymentInstructionsPanel {...this.state.processInstance} />) }
+        (<PaymentInstructionsPanel {...processInstance} />) }
 
         { deductionInstructions &&
-        ( <DeductionInstructionsPanel {...this.state.processInstance} />) }
+        ( <DeductionInstructionsPanel {...processInstance} />) }
 
         { statuatoryInstructions &&
-        ( <StatuatoryInstructionsPanel {...this.state.processInstance} />) }
+        ( <StatuatoryInstructionsPanel {...processInstance} />) }
 
 
 
         {/* <DropLoader onChange={this.handleDropFileInput}/> */}
         {
-          isEmpty(!this.state.processInstance) &&
+          isEmpty(!this.processInstance) &&
           (<button type='button'
             className='btn btn-default' onClick={this.handleViewDataClick}>View JSON</button>)
         }
         { this.state.showJSONData &&
-          (<div><pre><code>{JSON.stringify(this.state.processInstance, null, 2)}</code></pre></div>)
+          (<div><pre><code>{JSON.stringify(processInstance, null, 2)}</code></pre></div>)
         }
 
       </div>
@@ -123,8 +101,24 @@ class PayrollPage extends Component {
   }
 }
 
-export default PayrollPage;
+function mapState(state) {
+    return state;
+}
+function mapDispatch(dispatch) {
+    return {
+        // fetchPositions: () => dispatch(fetchPositions()),
+        // fetchPosition: (positionUrl) => dispatch(fetchPosition(positionUrl)),
+        // loadPositions: () => dispatch(loadPositions()),
+        getPayrollInstructionInstance: (url) => dispatch(getPayrollInstructionInstance(url)),
+        getPayrollInstructions: (url,offset,page) => dispatch(getPayrollInstructions(url,offset,page)),
+        clear: () => dispatch(clear()),
+        toggleShowJSON: () => dispatch(toggleShowJSON()),
+        toggleShowNoun: () => dispatch(toggleShowNoun()),
+        toggleShowProps: () => dispatch(toggleShowProps())
+    };
+}
 
+export default connect(mapState, mapDispatch)(PayrollPage);
 function isEmpty(obj) {
     return Object.keys(obj).length === 0;
 }
