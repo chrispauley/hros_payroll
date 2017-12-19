@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="PositionTypeCodeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="PositionTypeCodeList">
+    <xs:annotation>
+      <xs:documentation>These are values that are descriptive in classifying a position or a position opportunity or "offering". They are not precise classes useful internally to drive pay, benefits, or HR compliance. Enumerated values are: DirectHire, Temporary, TemporaryToHire, ContractToHire, Contract, Internship, Externship, Apprenticeship, Seasonal, Student, and Volunteer. Consider that "Temporary" and "DirectHire" are not parallel concepts, but are still commonly used in classifying jobs within advertising.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DirectHire" />
+      <xs:enumeration value="Temporary" />
+      <xs:enumeration value="TemporaryToHire" />
+      <xs:enumeration value="ContractToHire" />
+      <xs:enumeration value="Contract" />
+      <xs:enumeration value="Internship" />
+      <xs:enumeration value="Externship" />
+      <xs:enumeration value="Apprenticeship" />
+      <xs:enumeration value="Seasonal" />
+      <xs:enumeration value="Student" />
+      <xs:enumeration value="Volunteer" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PositionTypeCode" type="hros:PositionTypeCodeList" />
+</xs:schema>

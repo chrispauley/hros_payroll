@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="RateType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../codelist/UnitCodeList" />
+  <xsd:include schemaLocation="../codelist/CurrencyCodeList" />
+  <xsd:complexType name="RateType">
+    <xsd:annotation>
+      <xsd:documentation>Used to represent the numerical quotient resulting from a comparison of two independent things such as a quantity measured with respect to another measured quantity.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="1" maxOccurs="1" name="value">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:decimal" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="multiplier">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:decimal" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="unitCode" type="hros:UnitCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="currencyCode" type="hros:CurrencyCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="baseMultiplier">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:decimal" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="baseUnitCode" type="hros:UnitCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="baseCurrencyCode" type="hros:CurrencyCodeList" />
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="Rate" type="hros:RateType" />
+</xsd:schema>

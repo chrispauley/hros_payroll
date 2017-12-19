@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="PersonLegal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/IdentifierType.xsd" />
+  <xs:include schemaLocation="../base/IndicatorType.xsd" />
+  <xs:include schemaLocation="../base/CodeType.xsd" />
+  <xs:include schemaLocation="../base/DateTimeType.xsd" />
+  <xs:complexType name="PersonLegal">
+    <xs:annotation>
+      <xs:documentation>Person legal information</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="passportId" type="hros:IdentifierType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fatherName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="motherName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="race">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="birthPlace">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="deathDate" type="hros:DateTimeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="nationality">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="maritalStatus">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="visa">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:complexType>
+                <xs:all />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="religion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="studentType" type="hros:CodeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="studentIndicator" type="hros:IndicatorType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="studentStatus" type="hros:CodeType" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="PersonLegal" type="hros:PersonLegal" />
+</xs:schema>

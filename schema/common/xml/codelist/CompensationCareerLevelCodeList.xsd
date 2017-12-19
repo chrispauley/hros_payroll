@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="CompensationCareerLevelCodeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CompensationCareerLevelCodeList">
+    <xs:annotation>
+      <xs:documentation>A set of codes classifying the compensation career level codes.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Entry level" />
+      <xs:enumeration value="Some relevant experience" />
+      <xs:enumeration value="Experienced" />
+      <xs:enumeration value="Senior level" />
+      <xs:enumeration value="Mastery level" />
+      <xs:enumeration value="Industry expert" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CompensationCareerLevelCode" type="hros:CompensationCareerLevelCodeList" />
+</xs:schema>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="PersonType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="PersonProfile.xsd" />
+  <xs:include schemaLocation="PersonLegal.xsd" />
+  <xs:include schemaLocation="PersonBaseType.xsd" />
+  <xs:include schemaLocation="PersonPhysical.xsd" />
+  <xs:complexType name="PersonType">
+    <xs:annotation>
+      <xs:documentation>Represents full person information</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="legalId" type="hros:IdentifierType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="birthDate" type="hros:DateType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="gender" type="hros:GenderCodeList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="citizenship">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CountryCodeList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="residenceCountry">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CountryCodeList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="militaryStatus">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="ethnicity">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="hros:PersonNameType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="communication" type="hros:CommunicationType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="primaryLanguage" type="hros:LanguageCodeList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="height" type="hros:MeasureType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="weight" type="hros:MeasureType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="disability" type="hros:DisabilityType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tobaccoUser">
+        <xs:simpleType>
+          <xs:restriction base="xs:boolean" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="hairColor">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="eyeColor">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="identifyingMarks" type="hros:StringTypeArray" />
+      <xs:element minOccurs="0" maxOccurs="1" name="age">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="bloodType" type="hros:CodeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="emergencyContact">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="education" type="hros:EducationHistoryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="employment" type="hros:EmploymentHistoryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="military" type="hros:MilitaryHistoryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="licenses">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:licenseType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="certifications">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CertificationType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="qualifications">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:complexType>
+                <xs:all />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="securityCredentials">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:complexType>
+                <xs:all />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="affiliations">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:complexType>
+                <xs:all />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="passportId" type="hros:IdentifierType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fatherName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="motherName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="race">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="birthPlace">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="deathDate" type="hros:DateTimeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="nationality">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="maritalStatus">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="visa">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:complexType>
+                <xs:all />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="religion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="studentType" type="hros:CodeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="studentIndicator" type="hros:IndicatorType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="studentStatus" type="hros:CodeType" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="Person" type="hros:PersonType" />
+</xs:schema>

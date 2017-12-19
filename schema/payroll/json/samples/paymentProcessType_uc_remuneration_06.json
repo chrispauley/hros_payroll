@@ -1,0 +1,25 @@
+{
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "schemeLink": "https://github.com/HROpen/Payroll/issues/24",
+        "value": "6",
+        "description": "Night Shift Premium of 1.32%"
+    },
+    "alternateIds": [{ "schemeId": "remuneration", "value": "6" }],
+
+    "personName": [{
+        "formattedName": "Mary Smith",
+        "nameType": "legal"
+    }],
+
+    "deployment": {
+        "remunerations": [{
+            "id": { "value": "1005" }
+        }]
+    },
+
+    "paymentInstruction": {
+
+    }
+}

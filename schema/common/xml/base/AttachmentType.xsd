@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="AttachmentType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="IdentifierType.xsd" />
+  <xs:include schemaLocation="BinaryObjectType.xsd" />
+  <xs:include schemaLocation="StringTypeArray.xsd" />
+  <xs:complexType name="AttachmentContent">
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="content" type="hros:BinaryObjectType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="url">
+        <xs:simpleType>
+          <xs:restriction base="xs:anyURI" />
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="AttachmentType">
+    <xs:annotation>
+      <xs:documentation>Embedded attachment data or URL to actual attachment</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="content" type="hros:BinaryObjectType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="url">
+        <xs:simpleType>
+          <xs:restriction base="xs:anyURI" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="descriptions" type="hros:StringTypeArray" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="Attachment" type="hros:AttachmentType" />
+</xs:schema>

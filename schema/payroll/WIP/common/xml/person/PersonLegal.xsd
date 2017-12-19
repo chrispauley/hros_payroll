@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="PersonLegal" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../base/IdentifierType" />
+  <xsd:include schemaLocation="../base/IndicatorType" />
+  <xsd:include schemaLocation="../base/DateTimeType" />
+  <xsd:include schemaLocation="../base/CodeType" />
+  <xsd:complexType name="PersonLegal">
+    <xsd:annotation>
+      <xsd:documentation>A collection of demographic and personal data about a person.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="passportId" type="hros:IdentifierType">
+        <xsd:annotation>
+          <xsd:documentation>The passport identification number from the issuing country</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="fatherName">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>The surname of the father of the person.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="motherName">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>The surname of the mother of the person.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="race">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>The identified race(s) of the person.A race is defined as a group of people sharing the same culture, history, language, etc.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string" />
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="birthPlace">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>The birth place of the person.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="deathDate" type="hros:DateTimeType">
+        <xsd:annotation>
+          <xsd:documentation>If the person is deceased, the legal date that the person died.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="nationality">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>The nationality (or nationalities) of the person. Nationality is acquirable by descent, by birth or adoption in the country and/or by marriage. It is not a legal status like citizenship.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string" />
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="maritalStatus">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>The marital status of the person.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="visa">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>The visas that this person holds.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string" />
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="religion">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>The religions of the person of the person.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string" />
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="studentType" type="hros:CodeType">
+        <xsd:annotation>
+          <xsd:documentation>The type of student (if the person is a student).</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="studentIndicator" type="hros:IndicatorType">
+        <xsd:annotation>
+          <xsd:documentation>An indicator that this person is a student.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="studentStatus" type="hros:CodeType">
+        <xsd:annotation>
+          <xsd:documentation>The status of the student (if the person is a student).</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="PersonLegal" type="hros:PersonLegal" />
+</xsd:schema>

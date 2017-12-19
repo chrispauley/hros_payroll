@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="EducationHistoryType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../vcard/OrganizationType.xsd" />
+  <xs:include schemaLocation="../base/IndicatorType.xsd" />
+  <xs:include schemaLocation="../base/EntityType.xsd" />
+  <xs:include schemaLocation="BaseHistoryType.xsd" />
+  <xs:include schemaLocation="../base/FormattedDateTimeType.xsd" />
+  <xs:include schemaLocation="../codelist/IscedCodeList.xsd" />
+  <xs:include schemaLocation="../base/CodeType.xsd" />
+  <xs:include schemaLocation="../evaluation/ScoreType.xsd" />
+  <xs:include schemaLocation="../base/StringTypeArray.xsd" />
+  <xs:complexType name="EducationAttendanceType">
+    <xs:annotation>
+      <xs:documentation>Contains details documenting a person's attendance at an educational institution. (OED Institution, n. An establishment, organization, or association, instituted for the promotion of education.)</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>The identifier for the history.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="start" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The start date of the history if known.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="end" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The end date of the history if known.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="current" type="hros:IndicatorType">
+        <xs:annotation>
+          <xs:documentation>Indicator that the person's history entry is current active (i.e. if education, still at the school. If work history, still working at the organization)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="attachmentReferences">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>Attachment references supporting the history entry.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:AttachmentReferenceType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descriptions" type="hros:StringTypeArray">
+        <xs:annotation>
+          <xs:documentation>Additional details or descriptions about the history entry.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="institution" type="hros:OrganizationType">
+        <xs:annotation>
+          <xs:documentation>The institution to which the person attended.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="department" type="hros:OrganizationType">
+        <xs:annotation>
+          <xs:documentation>The department at the institution to which the person attended.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="programs" type="hros:StringTypeArray">
+        <xs:annotation>
+          <xs:documentation>The list of programs to which the person attended.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="educationLevelCodes">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>The identifier to the level of the education attendance. This could be country-specific or industry-specific classifications.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:EntityType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="iscedEducationLevelCode" type="hros:IscedCodeList">
+        <xs:annotation>
+          <xs:documentation>ISCED: International Standard Classification of Education - is the standard classificaiton of the education level of this attendance.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="goodStandingIndicator" type="hros:IndicatorType">
+        <xs:annotation>
+          <xs:documentation>Indicator that the person is currently in good standing according to the rules of the educational institution.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="educationDegrees">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>The degrees which were awarded or in process at the institution.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:EducationDegreeType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="otherAttendancePeriods">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>Additional periods of attendance</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element minOccurs="0" maxOccurs="1" name="start" type="hros:FormattedDateTimeType">
+                    <xs:annotation>
+                      <xs:documentation>The start date of the additional attendance period if known.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="1" name="end" type="hros:FormattedDateTimeType">
+                    <xs:annotation>
+                      <xs:documentation>The end date of the additional attendance period if known.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="EducationSpecializationType">
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>Recommended usage: unique descriptor which can't be expressed as enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="name">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Recommended usage: free text description for that entity</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="code" type="hros:CodeType">
+        <xs:annotation>
+          <xs:documentation>Recommended usage: descriptor which can be expressed as enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="type">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Type of specialization, e.g. 'major', 'minor'.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="EducationDegreeType">
+    <xs:annotation>
+      <xs:documentation>Contains details about the student's degree. A degree is a recognized completion of studies at a school (such as a college or university). A certificate, which may be a diploma or degree, is generally issued in recognition of having completed the course of study.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>Recommended usage: unique descriptor which can't be expressed as enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="name">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Recommended usage: free text description for that entity</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="code" type="hros:CodeType">
+        <xs:annotation>
+          <xs:documentation>Recommended usage: descriptor which can be expressed as enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="codes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CodeType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="date" type="hros:FormattedDateTimeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="specializations">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>The focus of study for the student's degree. This may include majors, minors, emphasis or other foci.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:EducationSpecializationType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="score" type="hros:ScoreType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="academicHonors" type="hros:StringTypeArray" />
+      <xs:element minOccurs="0" maxOccurs="1" name="currentlyAttendingIndicator" type="hros:IndicatorType">
+        <xs:annotation>
+          <xs:documentation>Indicator that the person is still attending.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="iscedEducationLevelCode" type="hros:IscedCodeList">
+        <xs:annotation>
+          <xs:documentation>ISCED: International Standard Classification of Education - is the standard classificaiton of the education level of this attendance.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="EducationHistoryType">
+    <xs:annotation>
+      <xs:documentation>A collection of information documenting a person's education. (OED, Education. The whole course of scholastic instruction which a person has received. The systematic instruction, schooling or training given to the young in preparation for the work of life; by extension, similar instruction or training obtained in adult age.)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:EducationAttendanceType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EducationHistory" type="hros:EducationHistoryType" />
+</xs:schema>

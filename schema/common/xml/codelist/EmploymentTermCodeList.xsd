@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="EmploymentTermCodeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="EmploymentTermCodeList">
+    <xs:annotation>
+      <xs:documentation>Values that classify the various employment term codes</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Regular" />
+      <xs:enumeration value="Temporary" />
+      <xs:enumeration value="Contractor" />
+      <xs:enumeration value="Contract to Permanent" />
+      <xs:enumeration value="Seasonal" />
+      <xs:enumeration value="Intern" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EmploymentTermCode" type="hros:EmploymentTermCodeList" />
+</xs:schema>

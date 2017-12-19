@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="ScheduleType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../base/EntityType" />
+  <xsd:include schemaLocation="../base/PeriodType" />
+  <xsd:include schemaLocation="../codelist/WeekdayCodeList" />
+  <xsd:include schemaLocation="../base/TimeType" />
+  <xsd:include schemaLocation="../base/DurationType" />
+  <xsd:complexType name="DayScheduleType">
+    <xsd:all />
+  </xsd:complexType>
+  <xsd:complexType name="ScheduleType">
+    <xsd:annotation>
+      <xsd:documentation>Periodic schedule of employee worktime.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xsd:annotation>
+          <xsd:documentation>Recommended usage: unique descriptor which can't be expressed as enumeration</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="name">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>Recommended usage: free text description for that entity</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="code" type="hros:CodeType">
+        <xsd:annotation>
+          <xsd:documentation>Recommended usage: descriptor which can be expressed as enumeration</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="period" type="hros:PeriodType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="hours" type="hros:DurationType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="items">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:DayScheduleType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="Schedule" type="hros:ScheduleType" />
+</xsd:schema>

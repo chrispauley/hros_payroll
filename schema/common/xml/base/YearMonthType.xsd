@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="YearMonthType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="YearMonthType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([0-9]{4})-(1[0-2]|0[1-9])" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="YearMonth" type="hros:YearMonthType" />
+</xs:schema>

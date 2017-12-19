@@ -1,0 +1,30 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "29",
+        "description": "John works in Nevada and he is transferred to a work site Oregon."
+    },
+    "alternateIds": [{ "schemeId": "uc_deployment", "value": "2" }],
+
+
+    "personName": [{
+        "formattedName": "John Marsh",
+        "given": "John",
+        "family": "Marsh",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0029" }
+    }
+
+}

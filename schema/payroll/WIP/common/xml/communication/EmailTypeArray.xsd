@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="EmailTypeArray" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="CommunicationItem" />
+  <xsd:include schemaLocation="EmailType" />
+  <xsd:complexType name="EmailTypeArray">
+    <xsd:annotation>
+      <xsd:documentation>Array of email information details</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element minOccurs="1" maxOccurs="1" name="address">
+              <xsd:simpleType>
+                <xsd:annotation>
+                  <xsd:documentation>Actual email address</xsd:documentation>
+                </xsd:annotation>
+                <xsd:restriction base="xsd:string">
+                  <xsd:pattern value="[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="1" name="name">
+              <xsd:simpleType>
+                <xsd:annotation>
+                  <xsd:documentation>Provide description for particular communication item</xsd:documentation>
+                </xsd:annotation>
+                <xsd:restriction base="xsd:string" />
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="1" name="useCode" type="hros:CodeType">
+              <xsd:annotation>
+                <xsd:documentation>Code identifying the usage of the contact point e.g. business, private, etc.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="1" name="preference">
+              <xsd:simpleType>
+                <xsd:annotation>
+                  <xsd:documentation>Provide priority for given communication item</xsd:documentation>
+                </xsd:annotation>
+                <xsd:restriction base="xsd:integer" />
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="1" name="availablePeriod" type="hros:DateTimePeriodType" />
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="EmailArray" type="hros:EmailTypeArray" />
+</xsd:schema>

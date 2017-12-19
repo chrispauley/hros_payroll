@@ -1,0 +1,12 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.0",
+    "title": "MeasureType",
+    "description": "A measure is a numeric value determined by measuring an object along with the specified unit of measure.",
+    "type": "object",
+    "properties": {
+        "value": { "type": "number" },
+        "unitCode": { "$ref": "../codelist/UnitCodeList.json#" }
+    },
+    "required": [ "value" ]
+}

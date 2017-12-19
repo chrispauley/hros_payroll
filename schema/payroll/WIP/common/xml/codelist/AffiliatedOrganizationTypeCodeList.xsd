@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="OrganizationAffiliationTypeCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="OrganizationAffiliationTypeCodeList">
+    <xsd:annotation>
+      <xsd:documentation>OLD: Values used to describe the type of assocation or affiliated organization.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="professional" />
+      <xsd:enumeration value="social" />
+      <xsd:enumeration value="community" />
+      <xsd:enumeration value="non-profit" />
+      <xsd:enumeration value="religious" />
+      <xsd:enumeration value="political" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="OrganizationAffiliationTypeCode" type="hros:OrganizationAffiliationTypeCodeList" />
+</xsd:schema>

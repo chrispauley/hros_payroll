@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.2.1" id="DeductionInstructionsType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../common/person/PersonNameType" />
+  <xsd:include schemaLocation="../common/base/EntityType" />
+  <xsd:include schemaLocation="../common/communication/CommunicationType" />
+  <xsd:complexType name="DeductionInstructionsType">
+    <xsd:annotation>
+      <xsd:documentation>Instructions for benefits and other deductions.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xsd:annotation>
+          <xsd:documentation>Recommended usage: unique descriptor which can't be expressed as enumeration</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="name">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>Recommended usage: free text description for that entity</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="code" type="hros:CodeType">
+        <xsd:annotation>
+          <xsd:documentation>Recommended usage: descriptor which can be expressed as enumeration</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="recruiterName" type="hros:PersonNameType">
+        <xsd:annotation>
+          <xsd:documentation>The recruiter's name.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="recruiterContact">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>The phone number, email or other communication method for contacting the requesting recruiter.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CommunicationType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="DeductionInstructions" type="hros:DeductionInstructionsType" />
+</xsd:schema>

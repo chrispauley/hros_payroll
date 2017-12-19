@@ -1,0 +1,46 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDAys": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": { "schemeId": "CompanyDocId", "value": "001" },
+    "alternateIds": [{ "schemeId": "CompanyDocId", "value": "001a" }],
+
+
+    "personName": [{
+        "formattedName": "George Smith",
+        "given": "George",
+        "family": "Smith",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-8999" }
+    },
+
+    "deployment": {
+        "workLocation": {
+            "id": { "schemeId": "companyLocId", "value": "121" }
+        }
+    },
+
+    "workRelationshipLifeCycle": {
+        "contract": {
+            "workRelationshipType": "employee",
+            "contractNumber": { "schemeId": "contractId", "value": "501" },
+            "contractStartDate": "2017-10-26"
+        }
+    },
+
+    "hire": {
+        "typeHire": "rehire",
+        "hireDate": "2017-10-26",
+        "serviceStartDates": [
+            "2016-10-01", "2017-10-27"
+        ]
+    }
+}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="MilitaryHistoryType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/StringTypeArray.xsd" />
+  <xs:include schemaLocation="../base/IndicatorType.xsd" />
+  <xs:include schemaLocation="BaseHistoryType.xsd" />
+  <xs:include schemaLocation="../codelist/CountryCodeList.xsd" />
+  <xs:include schemaLocation="../complex/CommentType.xsd" />
+  <xs:complexType name="MilitaryServiceType">
+    <xs:annotation>
+      <xs:documentation>Service or employment in a military branch.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>The identifier for the history.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="start" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The start date of the history if known.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="end" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The end date of the history if known.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="current" type="hros:IndicatorType">
+        <xs:annotation>
+          <xs:documentation>Indicator that the person's history entry is current active (i.e. if education, still at the school. If work history, still working at the organization)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="attachmentReferences">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>Attachment references supporting the history entry.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:AttachmentReferenceType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descriptions" type="hros:StringTypeArray">
+        <xs:annotation>
+          <xs:documentation>Additional details or descriptions about the history entry.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="countryCode" type="hros:CountryCodeList">
+        <xs:annotation>
+          <xs:documentation>The country to which this mlitary service was performed.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="serviceNumber">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The military service number or identifier of the person as defined by the country, branch, and/or division.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="branch">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The military office or department in which the person served; e.g. army, navy.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="division">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The military division as defined in the military branch and country.  It could be a portion of an army or fleet, consisting of a definite number of troops or vessels, under one commanding officer; also applied to a definite portion of a squadron or battalion.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="startingRank">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The rank which the person held in the miltary service at the beginning of the service period.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="endingRank">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The rank which the person held at the end of the military service period.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="currentRankIndicator" type="hros:IndicatorType">
+        <xs:annotation>
+          <xs:documentation>An indicator that the rank is currently held.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="campaigns" type="hros:StringTypeArray">
+        <xs:annotation>
+          <xs:documentation>A list of campaigns to which the person was involved during the service period</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="expertises" type="hros:StringTypeArray">
+        <xs:annotation>
+          <xs:documentation>A list of expertise that the person developed during the service period</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="honors" type="hros:StringTypeArray">
+        <xs:annotation>
+          <xs:documentation>A list of honors that the person received during the service period</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="disciplinaryActions" type="hros:StringTypeArray">
+        <xs:annotation>
+          <xs:documentation>A list of disciplinary actions taken during the service period</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="dischargeStatus">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>If this is not a currently held service, the discharge status for the service period. e.g. honorable, dishonorable, general.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="comments">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>Additional comments about the Military service history.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CommentType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="MilitaryHistoryType">
+    <xs:annotation>
+      <xs:documentation>History of military service</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:MilitaryServiceType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MilitaryHistory" type="hros:MilitaryHistoryType" />
+</xs:schema>

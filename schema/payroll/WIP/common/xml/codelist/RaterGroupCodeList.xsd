@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="RaterGroupCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="RaterGroupCodeList">
+    <xsd:annotation>
+      <xsd:documentation>Values describing the relationship between a performance appraisal process participant (e.g., a participant on a multi-rater panel) and the performance appraisal subject. Enumerated values include: customer, peer, supervisor, direct report, and self</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Customer" />
+      <xsd:enumeration value="Peer" />
+      <xsd:enumeration value="Supervisor" />
+      <xsd:enumeration value="Director" />
+      <xsd:enumeration value="Self" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="RaterGroupCode" type="hros:RaterGroupCodeList" />
+</xsd:schema>

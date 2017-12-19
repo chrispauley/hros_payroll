@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="IdentifierType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="IdentifierType">
+    <xs:annotation>
+      <xs:documentation>An identifier is a character string used to uniquely identify one instance of an object within an identification scheme that is managed by an agency.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="1" maxOccurs="1" name="value">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="schemeId">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The identification of the identifier scheme.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="schemeVersionId">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The identification of the version of the identifier scheme.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="schemeAgencyId">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The identification of the agency that manages the identifier scheme.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="Identifier" type="hros:IdentifierType" />
+</xs:schema>

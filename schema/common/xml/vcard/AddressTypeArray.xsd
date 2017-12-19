@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="AddressTypeArray" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="CommunicationItem.xsd" />
+  <xs:include schemaLocation="AddressType.xsd" />
+  <xs:complexType name="AddressTypeArray">
+    <xs:annotation>
+      <xs:documentation>Array of address information details</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+        <xs:complexType>
+          <xs:all>
+            <xs:element minOccurs="0" maxOccurs="1" name="line">
+              <xs:simpleType>
+                <xs:annotation>
+                  <xs:documentation>Street line address</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="extendedLines">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:documentation>Extended address components (e.g. apartment or suite number).</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:AddressComponentType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="countryCode" type="hros:CountryCodeList" />
+            <xs:element minOccurs="0" maxOccurs="1" name="countrySubDivisions">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:documentation>Qualifies the further divisions of the Country. These may be Districts, Regions, States, Provinces etc.</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:AddressComponentType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="city">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="postalCode">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="postOfficeBox">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="geoLocation" type="hros:GeoType" />
+            <xs:element minOccurs="0" maxOccurs="1" name="formattedAddress">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="name">
+              <xs:simpleType>
+                <xs:annotation>
+                  <xs:documentation>Provide description for particular communication item</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="useCode" type="hros:CodeType">
+              <xs:annotation>
+                <xs:documentation>Code identifying the usage of the contact point e.g. business, private, etc.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="preference">
+              <xs:simpleType>
+                <xs:annotation>
+                  <xs:documentation>Provide priority for given communication item</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:integer" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="availablePeriod" type="hros:DateTimePeriodType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddressArray" type="hros:AddressTypeArray" />
+</xs:schema>

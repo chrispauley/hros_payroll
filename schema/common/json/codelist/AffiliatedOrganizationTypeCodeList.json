@@ -1,0 +1,14 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.0",
+    "title": "OrganizationAffiliationTypeCodeList",
+    "description": "OLD: Values used to describe the type of assocation or affiliated organization.",
+    "enum": [
+        "professional",
+        "social",
+        "community",
+        "non-profit",
+        "religious",
+        "political"
+    ]
+}

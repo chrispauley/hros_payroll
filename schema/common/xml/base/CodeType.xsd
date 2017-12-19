@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="CodeType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CodeType">
+    <xs:annotation>
+      <xs:documentation>A code is a character string of letters, numbers, special characters (except escape sequences), and symbols. It represents a definitive value, a method, or a property description in an abbreviated or language-independent form that is part of a finite list of allowed values.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:element name="Code" type="hros:CodeType" />
+</xs:schema>

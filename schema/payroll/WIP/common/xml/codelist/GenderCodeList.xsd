@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="GenderCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="GenderCodeList">
+    <xsd:annotation>
+      <xsd:documentation>Gender code list</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="male" />
+      <xsd:enumeration value="female" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="GenderCode" type="hros:GenderCodeList" />
+</xsd:schema>

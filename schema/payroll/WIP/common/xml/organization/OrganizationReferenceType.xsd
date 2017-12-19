@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="OrganizationReferenceType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../base/EntityType" />
+  <xsd:include schemaLocation="../communication/CommunicationType" />
+  <xsd:simpleType name="ResponsibilityCodeList">
+    <xsd:annotation>
+      <xsd:documentation>Values that classify the various organization type responsibility codes</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Unit" />
+      <xsd:enumeration value="Department" />
+      <xsd:enumeration value="Division" />
+      <xsd:enumeration value="Parent" />
+      <xsd:enumeration value="Group" />
+      <xsd:enumeration value="Plant" />
+      <xsd:enumeration value="Subsidiary" />
+      <xsd:enumeration value="Joint Venture" />
+      <xsd:enumeration value="Branch" />
+      <xsd:enumeration value="Holding Affiliate" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OrganizationReferenceType">
+    <xsd:annotation>
+      <xsd:documentation>Basic information to reference a specific organization.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xsd:annotation>
+          <xsd:documentation>Recommended usage: unique descriptor which can't be expressed as enumeration</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="name">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>Recommended usage: free text description for that entity</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="code" type="hros:CodeType">
+        <xsd:annotation>
+          <xsd:documentation>Recommended usage: descriptor which can be expressed as enumeration</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="responsibilityCode" type="hros:ResponsibilityCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="communication" type="hros:CommunicationType" />
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="OrganizationReference" type="hros:OrganizationReferenceType" />
+</xsd:schema>

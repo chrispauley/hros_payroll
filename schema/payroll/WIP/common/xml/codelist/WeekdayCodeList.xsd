@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="WeekdayCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="WeekdayCodeList">
+    <xsd:annotation>
+      <xsd:documentation>Values that classify the various days of week</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Monday" />
+      <xsd:enumeration value="Tuesday" />
+      <xsd:enumeration value="Wednesday" />
+      <xsd:enumeration value="Thursday" />
+      <xsd:enumeration value="Friday" />
+      <xsd:enumeration value="Saturday" />
+      <xsd:enumeration value="Sunday" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="WeekdayCode" type="hros:WeekdayCodeList" />
+</xsd:schema>

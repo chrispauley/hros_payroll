@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="ActionCodeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ActionCodeList">
+    <xs:annotation>
+      <xs:documentation>Action values code list</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="create" />
+      <xs:enumeration value="update" />
+      <xs:enumeration value="delete" />
+      <xs:enumeration value="replace" />
+      <xs:enumeration value="merge" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ActionCode" type="hros:ActionCodeList" />
+</xs:schema>

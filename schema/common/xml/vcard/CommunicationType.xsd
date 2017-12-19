@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="CommunicationType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="AddressTypeArray.xsd" />
+  <xs:include schemaLocation="WebTypeArray.xsd" />
+  <xs:include schemaLocation="PhoneTypeArray.xsd" />
+  <xs:include schemaLocation="EmailTypeArray.xsd" />
+  <xs:complexType name="CommunicationType">
+    <xs:annotation>
+      <xs:documentation>allows capture of information about a variety of communication channels (telephone, email, fax, messaging, address, etc.)</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="address" type="hros:AddressTypeArray" />
+      <xs:element minOccurs="0" maxOccurs="1" name="phone" type="hros:PhoneTypeArray" />
+      <xs:element minOccurs="0" maxOccurs="1" name="email" type="hros:EmailTypeArray" />
+      <xs:element minOccurs="0" maxOccurs="1" name="web" type="hros:WebTypeArray" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="Communication" type="hros:CommunicationType" />
+</xs:schema>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="RatioType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="RatioType">
+    <xs:annotation>
+      <xs:documentation>Relation between two independent quantities, using the same unit</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal" />
+  </xs:simpleType>
+  <xs:element name="Ratio" type="hros:RatioType" />
+</xs:schema>

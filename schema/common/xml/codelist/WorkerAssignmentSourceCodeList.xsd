@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="WorkerAssignmentSourceCodeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="WorkerAssignmentSourceCodeList">
+    <xs:annotation>
+      <xs:documentation>Values that classify the various worker assignment source codes</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Domestic" />
+      <xs:enumeration value="Inpatriate" />
+      <xs:enumeration value="Expatriate" />
+      <xs:enumeration value="Local National" />
+      <xs:enumeration value="Third Country National" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkerAssignmentSourceCode" type="hros:WorkerAssignmentSourceCodeList" />
+</xs:schema>

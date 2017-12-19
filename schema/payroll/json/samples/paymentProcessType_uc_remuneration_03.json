@@ -1,0 +1,28 @@
+{
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "schemeLink": "https://github.com/HROpen/Payroll/issues/24",
+        "value": "3",
+        "description": "Payment of 10 hours of pay at Employees standard rate"
+    },
+    "alternateIds": [{ "schemeId": "remuneration", "value": "3" }],
+
+    "personName": [{
+        "formattedName": "Mary Smith",
+        "nameType": "legal"
+    }],
+
+    "deployment": {
+        "remunerations": [{
+            "id": {
+                "value": "1002"
+            },
+            "remunerationTypeCode": "BasePay",
+            "remunerationRate": {
+                "payRateUnitTimeCode": "Once"
+            }
+
+        }]
+    }
+}

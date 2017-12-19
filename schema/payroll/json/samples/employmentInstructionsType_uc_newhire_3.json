@@ -1,0 +1,32 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "agencyUri": "https://github.com/HROpen/Payroll/wiki/uc_newhire",
+        "schemeId": "PayrollUseCase",
+        "value": "3",
+        "description": "Greg is an apprentice who is starting a one year apprenticeship."
+    },
+    "alternateIds": [{ "schemeId": "uc_newhire", "value": "3" }],
+
+
+    "personName": [{
+        "formattedName": "Greg Jones",
+        "given": "Greg",
+        "family": "Jones",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0003" }
+    }
+
+
+}

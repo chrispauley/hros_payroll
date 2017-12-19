@@ -1,0 +1,47 @@
+{
+	"$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+	"version": "4.1.0",
+	"title": "DeploymentType",
+	"description": "DeploymentType data",
+	"definitions": {
+		"WorkerAssignmentSourceType": {
+			"type": "object",
+			"properties": {
+				"sourceCode": { "$ref": "../codelist/WorkerAssignmentSourceCodeList.json#" },
+				"homeCountry": { "$ref": "../codelist/CountryCodeList.json#" },
+				"hostCountry": { "$ref": "../codelist/CountryCodeList.json#" }
+			}
+		}
+	},
+	"type": "object",
+	"properties": {
+		"workerAssignmentSource": { "$ref": "#/definitions/WorkerAssignmentSourceType" },
+        "workLocation": { "$ref": "../organization/WorkLocationType.json#" },
+		"communication": { "$ref": "../communication/CommunicationType.json#" },
+		"resourceRelationshipCode": { "$ref": "../codelist/ResourceRelationshipCodeList.json#" },
+		"organizationIds": {
+			"type": "array",
+			"items": { "$ref": "../base/IdentifierType.json#" }
+		},
+		"job": { "$ref": "../work/JobType.json#" },
+        "position": { "$ref": "../work/PositionType.json#" },
+		"scheduledHours": { "$ref": "../base/RateType.json#" },
+		"assignmentReasonCode": { "$ref": "../codelist/AssignmentReasonCodeList.json#" },
+		"fullTimeEquivalentRatio": { "$ref": "../base/RatioType.json#" },
+		"wageHourLawCoverageIndicator": {
+			"description": "This determines if a person is covered by wage hour laws. If true, they are non-exempt or they are covered under the law.",
+			"$ref": "../base/IndicatorType.json#"
+		},
+		"effectivePeriod": { "$ref": "../base/EffectiveTimePeriod.json#" },
+		"employeeReportingCode": {
+			"description": "An element that allows further classification of the employee using employer or program-specific codes and controlled vocabularies. This information may be collected to use for return reporting back to the employer.",
+			"$ref": "../base/CodeType.json#"
+		},
+		"wageHourLawCoverageCountryCode": { "$ref": "../codelist/CountryCodeList.json#" },
+		"laborBargainingUnitIndicator": { "$ref": "../base/IndicatorType.json#" },
+		"newHireProbationaryIndicator": { "$ref": "../base/IndicatorType.json#" },
+        "organization": { "$ref": "../organization/OrganizationType.json#" }, 
+		"license": { "$ref": "LicenseType.json#" },
+		"certification": { "$ref": "CertificationType.json#" }
+	}
+}

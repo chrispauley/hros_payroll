@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="CompetencyDefinitionCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="CompetencyDefinitionCodeList">
+    <xsd:annotation>
+      <xsd:documentation>Types of competency definitions.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Competency" />
+      <xsd:enumeration value="BehavioralIndicator" />
+      <xsd:enumeration value="BehavioralInterviewQuestion" />
+      <xsd:enumeration value="SituationalInterviewQuestion" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="CompetencyDefinitionCode" type="hros:CompetencyDefinitionCodeList" />
+</xsd:schema>

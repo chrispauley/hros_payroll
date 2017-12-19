@@ -1,0 +1,16 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.0",
+    "title": "AttachmentReferenceType",
+    "description": "Attachment reference within document domain",
+    "type": "object",
+    "properties": {
+        "reference": { "$ref": "IdentifierType.json#" },
+        "uri": {
+            "description": "Internal instance JSON pointer reference",
+            "type": "string"
+        },
+        "descriptions": { "$ref": "StringTypeArray.json#" }
+    },
+    "required": [ "uri" ]
+}

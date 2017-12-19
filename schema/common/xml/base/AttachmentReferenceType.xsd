@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="AttachmentReferenceType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="StringTypeArray.xsd" />
+  <xs:include schemaLocation="IdentifierType.xsd" />
+  <xs:complexType name="AttachmentReferenceType">
+    <xs:annotation>
+      <xs:documentation>Attachment reference within document domain</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="reference" type="hros:IdentifierType" />
+      <xs:element minOccurs="1" maxOccurs="1" name="uri">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value=".*" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descriptions" type="hros:StringTypeArray" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="AttachmentReference" type="hros:AttachmentReferenceType" />
+</xs:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="RateType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../codelist/CurrencyCodeList.xsd" />
+  <xs:include schemaLocation="../codelist/UnitCodeList.xsd" />
+  <xs:complexType name="RateType">
+    <xs:annotation>
+      <xs:documentation>Used to represent the numerical quotient resulting from a comparison of two independent things such as a quantity measured with respect to another measured quantity.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="1" maxOccurs="1" name="value">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="multiplier">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="unitCode" type="hros:UnitCodeList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="currencyCode" type="hros:CurrencyCodeList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="baseMultiplier">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="baseUnitCode" type="hros:UnitCodeList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="baseCurrencyCode" type="hros:CurrencyCodeList" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="Rate" type="hros:RateType" />
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" id="CommunicationItem" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/CodeType.xsd" />
+  <xs:include schemaLocation="../base/DateTimePeriodType.xsd" />
+  <xs:complexType name="CommunicationItem">
+    <xs:annotation>
+      <xs:documentation>Common properties for communication items</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="name">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Provide description for particular communication item</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="useCode" type="hros:CodeType">
+        <xs:annotation>
+          <xs:documentation>Code identifying the usage of the contact point e.g. business, private, etc.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="preference">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Provide priority for given communication item</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:integer" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="availablePeriod" type="hros:DateTimePeriodType" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="CommunicationItem" type="hros:CommunicationItem" />
+</xs:schema>

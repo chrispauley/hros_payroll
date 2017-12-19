@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="ResourceClassification" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="CostAllocationType.xsd" />
+  <xs:include schemaLocation="../base/EntityType.xsd" />
+  <xs:include schemaLocation="WorkAllocationType.xsd" />
+  <xs:complexType name="ResourceClassification">
+    <xs:annotation>
+      <xs:documentation>Holds customer specific properties of an entity</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="managerName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="supervisorName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="contactName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="department" type="hros:EntityType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="location" type="hros:EntityType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="costCenter" type="hros:EntityType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="job" type="hros:EntityType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="account" type="hros:EntityType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="project" type="hros:EntityType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="shift" type="hros:EntityType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="externalOrderNumber">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="externalReqNumber">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="referenceNumber">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="purchaseOrderNumber">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="purchaseOrderLineItem">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="costAllocation" type="hros:CostAllocationType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="workAllocation" type="hros:WorkAllocationType" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="ResourceClassification" type="hros:ResourceClassification" />
+</xs:schema>

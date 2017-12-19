@@ -1,0 +1,14 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.0.1",
+    "title": "certificationType_sample_objects",
+    "description": "Samples for vcard/CertificationType.json",
+    "type": "object",
+    "properties": {
+        "badge_instance": { "$ref": "../../../vcard/CertificationType.json#" },
+        "certificate_instance": { "$ref": "../../../vcard/CertificationType.json#" },
+        "certification_instance": { "$ref": "../../../vcard/CertificationType.json#" },
+        "degree_instance": { "$ref": "../../../vcard/CertificationType.json#" },
+        "diploma_instance": { "$ref": "../../../vcard/CertificationType.json#" }
+    }
+}

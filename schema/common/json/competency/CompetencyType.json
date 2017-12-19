@@ -1,0 +1,11 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.0",
+    "title": "CompetencyType",
+    "description": "Represents competency types in HR Open Standards.",
+    "type": "object",
+    "properties": {
+        "person": { "$ref": "PersonCompetencyType.json#" },
+        "specifiedCompetency": { "$ref": "SpecifiedCompetencyType.json#" }
+    }
+}

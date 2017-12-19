@@ -1,0 +1,32 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "agencyUri": "https://github.com/HROpen/Payroll/wiki/uc_rehire",
+        "schemeId": "PayrollUseCase",
+        "value": "7",
+        "description": "Mary works as a ski instructor who works 15th November to 25th March every year."
+    },
+    "alternateIds": [{ "schemeId": "uc_rehire", "value": "3" }],
+
+
+    "personName": [{
+        "formattedName": "Mary Snyder",
+        "given": "Mary",
+        "family": "Snyder",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0007" }
+    }
+
+
+}

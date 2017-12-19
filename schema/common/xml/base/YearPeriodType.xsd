@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="YearPeriodType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="YearOpenEndPeriodType.xsd" />
+  <xs:complexType name="YearPeriodType">
+    <xs:annotation>
+      <xs:documentation>Single period between years. Both start and end are required.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="1" maxOccurs="1" name="start" type="hros:YearType" />
+      <xs:element minOccurs="1" maxOccurs="1" name="end" type="hros:YearType" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="YearPeriod" type="hros:YearPeriodType" />
+</xs:schema>

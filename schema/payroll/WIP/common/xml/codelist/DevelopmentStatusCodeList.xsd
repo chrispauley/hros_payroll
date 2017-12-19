@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="developmentStatusCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="developmentStatusCodeList">
+    <xsd:annotation>
+      <xsd:documentation>A code classifying the status of an item. This is an HR-XML open list. Enumerated values are 'in progress,'  'complete,' 'canceled,' 'not known,' and 'not applicable.'</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="InProgress" />
+      <xsd:enumeration value="Complete" />
+      <xsd:enumeration value="Canceled" />
+      <xsd:enumeration value="NotKnown" />
+      <xsd:enumeration value="NotApplicable" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="developmentStatusCode" type="hros:developmentStatusCodeList" />
+</xsd:schema>

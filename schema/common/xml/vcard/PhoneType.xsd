@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="PhoneType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/CodeType.xsd" />
+  <xs:complexType name="PhoneType">
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="countryDialingCode" type="hros:CodeType">
+        <xs:annotation>
+          <xs:documentation>The country dialing code for a communication number.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="areaDialingCode" type="hros:CodeType">
+        <xs:annotation>
+          <xs:documentation>The area dialing code for a communication number.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="dialNumber">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The communication number, not including country dialing or area dialing codes.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="phoneExtension">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The extension of the associated communication number.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="access">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The text that permits access to the electronic network of the associated communication number such as telephone network, for example 9, *70.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="formattedNumber">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Specifies details of an actual formatted number</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="Phone" type="hros:PhoneType" />
+</xs:schema>

@@ -1,0 +1,102 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.0",
+    "title": "PublicationType",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "id": { "$ref": "../base/IdentifierType.json#" },
+        "type": {
+            "description": "Type of publication, such as a book or article.",
+            "$ref": "../codelist/PublicationTypeCodeList.json#"
+        },
+        "date": { "$ref": "../base/DateType.json#" },
+        "title": { "type": "string" },
+        "abstract": { "type": "string" },
+        "contributors": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": { "type": "string" },
+                    "role": { "type": "string" }
+                }
+            }
+        },
+        "copyrights": {
+            "description": "A list of copyright holders and year when the copyright was issued.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "owner": {
+                        "description": "The owner(s) of the copyright.",
+                        "type": "string"
+                    },
+                    "year": {
+                        "description": "The year when the copyright was issued to the owner.",
+                        "$ref": "../base/YearType.json#"
+                    }
+                }
+            }
+        },
+        "attachmentReferences": {
+            "type": "array",
+            "items": { "$ref": "../base/AttachmentReferenceType.json#" }
+        },
+        "languageCode": {
+            "description": "The language of the publication.",
+            "$ref": "../codelist/LanguageCodeList.json#"
+        },
+        "comments": {
+            "description": "Comments related to the publication.",
+            "type": "array",
+            "items": { "$ref": "../base/CommentType.json#" }
+        },
+        "journal": {
+            "description": "The journal where the publication was published.",
+            "type": "string"
+        },
+        "issn": {
+            "description": "The ISSN (International Standard Serial Number) issued for the publication.",
+            "type": "string"
+        },
+        "volume": {
+            "description": "",
+            "type": "string"
+        },
+        "issue": {
+            "description": "",
+            "type": "string"
+        },
+        "pages": {
+            "description": "",
+            "type": "string"
+        },
+        "edition": {
+            "description": "",
+            "type": "string"
+        },
+        "chapters": {
+            "description": "",
+            "type": "string"
+        },
+        "isbn": {
+            "description": "",
+            "type": "string"
+        },
+        "publisher": {
+            "description": "",
+            "type": "string"
+        },
+        "publisherLocation": {
+            "description": "",
+            "$ref": "../communication/LocationType.json#"
+        },
+        "event": {
+            "description": "",
+            "$ref": "EventType.json#"
+        }
+    },
+    "required": [ "title", "type" ]
+}

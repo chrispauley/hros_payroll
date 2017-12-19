@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="PersonReferenceType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/IdentifierType.xsd" />
+  <xs:include schemaLocation="../vcard/CommunicationType.xsd" />
+  <xs:include schemaLocation="PersonNameType.xsd" />
+  <xs:include schemaLocation="../codelist/LanguageCodeList.xsd" />
+  <xs:complexType name="PersonReferenceType">
+    <xs:annotation>
+      <xs:documentation>Reference person data</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="hros:PersonNameType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="communication" type="hros:CommunicationType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="primaryLanguage" type="hros:LanguageCodeList" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="PersonReference" type="hros:PersonReferenceType" />
+</xs:schema>

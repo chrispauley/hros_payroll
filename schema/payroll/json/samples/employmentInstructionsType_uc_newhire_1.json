@@ -1,0 +1,140 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "agencyUri": "https://github.com/HROpen/Payroll/wiki/uc_newhire",
+        "schemeId": "PayrollUseCase",
+        "value": "1",
+        "description": "Mary is a new employee at ABC corporation."
+    },
+    "alternateIds": [{ "schemeId": "uc_newhire", "value": "1" }],
+
+
+    "personName": [{
+        "formattedName": "Mary Smith",
+        "given": "Mary",
+        "family": "Smith",
+        "nameType": "legal"
+    }],
+
+    "personLegal": {
+        "passportId": { "schemeId": "passport", "value": "0123456789" },
+        "id": { "schemeId": "ssn", "value": "123-45-0001" }
+    },
+
+    "deployment": {
+        "workerAssignmentSource": { "sourceCode": "Domestic" },
+        "workLocation": {
+            "typeCode": "Headquarters",
+            "virtualWorkerIndicator": false,
+            "fieldRemoteWorkerIndicator": true,
+            "address": {
+                "line": "155 Morningside Drive",
+                "countryCode": "US",
+                "countrySubDivisions": [{ "type": "State", "value": "CA" }],
+                "city": "Newtown",
+                "postalCode": "93211"
+            },
+            "description": {
+                "languageCode": "en-US",
+                "value":"Primary work location."
+            }
+        },
+        "communication": {
+            "phone": [{
+                "useCode": "private",
+                "preference": 1,
+                "formattedNumber": "+1 2677148647"
+            }],
+            "email": [{
+                    "useCode": "private",
+                    "preference": 1,
+                    "address": "mary.smith@corporation-abc.com"
+                },
+                {
+                    "useCode": "private",
+                    "preference": 2,
+                    "address": "mary.smith@yahoo.com"
+                }
+            ],
+
+            "address": [{
+                "useCode": "private",
+                "countryCode": "US",
+                "countrySubDivisions": [{
+                    "type": "state",
+                    "value": "PA"
+                }],
+                "city": "New Hope",
+                "postalCode": "18938",
+                "line": "904 Filly Circle",
+                "geoLocation": {
+                    "longitude": -75.0256251,
+                    "latitude": 40.3445
+                },
+                "formattedAddress": "904 Filly Circle, New Hope, PA 18938"
+            }]
+        },
+
+        "resourceRelationshipCode": "Employee",
+        "organizationIds": [{ "value": "" }],
+
+        "job": {
+            "id": { "value": "" },
+            "title": "Job Title",
+            "categoryCode": "Professional",
+            "jobFunction": "ProductDevelopment",
+            "planCode": "PlanOne",
+            "gradeCode": "4",
+            "stepCode": "2",
+            "description": "This is the job description."
+        },
+
+        "position": {
+            "id": { "value": "" },
+            "title": "This is the Position Title",
+            "remunerationBasisCode": "Salaried",
+            "positionScheduleType": "FullTime",
+            "positionTypeCode": "DirectHire",
+            "careerLevelCode": "MidCareer"
+        },
+
+        "scheduledHours": {
+            "value": 1000,
+            "unitCode": "WEE",
+            "currencyCode": "USD"
+        },
+
+        "assignmentReasonCode": "Hire",
+        "fullTimeEquivalentRatio": 100,
+        "wageHourLawCoverageIndicator": false,
+        "effectivePeriod": { "validFrom": "2017-12-01" },
+        "laborBargainingUnitIndicator": false,
+        "newHireProbationaryIndicator": true,
+
+        "organization": {
+            "taxId": { "schemeId": "", "value": "" },
+            "legalId": { "schemeId": "", "value": "" },
+            "description": {
+                "languageCode": "en-US",
+                "value":"Organization description goes here."
+            } ,
+            "ownershipType": "Public",
+            "workEnvironment": "Office"
+        }
+    },
+
+    "workRelationshipLifecycle": {
+        "hire": {
+            "typeHire": "new",
+            "hireDate": "2017-10-01"
+        }
+    }
+}

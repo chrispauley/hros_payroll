@@ -1,0 +1,17 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.0",
+    "title": "RateType",
+    "description": "Used to represent the numerical quotient resulting from a comparison of two independent things such as a quantity measured with respect to another measured quantity.",
+    "type": "object",
+    "properties": {
+        "value": { "type": "number" },
+        "multiplier": { "type": "number" },
+        "unitCode": { "$ref": "../codelist/UnitCodeList.json#" },
+        "currencyCode": { "$ref": "../codelist/CurrencyCodeList.json#" },
+        "baseMultiplier": { "type": "number" },
+        "baseUnitCode": { "$ref": "../codelist/UnitCodeList.json#" },
+        "baseCurrencyCode": { "$ref": "../codelist/CurrencyCodeList.json#" }
+    },
+    "required": [ "value" ]
+}

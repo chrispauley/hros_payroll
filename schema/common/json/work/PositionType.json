@@ -1,0 +1,17 @@
+{
+	"$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+	"version": "4.1.0",
+	"title": "PositionType",
+	"type": "object",
+	"properties": {
+		"id": { "$ref": "../base/IdentifierType.json#" },
+		"title": { "type": "string" },
+		"remunerationBasisCode": {
+			"description": "A code classifying the primary method by which remuneration for a position is provided or calculated. Examples include Hourly, Salaried, Salaried plus Commission, Commission Only, Salaried plus Bonus, etc.",
+			"$ref": "../base/CodeType.json#"
+		},
+		"positionScheduleType": { "$ref": "../codelist/PositionScheduleTypeCodeList.json#" },
+		"positionTypeCode": { "$ref": "../codelist/PositionTypeCodeList.json#" },
+		"careerLevelCode": { "$ref": "../base/CodeType.json#" }
+	}
+}

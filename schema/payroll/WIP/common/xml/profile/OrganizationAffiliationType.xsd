@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="OrganizationAffiliationType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../organization/OrganizationType" />
+  <xsd:include schemaLocation="../base/StringTypeArray" />
+  <xsd:include schemaLocation="../base/AttachmentReferenceType" />
+  <xsd:include schemaLocation="../codelist/AffiliatedOrganizationTypeCodeList" />
+  <xsd:include schemaLocation="../base/IdentifierType" />
+  <xsd:include schemaLocation="../base/DateType" />
+  <xsd:complexType name="OrganizationAffiliationType">
+    <xsd:annotation>
+      <xsd:documentation>OLD: Contains information about a person's affiliation with a trade, professional, or similar organization or group formed around a common purpose or cause.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="organization" type="hros:OrganizationType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="affiliationTypeCode" type="hros:AffiliatedOrganizationTypeCodeList">
+        <xsd:annotation>
+          <xsd:documentation>The type of association or organization with which a person is affiliated. In most contexts, this would be an organizational affiliation other than that with an employer. Typically, would be an affiliation with an association, trade organization, or union.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="memberId" type="hros:IdentifierType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="role">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="startDate" type="hros:DateType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="endDate" type="hros:DateType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descriptions" type="hros:StringTypeArray" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="attachmentReferences">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:AttachmentReferenceType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="OrganizationAffiliation" type="hros:OrganizationAffiliationType" />
+</xsd:schema>

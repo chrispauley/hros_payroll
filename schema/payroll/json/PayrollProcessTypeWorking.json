@@ -1,0 +1,462 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"version": "4.2.1",
+	"title": "PayrollType",
+	"description": "Provides the information needed to process a payroll.",
+	"type": "object",
+	"properties": {
+		"Deployment": {
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"WorkRelationship": {
+					"description": "tbd",
+					"$ref": "#/definitions/WorkRelationshipType"
+				},
+				"WorkRelationshipLifeCycle": {
+					"title": "WorkRelationshipLifeCycle",
+					"description": "tbd",
+					"$ref": "#/definitions/WorkRelationshipLifeCycleType"
+				}
+			}
+		},
+		"PaymentDistribution": {
+			"description": "tbd",
+			"$ref": "#/definitions/PaymentDistributionType"
+		}
+	},
+	"definitions": {
+		"IdentifierType": {
+			"title": "IdentifierType",
+			"description": "An identifier is a character string used to uniquely identify one instance of an object within an identification scheme that is managed by an agency. Use this type when the list or values are controlled by an external entity, the list or values are public and could be referenced or validated.",
+			"type": "object",
+			"properties": {
+				"value": {
+					"type": "string"
+				},
+				"schemeId": {
+					"description": "The identification of the identifier scheme.",
+					"type": "string"
+				},
+				"schemeVersionId": {
+					"description": "The identification of the version of the identifier scheme.",
+					"type": "string"
+				},
+				"schemeAgencyId": {
+					"description": "The identification of the agency that manages the identifier scheme.",
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"schemeLink": {
+					"description": "The URI that identifies where the identification scheme data is located.",
+					"type": "string",
+					"format": "uri"
+				},
+				"agencyUri": {
+					"description": "The URI that identifies where the identification scheme is located",
+					"type": "string",
+					"format": "uri"
+				}
+			},
+			"required": []
+		},
+		"DateType": {
+			"title": "DateType",
+			"description": "Date representation according ISO 8601 standard",
+			"type": "string",
+			"format": "date"
+		},
+		"DatePeriodType": {
+			"title": "DatePeriodType",
+			"description": "Single period between dates. Both start and end are required.",
+			"type": "object",
+			"allOf": [
+				{
+					"$ref": "#/definitions/DateOpenEndPeriodType"
+				}
+			]
+		},
+		"DateOpenEndPeriodType": {
+			"title": "DateOpenEndPeriodType",
+			"description": "Single period between dates. The end date is optional and should be used in cases where the end of the period is unknown or uncertain.",
+			"type": "object",
+			"properties": {
+				"start": {
+					"$ref": "#/definitions/DateType"
+				},
+				"end": {
+					"$ref": "#/definitions/DateType"
+				}
+			},
+			"required": [
+				"start", "end"
+			],
+			"additionalProperties": false
+		},
+		"IdGroupType": {
+			"title": "IdGroupType",
+			"description": "Structure for a single id with an array of alternateIds",
+			"type": "object",
+			"properties": {
+				"Id": {
+					"description": "tbd",
+					"$ref": "#/definitions/IdentifierType"
+				},
+				"alternateIds": {
+					"description": "Associated identifiers",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IdentifierType"
+					}
+				}
+			}
+		},
+		"ServiceDatesType": {
+			"title": "ServiceDatesType",
+			"description": "tbd",
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/ServiceDateType"
+			}
+		},
+		"ServiceDateType": {
+			"title": "ServiceDateType",
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"ServiceTypeCode": {
+					"description": "tbd",
+					"type": "string"
+				},
+				"ServiceDate": {
+					"description": "tbd",
+					"type": "string",
+					"$ref": "#/definitions/DateType"
+				},
+				"AdjustedServiceDate": {
+					"description": "tbd",
+					"type": "string",
+					"$ref": "#/definitions/DateType"
+				}
+			}
+		},
+		"AmountType": {
+			"title": "AmountType",
+			"description": "An amount is a number of monetary units specified in a currency.",
+			"type": "object",
+			"properties": {
+				"value": {
+					"type": "number"
+				},
+				"currency": {
+					"description": "tbd",
+					"type": "string"
+				}
+			},
+			"required": [
+				"value", "currency"
+			]
+		},
+		"PercentageType": {
+			"title": "PercentageType",
+			"description": "A percent is a value representing a fraction of one hundred, expressed as a quotient.",
+			"type": "object",
+			"properties": {
+				"value": {
+					"type": "number"
+				},
+				"basis": {
+					"description": "tbd",
+					"type": "string"
+				}
+			},
+			"required": [
+				"value", "basis"
+			]
+		},
+		"ContractType": {
+			"title": "ContractType",
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"ContractId": {
+					"description": "tbd",
+					"$ref": "#/definitions/IdentifierType"
+				},
+				"ContractPeriod": {
+					"description": "tbd",
+					"$ref": "#/definitions/DatePeriodType"
+				},
+				"ContractExtensions": {
+					"description": "tbd",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/ContractExtensionType"
+					}
+				}
+			}
+		},
+		"ContractExtensionType": {
+			"title": "ContractExtensionType",
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"ContractExtensionId": {
+					"description": "tbd",
+					"$ref": "#/definitions/IdentifierType"
+				},
+				"ContractExtensionPeriod": {
+					"description": "tbd",
+					"$ref": "#/definitions/DatePeriodType"
+				}
+			}
+		},
+		"PaymentDistributionType": {
+			"title": "PaymentDistributionType",
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"WorkRelationshipId": {
+					"description": "tbd",
+					"$ref": "#/definitions/IdentifierType"
+				},
+				"PaymentTypeCode": {
+					"description": "e.g. regular, bonus, reimbursement",
+					"type": "string"
+				},
+				"RequestedStartDate": {
+					"type": "string",
+					"$ref": "#/definitions/DateType"
+				},
+				"DistributionAllocations": {
+					"$ref": "#/definitions/DistributionAllocationType",
+					"type": "array"
+				}
+			}
+		},
+		"DistributionAllocationType": {
+			"title": "DistributionAllocationType",
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"DistributionMethodCode": {
+					"description": "Check, Electronic Funds Transfer, Cash",
+					"type": "string"
+				},
+				"DistributionAccount": {
+					"$ref": "#/definitions/DistributionAccountType"
+				},
+				"DistributionRate": {
+					"$ref": "#/definitions/DistributionRateType"
+				},
+				"ElectronicFundsTransferMethodCode": {
+					"description": "Pay Card, Monetary Account",
+					"type": "string"
+				},
+				"RemainingBalanceIndicator": {
+					"description": "tbd",
+					"type": "boolean"
+				}
+			}
+		},
+		"DistributionRateType": {
+			"title": "DistributionRateType",
+			"description": "tbd",
+			"type": "object",
+			"oneOf": [
+				{
+					"$ref": "#/definitions/AmountType"
+				}, {
+					"$ref": "#/definitions/PercentageType"
+				}
+			]
+		},
+		"DistributionAccountType": {
+			"title": "DistributionAccountType",
+			"description": "tbd",
+			"type": "object",
+			"oneOf": [
+				{
+					"$ref": "#/definitions/MonetaryAccountType"
+				}, {
+					"$ref": "#/definitions/PayCardType"
+				}
+			]
+		},
+		"MonetaryAccountType": {
+			"title": "MonetaryAccountType",
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"AccountId": {
+					"description": "tbd",
+					"$ref": "#/definitions/IdentifierType"
+				},
+				"AlternateIds": {
+					"description": "Associated identifiers",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IdentifierType"
+					}
+				},
+				"AccountTypeCode": {
+					"description": "tbd",
+					"type": "string"
+				},
+				"CurrencyTypeCode": {
+					"description": "tbd",
+					"type": "string"
+				},
+				"CountryCode": {
+					"description": "tbd",
+					"type": "string"
+				}
+			}
+		},
+		"PayCardType": {
+			"title": "PayCardType",
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"CardNumber": {
+					"description": "tbd",
+					"type": "number"
+				},
+				"ExpirationDate": {
+					"type": "string",
+					"$ref": "#/definitions/DateType"
+				}
+			}
+		},
+		"WorkRelationshipLifeCycleType": {
+			"title": "WorkRelationshipType",
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"Hire": {
+					"description": "tbd",
+					"$ref": "#/definitions/HireType"
+				},
+				"Termination": {
+					"description": "tbd",
+					"$ref": "#/definitions/TerminationType"
+				},
+				"ServiceDates": {
+					"description": "tbd",
+					"$ref": "#/definitions/ServiceDatesType"
+				}
+			}
+		},
+		"WorkRelationshipType": {
+			"title": "WorkRelationshipType",
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"WorkRelationshipId": {
+					"description": "tbd",
+					"$ref": "#/definitions/IdentifierType"
+				},
+				"WorkRelationshipTypeCode": {
+					"description": "tbd",
+					"type": "string"
+				},
+				"Contract": {
+					"description": "tbd",
+					"$ref": "#/definitions/ContractType"
+				}
+			}
+		},
+		"HireType": {
+			"title": "HireType",
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"HireDate": {
+					"description": "tbd",
+					"type": "string",
+					"$ref": "#/definitions/DateType"
+				},
+				"OriginalHireDate": {
+					"description": "tbd",
+					"type": "string",
+					"$ref": "#/definitions/DateType"
+				},
+				"ActualDutyEntryDate": {
+					"description": "tbd",
+					"type": "string",
+					"$ref": "#/definitions/DateType"
+				},
+				"HireTypeCode": {
+					"description": "e.g. New, Rehire, Transfer",
+					"type": "string"
+				}
+			}
+		},
+		"TerminationType": {
+			"title": "TerminationType",
+			"description": "tbd",
+			"type": "object",
+			"properties": {
+				"TerminationReasonId": {
+					"description": "tbd",
+					"$ref": "#/definitions/IdentifierType"
+				},
+				"TerminationDate": {
+					"description": "tbd",
+					"type": "string",
+					"$ref": "#/definitions/DateType"
+				},
+				"LastWorkedDate": {
+					"description": "tbd",
+					"type": "string",
+					"$ref": "#/definitions/DateType"
+				},
+				"FinalPayDate": {
+					"description": "tbd",
+					"type": "string",
+					"$ref": "#/definitions/DateType"
+				}
+			}
+		},
+		"DeductionType": {
+			"title": "DeductionType",
+			"description": "A deduction",
+			"type": "object",
+			"properties": {
+				"DeductionRate": {
+					"$ref": "#/definitions/DeductionRateType"
+				},
+				"DeductionGoal": {
+					"$ref": "#/definitions/DeductionGoalType"
+				}
+			}
+		},
+		"DeductionRateType": {
+			"title": "DeductionRateType",
+			"description": "tbd",
+			"type": "object",
+			"oneOf": [
+				{
+					"$ref": "#/definitions/AmountType"
+				}, {
+					"$ref": "#/definitions/PercentageType"
+				}
+			]
+		},
+		"DeductionGoalType": {
+			"title": "DeductionGoalType",
+			"description": "A deduction goal",
+			"type": "object",
+			"properties": {
+				"GoalAmount": {
+					"$ref": "#/definitions/AmountType"
+				},
+				"BalanceAmount": {
+					"$ref": "#/definitions/AmountType"
+				}
+			}
+		}
+	}
+}

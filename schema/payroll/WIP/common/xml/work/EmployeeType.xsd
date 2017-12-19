@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="EmployeeType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../base/CodeType" />
+  <xsd:include schemaLocation="../person/PersonBaseType" />
+  <xsd:include schemaLocation="../base/IndicatorType" />
+  <xsd:include schemaLocation="../base/IdentifierType" />
+  <xsd:include schemaLocation="../base/PercentType" />
+  <xsd:include schemaLocation="../codelist/PositionTypeCodeList" />
+  <xsd:include schemaLocation="../base/EntityType" />
+  <xsd:complexType name="SpecialClassificationTypeArray">
+    <xsd:annotation>
+      <xsd:documentation>VIP, Owner, Highly Compensated, Stock Owner, Executive, Officer, etc.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element minOccurs="0" maxOccurs="1" name="code" type="hros:CodeType" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="indicator" type="hros:IndicatorType" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="percentage" type="hros:PercentType" />
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EmployeeType">
+    <xsd:annotation>
+      <xsd:documentation>The information about a person and their relationship as an employee.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xsd:annotation>
+          <xsd:documentation>The primary identifier of the employee. This should be the identifier assigned by the owner of the data.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="name" type="hros:PersonNameType">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>Recommended usage: free text description for that entity</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="code" type="hros:CodeType">
+        <xsd:annotation>
+          <xsd:documentation>Recommended usage: descriptor which can be expressed as enumeration</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="legalId" type="hros:IdentifierType">
+        <xsd:annotation>
+          <xsd:documentation>The legal identifier of a person. The issuer is most likely a country or state.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="birthDate" type="hros:DateType">
+        <xsd:annotation>
+          <xsd:documentation>The birth date of a person.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="gender" type="hros:GenderCodeList">
+        <xsd:annotation>
+          <xsd:documentation>The gender of a person.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="citizenship">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>The citizenships that a person holds. This is a legal citizenship in a country (as opposed to nationality which may or may not be a country).</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CountryCodeList" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="residenceCountry">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>The country (or countries) where a person currently resides.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CountryCodeList" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="militaryStatus">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>The military status of a person.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="ethnicity" type="hros:StringTypeArray">
+        <xsd:annotation>
+          <xsd:documentation>The ethnicity (or ethnicity of a person. Ethnicity is an ethnic group or a social group that shares a common and distinctive culture, religion, and/or language.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="communication" type="hros:CommunicationType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="primaryLanguage" type="hros:LanguageCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="securityTag" type="hros:IdentifierType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="positionTypeCode" type="hros:PositionTypeCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="laborBargainingUnitMemberIndicator" type="hros:IndicatorType">
+        <xsd:annotation>
+          <xsd:documentation>An indicator that an employee is a memeber of a labor bargaining unit.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="specialClassifications" type="hros:SpecialClassificationTypeArray" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="specialProvisions">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="reportingCode">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="Employee" type="hros:EmployeeType" />
+</xsd:schema>

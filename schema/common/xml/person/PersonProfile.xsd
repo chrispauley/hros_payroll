@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="PersonProfile" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../history/EmploymentHistoryType.xsd" />
+  <xs:include schemaLocation="../history/MilitaryHistoryType.xsd" />
+  <xs:include schemaLocation="../vcard/CertificationType.xsd" />
+  <xs:include schemaLocation="../history/EducationHistoryType.xsd" />
+  <xs:include schemaLocation="../vcard/licenseType.xsd" />
+  <xs:complexType name="PersonProfile">
+    <xs:annotation>
+      <xs:documentation>Personal profile</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="emergencyContact">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="education" type="hros:EducationHistoryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="employment" type="hros:EmploymentHistoryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="military" type="hros:MilitaryHistoryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="licenses">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:licenseType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="certifications">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CertificationType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="qualifications">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:complexType>
+                <xs:all />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="securityCredentials">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:complexType>
+                <xs:all />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="affiliations">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:complexType>
+                <xs:all />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="PersonProfile" type="hros:PersonProfile" />
+</xs:schema>

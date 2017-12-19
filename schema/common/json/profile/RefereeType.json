@@ -1,0 +1,25 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.0",
+    "title": "RefereeType",
+    "description": "OLD: A person who may be referred to for information or guidance on the character or other qualities of someone, spec. of an applicant for employment, for an academic or other award, or the like.",
+    "type": "object",
+    "properties": {
+        "refereeId": { "$ref": "../base/IdentifierType.json#" },
+        "personName": { "$ref": "../person/PersonNameType.json#" },
+        "positionTitle": { "type": "string" },
+        "organizationName": { "type": "string" },
+        "communication": { "$ref": "../communication/CommunicationType.json#" },
+        "yearsKnown": { "type": "number" },
+        "relationship": { "$ref": "../codelist/RelationshipTypeCodeList.json#" },
+        "attachmentReferences": {
+            "type": "array",
+            "items": { "$ref": "../base/AttachmentReferenceType.json#" }
+        },
+        "comments": {
+            "type": "array",
+            "items": { "$ref": "../base/CommentType.json#" }
+        }
+    },
+    "required": [ "personName" ]
+}

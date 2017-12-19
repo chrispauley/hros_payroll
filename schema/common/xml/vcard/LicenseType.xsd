@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="LicenseType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="CertificationType.xsd" />
+  <xs:include schemaLocation="../base/EffectiveTimePeriod.xsd" />
+  <xs:complexType name="ValueAndDescriptionTypeArray">
+    <xs:annotation>
+      <xs:documentation>Small helper type for containing 'value/code/type', 'description' and 'effectiveTimePeriod' information</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="item">
+        <xs:complexType>
+          <xs:all>
+            <xs:element minOccurs="0" maxOccurs="1" name="validFrom" type="hros:DateTimeType" />
+            <xs:element minOccurs="0" maxOccurs="1" name="validTo" type="hros:DateTimeType" />
+            <xs:element minOccurs="1" maxOccurs="1" name="value">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="description">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LicenseType">
+    <xs:annotation>
+      <xs:documentation>Authoritative permission to hold a certain status or to do certain things, e.g. to practise some trade or profession. (OED license, n. a. A formal, usually a printed or written permission from a constituted authority to do something. b. The document embodying such a permission.)</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>A unique identifier to the certificate as defined by the issuing authority.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="name">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The common name of the certificate.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="type" type="hros:EntityType">
+        <xs:annotation>
+          <xs:documentation>The type of the certificate.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="status">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The status of the certificate. While this is an open string, common status include active, expired, pending, suspended.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="effectiveTimePeriod" type="hros:EffectiveTimePeriod">
+        <xs:annotation>
+          <xs:documentation>The time period for which the certificiate is valid and considered active.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="firstIssued" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The original issue date of the certificate. Often this is useful when the certifiates need to be renewed often, and it is important to know how long the certificate has been held.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="issuingAuthority" type="hros:OrganizationType">
+        <xs:annotation>
+          <xs:documentation>The organization that issued the certificate.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="attachmentReferences">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>References to attachments in the message that provide evidence of the issue or the validity of the license.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:AttachmentReferenceType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descriptions" type="hros:StringTypeArray" />
+      <xs:element minOccurs="0" maxOccurs="1" name="endorsements" type="hros:ValueAndDescriptionTypeArray">
+        <xs:annotation>
+          <xs:documentation>The modifications to the base license as authorized by the issuing authority that allow for additional access or grant additional qualifications. Examples include different variations of drivers or pilot licenses that allow for additional vehicles to be operated.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="restrictions" type="hros:ValueAndDescriptionTypeArray">
+        <xs:annotation>
+          <xs:documentation>The modifications to the base license as authorized by the issuing authority that restrict access or remove permissions or authority. Examples include requiring vision ware while operating a motor vehicle, or requiring an additional licensed operator to accompany the licensee while operating a vehicle.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="violations" type="hros:ValueAndDescriptionTypeArray">
+        <xs:annotation>
+          <xs:documentation>Provide a list of violations or transgressions against the license as per the licensing authority or other authorities. Examples include points violations on a drivers license due to speeding.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="License" type="hros:LicenseType" />
+</xs:schema>
