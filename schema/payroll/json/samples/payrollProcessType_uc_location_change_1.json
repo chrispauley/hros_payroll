@@ -1,0 +1,30 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "33",
+      "description": "Hayleigh works for a company in Buffalo, New York."
+    },
+    "alternateIds": [{ "schemeId": "uc_location_change", "value": "3" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Hayleigh Snyder",
+            "given": "Hayleigh",
+            "family": "Snyder",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0033"}
+        }
+    }
+}

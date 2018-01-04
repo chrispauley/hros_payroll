@@ -8,23 +8,23 @@
         }]
     },
     "documentId": {
-        "schemeAgencyId": "HROPEN",
-        "schemeId": "PayrollUseCase",
-        "value": "26",
-        "description": "Miranda King gets married to Brian Matthews."
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "26",
+      "description": "Miranda King gets married to Brian Matthews."
     },
     "alternateIds": [{ "schemeId": "uc_name_change", "value": "1" }],
 
+    "payee": {
+        "personName": [{
+            "formattedName": "Miranda King",
+            "given": "Miranda",
+            "family": "King",
+            "nameType": "legal"
+        }],
 
-    "personName": [{
-        "formattedName": "Miranda King",
-        "given": "Miranda",
-        "family": "King",
-        "nameType": "legal"
-    }],
-
-    "personlegal": {
-        "id": { "schemeId": "ssn", "value": "123-45-0026" }
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0026"}
+        }
     }
-
 }

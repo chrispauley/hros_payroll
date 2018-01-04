@@ -15,16 +15,16 @@
     },
     "alternateIds": [{ "schemeId": "uc_deployment", "value": "1" }],
 
+    "payee": {
+        "personName": [{
+            "formattedName": "Hayleigh Bowen",
+            "given": "Hayleigh",
+            "family": "Bowen",
+            "nameType": "legal"
+        }],
 
-    "personName": [{
-        "formattedName": "Hayleigh Bowen",
-        "given": "Hayleigh",
-        "family": "Bowen",
-        "nameType": "legal"
-    }],
-
-    "personlegal": {
-        "id": { "schemeId": "ssn", "value": "123-45-0028" }
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0028" }
+        }
     }
-
 }

@@ -8,85 +8,32 @@
         }]
     },
     "documentId": {
-        "schemeAgencyId": "HROPEN",
-        "schemeId": "PayrollUseCase",
-        "value": "4",
-        "description": "Graham is a temporary agency working covering a 6 week maternity absence."
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "4",
+      "description": "Graham is a temporary agency working covering a 6 week maternity absence."
     },
     "alternateIds": [{ "schemeId": "uc_newhire", "value": "4" }],
 
+    "payee": {
+        "personName": [{
+            "formattedName": "Graham Hubbard",
+            "given": "Graham",
+            "family": "Hubbard",
+            "nameType": "legal"
+        }],
 
-    "personName": [{
-        "formattedName": "Graham Hubbard",
-        "given": "Graham",
-        "family": "Hubbard",
-        "nameType": "legal"
-    }],
-
-    "personlegal": {
-        "id": { "schemeId": "ssn", "value": "123-45-0004" }
-    },
-
-    "workRelationshipLifecycle": {
-        "contract": {
-            "contractNumber": { "schemeId": "contractId", "value": "" },
-            "contactStartDate": "2017-12-01",
-            "workRelationshipType": "contractor",
-            "NOTE": "How do you represent a temporary employee from an agency?"
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0004" }
         }
     },
 
-    "deployment": {
-        "assignmentReasonCode": "Hire",
-
-        "communication": {
-            "address": [{
-                "line": "",
-                "city": "",
-                "countycode": "US",
-                "countrySubDivisions": [{ "type": "state", "value": "" }],
-                "typeCode": "home"
-            }],
-            "phone": [{ "formattedNumber": "", "useCode": "home" }],
-            "email": [{ "address": "Graham.Hubbard@example.com", "useCode": "company" }]
-        },
-
-        "job": {
-            "title": "",
-            "id": { "schemeId": "", "value": "" },
-            "jobFunction": "",
-            "planCode": "",
-            "stepCode": "",
-            "gradeCode": "",
-            "jobFunction": "",
-            "description": ""
-        },
-
-        "position": {
-            "title": "",
-            "id": { "schemeId": "", "value": "" },
-            "positionScheduleType": "FullTime",
-            "positionTypeCode": "DirectHire",
-            "remunerationBasisCode": "Saleried"
-        },
-
-        "workLocation": {
-            "id": { "schemeId": "", "value": "" },
-            "name": "",
-            "description": {
-                "languageCode": "en-US",
-                "value": ""
-            },
-            "address": {
-                "line": "",
-                "city": "",
-                "countycode": "US",
-                "countrySubDivisions": [{ "type": "state", "value": "" }],
-                "typeCode": "branch"
-            },
-            "fieldRemoteWorkerIndicator": false,
-            "virtualWorkerIndicator": false,
-            "fullTimeEquivalentRatio": 100
+    "workRelationshipLifeCycle": {
+        "contract": {
+            "workRelationShipType": "contractor",
+            "contractStartDate": "2017-11-30",
+            "contractEndDate": "2018-05-30",
+            "contractNumber": {"schemeId": "Company1", "value": "CTR0003"}
         }
     }
 

@@ -1,0 +1,18 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.2",
+    "title": "USTaxWithholdingCodeList",
+    "description": "A code classifying the withhodling status of US federal taxes.",
+    "enum": [
+        "Exempt",
+        "Tax Block",
+        "Employer Paid",
+        "Fully Subject to Tax"
+    ],
+    "enumNames": [
+        "Taxes Not Withheld, Earnings Not Reported",
+        "Taxes Not Withheld, Earnings Are Reported",
+        "Taxes Withheld, Earnings Grossed Up",
+        "Taxes Withheld, Earnings Are Reported"
+    ]
+}

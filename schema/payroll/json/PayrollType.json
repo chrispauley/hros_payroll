@@ -2,9 +2,9 @@
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
     "version": "4.2",
     "title": "PayrollType",
-    "description": "Represents the Payroll Specification.",
+    "description": "Represents the Payroll Specification. Uses one noun type for all use cases.",
     "type": "object",
     "properties": {
-        "payrollProcess": { "$ref": "PayrollProcessType.json#" }
+        "payrollProcess": { "$ref": "PayrollMasterDataType.json#" }
     }
 }

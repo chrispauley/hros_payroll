@@ -8,23 +8,23 @@
         }]
     },
     "documentId": {
-        "schemeAgencyId": "HROPEN",
-        "schemeId": "PayrollUseCase",
-        "value": "21",
-        "description": "Hellen is no longer satisfied with her job in her company."
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "21",
+      "description": "Hellen is no longer satisfied with her job in her company."
     },
     "alternateIds": [{ "schemeId": "uc_termination", "value": "3" }],
 
+    "payee": {
+        "personName": [{
+            "formattedName": "Hellen Blair",
+            "given": "Hellen",
+            "family": "Blair",
+            "nameType": "legal"
+        }],
 
-    "personName": [{
-        "formattedName": "Hellen Blair",
-        "given": "Hellen",
-        "family": "Blair",
-        "nameType": "legal"
-    }],
-
-    "personlegal": {
-        "id": { "schemeId": "ssn", "value": "123-45-0021" }
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0021"}
+        }
     }
-
 }

@@ -1,0 +1,31 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "5",
+      "description": "TBD"
+    },
+    "alternateIds": [{ "schemeId": "uc_recurring_quotas", "value": "1" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Dora Garcia",
+            "given": "Dora",
+            "family": "Garcia",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0005" }
+        }
+    }
+
+}

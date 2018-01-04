@@ -8,84 +8,33 @@
         }]
     },
     "documentId": {
-        "schemeAgencyId": "HROPEN",
-        "schemeId": "PayrollUseCase",
-        "value": "3",
-        "description": "Greg is an apprentice who is starting a one year apprenticeship."
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "3",
+      "description": "Greg is an apprentice who is starting a one year apprenticeship."
     },
     "alternateIds": [{ "schemeId": "uc_newhire", "value": "3" }],
 
-    "personName": [{
-        "formattedName": "Greg Jones",
-        "given": "Greg",
-        "family": "Jones",
-        "nameType": "legal"
-    }],
+    "payee": {
+        "personName": [{
+            "formattedName": "Greg Jones",
+            "given": "Greg",
+            "family": "Jones",
+            "nameType": "legal"
+        }],
 
-    "personlegal": {
-        "id": { "schemeId": "ssn", "value": "123-45-0003" }
-    },
-
-    "workRelationshipLifecycle": {
-        "contract": {
-            "contractNumber": { "schemeId": "contractId", "value": "" },
-            "contactStartDate": "2017-12-01",
-            "workRelationshipType": "volunteer",
-            "NOTE": "How do you represent an apprentice?"
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0003" }
         }
     },
 
-    "deployment": {
-        "assignmentReasonCode": "Hire",
-
-        "communication": {
-            "address": [{
-                "line": "",
-                "city": "",
-                "countycode": "US",
-                "countrySubDivisions": [{ "type": "state", "value": "" }],
-                "typeCode": "home"
-            }],
-            "phone": [{ "formattedNumber": "", "useCode": "home" }],
-            "email": [{ "address": "Greg.Jones@example.com", "useCode": "company" }]
-        },
-
-        "job": {
-            "title": "",
-            "id": { "schemeId": "", "value": "" },
-            "jobFunction": "",
-            "planCode": "",
-            "stepCode": "",
-            "gradeCode": "",
-            "jobFunction": "",
-            "description": ""
-        },
-
-        "position": {
-            "title": "",
-            "id": { "schemeId": "", "value": "" },
-            "positionScheduleType": "FullTime",
-            "positionTypeCode": "DirectHire",
-            "remunerationBasisCode": "Saleried"
-        },
-
-        "workLocation": {
-            "id": { "schemeId": "", "value": "" },
-            "name": "",
-            "description": {
-                "languageCode": "en-US",
-                "value": ""
-            },
-            "address": {
-                "line": "",
-                "city": "",
-                "countycode": "US",
-                "countrySubDivisions": [{ "type": "state", "value": "" }],
-                "typeCode": "branch"
-            },
-            "fieldRemoteWorkerIndicator": false,
-            "virtualWorkerIndicator": false,
-            "fullTimeEquivalentRatio": 100
+    "workRelationshipLifeCycle": {
+        "contract": {
+            "workRelationShipType": "contractor",
+            "contractStartDate": "2017-11-30",
+            "contractEndDate": "2018-11-30",
+            "contractNumber": {"schemeId": "Company1", "value": "CTR0002"}
         }
     }
+
 }

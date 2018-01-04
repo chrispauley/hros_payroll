@@ -21,6 +21,10 @@
      obj.style.width = 1200+'px';
     //  obj.style.width = obj.contentWindow.document.body.scrollWidth + 'px';
   }
+  function loadMasterDataType(){
+    var newUrl='JSchema/index.htm?#schema=/schema/payroll/json/PayrollMasterDataType.json';
+    document.getElementById('iframeID').src=newUrl;
+  }
 </script>
 </head>
 
@@ -35,16 +39,25 @@
     <div class='row'>
       <div class='col-md-12'>
         <div>
-          <a target='_new' href='http://localhost:3333/schema/payroll/json/PayrollProcessType.json'>http://localhost:3333/schema/payroll/json/PayrollProcessType.json</a>
+            <p className='text-muted'>Please click on this link to load the schema:
+                <a target='_new' onClick='loadMasterDataType()'>PayrollMasterDataType.json</a>
+            </p>
         </div>
       </div>
     </div>
     <div class='row'>
       <div class='col-md-12'>
-        <iframe src='JSchema/index.htm' frameborder='0' onload='resizeIframe(this)'></iframe>
+        <iframe id='iframeID' src='JSchema/index.htm' frameborder='0' onload='resizeIframe(this)'></iframe>
       </div>
     </div>
 
+    <div class='row'>
+        <hr/>
+        <div class='col-md-12'>
+            <p className='text-muted'>This page uses the JSchema web application in an iframe. It doesn't work from the gh-pages branch of the repo because of CORS issues. It does work when it is hosted in a docker container on AWS.
+            </p>
+        </div>
+    </div>
   </div>
 
   <div id='footer'></div>

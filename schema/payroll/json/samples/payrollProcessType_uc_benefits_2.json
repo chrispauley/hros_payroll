@@ -1,0 +1,30 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "34",
+      "description": "Mary selects to purchase supplemental insurance which her employer allows her to pay for through a post tax deduction."
+    },
+    "alternateIds": [{ "schemeId": "uc_benefits", "value": "2" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Mary Mills",
+            "given": "Mary",
+            "family": "Mills",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0034"}
+        }
+    }
+}

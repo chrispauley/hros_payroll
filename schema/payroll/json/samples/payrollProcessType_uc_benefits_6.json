@@ -1,0 +1,30 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "38",
+      "description": "Wendy was an excellent worker and was awarded a free trip to the companies head office in Paris, FR with free hotel and $500 spending money."
+    },
+    "alternateIds": [{ "schemeId": "uc_benefits", "value": "6" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Wendy Lopez",
+            "given": "Wendy",
+            "family": "Lopez",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0038"}
+        }
+    }
+}

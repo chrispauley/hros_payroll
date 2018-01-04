@@ -8,22 +8,24 @@
         }]
     },
     "documentId": {
-        "schemeAgencyId": "HROPEN",
-        "schemeId": "PayrollUseCase",
-        "value": "11",
-        "description": "Mary works for a small manufacturing company in the Midwest."
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "11",
+      "description": "Mary works for a small manufacturing company in the Midwest."
     },
     "alternateIds": [{ "schemeId": "uc_payment_details", "value": "3" }],
 
+    "payee": {
+        "personName": [{
+            "formattedName": "Mary Hill",
+            "given": "Mary",
+            "family": "Hill",
+            "nameType": "legal"
+        }],
 
-    "personName": [{
-        "formattedName": "Mary Hill",
-        "given": "Mary",
-        "family": "Hill",
-        "nameType": "legal"
-    }],
-
-    "personlegal": {
-        "id": { "schemeId": "ssn", "value": "123-45-0011" }
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0011" }
+        }
     }
+
 }

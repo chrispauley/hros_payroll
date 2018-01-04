@@ -1,0 +1,30 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "43",
+      "description": "Dave works in a factory making spigots and is paid $5 for every 3 spigots made."
+    },
+    "alternateIds": [{ "schemeId": "uc_basic_package", "value": "4" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Dave Jensen",
+            "given": "Dave",
+            "family": "Jensen",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0043"}
+        }
+    }
+}

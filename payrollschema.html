@@ -26,7 +26,18 @@
         <main></main>
       </div>
     </div>
+    <div class='row'>
 
+        <div class='col-md-12'>
+            <p className='text-muted'>
+                This page is using <a href='https://github.com/epoberezkin/ajv'>AJV</a>,
+                an NPM Library, to load the schemas. It currently does not work with
+                the HROS schemas because the libray supports json-schema-draft-06 which
+                is causing a conflict with schema meta data. If you are use the Chrome browser
+                Dev Tools, you can see the error in the JavaScript Console. 
+            </p>
+        </div>
+    </div>
   </div>
 
   <div id='footer'></div>

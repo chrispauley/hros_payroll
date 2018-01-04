@@ -1,0 +1,90 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.2.1",
+    "title": "PaymentInstructionType",
+    "description": "The instructions for a payment.",
+    "allOf": [
+        { "$ref": "../../common/json/base/EntityType.json#" },
+        { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
+    ],
+    "type": "object",
+    "definitions": {
+        "AccountType": {
+            "description": "Type of payment account.",
+            "enum": [
+                "main",
+                "other"
+            ]
+        },
+        "PaymentMethodType": {
+            "description": "The manner is which a payment is made. e.g. Direct Deposit, Check, etc.",
+            "type": "object",
+            "properties": {
+                "methodType": {
+                    "description": "NOTE: discuss this.",
+                    "enum": [
+                        "BankEFT", "Check", "Paypal"
+                    ]
+                },
+                "accountId": {
+                    "description": "NOTE: discuss this.",
+                    "enum": [
+                        "IBAN", "Swift", "Email", "Phone"
+                    ]
+                },
+                "accountType": {
+                    "description": "",
+                    "enum": [
+                        "Checking", "Savings", "Money Market", "Mattress"
+                    ]
+                },
+                "nameOnAccount": {
+                    "description": "Exact name as it appears on the account.",
+                    "type": "string"
+                },
+                "bankId": {
+                    "description": "NOTE: discuss this.",
+                    "type": "string"
+                },
+                "countryCode": {
+                    "description": "NOTE: discuss this.",
+                    "$ref": "../../common/json/codelist/CountryCodeList.json#"
+                },
+                "currencyCode": {
+                    "description": "NOTE: discuss this.",
+                    "$ref": "../../common/json/codelist/CurrencyCodeList.json#"
+                }
+            }
+        },
+        "PaymentDistributionType": {
+            "description": "NOTE: description needed.",
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "description": "NOTE: description needed.",
+                    "$ref": "../../common/json/base/AmountType.json#"
+                },
+                "percentage": {
+                    "description": "NOTE: description needed.",
+                    "$ref": "../../common/json/base/PercentType.json#"
+                },
+                "remainingBalanceIndicator": {
+                    "description": "NOTE: description needed.",
+                    "$ref": "../../common/json/base/IndicatorType.json#"
+                },
+                "deductionReference": {
+                    "description": "NOTE: discuss this.",
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "properties": {
+        "id": { "$ref": "../../common/json/base/IdentifierType.json#" },
+        "paymentCycleCode": { "$ref": "../../common/json/codelist/PayCycleIntervalCodeList.json#" },
+        "processingSequence": { "type": "integer", "minimum": 1 },
+        "accountType": { "$ref": "#/definitions/AccountType" },
+        "paymentMethod": { "$ref": "#/definitions/PaymentMethodType" },
+        "paymentDistribution": { "$ref": "#/definitions/PaymentDistributionType" }
+    }
+}

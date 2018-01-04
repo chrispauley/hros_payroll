@@ -15,16 +15,16 @@
     },
     "alternateIds": [{ "schemeId": "uc_payment_details", "value": "6" }],
 
+    "payee": {
+        "personName": [{
+            "formattedName": "John Kelly",
+            "given": "John",
+            "family": "Kelly",
+            "nameType": "legal"
+        }],
 
-    "personName": [{
-        "formattedName": "John Kelly",
-        "given": "John",
-        "family": "Kelly",
-        "nameType": "legal"
-    }],
-
-    "personlegal": {
-        "id": { "schemeId": "ssn", "value": "123-45-0014" }
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0014" }
+        }
     }
-
 }

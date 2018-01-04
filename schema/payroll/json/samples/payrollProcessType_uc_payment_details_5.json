@@ -15,15 +15,16 @@
     },
     "alternateIds": [{ "schemeId": "uc_payment_details", "value": "5" }],
 
-    "personName": [{
-        "formattedName": "Diego Sanchez",
-        "given": "Diego",
-        "family": "Sanchez",
-        "nameType": "legal"
-    }],
+    "payee": {
+        "personName": [{
+            "formattedName": "Diego Sanchez",
+            "given": "Diego",
+            "family": "Sanchez",
+            "nameType": "legal"
+        }],
 
-    "personlegal": {
-        "id": { "schemeId": "ssn", "value": "123-45-0013" }
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0013" }
+        }
     }
-
 }

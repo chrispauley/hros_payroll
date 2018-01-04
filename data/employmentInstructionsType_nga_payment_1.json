@@ -1,28 +1,29 @@
 {
-
-    "personName": [{
-        "formattedName": "Richard T Garrett",
-        "given": "Richard",
-        "family": "Garrett",
-        "nameType": "legal",
-        "preferred": "Bob",
-        "middle": "The",
-        "formerFamily": "Smith",
-        "preferredSalutationCode": "",
-        "generationAffixCode": "Snr",
-        "qualificationAffixCode": "Dr",
-        "titleAffixCode": "II",
-        "initials": "RTG",
-        "legal": "Richard The Garrett",
-        "alias": "",
-        "NOTES": "AlternateScriptPersonName not in v4.1"
-    }],
-    "personlegal": {
-        "birthDate": "1986-04-08",
-        "birthPlace": "Bristol - NOTE: missing city, countrysubdiv, countrycode",
-        "gender": "male",
-        "maritalStatus": "Married",
-        "NOTE": "missing PrimaryLanguageCode"
+    "payee": {
+        "personName": [{
+            "formattedName": "Richard T Garrett",
+            "given": "Richard",
+            "family": "Garrett",
+            "nameType": "legal",
+            "preferred": "Bob",
+            "middle": "The",
+            "formerFamily": "Smith",
+            "preferredSalutationCode": "",
+            "generationAffixCode": "Snr",
+            "qualificationAffixCode": "Dr",
+            "titleAffixCode": "II",
+            "initials": "RTG",
+            "legal": "Richard The Garrett",
+            "alias": "",
+            "NOTES": "AlternateScriptPersonName not in v4.1"
+        }],
+        "personlegal": {
+            "birthDate": "1986-04-08",
+            "birthPlace": "Bristol - NOTE: missing city, countrysubdiv, countrycode",
+            "gender": "male",
+            "maritalStatus": "Married",
+            "NOTE": "missing PrimaryLanguageCode"
+        }
     },
 
     "workRelationshipLifecycle": {
@@ -102,14 +103,14 @@
         "fullTimeEquivalentRatio": 1,
 
         "NOTES": ["Missing <hr:PayCycleRemuneration",
-                "nga:PaymentInstructions paymentInstruction spec is currently in development",
-                "nga:CostAssignment does not have a place in the spec at this time.",
-                "nga:PayScales is not defined in the spec.",
-                "nga:DateSpecifications is not defined in the spec.",
-                "nga:Approvers is not defined in the spec.",
-                "nga:ContractElements is not defined in the spec.",
-                "nga:AlternateIdentifiers is not defined in the spec.",
-                "nga:PayServEmpPayElements "
+            "nga:PaymentInstructions paymentInstruction spec is currently in development",
+            "nga:CostAssignment does not have a place in the spec at this time.",
+            "nga:PayScales is not defined in the spec.",
+            "nga:DateSpecifications is not defined in the spec.",
+            "nga:Approvers is not defined in the spec.",
+            "nga:ContractElements is not defined in the spec.",
+            "nga:AlternateIdentifiers is not defined in the spec.",
+            "nga:PayServEmpPayElements "
         ]
 
     }

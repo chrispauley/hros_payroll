@@ -8,23 +8,23 @@
         }]
     },
     "documentId": {
-        "schemeAgencyId": "HROPEN",
-        "schemeId": "PayrollUseCase",
-        "value": "32",
-        "description": "Chris works Part Time during the week at the Baltimore Starbucks Store # 4633 and then starts working as well on weekends at Baltimore Store # 6733."
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "32",
+      "description": "Chris works Part Time during the week at the Baltimore Starbucks Store # 4633 and then starts working as well on weekends at Baltimore Store # 6733."
     },
     "alternateIds": [{ "schemeId": "uc_deployment", "value": "5" }],
 
+    "payee": {
+        "personName": [{
+            "formattedName": "Chris Clarke",
+            "given": "Chris",
+            "family": "Clarke",
+            "nameType": "legal"
+        }],
 
-    "personName": [{
-        "formattedName": "Chris Clarke",
-        "given": "Chris",
-        "family": "Clarke",
-        "nameType": "legal"
-    }],
-
-    "personlegal": {
-        "id": { "schemeId": "ssn", "value": "123-45-0032" }
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0032"}
+        }
     }
-
 }

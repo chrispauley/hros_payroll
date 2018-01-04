@@ -8,25 +8,23 @@
         }]
     },
     "documentId": {
-        "schemeAgencyId": "HROPEN",
-        "schemeId": "PayrollUseCase",
-        "value": "19",
-        "description": "John is a temporary employee and his planed termination date is coming to end this month."
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "19",
+      "description": "John is a temporary employee and his planed termination date is coming to end this month."
     },
     "alternateIds": [{ "schemeId": "uc_termination", "value": "1" }],
 
-    "personName": [{
-        "formattedName": "John Harris",
-        "given": "John",
-        "family": "Harris",
-        "nameType": "legal"
-    }],
+    "payee": {
+        "personName": [{
+            "formattedName": "John Harris",
+            "given": "John",
+            "family": "Harris",
+            "nameType": "legal"
+        }],
 
-    "personlegal": {
-        "id": {
-            "schemeId": "ssn",
-            "value": "123-45-0019"
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0019" }
         }
     }
-
 }

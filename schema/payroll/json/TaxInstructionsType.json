@@ -7,7 +7,7 @@
         { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
     ],
     "definitions": {
-        "USTaxInstructionsType": {
+        "USTaxInstructionType": {
             "description": "",
             "type": "object",
             "allOf": [
@@ -188,7 +188,7 @@
         "deductionCycleCode": { "$ref": "../../common/json/base/CodeType.json#" },
         "totalTransactions": { "type": "number" },
         "processingSequence": { "type": "number" },
-        "USTaxInstruction": { "$ref": "#/definitions/USTaxInstructionsType" },
+        "USTaxInstruction": { "$ref": "#/definitions/USTaxInstructionType" },
         "NLTaxInstruction": { "$ref": "NLTaxInstructionType.json#" }
     }
 }

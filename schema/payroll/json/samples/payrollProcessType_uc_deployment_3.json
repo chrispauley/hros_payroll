@@ -15,16 +15,16 @@
     },
     "alternateIds": [{ "schemeId": "uc_deployment", "value": "3" }],
 
+    "payee": {
+        "personName": [{
+            "formattedName": "Mary Hart",
+            "given": "Mary",
+            "family": "Hart",
+            "nameType": "legal"
+        }],
 
-    "personName": [{
-        "formattedName": "Mary Hart",
-        "given": "Mary",
-        "family": "Hart",
-        "nameType": "legal"
-    }],
-
-    "personlegal": {
-        "id": { "schemeId": "ssn", "value": "123-45-0030" }
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0030" }
+        }
     }
-
 }
