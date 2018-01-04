@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="PersonCompetencyType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../base/MeasureType" />
+  <xsd:include schemaLocation="../base/CodeType" />
+  <xsd:include schemaLocation="../base/OpenEndPeriodType" />
+  <xsd:include schemaLocation="../base/AttachmentReferenceType" />
+  <xsd:include schemaLocation="../evaluation/ScoreType" />
+  <xsd:include schemaLocation="../base/StringTypeArray" />
+  <xsd:include schemaLocation="../base/IdentifierType" />
+  <xsd:include schemaLocation="../base/FormattedDateTimeType" />
+  <xsd:include schemaLocation="../evaluation/BaseScoreType" />
+  <xsd:complexType name="CompetencyDimensionType">
+    <xsd:annotation>
+      <xsd:documentation>A measurable characteristic of a competency. Examples might include 'frequency of use,' 'level of interest,' etc.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="dimensionType" type="hros:CodeType">
+        <xsd:annotation>
+          <xsd:documentation>A code classifying the type of competency dimension.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="score" type="hros:ScoreType" />
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:complexType name="CompetencyEvidenceType">
+    <xsd:annotation>
+      <xsd:documentation>A document or other record providing evidence of a competency or that is treated as a proxy for the existence of the competency. Examples include: an assessment result; a performance appraisal; an educational degree; a supervisor's observation; etc.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="ids">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:IdentifierType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="evidenceTypeCode" type="hros:CodeType">
+        <xsd:annotation>
+          <xsd:documentation>A code categorizing the type of evidence that substantiates a related competency. For example, 'assessment,' 'degree,' 'performance appraisal' etc.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="evidenceName">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>A name or label for the evidence.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="descriptions" type="hros:StringTypeArray">
+        <xsd:annotation>
+          <xsd:documentation>Description of the evidence requirement.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="evidenceRequirementsId" type="hros:IdentifierType">
+        <xsd:annotation>
+          <xsd:documentation>An identifier for a policy associated with or governing the type of evidence. For example, a policy setting a confidence level or minimum requirement for the associated evidence.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="scores">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>Scores supporting the competency evidence.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:ScoreType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="effectivePeriod" type="hros:OpenEndPeriodType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="verificationDate" type="hros:FormattedDateTimeType">
+        <xsd:annotation>
+          <xsd:documentation>The date on which the associated information or fact was verified.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="verificationSourceName">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>The name of the service, person, or agent from which the verification was obtained.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="attachmentReference" type="hros:AttachmentReferenceType" />
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:complexType name="PersonCompetencyType">
+    <xsd:annotation>
+      <xsd:documentation>A specified person competency is a competency within the context of a personal record (profile, appraisal, assessment) assessed or asserted at specified level of proficiency.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="competencyIds">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>A unique identifier for a competency definition.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:IdentifierType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="competencyName">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>A human readable, descriptive name for the given competency.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="description">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>Brief description of the named competency.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="proficiencyLevel" type="hros:BaseScoreType">
+        <xsd:annotation>
+          <xsd:documentation>A minimum level of proficiency for a competency  associated with a position, role, course, or other item. The proficiency level is expressed as a score a point scale or a mark among range of values.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="lastUsedDate" type="hros:FormattedDateTimeType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="experienceMeasure" type="hros:MeasureType">
+        <xsd:annotation>
+          <xsd:documentation>The number of years of experience associated with the given entity. For example, this may be years of experience asserted or claimed by a candidate as evidence of a competency.  Or it may be the assertion of a competency evidence policy or requirement for years of experience associated with a position or role. Use the unitCode to specify 'years' or 'months'.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="interestLevel" type="hros:BaseScoreType">
+        <xsd:annotation>
+          <xsd:documentation>A rating of a person's interest associated with a competency.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="competencyDimensions">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CompetencyDimensionType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="competencyEvidence" type="hros:CompetencyEvidenceType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="attachmentReferences">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:AttachmentReferenceType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="PersonCompetency" type="hros:PersonCompetencyType" />
+</xsd:schema>

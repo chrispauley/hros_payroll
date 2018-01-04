@@ -1,0 +1,138 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.2.1",
+    "title": "WorkRelationshipLifecycleType",
+    "description": "Contains a collection of information about a period of employment, including hire, leaves of absence, and termination.",
+    "type": "object",
+    "definitions": {
+        "ContractType": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "contractNumber": {
+                    "description": "The identifier for the contract.",
+                    "$ref": "../base/IdentifierType.json#"
+                },
+                "contractStartDate": {
+                    "description": "The start date for the contract.",
+                    "$ref": "../base/DateType.json#"
+                },
+                "contractEndDate": {
+                    "description": "The end date for the contract.",
+                    "$ref": "../base/DateType.json#"
+                },
+                "addendum": {
+                    "description": "Date for each occurrence.",
+                    "type": "array",
+                    "items": { "$ref": "../base/DateType.json#" }
+                },
+                "workRelationshipType": {
+                    "description": "",
+                    "enum": [
+                        "volunteer",
+                        "employee",
+                        "contractor"
+                    ]
+                }
+            }
+        },
+        "HireType": {
+            "description": "Provides hire date information.",
+            "type": "object",
+            "properties": {
+                "typeHire": {
+                    "description": "",
+                    "enum": [
+                        "new",
+                        "rehire",
+                        "transfer",
+                        "aquisition"
+                    ]
+                }
+            },
+            "hireDate": {
+                "description": "Date of hire.",
+                "$ref": "../base/DateType.json#"
+            },
+            "originalHireDate": {
+                "description": "Original date of hire.",
+                "$ref": "../base/DateType.json#"
+            },
+            "adjustedHireDate": {
+                "description": "Adjusted date of hire.",
+                "$ref": "../base/DateType.json#"
+            },
+            "serviceStartDates": {
+                "description": "Service start date(s). NOTE: should be an array of objects which includes a date.",
+                "type": "array",
+                "items": {
+                    "$ref": "../base/DateType.json#"
+                }
+            },
+            "dutyEntryDate": {
+                "description": "DutyEntryDate also known as WorkerStartDate. Required by some companies. Also used to define training period before they actually start working. Hire date would be when they start working.",
+                "$ref": "../base/DateType.json#"
+            },
+            "acquisitionDate": {
+                "description": "TBD.",
+                "$ref": "../base/DateType.json#"
+            }
+        },
+        "TerminationType": {
+            "description": "Provides termination details.",
+            "type": "object",
+            "properties": {
+                "reasonCode": {
+                    "description": "Retirement, Voluntary (subcategory), Involuntary (subcategory), Transfer, Business Sold. In EU - info must be sent to government but the codes are provided by the government. Will use IdentifierType. This allows us to define who owns the list and the list value",
+                    "$ref": "../base/IdentifierType.json#"
+                },
+                "terminationDate": {
+                    "description": "When contract is complete.",
+                    "$ref": "../base/DateType.json#"
+                },
+                "lastWorkedDate": {
+                    "description": "may need it statutorily. For example, we will pay you through end of month but your last worked day was on the 15th. Access turned off, etc from an HR perspective.",
+                    "$ref": "../base/DateType.json#"
+                },
+                "lastPaidDate": {
+                    "description": "high level employees that have terminated but the salary may carry on for a few more months. Or Date the recurring payment is turned off",
+                    "$ref": "../base/DateType.json#"
+                },
+                "terminiationPaymentInformaiton": {
+                    "description": "Severance, rules for unused vacation, etc. This should already be defined prior to the payroll process. Any payments would be passed through as any other payments would be payed.",
+                    "type": "string"
+                }
+            }
+        },
+
+        "LeaveType": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "enum": [
+                        "Active",
+                        "Inactive"
+                    ]
+                },
+                "remunerationCode": {
+                    "enum": [
+                        "Paid",
+                        "Unpaid"
+                    ]
+                },
+                "reasonCode": { "$ref": "../base/CodeType.json#" },
+                "startDate": { "$ref": "../base/DateType.json#" },
+                "lastWorkedDate": { "$ref": "../base/DateType.json#" },
+                "lastPaidDate": { "$ref": "../base/DateType.json#" },
+                "scheduledWorkReturnDate": { "$ref": "../base/DateType.json#" },
+                "workReturnDate": { "$ref": "../base/DateType.json#" }
+            }
+        }
+    },
+    "properties": {
+        "contract": { "$ref": "#/definitions/ContractType" },
+        "hire": { "$ref": "#/definitions/HireType" },
+        "leaveOfAbsence": { "$ref": "#/definitions/LeaveType" },
+        "termination": { "$ref": "#/definitions/TerminationType" }
+    }
+}

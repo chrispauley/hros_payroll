@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="ScheduledHoursCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="ScheduledHoursCodeList">
+    <xsd:annotation>
+      <xsd:documentation>Values that classify the various scheduled hours types</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Week" />
+      <xsd:enumeration value="Two Weeks" />
+      <xsd:enumeration value="Four Weeks" />
+      <xsd:enumeration value="Half Month" />
+      <xsd:enumeration value="Month" />
+      <xsd:enumeration value="Two Months" />
+      <xsd:enumeration value="Quarter" />
+      <xsd:enumeration value="Seasonal Term" />
+      <xsd:enumeration value="Half Year" />
+      <xsd:enumeration value="Year" />
+      <xsd:enumeration value="Shift" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ScheduledHoursCode" type="hros:ScheduledHoursCodeList" />
+</xsd:schema>

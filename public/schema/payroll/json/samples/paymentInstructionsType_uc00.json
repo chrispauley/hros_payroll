@@ -1,0 +1,23 @@
+{
+    "id": { "schemeId": "CompanyId", "value": "1" },
+    "code": "sample_code",
+    "name": "Every entity has an id, code, and name.",
+
+    "accountType": "main",
+
+    "paymentDistribution": {
+        "amount": { "value": 2000.00, "currency": "USD" },
+        "percentage": 100,
+        "remainingBalanceIndicator": false,
+        "deductionReference": "taxes, savings, insurance"
+    },
+
+    "paymentMethod": {
+        "methodType": "BankEFT",
+        "accountId": "IBAN",
+        "nameOnAccount": "George Smith",
+        "bankId": "",
+        "countryCode": "US",
+        "currencyCode": "USD"
+    }
+}

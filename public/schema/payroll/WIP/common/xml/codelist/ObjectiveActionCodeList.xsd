@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="ObjectiveActionCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="ObjectiveActionCodeList">
+    <xsd:annotation>
+      <xsd:documentation>A code classifying an action to be taken with respect to achieving an objective. This may be used in the definition or specification of an objective or objective plan.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Increase" />
+      <xsd:enumeration value="Decrease" />
+      <xsd:enumeration value="MaintainAt" />
+      <xsd:enumeration value="MaintainAbove" />
+      <xsd:enumeration value="Reach" />
+      <xsd:enumeration value="MaintainBelow" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ObjectiveActionCode" type="hros:ObjectiveActionCodeList" />
+</xsd:schema>

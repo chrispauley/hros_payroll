@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {configureStore} from "./config/configureStore";
 
-
 import PayrollPage from './pages/PayrollPage';
 import Nav from './pages/Nav'
 import Footer from './pages/Footer'

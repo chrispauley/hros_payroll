@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="SpecifiedPersonType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="PersonReferenceType.xsd" />
+  <xs:include schemaLocation="../base/CodeType.xsd" />
+  <xs:complexType name="SpecifiedPersonType">
+    <xs:annotation>
+      <xs:documentation>Contains information to identify a person associated with the interaction or entity.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="hros:PersonNameType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="communication" type="hros:CommunicationType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="primaryLanguage" type="hros:LanguageCodeList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="roleCode" type="hros:CodeType" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="SpecifiedPerson" type="hros:SpecifiedPersonType" />
+</xs:schema>

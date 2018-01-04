@@ -1,8 +1,10 @@
 {
-    "personName": [],
-    "personLegal": {
-        "legalId": {
-            "value": ""
+    "payee": {
+        "personName": [],
+        "personLegal": {
+            "legalId": {
+                "value": ""
+            }
         }
     },
     "statuatoryInstructions": [{

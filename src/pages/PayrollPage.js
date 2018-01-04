@@ -1,28 +1,38 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {getPayrollInstructionInstance, getPayrollInstructions } from '../actions/payrollActions';
+import {getPayrollInstructionInstance, getSampleList} from '../actions/payrollActions';
+import {
+  toggleShowJSON,
+  toggle_showSchema,
+  toggle_showNoun,
+  toggle_payee,
+  toggle_showDeployment,
+  toggle_showTax,
+  toggle_showBenefits,
+  toggle_showGarnishments,
+  toggle_showGeneralInstructions
+} from '../actions/sessionActions';
+
+import {loadSchema} from '../actions/validatorActions';
+
 import DropLoader from "../components/utils/DropLoader";
 
 import DataSelectPanel from '../components/common/DataSelectPanel'
 import NounPanel from '../components/noun/NounPanel';
 import PayeePanel from '../components/payee/PayeePanel';
+import BenefitInstructionsPanel from '../components/benefitInstructions/BenefitInstructionsPanel';
 import DeploymentPanel from '../components/deployment/DeploymentPanel';
-import WorkRelationshipPanel from '../components/workRelationshipLifecyle/WorkRelationshipPanel';
-
-import DeductionInstructionsPanel from '../components/deductionInstruction/DeductionInstructionsPanel'
+import GeneralDeductionsPanel from '../components/generalDeductions/GeneralDeductionsPanel';
+import GarnishmentDeductionsPanel from '../components/garnishmentDeductions/GarnishmentDeductionsPanel';
 import PaymentInstructionsPanel from '../components/paymentInstruction/PaymentInstructionsPanel'
-import StatuatoryInstructionsPanel from '../components/statutoryInstruction/StatuatoryInstructionsPanel'
+import TaxInstructionsPanel from '../components/taxInstructions/TaxInstructionsPanel';
+
+import WorkRelationshipPanel from '../components/workRelationshipLifecyle/WorkRelationshipPanel';
 
 
 class PayrollPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      items: [],
-      offset: 5,
-      page: 1,
-      processInstance: {}
-    }
   }
 
   handleClick = (e) => {
@@ -32,69 +42,111 @@ class PayrollPage extends Component {
   }
 
   componentDidMount() {
-    // console.log('componentDidMount');
+    console.log('componentDidMount');
     var url = 'data/fileList.json';
-    this.props.getPayrollInstructions(url);
+    this.props.getSampleList(url);
   }
 
-  componentWillUnmount() {
-  }
+  componentWillUnmount() {}
 
   handleDropFileInput = (data) => {
-    this.setState({ processInstance: data });
+    this.setState({processInstance: data});
   }
 
-  handleViewDataClick = () => {
-    this.setState({showJSONData: true})
+  handleLoadSchemaClick = () => {
+    console.log('handleLoadSchemaClick()');
+    var url = 'schema/common/json/meta/hros.json';
+    url = 'schema/payroll/json/PayrollType.json';
+    this.props.loadSchema(url);
   }
-
 
   render() {
     var {error, processInstance} = this.props.payrollReducer;
-    var {documentId, payee, deployment, workRelationshipLifeCycle, paymentInstructions,
-      deductionInstructions, statuatoryInstructions } = this.props.payrollReducer.processInstance;
+    if (error) {
+      return (
+        <div>
+          <DataSelectPanel {...this.props.payrollReducer} onClick={this.handleClick.bind(this)}/>
+          <div className='row'>Error loading process instance.</div>
+        </div>
+      );
+    }
+
+    var {
+      documentId,
+      payee,
+      payrollDeployments,
+      workRelationshipLifeCycle,
+      benefitDeductionInstructions,
+      garnishmentDeductionInstruction,
+      generalDeductionInstructions,
+      paymentInstructions,
+      deductionInstructions,
+      taxInstructions
+    } = processInstance;
 
     return (
       <div>
 
-        {error && (<div className='col-md-12'><span style={{color:'red'}}>Error loading data </span><hr/></div>) }
-        <DataSelectPanel {...this.props.payrollReducer} onClick={this.handleClick.bind(this)}/>
+        {error && (
+          <div className='col-md-12'>
+            <span style={{
+              color: 'red'
+            }}>Error loading data
+            </span><hr/></div>
+        )}
+        {/* <DataSelectPanel {...this.props.payrollReducer} onClick={this.handleClick.bind(this)}/> */}
+        <DataSelectPanel onClick={this.handleClick.bind(this)}/>
 
-        <hr/>
+        <hr/> {documentId && (<NounPanel {...processInstance}/>)}
 
-        {
-          documentId &&
-          (<NounPanel {...processInstance} />) }
+        {payee && (<PayeePanel {...processInstance}/>)}
 
-        { deployment &&
-          (<DeploymentPanel {...processInstance } />) }
+        {payrollDeployments && (<DeploymentPanel />)}
 
-        { workRelationshipLifeCycle &&
-          (<WorkRelationshipPanel {...processInstance } />) }
+        {/* { workRelationshipLifeCycle &&
+          (<WorkRelationshipPanel {...processInstance } />) } */}
 
-        { payee &&
-          (<PayeePanel {...processInstance}/> ) }
+        { benefitDeductionInstructions && ( <BenefitInstructionsPanel />) }
 
-        { paymentInstructions &&
-        (<PaymentInstructionsPanel {...processInstance} />) }
+        { generalDeductionInstructions && (<GeneralDeductionsPanel />)}
 
-        { deductionInstructions &&
-        ( <DeductionInstructionsPanel {...processInstance} />) }
+        { paymentInstructions && ( <PaymentInstructionsPanel />) }
 
-        { statuatoryInstructions &&
-        ( <StatuatoryInstructionsPanel {...processInstance} />) }
+        {taxInstructions && (<TaxInstructionsPanel/>)}
 
+        {garnishmentDeductionInstruction && (<GarnishmentDeductionsPanel/>)}
 
 
         {/* <DropLoader onChange={this.handleDropFileInput}/> */}
-        {
-          isEmpty(!this.processInstance) &&
-          (<button type='button'
-            className='btn btn-default' onClick={this.handleViewDataClick}>View JSON</button>)
-        }
-        { this.state.showJSONData &&
-          (<div><pre><code>{JSON.stringify(processInstance, null, 2)}</code></pre></div>)
-        }
+        <button type='button' className='btn btn-info' onClick={this.handleLoadSchemaClick}>
+          Load Schema</button>
+
+        <button type='button' className='btn btn-info' onClick={this.props.toggle_showSchema}>
+          {this.props.sessionReducer.showSchema
+            ? ('Hide')
+            : ('Show')}
+          Schema</button>
+
+        {isEmpty(!processInstance) && (
+          <button type='button' className='btn btn-info' onClick={this.props.toggleShowJSON}>
+            {this.props.sessionReducer.showJSON
+              ? ('Hide')
+              : ('Show')}
+            JSON</button>
+        )
+}
+        {this.props.sessionReducer.showJSON && (
+          <div>
+            <pre><code>{JSON.stringify(processInstance, null, 2)}</code></pre>
+          </div>
+        )
+}
+        {this.props.sessionReducer.showSchema && (
+          <div>
+            <pre><code>{JSON.stringify(this.props.validatorReducer.schema, null, 2)}</code></pre>
+          </div>
+        )
+}
 
       </div>
     );
@@ -102,23 +154,30 @@ class PayrollPage extends Component {
 }
 
 function mapState(state) {
-    return state;
+  return state;
 }
 function mapDispatch(dispatch) {
-    return {
-        // fetchPositions: () => dispatch(fetchPositions()),
-        // fetchPosition: (positionUrl) => dispatch(fetchPosition(positionUrl)),
-        // loadPositions: () => dispatch(loadPositions()),
-        getPayrollInstructionInstance: (url) => dispatch(getPayrollInstructionInstance(url)),
-        getPayrollInstructions: (url,offset,page) => dispatch(getPayrollInstructions(url,offset,page)),
-        clear: () => dispatch(clear()),
-        toggleShowJSON: () => dispatch(toggleShowJSON()),
-        toggleShowNoun: () => dispatch(toggleShowNoun()),
-        toggleShowProps: () => dispatch(toggleShowProps())
-    };
+  return {
+    // fetchPositions: () => dispatch(fetchPositions()),
+    // fetchPosition: (positionUrl) => dispatch(fetchPosition(positionUrl)),
+    loadSchema: (url) => dispatch(loadSchema(url)),
+    getPayrollInstructionInstance: (url) => dispatch(getPayrollInstructionInstance(url)),
+    getSampleList: (url, offset, page) => dispatch(getSampleList(url, offset, page)),
+    clear: () => dispatch(clear()),
+    toggleShowJSON: () => dispatch(toggleShowJSON()),
+    toggleShowNoun: () => dispatch(toggleShowNoun()),
+    toggleShowProps: () => dispatch(toggleShowProps()),
+    toggle_showSchema: () => dispatch(toggle_showSchema())
+    // toggle_payee: ()=> dispatch(toggle_payee()),
+    // toggle_showDeployment: () => dispatch(toggle_showDeployment()),
+    // toggle_showTax: () => dispatch(toggle_showTax()),
+    // toggle_showBenefits: () => dispatch(toggle_showBenefits()),
+    // toggle_showGarnishments: () => dispatch(toggle_showGarnishments()),
+    // toggle_showGeneralInstructions: () => dispatch(toggle_showGeneralInstructions())
+  };
 }
 
 export default connect(mapState, mapDispatch)(PayrollPage);
 function isEmpty(obj) {
-    return Object.keys(obj).length === 0;
+  return Object.keys(obj).length === 0;
 }

@@ -1,0 +1,31 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "16",
+      "description": "Wendy is seconded to the Paris, France Office for 2 years from her home office in the US."
+    },
+    "alternateIds": [{ "schemeId": "uc_transfer", "value": "2" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Wendy Roberts",
+            "given": "Wendy",
+            "family": "Roberts",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0016" }
+        }
+    }
+
+}

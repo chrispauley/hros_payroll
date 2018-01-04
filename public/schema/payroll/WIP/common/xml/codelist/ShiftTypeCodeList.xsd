@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="ShiftTypeCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="ShiftTypeCodeList">
+    <xsd:annotation>
+      <xsd:documentation>Values that classify the various shift types</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Weekday Shift 1" />
+      <xsd:enumeration value="Weekday Shift 2" />
+      <xsd:enumeration value="Weekday Shift 3" />
+      <xsd:enumeration value="Weekend Shift 1" />
+      <xsd:enumeration value="Weekend Shift 2" />
+      <xsd:enumeration value="Weekend Shift 3" />
+      <xsd:enumeration value="Split Shift" />
+      <xsd:enumeration value="Double Shift Weekday" />
+      <xsd:enumeration value="Double Shift Weekend" />
+      <xsd:enumeration value="Holiday Shift" />
+      <xsd:enumeration value="Shift 1 - Day" />
+      <xsd:enumeration value="Shift 2 - Evening" />
+      <xsd:enumeration value="Shift 3 - Overnight" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ShiftTypeCode" type="hros:ShiftTypeCodeList" />
+</xsd:schema>

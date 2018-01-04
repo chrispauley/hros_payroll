@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="CostAllocationType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/PercentType.xsd" />
+  <xs:include schemaLocation="../base/EntityType.xsd" />
+  <xs:complexType name="CostAllocationType">
+    <xs:annotation>
+      <xs:documentation>Contains percentage table per identifier of an account, department, or other entity to which an item should be allocated.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+        <xs:complexType>
+          <xs:all>
+            <xs:element minOccurs="1" maxOccurs="1" name="percentage" type="hros:PercentType" />
+            <xs:element minOccurs="0" maxOccurs="1" name="department" type="hros:EntityType" />
+            <xs:element minOccurs="0" maxOccurs="1" name="location" type="hros:EntityType" />
+            <xs:element minOccurs="0" maxOccurs="1" name="costCenter" type="hros:EntityType" />
+            <xs:element minOccurs="0" maxOccurs="1" name="job" type="hros:EntityType" />
+            <xs:element minOccurs="0" maxOccurs="1" name="account" type="hros:EntityType" />
+            <xs:element minOccurs="0" maxOccurs="1" name="project" type="hros:EntityType" />
+            <xs:element minOccurs="0" maxOccurs="1" name="shift" type="hros:EntityType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CostAllocation" type="hros:CostAllocationType" />
+</xs:schema>

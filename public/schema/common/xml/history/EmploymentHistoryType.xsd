@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="EmploymentHistoryType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../vcard/OrganizationType.xsd" />
+  <xs:include schemaLocation="../vcard/LocationType.xsd" />
+  <xs:include schemaLocation="../base/EntityType.xsd" />
+  <xs:include schemaLocation="../base/IndicatorType.xsd" />
+  <xs:include schemaLocation="BaseHistoryType.xsd" />
+  <xs:simpleType name="ResourceRelationshipCodeList">
+    <xs:annotation>
+      <xs:documentation>A code classifying a resource's employment relationship with repect to an associated organization within an assignment. In the vast majority of cases, a resource can be classified as either an employee (a "direct hire") or a vendor's employee. The "Vendor Employee" concept encompasses those self employed and those sourced through a staffing or leasing company. A third value of "Other" may be used to fit rare exceptions, such as a customer employee who has a role in a project or process and must be considered in the provisioning of an HR system.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Employee" />
+      <xs:enumeration value="VendorEmployee" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="EmployerHistoryType">
+    <xs:annotation>
+      <xs:documentation>Details of a particular tenure of employment or work with an organization.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>The identifier for the history.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="start" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The start date of the history if known.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="end" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The end date of the history if known.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="current" type="hros:IndicatorType">
+        <xs:annotation>
+          <xs:documentation>Indicator that the person's history entry is current active (i.e. if education, still at the school. If work history, still working at the organization)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="attachmentReferences">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>Attachment references supporting the history entry.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:AttachmentReferenceType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descriptions" type="hros:StringTypeArray">
+        <xs:annotation>
+          <xs:documentation>Additional details or descriptions about the history entry.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="organization" type="hros:OrganizationType">
+        <xs:annotation>
+          <xs:documentation>The specific organization to which the person held positions or performed work.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="positionHistories">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>The set of positions that the person held at the organization.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:PositionHistoryType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="PositionHistoryType">
+    <xs:annotation>
+      <xs:documentation>The details about a persons tenure within position.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>The identifier for the history.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="start" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The start date of the history if known.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="end" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The end date of the history if known.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="current" type="hros:IndicatorType">
+        <xs:annotation>
+          <xs:documentation>Indicator that the person's history entry is current active (i.e. if education, still at the school. If work history, still working at the organization)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="attachmentReferences">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>Attachment references supporting the history entry.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:AttachmentReferenceType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descriptions" type="hros:StringTypeArray">
+        <xs:annotation>
+          <xs:documentation>Additional details or descriptions about the history entry.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="title">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The title that the person held for this position.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="resourceRelationshipCode" type="hros:ResourceRelationshipCodeList">
+        <xs:annotation>
+          <xs:documentation>The relationship of the person to the organization - an employee or an employee of another company (contract or temporary staffing).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="vendorEmployeeIndicator" type="hros:IndicatorType">
+        <xs:annotation>
+          <xs:documentation>Indicator that this person was a vendor employee for this position.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="organization" type="hros:OrganizationType">
+        <xs:annotation>
+          <xs:documentation>The department, sub-company, office, or other sub-organization to which the person was employed.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="location" type="hros:LocationType">
+        <xs:annotation>
+          <xs:documentation>The location of the position to which the person was employed.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="jobCategories">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>The job categories under which the position is classified. These may be international, national, industry, or company categories as defined by the entity owner.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:EntityType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="jobLevels">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>The job levels under which this position is classified. These may be international, national, industry or company levels as defined by the entity owner.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:EntityType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="EmploymentHistoryType">
+    <xs:annotation>
+      <xs:documentation>The prior and current details of a person's employment, work, or relevant experience such as might be reported within a professional profile, CV, resume, employment application, or similar document.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:EmployerHistoryType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmploymentHistory" type="hros:EmploymentHistoryType" />
+</xs:schema>

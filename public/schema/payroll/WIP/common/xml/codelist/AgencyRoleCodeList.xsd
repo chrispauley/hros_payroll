@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="AgencyRoleCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="AgencyRoleCodeList">
+    <xsd:annotation>
+      <xsd:documentation>A code classifying the role of an entity or the role with which that entity is associated.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="customer" />
+      <xsd:enumeration value="supplier" />
+      <xsd:enumeration value="requester" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="AgencyRoleCode" type="hros:AgencyRoleCodeList" />
+</xsd:schema>

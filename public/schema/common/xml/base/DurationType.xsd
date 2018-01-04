@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="DurationType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="DurationType">
+    <xs:annotation>
+      <xs:documentation>A duration is the specification of a length of time without a fixed start or end time.</xs:documentation>
+    </xs:annotation>
+    <xs:union>
+      <xs:simpleType>
+        <xs:annotation>
+          <xs:documentation>Decimal value in seconds</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:decimal" />
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:annotation>
+          <xs:documentation>ISO8601 time duration format</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(-|)P(?:\d+(?:(\.(?!.*[a-zA-Z][0-9].*))\d+)?Y)?(?:\d+(?:(\.(?!.*[a-zA-Z][0-9].*))\d+)?M)?(?:\d+(?:(\.(?!.*[a-zA-Z][0-9].*))\d+)?W)?(?:\d+(?:(\.(?!.*[a-zA-Z][0-9].*))\d+)?D)?(?:T(?:\d+(?:(\.(?!.*[a-zA-Z][0-9].*))\d+)?H)?(?:\d+(?:(\.(?!.*[a-zA-Z][0-9].*))\d+)?M)?(?:\d+(?:(\.(?!.*[a-zA-Z][0-9].*))\d+)?S)?)?" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:element name="Duration" type="hros:DurationType" />
+</xs:schema>

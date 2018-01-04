@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="WorkLocationType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/IndicatorType.xsd" />
+  <xs:include schemaLocation="../base/TextType.xsd" />
+  <xs:include schemaLocation="AddressType.xsd" />
+  <xs:simpleType name="WorkLocationTypeCodeList">
+    <xs:annotation>
+      <xs:documentation>A set of codes classifying the work location.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Distribution center" />
+      <xs:enumeration value="Hotel property" />
+      <xs:enumeration value="Headquarters" />
+      <xs:enumeration value="Plant" />
+      <xs:enumeration value="Retail store" />
+      <xs:enumeration value="Offshore oil rig" />
+      <xs:enumeration value="Warehouse" />
+      <xs:enumeration value="Shared service center" />
+      <xs:enumeration value="Center of excellence" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WorkLocationType">
+    <xs:annotation>
+      <xs:documentation>Work location schema</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="typeCode" type="hros:WorkLocationTypeCodeList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="virtualWorkerIndicator" type="hros:IndicatorType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fieldRemoteWorkerIndicator" type="hros:IndicatorType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="remoteAddress" type="hros:AddressType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="description" type="hros:TextType" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="WorkLocation" type="hros:WorkLocationType" />
+</xs:schema>

@@ -1,0 +1,68 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+ul.tech_icon { list-style: none;}
+
+ul.tech_icon > li {
+  clear: left;
+}
+
+ul.tech_icon > li:before {
+  content: '';
+  height: 1.2em;
+  width: 1.2em;
+  margin-left: -1em;
+  margin-right: .5em;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+.react::before {
+    content:'';
+    background-image: url('img/reactjs.svg');
+}
+
+.redux::before {
+    content:'';
+    background-image: url('img/redux_icon.svg');
+}
+
+.node::before {
+    content:'';
+    background-image: url('img/nodejs.svg');
+}
+.bootstrap::before {
+    content:'';
+    background-image: url('img/bootstrap.svg');
+}
+.bower::before {
+    content:'';
+    background-image: url('img/bower.svg');
+}
+.html5::before {
+    content:'';
+    background-image: url('img/html5.svg');
+}
+.webpack::before {
+    content:'';
+    background-image: url('img/webpack.svg');
+}

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="OrganizationType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/IdentifierType.xsd" />
+  <xs:include schemaLocation="LocationType.xsd" />
+  <xs:include schemaLocation="../base/EntityType.xsd" />
+  <xs:include schemaLocation="../base/TextType.xsd" />
+  <xs:include schemaLocation="../base/CodeType.xsd" />
+  <xs:include schemaLocation="../base/NumberType.xsd" />
+  <xs:include schemaLocation="../person/SpecifiedPersonType.xsd" />
+  <xs:simpleType name="IndustryCodeList">
+    <xs:annotation>
+      <xs:documentation>Values that classify the various Industry code types</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NAICS" />
+      <xs:enumeration value="GICS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GeographicResponsibilityCodeList">
+    <xs:annotation>
+      <xs:documentation>Values that classify the various geographic responsibility codes</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Global" />
+      <xs:enumeration value="National" />
+      <xs:enumeration value="Regional" />
+      <xs:enumeration value="Local" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResponsibilityCodeList">
+    <xs:annotation>
+      <xs:documentation>Values that classify the various organization type responsibility codes</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unit" />
+      <xs:enumeration value="Department" />
+      <xs:enumeration value="Division" />
+      <xs:enumeration value="Parent" />
+      <xs:enumeration value="Group" />
+      <xs:enumeration value="Plant" />
+      <xs:enumeration value="Subsidiary" />
+      <xs:enumeration value="Joint Venture" />
+      <xs:enumeration value="Branch" />
+      <xs:enumeration value="Holding Affiliate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OwnershipTypeCodeList">
+    <xs:annotation>
+      <xs:documentation>Values that classify the various organization ownership types</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Public" />
+      <xs:enumeration value="Private" />
+      <xs:enumeration value="NonProfit" />
+      <xs:enumeration value="Government" />
+      <xs:enumeration value="Joint Venture" />
+      <xs:enumeration value="Mutual" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WorkEnvironmentTypeCodeList">
+    <xs:annotation>
+      <xs:documentation>Values that classify the various organization ownership types</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Public" />
+      <xs:enumeration value="Private" />
+      <xs:enumeration value="NonProfit" />
+      <xs:enumeration value="Government" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="OrganizationType">
+    <xs:annotation>
+      <xs:documentation>Basic information to identify and reference a specific organization.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>Recommended usage: unique descriptor which can't be expressed as enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="name">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Recommended usage: free text description for that entity</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="code" type="hros:CodeType">
+        <xs:annotation>
+          <xs:documentation>Recommended usage: descriptor which can be expressed as enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="taxId" type="hros:IdentifierType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="legalId" type="hros:IdentifierType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="industryCodes">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>The industry codes with which the organization is engaged.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CodeType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="headCount" type="hros:NumberType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="revenue" type="hros:NumberType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="description" type="hros:TextType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="geographicResponsibilityCode" type="hros:GeographicResponsibilityCodeList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="responsibilityCode" type="hros:ResponsibilityCodeList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ownershipType" type="hros:OwnershipTypeCodeList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="stockSymbol" type="hros:CodeType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="workEnvironment" type="hros:WorkEnvironmentTypeCode" />
+      <xs:element minOccurs="0" maxOccurs="1" name="contacts">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>The people at the organization who can be used contacts.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:SpecifiedPersonType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="domainName">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>The internet domain to help identify the organization and a reference to find additional information.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:anyURI" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="locations">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>The locations of the organization.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:LocationType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="Organization" type="hros:OrganizationType" />
+</xs:schema>

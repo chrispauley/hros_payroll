@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="PayCycleIntervalCodeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="PayCycleIntervalCodeList">
+    <xs:annotation>
+      <xs:documentation>PayCycleInterval specifies how often the pay cycle occurs or, in other words, how often a person is paid, e.g., weekly, biweekly, etc. This is a different concept than an interval used in expressing a rate of pay.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Day" />
+      <xs:enumeration value="Week" />
+      <xs:enumeration value="TwoWeeks" />
+      <xs:enumeration value="HalfMonth" />
+      <xs:enumeration value="Month" />
+      <xs:enumeration value="TwoMonths" />
+      <xs:enumeration value="MonthWeek" />
+      <xs:enumeration value="MonthWeek2" />
+      <xs:enumeration value="MonthWeek3" />
+      <xs:enumeration value="MonthWeek4" />
+      <xs:enumeration value="MonthWeek5" />
+      <xs:enumeration value="MonthWeekLast" />
+      <xs:enumeration value="Quarter" />
+      <xs:enumeration value="HalfYear" />
+      <xs:enumeration value="Year" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PayCycleIntervalCode" type="hros:PayCycleIntervalCodeList" />
+</xs:schema>

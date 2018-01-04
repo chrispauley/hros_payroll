@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="BaseHistoryType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/IdentifierType.xsd" />
+  <xs:include schemaLocation="../base/StringTypeArray.xsd" />
+  <xs:include schemaLocation="../base/IndicatorType.xsd" />
+  <xs:include schemaLocation="../base/AttachmentReferenceType.xsd" />
+  <xs:include schemaLocation="../base/FormattedDateTimeType.xsd" />
+  <xs:complexType name="BaseHistoryType">
+    <xs:annotation>
+      <xs:documentation>Basic type that contains all properties common to a person's profile history entry - intended for use in education history, employment history or military history.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>The identifier for the history.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="start" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The start date of the history if known.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="end" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The end date of the history if known.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="current" type="hros:IndicatorType">
+        <xs:annotation>
+          <xs:documentation>Indicator that the person's history entry is current active (i.e. if education, still at the school. If work history, still working at the organization)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="attachmentReferences">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>Attachment references supporting the history entry.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:AttachmentReferenceType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="descriptions" type="hros:StringTypeArray">
+        <xs:annotation>
+          <xs:documentation>Additional details or descriptions about the history entry.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="BaseHistory" type="hros:BaseHistoryType" />
+</xs:schema>

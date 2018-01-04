@@ -10,11 +10,11 @@ class PayeePanel extends Component {
     this.state = {
       isCollapsed: false
     }
-    console.log('PayeePanel', props);
+    // console.log('PayeePanel', props);
   }
 
   render() {
-    var {personName, personLegal } = this.props;
+    var {personName, personLegal } = this.props.payee;
     var personNamesJsx = null;
 
     if ( personName && personName.length > 0) {
@@ -37,10 +37,11 @@ class PayeePanel extends Component {
 
               <div>
                 <div className='row well'>
-                  <div className='col-md-4'>
+                  <div className='col-md-12'>
                     {/* This should be a list of tables. */}
-                    <h4>Person Names: {personNamesJsx}</h4>
+                    <h4>Payee: {personNamesJsx}</h4>
                   </div>
+                  <pre><code>{JSON.stringify(this.props.payee, null,2)}</code></pre>
                 </div>
 
                 { personLegal &&

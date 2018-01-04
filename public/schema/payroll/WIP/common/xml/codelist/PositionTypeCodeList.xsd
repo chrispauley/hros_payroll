@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="PositionTypeCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="PositionTypeCodeList">
+    <xsd:annotation>
+      <xsd:documentation>These are values that are descriptive in classifying a position or a position opportunity or "offering". They are not precise classes useful internally to drive pay, benefits, or HR compliance. Enumerated values are: DirectHire, Temporary, TemporaryToHire, ContractToHire, Contract, Internship, Externship, Apprenticeship, Seasonal, Student, and Volunteer. Consider that "Temporary" and "DirectHire" are not parallel concepts, but are still commonly used in classifying jobs within advertising.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="DirectHire" />
+      <xsd:enumeration value="Temporary" />
+      <xsd:enumeration value="TemporaryToHire" />
+      <xsd:enumeration value="ContractToHire" />
+      <xsd:enumeration value="Contract" />
+      <xsd:enumeration value="Internship" />
+      <xsd:enumeration value="Externship" />
+      <xsd:enumeration value="Apprenticeship" />
+      <xsd:enumeration value="Seasonal" />
+      <xsd:enumeration value="Student" />
+      <xsd:enumeration value="Volunteer" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PositionTypeCode" type="hros:PositionTypeCodeList" />
+</xsd:schema>

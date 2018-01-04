@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="DatePeriodType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="DateOpenEndPeriodType.xsd" />
+  <xs:complexType name="DatePeriodType">
+    <xs:annotation>
+      <xs:documentation>Single period between dates. Both start and end are required.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="1" maxOccurs="1" name="start" type="hros:DateType" />
+      <xs:element minOccurs="1" maxOccurs="1" name="end" type="hros:DateType" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="DatePeriod" type="hros:DatePeriodType" />
+</xs:schema>

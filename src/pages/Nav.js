@@ -52,6 +52,7 @@ class Nav extends React.Component {
                     </li> */}
 
                     <li><a href='jschemaframe.html'>JSchema</a></li>
+                    <li><a href='payrollschema.html'>PayrollSchema</a></li>
                   </ul>
 
                   <ul className='nav navbar-nav navbar-right'>

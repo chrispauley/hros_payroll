@@ -16,6 +16,7 @@ module.exports = {
     'index': './src/index.js',
     'payroll': './src/payroll.js',
     'jschemapage': './src/jschemapage',
+    'payrollschema': './src/payrollschema',
     'about': './src/about.js'
   },
   output: {

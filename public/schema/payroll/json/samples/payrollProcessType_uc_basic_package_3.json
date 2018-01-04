@@ -1,0 +1,30 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "42",
+      "description": "Eric works night shift with an annual salary of $22,000 and a shift allowance of $400 a week."
+    },
+    "alternateIds": [{ "schemeId": "uc_basic_package", "value": "3" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Eric Stevenson",
+            "given": "Eric",
+            "family": "Stevenson",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0042" }
+        }
+    }
+}

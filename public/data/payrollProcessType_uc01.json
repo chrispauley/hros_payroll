@@ -26,29 +26,31 @@
         }
     ],
 
-    "personName": [{
-        "formattedName": "George Smith",
-        "given": "George",
-        "family": "Smith",
-        "nameType": "legal"
-    }],
-    "personLegal": {
-        "passportId": {
-            "schemeId": "passport",
-            "value": "0123456789"
-        },
-        "id": {
-            "schemeId": "ssn",
-            "value": "123-45-8999"
+    "payee": {
+        "personName": [{
+            "formattedName": "George Smith",
+            "given": "George",
+            "family": "Smith",
+            "nameType": "legal"
+        }],
+        "personLegal": {
+            "passportId": {
+                "schemeId": "passport",
+                "value": "0123456789"
+            },
+            "id": {
+                "schemeId": "ssn",
+                "value": "123-45-8999"
+            }
         }
     },
-    "deployment": {
+    "payrollDeployments": [{
         "workerAssignmentSource": {
             "sourceCode": "Inpatriate",
             "homeCountry": "GB",
             "hostCountry": "US"
         },
-        "workLocation": {
+        "workLocations": [{
             "id": {
                 "schemeId": "companyLocId",
                 "value": "121"
@@ -64,16 +66,16 @@
             "address": {
                 "line": "123 Main St",
                 "city": "Newtown",
-                "countrySubDivisions": [{"type": "state", "value": "New Jersey"}],
+                "countrySubDivisions": [{ "type": "state", "value": "New Jersey" }],
                 "postalCode": "08590"
             }
-        },
+        }],
         "communication": {
             "web": [{
                 "url": "http://www.example.com"
             }]
         }
-    },
+    }],
     "workRelationshipLifeCycle": {
         "contract": {
             "contractNumber": {

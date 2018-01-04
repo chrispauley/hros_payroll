@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import shortid from 'shortid';
 import Pagination from './Pagination';
 
@@ -8,16 +9,17 @@ class DataSelectPanel extends Component {
     super(props);
     this.state = {
       isCollapsed: false,
-      items: props.items,
+      items: props.payrollReducer.items,
       pageOfItems: [],
       initialPage: 1
     }
+    console.log("DataSelectPanel props:", this.props.payrollReducer);
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      items: nextProps.items,
-      pageOfItems: nextProps.items.slice(0,6) })
+      items: nextProps.payrollReducer.items,
+      pageOfItems: nextProps.payrollReducer.items.slice(0,6) })
   }
 
   onChangePage = (pageOfItems) => {
@@ -77,4 +79,13 @@ class DataSelectPanel extends Component {
     );
   }
 }
-export default DataSelectPanel;
+
+function mapState(state) {
+    return state;
+}
+function mapDispatch(dispatch) {
+    return {
+    };
+}
+
+export default connect(mapState, mapDispatch)(DataSelectPanel);

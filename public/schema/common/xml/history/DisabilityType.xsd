@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="DisabilityType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/FormattedDateTimeType.xsd" />
+  <xs:include schemaLocation="../base/IndicatorType.xsd" />
+  <xs:include schemaLocation="../base/PercentType.xsd" />
+  <xs:include schemaLocation="../complex/CommentType.xsd" />
+  <xs:include schemaLocation="../base/EffectiveTimePeriod.xsd" />
+  <xs:simpleType name="DisabilityLevelCodeList">
+    <xs:annotation>
+      <xs:documentation>A value from an external code list classifying the level of disability. A simple example code list:</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>need for another person's assistance with daily life tasks</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>inability to perform one or more sensory or physical functions</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>experiencing difficulties in multiple sensory or physical functions</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>experiencing difficulty in just one function</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:documentation>no limitations in functioning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DisabilitySummaryType">
+    <xs:annotation>
+      <xs:documentation>Describes a disability associated with a specified person. Want of ability to discharge a function. Incapacity in the eye of the law. (PRELIMINARY/PROPOSAL)</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="disabilityLevelCode" type="hros:DisabilityLevelCodeList">
+        <xs:annotation>
+          <xs:documentation>A value from an external code list classifying the level of disability.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="percentage" type="hros:PercentType">
+        <xs:annotation>
+          <xs:documentation>The amount of disability as a percentage of impairment. This should be defined by a medical board based on standards.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="disabilityTypeCode">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>A value from an external code list classifying the type of disability. Examples: 1. DisabilityConditionType as defined by PESC.org; 2. U.S. Office of Special Education Programs (OSEP) Primary and Secondary Disability Codes; 3. 'Total', 'Partial', and 'Residual' as broad classifications of disability in certain contexts (Acord.org).</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="disabilityDate" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The date on which an injury occurred or which is otherwise associated as the start of a period ofdisability.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="disabilityCertifiedDate" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The date on which a person a person's disabled status is verified by a doctor or medical professional.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="recoveryDate" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The date on which a person is determined to have recovered from an injury or disability.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="accomodationTypeCode">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:documentation>A code identifying a type of assistance or technology required to accomodate a disability. This is a value from an external code list.</xs:documentation>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="comment" type="hros:CommentType">
+        <xs:annotation>
+          <xs:documentation>Additional comments on the disability.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="effectiveDate" type="hros:EffectiveTimePeriod">
+        <xs:annotation>
+          <xs:documentation>Effective date of the defined disability.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="DisabilityType">
+    <xs:annotation>
+      <xs:documentation>REMARK: THIS IS A PRELIMINARY VERSION OF DISABILITY TYPE EMERGED FROM INITIAL DISCUSSIONS WITHIN THE RECRUITING WORK GROUP - OLD: Describes a disability associated with a specified person. Want of ability to discharge a function. Incapacity in the eye of the law.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="indicator" type="hros:IndicatorType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="summary">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:DisabilitySummaryType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="Disability" type="hros:DisabilityType" />
+</xs:schema>

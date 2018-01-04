@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="WebTypeArray" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="CommunicationItem.xsd" />
+  <xs:include schemaLocation="WebType.xsd" />
+  <xs:complexType name="WebTypeArray">
+    <xs:annotation>
+      <xs:documentation>Array of web information details</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+        <xs:complexType>
+          <xs:all>
+            <xs:element minOccurs="1" maxOccurs="1" name="url">
+              <xs:simpleType>
+                <xs:annotation>
+                  <xs:documentation>Actual web address</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:anyURI" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="name">
+              <xs:simpleType>
+                <xs:annotation>
+                  <xs:documentation>Provide description for particular communication item</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="useCode" type="hros:CodeType">
+              <xs:annotation>
+                <xs:documentation>Code identifying the usage of the contact point e.g. business, private, etc.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="preference">
+              <xs:simpleType>
+                <xs:annotation>
+                  <xs:documentation>Provide priority for given communication item</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:integer" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="availablePeriod" type="hros:DateTimePeriodType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebArray" type="hros:WebTypeArray" />
+</xs:schema>

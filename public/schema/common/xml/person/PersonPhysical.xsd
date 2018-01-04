@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="PersonPhysical" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../history/DisabilityType.xsd" />
+  <xs:include schemaLocation="../base/MeasureType.xsd" />
+  <xs:include schemaLocation="../base/StringTypeArray.xsd" />
+  <xs:include schemaLocation="../base/CodeType.xsd" />
+  <xs:complexType name="PersonPhysical">
+    <xs:annotation>
+      <xs:documentation>Person physical information</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="height" type="hros:MeasureType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="weight" type="hros:MeasureType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="disability" type="hros:DisabilityType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="tobaccoUser">
+        <xs:simpleType>
+          <xs:restriction base="xs:boolean" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="hairColor">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="eyeColor">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="identifyingMarks" type="hros:StringTypeArray" />
+      <xs:element minOccurs="0" maxOccurs="1" name="age">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="bloodType" type="hros:CodeType" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="PersonPhysical" type="hros:PersonPhysical" />
+</xs:schema>

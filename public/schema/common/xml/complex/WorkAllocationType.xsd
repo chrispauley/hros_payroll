@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="WorkAllocationType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="PayRateType.xsd" />
+  <xs:complexType name="WorkAllocationType">
+    <xs:annotation>
+      <xs:documentation>Contains piece of work rate table per type of work or quantity limits</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="item">
+        <xs:complexType>
+          <xs:all>
+            <xs:element minOccurs="0" maxOccurs="1" name="typeCode">
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="quantityLimit">
+              <xs:simpleType>
+                <xs:restriction base="xs:decimal" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="1" maxOccurs="1" name="payRate" type="hros:PayRateType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkAllocation" type="hros:WorkAllocationType" />
+</xs:schema>

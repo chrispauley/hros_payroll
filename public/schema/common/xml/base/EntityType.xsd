@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="EntityType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="CodeType.xsd" />
+  <xs:include schemaLocation="IdentifierType.xsd" />
+  <xs:complexType name="EntityType">
+    <xs:annotation>
+      <xs:documentation>Describe entity with id, name and code</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>Recommended usage: unique descriptor which can't be expressed as enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="name">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Recommended usage: free text description for that entity</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="code" type="hros:CodeType">
+        <xs:annotation>
+          <xs:documentation>Recommended usage: descriptor which can be expressed as enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="Entity" type="hros:EntityType" />
+</xs:schema>

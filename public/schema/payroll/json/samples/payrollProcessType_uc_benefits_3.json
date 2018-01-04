@@ -1,0 +1,30 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "35",
+      "description": "Gary selects 2 times life insurance and they are 45 years old."
+    },
+    "alternateIds": [{ "schemeId": "uc_benefits", "value": "3" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Gary Morrison",
+            "given": "Gary",
+            "family": "Morrison",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0035"}
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.0",
+    "title": "OrganizationAffiliationType",
+    "description": "OLD: Contains information about a person's affiliation with a trade, professional, or similar organization or group formed around a common purpose or cause.",
+    "type": "object",
+    "properties": {
+        "organization": { "$ref": "../organization/OrganizationType.json#" },
+        "affiliationTypeCode": {
+            "description": "The type of association or organization with which a person is affiliated. In most contexts, this would be an organizational affiliation other than that with an employer. Typically, would be an affiliation with an association, trade organization, or union.",
+            "$ref": "../codelist/AffiliatedOrganizationTypeCodeList.json#"
+        },
+        "memberId": { "$ref": "../base/IdentifierType.json#" },
+        "role": { "type": "string" },
+        "startDate": { "$ref": "../base/DateType.json#" },
+        "endDate": { "$ref": "../base/DateType.json#" },
+        "descriptions": { "$ref": "../base/StringTypeArray.json#" },
+        "attachmentReferences": {
+            "type": "array",
+            "items": { "$ref": "../base/AttachmentReferenceType.json#" }
+        }
+    }
+}

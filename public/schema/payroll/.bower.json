@@ -1,0 +1,33 @@
+{
+  "name": "hros-payroll",
+  "description": "HROpen Payroll specification",
+  "private": true,
+  "main": "readme.md",
+  "ignore": [
+    ".gitignore",
+    ".bowerrc",
+    "bower.json",
+    "documentation"
+  ],
+  "authors": [
+    {
+      "name": "HROpen Standards Consortium",
+      "email": "info@hropenstandards.org",
+      "homepage": "http://hropenstandards.org"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HROpen/Payroll.git"
+  },
+  "homepage": "https://github.com/HROpen/Payroll",
+  "_release": "0218947746",
+  "_resolution": {
+    "type": "branch",
+    "branch": "Version3x",
+    "commit": "0218947746d53463cff216a2b8332c3c5257afcf"
+  },
+  "_source": "https://github.com/HROpen/Payroll.git",
+  "_target": "Version3x",
+  "_originalSource": "https://github.com/HROpen/Payroll.git"
+}

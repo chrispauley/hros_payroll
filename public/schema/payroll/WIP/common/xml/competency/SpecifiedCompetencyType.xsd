@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="SpecifiedCompetencyType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../base/IdentifierType" />
+  <xsd:include schemaLocation="../evaluation/BaseScoreType" />
+  <xsd:complexType name="SpecifiedCompetencyType">
+    <xsd:annotation>
+      <xsd:documentation>A specified competency is a reference to a particular competency at a specified level of proficiency.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="competencyIds">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>Array of competency identifiers.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:IdentifierType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="name">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>Competency name.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="proficiencyLevel" type="hros:BaseScoreType" />
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="SpecifiedCompetency" type="hros:SpecifiedCompetencyType" />
+</xsd:schema>

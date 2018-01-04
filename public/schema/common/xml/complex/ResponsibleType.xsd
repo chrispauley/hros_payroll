@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="ResponsibleType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="Comment.xsd" />
+  <xs:include schemaLocation="../base/FormattedDateTimeType.xsd" />
+  <xs:include schemaLocation="../person/SpecifiedPersonType.xsd" />
+  <xs:complexType name="ResponsibleType">
+    <xs:annotation>
+      <xs:documentation>A collection of information about the person who is the submitter/approver of the associated document.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="comment" type="hros:CommentType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="code">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="person" type="hros:SpecifiedPersonType">
+        <xs:annotation>
+          <xs:documentation>Contains information identifying the person who has the role of submitter/approver.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="datetime" type="hros:FormattedDateTimeType">
+        <xs:annotation>
+          <xs:documentation>The date the related document, report, or related entity was communicated to a receiving or approving entity.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="Responsible" type="hros:ResponsibleType" />
+</xs:schema>

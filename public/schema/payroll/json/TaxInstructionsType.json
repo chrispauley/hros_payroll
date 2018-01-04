@@ -1,0 +1,194 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.2.1",
+    "title": "TaxInstructionsType",
+    "description": "Instructions for tax deductions.",
+    "allOf": [
+        { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
+    ],
+    "definitions": {
+        "USTaxInstructionType": {
+            "description": "",
+            "type": "object",
+            "allOf": [
+                { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
+            ],
+
+            "countryCode": { "$ref": "../../common/json/codelist/CountryCodeList.json#" },
+
+            "federalTaxWithholdingInstructions": {
+                "type": "array",
+                "items": { "$ref": "#/definitions/FederalTaxWithholdingInstructionType" }
+            },
+            "stateTaxWithholdingInstructions": {
+                "type": "array",
+                "items": { "$ref": "#/definitions/StateTaxWithholdingInstructionType" }
+            },
+            "localTaxWithholdingInstructions": {
+                "type": "array",
+                "items": { "$ref": "#/definitions/LocalTaxWithholdingInstructionsType" }
+            }
+        },
+
+        "FederalTaxWithholdingInstructionType": {
+            "description": "A US Federal tax instruction for a payee",
+            "type": "object",
+            "properties": {
+                "FederalIncomeTax": { "$ref": "#/definitions/FederalIncomeTaxType" },
+                "SocialSecurityTax": { "type": "string" },
+                "MedicareTax": { "type": "string" },
+                "FUTATax": { "type": "string" },
+                "interimW2IssuedIndicator": { "$ref": "../../common/json/base/IndicatorType.json#" },
+                "statutoryEmployeeIndicator": { "$ref": "../../common/json/base/IndicatorType.json#" },
+                "qualifiedPensionIndicator": { "$ref": "../../common/json/base/IndicatorType.json#" },
+                "Form1099": { "type": "string" }
+            }
+        },
+        "FederalIncomeTaxType": {
+            "description": "FederalIncomeTaxType",
+            "type": "object",
+            "properties": {
+                "taxWithholdingStatus": { "$ref": "USTaxWithholdingCodeList.json#" },
+                "filingStatusCode": { "$ref": "#/definitions/EffectiveDataStatusCodeType" },
+                "numberOfAllowances": { "type": "number" },
+                "additionalTax": { "$ref": "#/definitions/AdditionalTaxType" }
+            }
+        },
+        "EffectiveDataStatusCodeType": {
+            "type": "object",
+            "description": "Status Code with effective dates",
+            "allOf": [
+                { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
+            ],
+            "properties": {
+                "value": { "$ref": "../../common/json/base/CodeType.json#" }
+            }
+        },
+        "AdditionalTaxType": {
+            "type": "object",
+            "description": "Additional Tax by amount and percentage.",
+            "properties": {
+                "amount": { "$ref": "../../common/json/base/AmountType.json#" },
+                "percentage": { "$ref": "../../common/json/base/PercentType.json#" }
+            }
+        },
+
+        "StateTaxWithholdingInstructionType": {
+            "description": "A US State tax instruction for a payee",
+            "type": "object",
+            "allOf": [
+                { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
+            ],
+            "properties": {
+                "StateIncomeTax": { "$ref": "#/definitions/StateIncomeTaxType" },
+                "StateUnemploymentInsuranceTax": { "type": "string" },
+                "StateDisabilityInsuranceTax": { "type": "string" }
+            }
+        },
+        "StateIncomeTaxType": {
+            "description": "StateIncomeTaxType",
+            "type": "object",
+            "properties": {
+                "countrySubDivisionCode": { "$ref": "../../common/json/communication/AddressComponentType.json#" },
+                "countyOfResidenceCode": { "$ref": "../../common/json/base/CodeType.json#" },
+                "livedInTaxJurisdictionIndicator": { "$ref": "../../common/json/base/IndicatorType.json#" },
+                "workedInTaxJurisdictionIndicator": { "$ref": "../../common/json/base/IndicatorType.json#" },
+                "primaryWorkedInTaxJurisdictionIndicator": { "$ref": "../../common/json/base/IndicatorType.json#" },
+                "taxWithholdingStatus": { "$ref": "USTaxWithholdingCodeList.json#" },
+                "filingStatusCode": { "$ref": "../../common/json/base/CodeType.json#" },
+                "numberOfAllowances": {
+                    "description": "NOTE: needs to be a choice between NumberOfAllowances and TaxAllowance.",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "taxAllowances": {
+                    "description": "",
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/TaxAllowanceType" }
+                },
+                "additionalTax": {
+                    "description": "NOTE: needs to be a choice between additionalTax and reducedTax.",
+                    "$ref": "#/definitions/AdditionalTaxType"
+                },
+                "reducedTax": { "$ref": "#/definitions/AdditionalTaxType" },
+                "workedInAllocationPercentage": { "$ref": "#/definitions/WorkedInAllocationPercentage" },
+                "taxWithholdingRateCode": { "$ref": "#/definitions/TaxWithholdingRateCode" }
+            }
+        },
+
+        "TaxAllowanceType": {
+            "description": "",
+            "type": "object",
+            "allOf": [
+                { "$ref": "../../common/json/base/EntityType.json#" }
+            ],
+            "properties": {
+                "quantity": { "$ref": "../../common/json/base/QuantityType.json#" },
+                "amount": { "$ref": "../../common/json/base/AmountType.json#" },
+                "percentage": { "type": "number" }
+            }
+        },
+        "WorkedInAllocationPercentage": {
+            "description": "Percentage of tax for the jurisdiction. Example is in the case of working in multiple states or locals - this is the percent of time worked in this jurisdiction, therefore the tax due is that percent of the whole.",
+            "type": "number"
+        },
+        "TaxWithholdingRateCode": {
+            "description": "State Withholding Rate Type list the possible state withholding rates.  The rates are only at the state level. NJ has a table and CT has a table.",
+            "type": "string"
+        },
+
+        "LocalTaxWithholdingInstructionsType": {
+            "description": "Payroll Instruction to communicate Local Tax Withholding Deductions",
+            "type": "object",
+            "allOf": [{ "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }],
+            "properties": {
+                "localIncomeTaxes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/LocalIncomeTaxType"
+                    }
+                }
+            }
+        },
+
+        "LocalIncomeTaxType": {
+            "description": "",
+            "type": "object",
+            "allOf": [{ "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }],
+            "properties": {
+                "countrySubDivisionCode": { "$ref": "../../common/json/communication/AddressComponentType.json#" },
+                "localCode": { "$ref": "../../common/json/base/CodeType.json#" },
+                "livedInTaxJurisdictionIndicator": { "$ref": "../../common/json/base/IndicatorType.json#" },
+                "workedInTaxJurisdictionIndicator": { "$ref": "../../common/json/base/IndicatorType.json#" },
+                "primaryWorkedInTaxJurisdictionIndicator": { "$ref": "../../common/json/base/IndicatorType.json#" },
+                "taxWithholdingStatus": { "$ref": "USTaxWithholdingCodeList.json#" },
+                "filingStatusCode": { "$ref": "../../common/json/base/CodeType.json#" },
+                "numberOfAllowances": {
+                    "description": "NOTE: needs to be a choice between NumberOfAllowances and TaxAllowance.",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "taxAllowances": {
+                    "description": "",
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/TaxAllowanceType" }
+                },
+                "additionalTax": {
+                    "description": "NOTE: needs to be a choice between additionalTax and reducedTax.",
+                    "$ref": "#/definitions/AdditionalTaxType"
+                },
+                "reducedTax": { "$ref": "#/definitions/AdditionalTaxType" },
+                "workedInAllocationPercentage": { "$ref": "#/definitions/WorkedInAllocationPercentage" }
+            }
+        }
+
+    },
+    "properties": {
+        "id": { "$ref": "../../common/json/base/IdentifierType.json#" },
+        "deductionCycleCode": { "$ref": "../../common/json/base/CodeType.json#" },
+        "totalTransactions": { "type": "number" },
+        "processingSequence": { "type": "number" },
+        "USTaxInstruction": { "$ref": "#/definitions/USTaxInstructionType" },
+        "NLTaxInstruction": { "$ref": "NLTaxInstructionType.json#" }
+    }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="YearType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="YearType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[1-9]\d{3}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="Year" type="hros:YearType" />
+</xsd:schema>

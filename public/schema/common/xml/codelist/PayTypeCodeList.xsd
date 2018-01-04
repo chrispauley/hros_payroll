@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="PayTypeCodeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="PayTypeCodeList">
+    <xs:annotation>
+      <xs:documentation>Values that classify the various pay types</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Base Pay" />
+      <xs:enumeration value="Commission" />
+      <xs:enumeration value="Bonus" />
+      <xs:enumeration value="Short Term Incentive" />
+      <xs:enumeration value="Shift Pay" />
+      <xs:enumeration value="OnCall" />
+      <xs:enumeration value="Hazard" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PayTypeCode" type="hros:PayTypeCodeList" />
+</xs:schema>

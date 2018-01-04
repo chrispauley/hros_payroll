@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="PayRateIntervalCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="PayRateIntervalCodeList">
+    <xsd:annotation>
+      <xsd:documentation>An interval of time or other basis used to express a rate of pay or remuneration. OED: Interval, n.  2. a. The space of time intervening between two points of time; any intervening time.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Hour" />
+      <xsd:enumeration value="Day" />
+      <xsd:enumeration value="Week" />
+      <xsd:enumeration value="TwoWeeks" />
+      <xsd:enumeration value="FourWeeks" />
+      <xsd:enumeration value="HalfMonth" />
+      <xsd:enumeration value="Month" />
+      <xsd:enumeration value="TwoMonths" />
+      <xsd:enumeration value="Quarter" />
+      <xsd:enumeration value="SeasonalTerm" />
+      <xsd:enumeration value="HalfYear" />
+      <xsd:enumeration value="Year" />
+      <xsd:enumeration value="QuarterTo Date" />
+      <xsd:enumeration value="YearToDate" />
+      <xsd:enumeration value="Once" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PayRateIntervalCode" type="hros:PayRateIntervalCodeList" />
+</xsd:schema>

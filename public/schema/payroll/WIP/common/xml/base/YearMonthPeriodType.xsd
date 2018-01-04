@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="YearMonthPeriodType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="YearMonthOpenEndPeriodType" />
+  <xsd:complexType name="YearMonthPeriodType">
+    <xsd:annotation>
+      <xsd:documentation>Single period between year/months. Both start and end are required.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="1" maxOccurs="1" name="start" type="hros:YearMonthType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="end" type="hros:YearMonthType" />
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="YearMonthPeriod" type="hros:YearMonthPeriodType" />
+</xsd:schema>

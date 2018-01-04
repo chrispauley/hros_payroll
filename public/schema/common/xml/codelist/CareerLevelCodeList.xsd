@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" id="CareerLevelCodeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CareerLevelCodeList">
+    <xs:annotation>
+      <xs:documentation>A code classifying the level of a candidate based on career experience. Student, Entry Level, Recent Graduate, Mid-Career, Manager, Experienced Non-Manager, Senior Executive</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Student" />
+      <xs:enumeration value="EntryLevel" />
+      <xs:enumeration value="RecentGraduate" />
+      <xs:enumeration value="MidCareer" />
+      <xs:enumeration value="Manager" />
+      <xs:enumeration value="ExperiencedNonManager" />
+      <xs:enumeration value="SeniorExecutive" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CareerLevelCode" type="hros:CareerLevelCodeList" />
+</xs:schema>

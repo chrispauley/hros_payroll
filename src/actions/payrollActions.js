@@ -2,11 +2,11 @@ export const LOAD_PAYROLL_INSTRUCTION = 'LOAD_PAYROLL_INSTRUCTION';
 export const LOAD_PAYROLL_INSTRUCTION_FULFILLED = 'LOAD_PAYROLL_INSTRUCTION_FULFILLED';
 export const LOAD_PAYROLL_INSTRUCTION_ERROR = 'LOAD_PAYROLL_INSTRUCTION_ERROR';
 export const CLEAR_PAYROLL_INSTRUCTION = 'CLEAR_PAYROLL_INSTRUCTION';
-export const FETCH_PAYROLL_INSTRUCTIONS = 'FETCH_PAYROLL_INSTRUCTIONS';
-export const FETCH_PAYROLL_INSTRUCTIONS_FULFILLED = 'FETCH_PAYROLL_INSTRUCTIONS_FULFILLED';
-export const FETCH_PAYROLL_INSTRUCTIONS_ERROR = 'FETCH_PAYROLL_INSTRUCTIONS_ERROR';
+export const FETCH_SAMPLE_LIST = 'FETCH_SAMPLE_LIST';
+export const FETCH_SAMPLE_LIST_FULFILLED = 'FETCH_SAMPLE_LIST_FULFILLED';
+export const FETCH_SAMPLE_LIST_ERROR = 'FETCH_SAMPLE_LIST_ERROR';
 
-// import {LOAD_PAYROLL_INSTRUCTION, CLEAR_PAYROLL_INSTRUCTIONS, FETCH_PAYROLL_INSTRUCTIONS, FETCH_PAYROLL_INSTRUCTIONS_FULFILLED} from '../actions/payrollActions';
+// import {LOAD_PAYROLL_INSTRUCTION, CLEAR_PAYROLL_INSTRUCTIONS, FETCH_SAMPLE_LIST, FETCH_SAMPLE_LIST_FULFILLED} from '../actions/payrollActions';
 // import { loadPayrollInstruction, fetchPayrollInstructions } from '../actions/payrollActions';
 //handleDropFileInput
 
@@ -19,17 +19,17 @@ export function clear() {
 }
 
 export function fetchPayrollInstructions() {
-  return {type: FETCH_PAYROLL_INSTRUCTIONS, payload: count}
+  return {type: FETCH_SAMPLE_LIST, payload: count}
 }
 
-export function getPayrollInstructions (url, offset = 5, page = 1) {
-  // console.log(`getPayrollInstructions(${url},${offset},${page})`);
+export function getSampleList (url, offset = 5, page = 1) {
+  // console.log(`getSampleList(${url},${offset},${page})`);
   return (dispatch) => {
     // Fetch local data
     var that = this;
     var result = [];
 
-    dispatch({type: FETCH_PAYROLL_INSTRUCTIONS});
+    dispatch({type: FETCH_SAMPLE_LIST});
 
     fetch(url, {method: 'get'}).then(function(response) {
       return response.json();
@@ -38,11 +38,11 @@ export function getPayrollInstructions (url, offset = 5, page = 1) {
         result.push({name: item.displayName, link: item.publicPath});
       })
     }).then(function() {
-      dispatch({type: FETCH_PAYROLL_INSTRUCTIONS_FULFILLED, payload: result})
+      dispatch({type: FETCH_SAMPLE_LIST_FULFILLED, payload: result})
     }).catch(function(err) {
       // Error :(
       console.log(err);
-      dispatch({type: FETCH_PAYROLL_INSTRUCTIONS_ERROR,
+      dispatch({type: FETCH_SAMPLE_LIST_ERROR,
         payload: {error: 'Could not load.'}})
 
     });
@@ -50,15 +50,15 @@ export function getPayrollInstructions (url, offset = 5, page = 1) {
 }
 
 export function fetchPayrollInstructionsFulfilledAction(instructions) {
-  return {type: FETCH_PAYROLL_INSTRUCTIONS_FULFILLED, payload: instructions}
+  return {type: FETCH_SAMPLE_LIST_FULFILLED, payload: instructions}
 }
 
 export function fetchPayrollInstructionsError(error) {
-  return {type: FETCH_PAYROLL_INSTRUCTIONS_ERROR, payload: error}
+  return {type: FETCH_SAMPLE_LIST_ERROR, payload: error}
 }
 
 export function getPayrollInstructionInstance(url) {
-  console.log('url: ', url);
+  // console.log('url: ', url);
   return (dispatch) => {
     dispatch({type: LOAD_PAYROLL_INSTRUCTION});
     fetch(url)

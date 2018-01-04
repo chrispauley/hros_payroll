@@ -1,0 +1,13 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.2",
+    "title": "GarnishmentDeductionType",
+    "description": "This defines the deduction associated to a garnishment in the context of that which is relevant to payroll processing.",
+    "type": "object",
+    "allOf": [
+        { "$ref": "GeneralDeductionType.json#" }
+    ],
+    "properties": {
+        "partialGarnishmentAllowedIndicator": { "$ref": "../../common/json/base/IndicatorType.json#" }
+    }
+}

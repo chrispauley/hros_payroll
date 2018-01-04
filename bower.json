@@ -1,6 +1,6 @@
 {
-  "name": "hros_staged_assessments",
-  "description": "Project to visualize HR Open Assessments with staging features.",
+  "name": "hros_payroll",
+  "description": "Project to visualize HR Open Payroll specification.",
   "private": true,
   "main": "readme.md",
   "ignore": [
@@ -23,6 +23,6 @@
   },
   "devDependencies": {
     "common": "https://github.com/HROpen/Common.git#WorkRelationshipLifeCycle",
-    "payroll": "https://github.com/HROpen/Payroll.git#AddNouns"
+    "payroll": "https://github.com/HROpen/Payroll.git#Version3x"
   }
 }

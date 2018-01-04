@@ -1,0 +1,28 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.0",
+    "title": "AttachmentType",
+    "description": "Embedded attachment data or URL to actual attachment",
+    "definitions": {
+        "AttachmentContent": {
+            "title": "AttachmentContent",
+            "type": "object",
+            "properties": {
+                "content": { "$ref": "BinaryObjectType.json#" },
+                "url": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "minProperties": 1
+        }
+    },
+    "allOf": [
+        { "$ref": "#/definitions/AttachmentContent" }
+    ],
+    "type": "object",
+    "properties": {
+        "id": { "$ref": "IdentifierType.json#" },
+        "descriptions": { "$ref": "StringTypeArray.json#" }
+    }
+}

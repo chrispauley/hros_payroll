@@ -1,0 +1,18 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.2.1",
+    "title": "DeductionGoalType",
+    "description": "This defines any goal or limits for the associated deduction.",
+    "type": "object",
+    "properties": {
+        "id": { "$ref": "../../common/json/base/IdentifierType.json#" },
+        "limitAmount": {
+            "description": "The total deduction amount that cannot be exceeded over the life of the deduction.",
+            "$ref": "../../common/json/base/AmountType.json#"
+        },
+        "accrualAdjustmentAmount": {
+            "description": "Is the amount paid against the goal outside the payroll system.",
+            "$ref": "../../common/json/base/AmountType.json#"
+        }
+    }
+}

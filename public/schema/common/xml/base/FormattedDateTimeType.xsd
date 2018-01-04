@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="FormattedDateTimeType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="YearType.xsd" />
+  <xs:include schemaLocation="YearMonthType.xsd" />
+  <xs:include schemaLocation="DateTimeType.xsd" />
+  <xs:include schemaLocation="DateType.xsd" />
+  <xs:simpleType name="FormattedDateTimeType">
+    <xs:annotation>
+      <xs:documentation>This is formatted representation of a date, which may be specified as a date, date/time, year, or year/month.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="hros:DateType hros:DateTimeType hros:YearType hros:YearMonthType" />
+  </xs:simpleType>
+  <xs:element name="FormattedDateTime" type="hros:FormattedDateTimeType" />
+</xs:schema>

@@ -1,0 +1,13 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.0",
+    "title": "RaterGroupCodeList",
+    "description": "Values describing the relationship between a performance appraisal process participant (e.g., a participant on a multi-rater panel) and the performance appraisal subject. Enumerated values include: customer, peer, supervisor, direct report, and self",
+    "enum": [
+        "Customer",
+        "Peer",
+        "Supervisor",
+        "Director",
+        "Self"
+    ]
+}

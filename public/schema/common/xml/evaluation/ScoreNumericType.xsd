@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="ScoreNumericType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../codelist/scoreNumericCodeList.xsd" />
+  <xs:complexType name="ScoreNumericType">
+    <xs:annotation>
+      <xs:documentation>A numeric measurement of abilities, capacity to learn, in the assessment of personality, or in other measurable characteristics.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="value">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="scoreCode" type="hros:scoreNumericCodeList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="interval">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>A range between one number and another.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:decimal" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="minimum">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Optional. Indicates lower value for a range.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:decimal" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="maximum">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Optional. Indicates upper value for a range.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:decimal" />
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="ScoreNumeric" type="hros:ScoreNumericType" />
+</xs:schema>

@@ -1,0 +1,30 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "31",
+        "description": "Susan is working as Math Teacher and takes on a second role as the Baseball Coach."
+    },
+    "alternateIds": [{ "schemeId": "uc_deployment", "value": "4" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Susan Pierce",
+            "given": "Susan",
+            "family": "Pierce",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0031" }
+        }
+    }
+}

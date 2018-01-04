@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" id="ScoreNumericCodeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ScoreNumericCodeList">
+    <xs:annotation>
+      <xs:documentation>An enumeration of the numeric scoring scheme.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Percentile" />
+      <xs:enumeration value="RawScore" />
+      <xs:enumeration value="Stanine" />
+      <xs:enumeration value="Sten" />
+      <xs:enumeration value="T-score" />
+      <xs:enumeration value="Z-score" />
+      <xs:enumeration value="IntelligenceQuotient" />
+      <xs:enumeration value="Scaled" />
+      <xs:enumeration value="NormalCurve" />
+      <xs:enumeration value="GPA" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ScoreNumericCode" type="hros:ScoreNumericCodeList" />
+</xs:schema>

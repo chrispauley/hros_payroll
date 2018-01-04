@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="DeploymentType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../base/RateType" />
+  <xsd:include schemaLocation="../base/EffectiveTimePeriod" />
+  <xsd:include schemaLocation="LicenseType" />
+  <xsd:include schemaLocation="../codelist/ResourceRelationshipCodeList" />
+  <xsd:include schemaLocation="CertificationType" />
+  <xsd:include schemaLocation="../base/CodeType" />
+  <xsd:include schemaLocation="../base/IdentifierType" />
+  <xsd:include schemaLocation="../organization/OrganizationType" />
+  <xsd:include schemaLocation="../organization/WorkLocationType" />
+  <xsd:include schemaLocation="../base/IndicatorType" />
+  <xsd:include schemaLocation="../codelist/AssignmentReasonCodeList" />
+  <xsd:include schemaLocation="../codelist/CountryCodeList" />
+  <xsd:include schemaLocation="../communication/CommunicationType" />
+  <xsd:include schemaLocation="../work/JobType" />
+  <xsd:include schemaLocation="../base/RatioType" />
+  <xsd:include schemaLocation="../codelist/WorkerAssignmentSourceCodeList" />
+  <xsd:include schemaLocation="../work/PositionType" />
+  <xsd:complexType name="WorkerAssignmentSourceType">
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="sourceCode" type="hros:WorkerAssignmentSourceCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="homeCountry" type="hros:CountryCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="hostCountry" type="hros:CountryCodeList" />
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:complexType name="DeploymentType">
+    <xsd:annotation>
+      <xsd:documentation>DeploymentType data</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="workerAssignmentSource" type="hros:WorkerAssignmentSourceType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="workLocation" type="hros:WorkLocationType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="communication" type="hros:CommunicationType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="resourceRelationshipCode" type="hros:ResourceRelationshipCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="organizationIds">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:IdentifierType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="job" type="hros:JobType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="position" type="hros:PositionType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="scheduledHours" type="hros:RateType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="assignmentReasonCode" type="hros:AssignmentReasonCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="fullTimeEquivalentRatio" type="hros:RatioType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="wageHourLawCoverageIndicator" type="hros:IndicatorType">
+        <xsd:annotation>
+          <xsd:documentation>This determines if a person is covered by wage hour laws. If true, they are non-exempt or they are covered under the law.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="effectivePeriod" type="hros:EffectiveTimePeriod" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="employeeReportingCode" type="hros:CodeType">
+        <xsd:annotation>
+          <xsd:documentation>An element that allows further classification of the employee using employer or program-specific codes and controlled vocabularies. This information may be collected to use for return reporting back to the employer.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="wageHourLawCoverageCountryCode" type="hros:CountryCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="laborBargainingUnitIndicator" type="hros:IndicatorType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="newHireProbationaryIndicator" type="hros:IndicatorType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="organization" type="hros:OrganizationType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="license" type="hros:LicenseType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="certification" type="hros:CertificationType" />
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="Deployment" type="hros:DeploymentType" />
+</xsd:schema>

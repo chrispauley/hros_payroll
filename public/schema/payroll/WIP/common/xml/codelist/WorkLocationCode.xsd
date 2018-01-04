@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="WorkLocationCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="WorkLocationCodeList">
+    <xsd:annotation>
+      <xsd:documentation>A set of codes classifying the work location.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Distribution center" />
+      <xsd:enumeration value="Hotel property" />
+      <xsd:enumeration value="Headquarters" />
+      <xsd:enumeration value="Plant" />
+      <xsd:enumeration value="Retail store" />
+      <xsd:enumeration value="Offshore oil rig" />
+      <xsd:enumeration value="Warehouse" />
+      <xsd:enumeration value="Shared service center" />
+      <xsd:enumeration value="Center of excellence" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="WorkLocationCode" type="hros:WorkLocationCodeList" />
+</xsd:schema>

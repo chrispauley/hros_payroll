@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="CodeType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="CodeType">
+    <xsd:annotation>
+      <xsd:documentation>A code is a character string of letters, numbers, special characters (except escape sequences), and symbols. It represents a definitive value, a method, or a property description in an abbreviated or language-independent form that is part of a finite list of allowed values. Use this schema when there is a defined list of values but the owner is unknown or private, the values may not be referenced, or there is no validation possible. </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string" />
+  </xsd:simpleType>
+  <xsd:element name="Code" type="hros:CodeType" />
+</xsd:schema>

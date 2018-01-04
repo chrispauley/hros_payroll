@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.2" id="PayrollType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="PayrollProcessType" />
+  <xsd:complexType name="PayrollType">
+    <xsd:annotation>
+      <xsd:documentation>Represents the Payroll Specification.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="payrollProcess" type="hros:PayrollProcessType" />
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="Payroll" type="hros:PayrollType" />
+</xsd:schema>

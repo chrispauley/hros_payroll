@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="ScoreTextType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ScoreTextType">
+    <xs:annotation>
+      <xs:documentation>A non-numeric or textual representation of a Score.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="value">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="scoreTextCode">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Default: CourseGrade. A code used to textually classify the type scoring methodology or convention.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="minimum">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Optional. Describes the minumum score.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="maximum">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Optional. Describes the maximum score.</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="ScoreText" type="hros:ScoreTextType" />
+</xs:schema>

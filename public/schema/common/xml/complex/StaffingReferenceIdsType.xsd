@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="StaffingReferenceIdsType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/IdentifierType.xsd" />
+  <xs:complexType name="StaffingReferenceIdsType">
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="assignmentId" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>An identifier for a particular engagement or assignment of a staffing resource.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="orderId" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>Uniquely distinquishes the order.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="requestForQuotationId" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>Used to specify a reference to a StaffingRFQ document.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="resourceId" type="hros:IdentifierType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="quoteId" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>Used to specify a reference to a StaffingQuote document.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="actionId" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>Used to specify a reference to a StaffingAction document.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="masterOrderId" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>Reference to a master order or project. Used to associate multiple orders.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="StaffingReferenceIds" type="hros:StaffingReferenceIdsType" />
+</xs:schema>

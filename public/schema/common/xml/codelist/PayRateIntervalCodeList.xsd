@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="PayRateIntervalCodeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="PayRateIntervalCodeList">
+    <xs:annotation>
+      <xs:documentation>An interval of time or other basis used to express a rate of pay or remuneration. OED: Interval, n.  2. a. The space of time intervening between two points of time; any intervening time.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Hour" />
+      <xs:enumeration value="Day" />
+      <xs:enumeration value="Week" />
+      <xs:enumeration value="TwoWeeks" />
+      <xs:enumeration value="FourWeeks" />
+      <xs:enumeration value="HalfMonth" />
+      <xs:enumeration value="Month" />
+      <xs:enumeration value="TwoMonths" />
+      <xs:enumeration value="Quarter" />
+      <xs:enumeration value="SeasonalTerm" />
+      <xs:enumeration value="HalfYear" />
+      <xs:enumeration value="Year" />
+      <xs:enumeration value="QuarterTo Date" />
+      <xs:enumeration value="YearToDate" />
+      <xs:enumeration value="Once" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PayRateIntervalCode" type="hros:PayRateIntervalCodeList" />
+</xs:schema>

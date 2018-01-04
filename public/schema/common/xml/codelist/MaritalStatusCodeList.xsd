@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="MaritalStatusCodeList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="MaritalStatusCodeList">
+    <xs:annotation>
+      <xs:documentation>Marital status code list</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Divorced" />
+      <xs:enumeration value="Married" />
+      <xs:enumeration value="Widowed" />
+      <xs:enumeration value="Legally Separated" />
+      <xs:enumeration value="Single" />
+      <xs:enumeration value="Registered Domestic Partner" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MaritalStatusCode" type="hros:MaritalStatusCodeList" />
+</xs:schema>

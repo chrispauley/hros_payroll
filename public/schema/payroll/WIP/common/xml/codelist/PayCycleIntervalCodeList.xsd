@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="PayCycleIntervalCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="PayCycleIntervalCodeList">
+    <xsd:annotation>
+      <xsd:documentation>PayCycleInterval specifies how often the pay cycle occurs or, in other words, how often a person is paid, e.g., weekly, biweekly, etc. This is a different concept than an interval used in expressing a rate of pay.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Day" />
+      <xsd:enumeration value="Week" />
+      <xsd:enumeration value="TwoWeeks" />
+      <xsd:enumeration value="HalfMonth" />
+      <xsd:enumeration value="Month" />
+      <xsd:enumeration value="TwoMonths" />
+      <xsd:enumeration value="MonthWeek" />
+      <xsd:enumeration value="MonthWeek2" />
+      <xsd:enumeration value="MonthWeek3" />
+      <xsd:enumeration value="MonthWeek4" />
+      <xsd:enumeration value="MonthWeek5" />
+      <xsd:enumeration value="MonthWeekLast" />
+      <xsd:enumeration value="Quarter" />
+      <xsd:enumeration value="HalfYear" />
+      <xsd:enumeration value="Year" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PayCycleIntervalCode" type="hros:PayCycleIntervalCodeList" />
+</xsd:schema>

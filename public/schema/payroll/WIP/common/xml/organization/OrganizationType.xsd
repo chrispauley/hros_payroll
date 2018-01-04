@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="OrganizationType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../base/CodeType" />
+  <xsd:include schemaLocation="../base/AmountType" />
+  <xsd:include schemaLocation="../person/SpecifiedPersonType" />
+  <xsd:include schemaLocation="OrganizationReferenceType" />
+  <xsd:include schemaLocation="../base/IdentifierType" />
+  <xsd:include schemaLocation="../base/NumberType" />
+  <xsd:include schemaLocation="../base/TextType" />
+  <xsd:simpleType name="GeographicResponsibilityCodeList">
+    <xsd:annotation>
+      <xsd:documentation>Values that classify the various geographic responsibility codes</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Global" />
+      <xsd:enumeration value="National" />
+      <xsd:enumeration value="Regional" />
+      <xsd:enumeration value="Local" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="OwnershipTypeCodeList">
+    <xsd:annotation>
+      <xsd:documentation>Values that classify the various organization ownership types</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Public" />
+      <xsd:enumeration value="Private" />
+      <xsd:enumeration value="NonProfit" />
+      <xsd:enumeration value="Government" />
+      <xsd:enumeration value="Joint Venture" />
+      <xsd:enumeration value="Mutual" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OrganizationType">
+    <xsd:annotation>
+      <xsd:documentation>Basic information to identify and reference a specific organization.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="responsibilityCode" type="hros:ResponsibilityCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="communication" type="hros:CommunicationType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xsd:annotation>
+          <xsd:documentation>Recommended usage: unique descriptor which can't be expressed as enumeration</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="name">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>Recommended usage: free text description for that entity</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="code" type="hros:CodeType">
+        <xsd:annotation>
+          <xsd:documentation>Recommended usage: descriptor which can be expressed as enumeration</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="taxId" type="hros:IdentifierType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="legalId" type="hros:IdentifierType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="industryCodes">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>The industry codes with which the organization is engaged.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:CodeType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="headCount" type="hros:NumberType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="revenue" type="hros:AmountType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="description" type="hros:TextType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="geographicResponsibilityCode" type="hros:GeographicResponsibilityCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="ownershipType" type="hros:OwnershipTypeCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="stockSymbol" type="hros:CodeType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="workEnvironment" type="hros:CodeType">
+        <xsd:annotation>
+          <xsd:documentation>Work Environment type e.g., Office, Workshop, Factory, etc</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="contacts">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>The people at the organization who can be used contacts.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:SpecifiedPersonType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="domainName">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>The internet domain to help identify the organization and a reference to find additional information.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:anyURI" />
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="Organization" type="hros:OrganizationType" />
+</xsd:schema>

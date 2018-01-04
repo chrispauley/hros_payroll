@@ -1,0 +1,30 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+      "schemeAgencyId": "HROPEN",
+      "schemeId": "PayrollUseCase",
+      "value": "25",
+      "description": "Dave was traveling for his company when his airplane crashed without any survivors."
+    },
+    "alternateIds": [{ "schemeId": "uc_termination", "value": "7" }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Dave Weaver",
+            "given": "Dave",
+            "family": "Weaver",
+            "nameType": "legal"
+        }],
+
+        "personlegal": {
+            "id": { "schemeId": "ssn", "value": "123-45-0025"}
+        }
+    }
+}

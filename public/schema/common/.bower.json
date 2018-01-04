@@ -1,0 +1,34 @@
+{
+  "name": "hros-common",
+  "description": "Core schema repository shared between all HR Open specifications",
+  "private": true,
+  "main": "readme.md",
+  "ignore": [
+    ".gitignore",
+    ".bowerrc",
+    "bower.json",
+    "documentation",
+    "ref"
+  ],
+  "authors": [
+    {
+      "name": "HROpen Standards Consortium",
+      "email": "info@hropenstandards.org",
+      "homepage": "http://hropenstandards.org"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HROpen/Common.git"
+  },
+  "homepage": "https://github.com/HROpen/Common",
+  "_release": "9420f82add",
+  "_resolution": {
+    "type": "branch",
+    "branch": "WorkRelationshipLifeCycle",
+    "commit": "9420f82addd82da262413794e0abfd6434056e45"
+  },
+  "_source": "https://github.com/HROpen/Common.git",
+  "_target": "WorkRelationshipLifeCycle",
+  "_originalSource": "https://github.com/HROpen/Common.git"
+}

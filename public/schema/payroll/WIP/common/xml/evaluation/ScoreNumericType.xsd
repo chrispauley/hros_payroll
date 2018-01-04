@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="ScoreNumericType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../codelist/scoreNumericCodeList" />
+  <xsd:complexType name="ScoreNumericType">
+    <xsd:annotation>
+      <xsd:documentation>A numeric measurement of abilities, capacity to learn, in the assessment of personality, or in other measurable characteristics.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="1" maxOccurs="1" name="value">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:decimal" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="scoreCode" type="hros:scoreNumericCodeList" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="interval">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>A range between one number and another.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:decimal" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="minimum">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>Optional. Indicates lower value for a range.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:decimal" />
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="maximum">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>Optional. Indicates upper value for a range.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:decimal" />
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="ScoreNumeric" type="hros:ScoreNumericType" />
+</xsd:schema>

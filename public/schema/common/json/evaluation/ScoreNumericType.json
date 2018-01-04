@@ -1,0 +1,24 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.0",
+    "title": "ScoreNumericType",
+    "description": "A numeric measurement of abilities, capacity to learn, in the assessment of personality, or in other measurable characteristics.",
+    "type": "object",
+    "properties": {
+        "value": { "type": "number" },
+        "scoreCode": { "$ref": "../codelist/scoreNumericCodeList.json#" },
+        "interval": {
+            "description": "A range between one number and another.",
+            "type": "number"
+        },
+        "minimum": {
+            "description": "Optional. Indicates lower value for a range.",
+            "type": "number"
+        },
+        "maximum": {
+            "description": "Optional. Indicates upper value for a range.",
+            "type": "number"
+        }
+    },
+    "required": [ "value" ]
+}

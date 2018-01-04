@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.1.0" id="Localization" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../codelist/LanguageCodeList" />
+  <xsd:complexType name="Localization">
+    <xsd:annotation>
+      <xsd:documentation>Can be used for any entity to specify localization language code</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="language" type="hros:LanguageCodeList" />
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="Localization" type="hros:Localization" />
+</xsd:schema>

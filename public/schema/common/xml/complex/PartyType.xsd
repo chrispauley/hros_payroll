@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:hros="http://hropenstandards.org/xml/" targetNamespace="http://hropenstandards.org/xml/" version="4.0.1" id="PartyType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="../base/IdentifierType.xsd" />
+  <xs:include schemaLocation="../vcard/CommunicationType.xsd" />
+  <xs:include schemaLocation="../base/EntityType.xsd" />
+  <xs:include schemaLocation="../person/SpecifiedPersonType.xsd" />
+  <xs:complexType name="PartyType">
+    <xs:annotation>
+      <xs:documentation>A collection of information about the party who is the supplier/customer/requester of the associated entity.</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="1" maxOccurs="1" name="id" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>Recommended usage: unique descriptor which can't be expressed as enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="name">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>Recommended usage: free text description for that entity</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="code" type="hros:CodeType">
+        <xs:annotation>
+          <xs:documentation>Recommended usage: descriptor which can be expressed as enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="legalId" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>A government assigned identifier to distinguish the party (organization, person, or legal entity) to a transaction.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="taxId" type="hros:IdentifierType">
+        <xs:annotation>
+          <xs:documentation>An identifer assigned by a government tax authority to distinguish the party (organization, person, or legal entity) to a transaction.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="communication" type="hros:CommunicationType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="personContacts">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="hros:SpecifiedPersonType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="Party" type="hros:PartyType" />
+</xs:schema>
