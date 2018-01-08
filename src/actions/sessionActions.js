@@ -1,3 +1,5 @@
+export const LOAD_SESSION_STATE = 'LOAD_SESSION_STATE';
+export const SAVE_SESSION_STATE = 'SAVE_SESSION_STATE';
 export const TOGGLE_ACCOUNTTYPE = 'TOGGLE_ACCOUNTTYPE';
 export const TOGGLE_PAYMENTMETHOD = 'TOGGLE_PAYMENTMETHOD';
 export const TOGGLE_SHOW_JSON = 'TOGGLE_SHOW_JSON';
@@ -12,6 +14,26 @@ export const TOGGLE_SHOW_TAX = 'TOGGLE_SHOW_TAX';
 export const TOGGLE_SHOW_BENEFITS = 'TOGGLE_SHOW_BENEFITS';
 export const TOGGLE_SHOW_GARNISHMENTS = 'TOGGLE_SHOW_GARNISHMENTS';
 export const TOGGLE_GENERAL_INSTRUCTIONS = 'TOGGLE_GENERAL_INSTRUCTIONS';
+
+export const loadState = () => {
+  try {
+    const sessionState = localStorage.getItem('sessionState');
+    if (sessionState === null) {
+      return undefined;
+    }
+    return JSON.parse(sessionState);
+  } catch (err) {
+    return undefined;
+  }
+}
+export const saveState = (state) => {
+  try {
+    const serializedState = JSON.stringify(state);
+    localStorage.setItem('sessionState', serializedState);
+  } catch (err) {
+    console.error('Unable to save sessionState to localStorage.');
+  }
+}
 
 export function toggle_showNoun() {
   return {type: TOGGLE_SHOW_NOUN}

@@ -1,17 +1,16 @@
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk'
-import reducer from '../reducers';
-// import { ajax } from 'rxjs/observable/dom/ajax';
-//
-// import {createEpicMiddleware} from 'redux-observable'
-// import {rootEpic} from '../epics/index';
+import reducers from '../reducers';
+import { loadState, saveState} from '../actions/sessionActions';
+
+const persistedSession = loadState();
 
 export function configureStore(deps = {}){
-
 
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
     return createStore(
-        reducer, applyMiddleware(thunk)
+        reducers, persistedSession,
+        applyMiddleware(thunk)
     );
 }

@@ -117,10 +117,90 @@
                     },
                     "numberOfAllowances": 4,
                     "additionalTax": {
-                        "amount": {"value": 10 }
+                        "amount": { "value": 10 }
                     }
                 }
             }
         }
-    }
+    },
+
+    "paymentInstructions": [{
+        "accountType": "main",
+        "paymentCycleCode": "TwoWeeks",
+        "paymentMethod": {
+            "accountType": "Checking"
+        },
+        "countryCode": "US",
+        "currencyCode": "USD",
+        "nameOnAccount": "John Martin",
+        "methodType": "BankEFT"
+    }],
+
+    "benefitDeductionInstructions": [{
+            "benefitDeduction": {
+                "validFrom": "20171201",
+                "validTo": "20181231",
+                "typeDeduction": "PPO medical plan",
+                "preTaxIndicator": true,
+                "amount": {
+                    "currency": "USD",
+                    "value": 50.00
+                }
+            },
+            "processInstance": 1,
+            "deductionCycleCode": ""
+        },
+        {
+            "benefitDeduction": {
+                "validFrom": "20171201",
+                "validTo": "20181231",
+                "typeDeduction": "Dental",
+                "preTaxIndicator": true,
+                "amount": {
+                    "currency": "USD",
+                    "value": 10.00
+                }
+            },
+            "processInstance": 2,
+            "deductionCycleCode": ""
+        }
+    ],
+
+    "generalDeductionInstructions": [{
+        "validFrom": "20171201",
+        "processingSequence": 1,
+        "id": { "value": "" },
+        "deductionCycleCode": "",
+        "deductionGoal": {
+            "id": { "value": "" },
+            "limitAmount": { "value": 100.00, "currency": "USD" }
+        },
+        "generalDeduction": {
+            "typeDeduction": "",
+            "amount": { "value": 10.00, "currency": "USD" }
+        }
+    }],
+
+    "garnishmentDeductionInstruction": [{
+        "validFrom": "20171201",
+        "processingSequence": 1,
+        "deductionCycleCode": "TwoWeeks",
+        "lien": {
+            "id": { "schemeId": "", "value": "" },
+            "issuanceDate": "20150131",
+            "excludedDeductionCodes": ["x", "y", "z"],
+            "excludedEarningCodes": ["a", "b"],
+            "guaranteedMiniumumNetPayAmount": { "value": 250.00, "currency": "USD" },
+            "statusCode": "Active",
+            "subTypeCode": "",
+            "supportOrder": {
+                "id": { "schemeId": "", "value": "" },
+                "supportOrderJurisdication": {
+                    "city": "Pickerington",
+                    "countryCode": "US",
+                    "countrySubdivisions": [{ "type": "state", "value": "Ohio" }]
+                }
+            }
+        }
+    }]
 }
