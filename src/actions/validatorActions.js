@@ -13,6 +13,7 @@ function ajvLoadSchema(uri) {
     $.getJSON(uri)
       .done((json) => resolve(json))
       .fail((xhr, status, err) => {
+        dispatch({type: LOAD_SCHEMA_ERROR, payload: err})
         reject(status + err.message)
       });
   });
@@ -42,14 +43,22 @@ export function loadSchema(schemaUrl) {
       // ajv.removeSchema('http://json-schema.org/draft-06/schema');
 
       // ajv.addSchema()
-      var validate = ajv.compileAsync(schema);
+      // debugger;
+      try {
+        var validate = ajv.compileAsync(schema);
+      } catch  (err){
+        dispatch({type: LOAD_SCHEMA_ERROR, payload: err})
+      }
+
+      console.log('4');
       var errorsArray = ajv.errors;
             // console.log(ajv);
       // console.log('errorsArray', ajv.errors);
 
-      dispatch({type: LOAD_SCHEMA_ERROR, payload: errorsArray})
+
 
     }).catch(function(err) {
+      console.log('5 catch');
       // Error :(
       console.log(err);
       dispatch({type: LOAD_SCHEMA_ERROR,

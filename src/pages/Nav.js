@@ -51,13 +51,21 @@ class Nav extends React.Component {
                           </ul>
                     </li> */}
 
-                    <li><a href='jschemaframe.html'>JSchema</a></li>
-                    <li><a href='payrollschema.html'>PayrollSchema</a></li>
+                    <li className='dropdown'>
+                      <a href='' className='dropdown-toggle'
+                        data-toggle='dropdown'>Schema <b className='caret'></b></a>
+                        <ul className='dropdown-menu'>
+                          <li><a href='jschemaframe.html'>JSchema</a></li>
+                          <li><a href='payrollschema.html'>Payroll Schema</a></li>
+                          <li><a href='validatedata.html'>Validate Data</a></li>
+                        </ul>
+
+                    </li>
                   </ul>
 
                   <ul className='nav navbar-nav navbar-right'>
                     <li><a href='about.html'>About</a></li>
-                    <li><a href='about.html'><User name={this.props.name}/></a></li>
+                    {/* <li><a href='about.html'><User name={this.props.name}/></a></li> */}
                   </ul>
 
                 </div>

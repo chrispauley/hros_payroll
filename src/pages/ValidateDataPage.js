@@ -9,7 +9,7 @@ var draft4 = 'schema/json-schema-draft-04.json';
 var payroll = 'schema/payroll/json/PayrollType.json';
 var listSchemas = [v4,hros,draft4,payroll]
 
-class PayrollSchemaPage extends React.Component {
+class ValidateDataPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +40,11 @@ class PayrollSchemaPage extends React.Component {
     })
 
     return (
-      <div className='row'>
+      <div className='row' style={{marginTop: '50px'}}>
+        { errors && 
+          (<div className='col-md-12'>
+            <span><pre><code>{JSON.stringify(errors,null,2)}</code></pre></span>
+          </div>)}
         <hr/>
         <div className='col-md-12 col-sm-6'>
           <div className='panel panel-default'>
@@ -95,7 +99,7 @@ function mapDispatch(dispatch) {
   };
 }
 
-export default connect(mapState, mapDispatch)(PayrollSchemaPage);
+export default connect(mapState, mapDispatch)(ValidateDataPage);
 function isEmpty(obj) {
   return Object.keys(obj).length === 0;
 }

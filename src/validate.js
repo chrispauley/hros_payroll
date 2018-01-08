@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {configureStore} from "./config/configureStore";
 
-import ViewPayrollSchema from './pages/ViewPayrollSchemaPage';
 import Nav from './pages/Nav'
 import Footer from './pages/Footer'
-// loadStore is in configureStore.js
-import {loadState, saveState} from './actions/sessionActions';
+import ValidateDataPage from './pages/ValidateDataPage'
 
-const jwtPayload = {"name": "Chris Pauley"};
 const store = configureStore();
 
+const jwtPayload = {"name": "Chris Pauley"};
 const footerProps = {
   columnOne: {
     heading: "Footer ColumnOne"
@@ -24,15 +22,9 @@ const footerProps = {
   }
 }
 
-store.subscribe(() =>{
-  saveState({
-    sessionReducer: store.getState().sessionReducer
-  })
-});
-
 ReactDOM.render (<Nav name={jwtPayload.name}/>, document.querySelector('#top-nav'));
 ReactDOM.render (<Footer {...footerProps}/>, document.querySelector('#footer'));
 ReactDOM.render (
   <Provider store={store}>
-    <ViewPayrollSchema />
+    <ValidateDataPage />
   </Provider>, document.querySelector('main'));

@@ -118,14 +118,14 @@ class PayrollPage extends Component {
 
 
         {/* <DropLoader onChange={this.handleDropFileInput}/> */}
-        <button type='button' className='btn btn-info' onClick={this.handleLoadSchemaClick}>
-          Load Schema</button>
+        {/* <button type='button' className='btn btn-info' onClick={this.handleLoadSchemaClick}>
+          Load Schema</button> */}
 
-        <button type='button' className='btn btn-info' onClick={this.props.toggle_showSchema}>
+        {/* <button type='button' className='btn btn-info' onClick={this.props.toggle_showSchema}>
           {this.props.sessionReducer.showSchema
             ? ('Hide')
             : ('Show')}
-          Schema</button>
+          Schema</button> */}
 
         {isEmpty(!processInstance) && (
           <button type='button' className='btn btn-info' onClick={this.props.toggleShowJSON}>

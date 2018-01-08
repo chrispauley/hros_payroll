@@ -32,6 +32,8 @@ export function vaidatorReducer(state = initialState, action) {
         metaUrl: metaUrl
       }
     case LOAD_SCHEMA_ERROR:
+    console.error('LOAD_SCHEMA_ERROR');
+    console.log(action.payload);
       return {
         ...state,
         loading: false,

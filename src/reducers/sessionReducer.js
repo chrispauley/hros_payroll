@@ -21,7 +21,7 @@ const initialState = {
   user: null,
   user_error: null,
 
-  showJSON: false,
+  showJSON: true,
   showProps: false,
   showSessionProps: false,
   showSchema: false,
