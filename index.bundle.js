@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 139);
+/******/ 	return __webpack_require__(__webpack_require__.s = 141);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -263,16 +263,52 @@ process.umask = function() { return 0; };
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(18);
-} else {
   module.exports = __webpack_require__(19);
+} else {
+  module.exports = __webpack_require__(20);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 
-/***/ 10:
+/***/ 11:
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (process.env.NODE_ENV !== 'production') {
+  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
+    Symbol.for &&
+    Symbol.for('react.element')) ||
+    0xeac7;
+
+  var isValidElement = function(object) {
+    return typeof object === 'object' &&
+      object !== null &&
+      object.$$typeof === REACT_ELEMENT_TYPE;
+  };
+
+  // By explicitly using `prop-types` you are opting into new development behavior.
+  // http://fb.me/prop-types-in-prod
+  var throwOnDirectAccess = true;
+  module.exports = __webpack_require__(32)(isValidElement, throwOnDirectAccess);
+} else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(33)();
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+
+/***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -354,7 +390,7 @@ module.exports = EventListener;
 
 /***/ }),
 
-/***/ 11:
+/***/ 13:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -426,7 +462,7 @@ module.exports = shallowEqual;
 
 /***/ }),
 
-/***/ 12:
+/***/ 14:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -441,7 +477,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(22);
+var isTextNode = __webpack_require__(23);
 
 /*eslint-disable no-bitwise */
 
@@ -470,7 +506,93 @@ module.exports = containsNode;
 
 /***/ }),
 
-/***/ 13:
+/***/ 141:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(21);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Nav = __webpack_require__(34);
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
+var _Home = __webpack_require__(142);
+
+var _Home2 = _interopRequireDefault(_Home);
+
+var _Footer = __webpack_require__(35);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var jwtPayload = { "name": "Chris Pauley" };
+var footerProps = {
+  columnOne: {
+    heading: "Footer ColumnOne"
+  },
+  columnTwo: {
+    heading: "Footer ColumnTwo"
+  },
+  columnThree: {
+    heading: "Footer ColumnThree"
+  }
+};
+
+_reactDom2.default.render(_react2.default.createElement(_Nav2.default, { name: jwtPayload.name }), document.querySelector('#top-nav'));
+_reactDom2.default.render(_react2.default.createElement(_Footer2.default, footerProps), document.querySelector('#footer'));
+_reactDom2.default.render(_react2.default.createElement(_Home2.default, null), document.querySelector('main'));
+
+/***/ }),
+
+/***/ 142:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import { Form, Button } from 'semantic-ui-react';
+
+var Home = function Home() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'row', style: { marginTop: '50px' } },
+    _react2.default.createElement(
+      'div',
+      { className: 'col-md-12',
+        style: ({ minHeight: '700px' }, { padding: '1em' }) },
+      _react2.default.createElement(
+        'h2',
+        { className: 'ui inverted header', style: { fontSize: '3em' } },
+        'HROS Payroll Instance Viewer - home page'
+      )
+    )
+  );
+};
+
+exports.default = Home;
+
+/***/ }),
+
+/***/ 15:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -501,54 +623,7 @@ module.exports = focusNode;
 
 /***/ }),
 
-/***/ 139:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(20);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _Nav = __webpack_require__(33);
-
-var _Nav2 = _interopRequireDefault(_Nav);
-
-var _Home = __webpack_require__(140);
-
-var _Home2 = _interopRequireDefault(_Home);
-
-var _Footer = __webpack_require__(34);
-
-var _Footer2 = _interopRequireDefault(_Footer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var jwtPayload = { "name": "Chris Pauley" };
-var footerProps = {
-  columnOne: {
-    heading: "Footer ColumnOne"
-  },
-  columnTwo: {
-    heading: "Footer ColumnTwo"
-  },
-  columnThree: {
-    heading: "Footer ColumnThree"
-  }
-};
-
-_reactDom2.default.render(_react2.default.createElement(_Nav2.default, { name: jwtPayload.name }), document.querySelector('#top-nav'));
-_reactDom2.default.render(_react2.default.createElement(_Footer2.default, footerProps), document.querySelector('#footer'));
-_reactDom2.default.render(_react2.default.createElement(_Home2.default, null), document.querySelector('main'));
-
-/***/ }),
-
-/***/ 14:
+/***/ 16:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -591,82 +666,7 @@ module.exports = getActiveElement;
 
 /***/ }),
 
-/***/ 140:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// import { Form, Button } from 'semantic-ui-react';
-
-var Home = function Home() {
-  return _react2.default.createElement(
-    'div',
-    { className: 'row', style: { marginTop: '50px' } },
-    _react2.default.createElement(
-      'div',
-      { className: 'col-md-12',
-        style: ({ minHeight: '700px' }, { padding: '1em' }) },
-      _react2.default.createElement(
-        'h2',
-        { className: 'ui inverted header', style: { fontSize: '3em' } },
-        'HROS Payroll Instance Viewer - home page'
-      )
-    )
-  );
-};
-
-exports.default = Home;
-
-/***/ }),
-
-/***/ 15:
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (process.env.NODE_ENV !== 'production') {
-  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
-    Symbol.for &&
-    Symbol.for('react.element')) ||
-    0xeac7;
-
-  var isValidElement = function(object) {
-    return typeof object === 'object' &&
-      object !== null &&
-      object.$$typeof === REACT_ELEMENT_TYPE;
-  };
-
-  // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
-  var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(31)(isValidElement, throwOnDirectAccess);
-} else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(32)();
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-
-/***/ 18:
+/***/ 19:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -697,7 +697,50 @@ module.exports={Children:{map:S.map,forEach:S.forEach,count:S.count,toArray:S.to
 
 /***/ }),
 
-/***/ 19:
+/***/ 2:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * 
+ */
+
+function makeEmptyFunction(arg) {
+  return function () {
+    return arg;
+  };
+}
+
+/**
+ * This function accepts and discards inputs; it has no side effects. This is
+ * primarily useful idiomatically for overridable function endpoints which
+ * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+ */
+var emptyFunction = function emptyFunction() {};
+
+emptyFunction.thatReturns = makeEmptyFunction;
+emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+emptyFunction.thatReturnsThis = function () {
+  return this;
+};
+emptyFunction.thatReturnsArgument = function (arg) {
+  return arg;
+};
+
+module.exports = emptyFunction;
+
+/***/ }),
+
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2404,50 +2447,7 @@ module.exports = ReactEntry;
 
 /***/ }),
 
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
-function makeEmptyFunction(arg) {
-  return function () {
-    return arg;
-  };
-}
-
-/**
- * This function accepts and discards inputs; it has no side effects. This is
- * primarily useful idiomatically for overridable function endpoints which
- * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
- */
-var emptyFunction = function emptyFunction() {};
-
-emptyFunction.thatReturns = makeEmptyFunction;
-emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-emptyFunction.thatReturnsThis = function () {
-  return this;
-};
-emptyFunction.thatReturnsArgument = function (arg) {
-  return arg;
-};
-
-module.exports = emptyFunction;
-
-/***/ }),
-
-/***/ 20:
+/***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2485,16 +2485,16 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(21);
+  module.exports = __webpack_require__(22);
 } else {
-  module.exports = __webpack_require__(24);
+  module.exports = __webpack_require__(25);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 
-/***/ 21:
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2508,7 +2508,7 @@ if (process.env.NODE_ENV === 'production') {
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(1);__webpack_require__(3);var l=__webpack_require__(9),n=__webpack_require__(4),ba=__webpack_require__(10),ca=__webpack_require__(2),da=__webpack_require__(5),ea=__webpack_require__(11),fa=__webpack_require__(12),ha=__webpack_require__(13),ia=__webpack_require__(14);
+var aa=__webpack_require__(1);__webpack_require__(3);var l=__webpack_require__(9),n=__webpack_require__(4),ba=__webpack_require__(12),ca=__webpack_require__(2),da=__webpack_require__(5),ea=__webpack_require__(13),fa=__webpack_require__(14),ha=__webpack_require__(15),ia=__webpack_require__(16);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -2758,7 +2758,7 @@ unstable_deferredUpdates:Xj.deferredUpdates,flushSync:Xj.flushSync,__SECRET_INTE
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2773,7 +2773,7 @@ unstable_deferredUpdates:Xj.deferredUpdates,flushSync:Xj.flushSync,__SECRET_INTE
  * @typechecks
  */
 
-var isNode = __webpack_require__(23);
+var isNode = __webpack_require__(24);
 
 /**
  * @param {*} object The object to check.
@@ -2787,7 +2787,7 @@ module.exports = isTextNode;
 
 /***/ }),
 
-/***/ 23:
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2816,7 +2816,7 @@ module.exports = isNode;
 
 /***/ }),
 
-/***/ 24:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2840,19 +2840,19 @@ var react = __webpack_require__(1);
 var invariant = __webpack_require__(3);
 var ExecutionEnvironment = __webpack_require__(9);
 var _assign = __webpack_require__(4);
-var EventListener = __webpack_require__(10);
+var EventListener = __webpack_require__(12);
 var require$$0 = __webpack_require__(6);
-var hyphenateStyleName = __webpack_require__(25);
+var hyphenateStyleName = __webpack_require__(26);
 var emptyFunction = __webpack_require__(2);
-var camelizeStyleName = __webpack_require__(27);
-var performanceNow = __webpack_require__(29);
-var propTypes = __webpack_require__(15);
+var camelizeStyleName = __webpack_require__(28);
+var performanceNow = __webpack_require__(30);
+var propTypes = __webpack_require__(11);
 var emptyObject = __webpack_require__(5);
 var checkPropTypes = __webpack_require__(7);
-var shallowEqual = __webpack_require__(11);
-var containsNode = __webpack_require__(12);
-var focusNode = __webpack_require__(13);
-var getActiveElement = __webpack_require__(14);
+var shallowEqual = __webpack_require__(13);
+var containsNode = __webpack_require__(14);
+var focusNode = __webpack_require__(15);
+var getActiveElement = __webpack_require__(16);
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -20046,7 +20046,7 @@ module.exports = ReactDOMFiberEntry;
 
 /***/ }),
 
-/***/ 25:
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20061,7 +20061,7 @@ module.exports = ReactDOMFiberEntry;
 
 
 
-var hyphenate = __webpack_require__(26);
+var hyphenate = __webpack_require__(27);
 
 var msPattern = /^ms-/;
 
@@ -20089,7 +20089,7 @@ module.exports = hyphenateStyleName;
 
 /***/ }),
 
-/***/ 26:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20126,7 +20126,7 @@ module.exports = hyphenate;
 
 /***/ }),
 
-/***/ 27:
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20141,7 +20141,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(28);
+var camelize = __webpack_require__(29);
 
 var msPattern = /^-ms-/;
 
@@ -20170,7 +20170,7 @@ module.exports = camelizeStyleName;
 
 /***/ }),
 
-/***/ 28:
+/***/ 29:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20203,44 +20203,6 @@ function camelize(string) {
 }
 
 module.exports = camelize;
-
-/***/ }),
-
-/***/ 29:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @typechecks
- */
-
-var performance = __webpack_require__(30);
-
-var performanceNow;
-
-/**
- * Detect if we can use `window.performance.now()` and gracefully fallback to
- * `Date.now()` if it doesn't exist. We need to support Firefox < 15 for now
- * because of Facebook's testing infrastructure.
- */
-if (performance.now) {
-  performanceNow = function performanceNow() {
-    return performance.now();
-  };
-} else {
-  performanceNow = function performanceNow() {
-    return Date.now();
-  };
-}
-
-module.exports = performanceNow;
 
 /***/ }),
 
@@ -20309,6 +20271,44 @@ module.exports = invariant;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @typechecks
+ */
+
+var performance = __webpack_require__(31);
+
+var performanceNow;
+
+/**
+ * Detect if we can use `window.performance.now()` and gracefully fallback to
+ * `Date.now()` if it doesn't exist. We need to support Firefox < 15 for now
+ * because of Facebook's testing infrastructure.
+ */
+if (performance.now) {
+  performanceNow = function performanceNow() {
+    return performance.now();
+  };
+} else {
+  performanceNow = function performanceNow() {
+    return Date.now();
+  };
+}
+
+module.exports = performanceNow;
+
+/***/ }),
+
+/***/ 31:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20332,7 +20332,7 @@ module.exports = performance || {};
 
 /***/ }),
 
-/***/ 31:
+/***/ 32:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20883,7 +20883,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20949,7 +20949,7 @@ module.exports = function() {
 
 /***/ }),
 
-/***/ 33:
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21070,20 +21070,44 @@ var Nav = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "li",
-                null,
+                { className: "dropdown" },
                 _react2.default.createElement(
                   "a",
-                  { href: "jschemaframe.html" },
-                  "JSchema"
-                )
-              ),
-              _react2.default.createElement(
-                "li",
-                null,
+                  { href: "", className: "dropdown-toggle",
+                    "data-toggle": "dropdown" },
+                  "Schema ",
+                  _react2.default.createElement("b", { className: "caret" })
+                ),
                 _react2.default.createElement(
-                  "a",
-                  { href: "payrollschema.html" },
-                  "PayrollSchema"
+                  "ul",
+                  { className: "dropdown-menu" },
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "jschemaframe.html" },
+                      "JSchema"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "payrollschema.html" },
+                      "Payroll Schema"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                      "a",
+                      { href: "validatedata.html" },
+                      "Validate Data"
+                    )
+                  )
                 )
               )
             ),
@@ -21097,15 +21121,6 @@ var Nav = function (_React$Component) {
                   "a",
                   { href: "about.html" },
                   "About"
-                )
-              ),
-              _react2.default.createElement(
-                "li",
-                null,
-                _react2.default.createElement(
-                  "a",
-                  { href: "about.html" },
-                  _react2.default.createElement(User, { name: this.props.name })
                 )
               )
             )
@@ -21122,7 +21137,7 @@ exports.default = Nav;
 
 /***/ }),
 
-/***/ 34:
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21136,7 +21151,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _footer = __webpack_require__(35);
+var _footer = __webpack_require__(36);
 
 var _footer2 = _interopRequireDefault(_footer);
 
@@ -21184,7 +21199,7 @@ exports.default = Footer;
 
 /***/ }),
 
-/***/ 35:
+/***/ 36:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
