@@ -1,6 +1,6 @@
 {
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
-    "version": "4.2.1",
+    "version": "4.1.1",
     "title": "PayrollMasterDataType",
     "description": "Provides the information needed to process a payroll.",
     "type": "object",
@@ -16,14 +16,14 @@
         "payee": { "$ref": "#/definitions/PayrollPayeeType" },
         "payrollDeployments": { "type": "array", "items": { "$ref": "#/definitions/PayrollDeploymentType" } },
         "paymentInstructions": { "type": "array", "items": { "$ref": "PaymentInstructionType.json#" } },
-        "generalDeductionInstructions": { "type": "array", "items": { "$ref": "GeneralDeductionInstructionType.json#" } },
-        "benefitDeductionInstructions": { "type": "array", "items": { "$ref": "BenefitDeductionInstructionType.json#" } },
+        "deductionInstructions": { "type": "array", "items": { "$ref": "DeductionInstructionType.json#" } },
         "taxInstructions": { "$ref": "TaxInstructionsType.json#" },
-        "garnishmentDeductionInstruction": { "type": "array", "items": { "$ref": "GarnishmentDeductionInstructionType.json#" } }
+        "garnishmentInstructions": { "type": "array", "items": { "$ref": "GarnishmentInstructionType.json#" } }
     },
 
     "definitions": {
         "CompanyCarType": {
+            "title": "CompanyCarType",
             "description": "",
             "type": "object",
             "properties": {
@@ -34,6 +34,7 @@
         },
 
         "OrganizationIdentifiersType": {
+            "title": "OrganizationIdentifiersType",
             "description": "A collection of different identifiers of an Organization.",
             "type": "object",
             "properties": {
@@ -62,6 +63,7 @@
         },
 
         "PayrollPayeeType": {
+            "title": "PayrollPayeeType",
             "description": "The worker who is being paid by the payroll system.",
             "type": "object",
             "allOf": [
@@ -78,6 +80,7 @@
         },
 
         "PayrollDeploymentType": {
+            "title": "PayrollDeploymentType",
             "description": "Properties of the position(s) for which the worker is being Onboarded in Payroll.",
             "type": "object",
             "allOf": [

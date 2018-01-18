@@ -1,6 +1,6 @@
 {
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
-    "version": "4.2.1",
+    "version": "4.1.1",
     "title": "TaxInstructionsType",
     "description": "Instructions for tax deductions.",
     "allOf": [

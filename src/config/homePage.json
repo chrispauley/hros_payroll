@@ -1,0 +1,12 @@
+[
+    {
+        "id": "what",
+        "heading": "This is the section content.",
+        "content": "what -section content"
+    },
+    {
+        "id": "id2",
+        "heading": "heading 2",
+        "content": "content 2"
+    }
+]

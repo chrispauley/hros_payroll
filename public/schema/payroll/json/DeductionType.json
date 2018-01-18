@@ -1,7 +1,7 @@
 {
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
-    "version": "4.2",
-    "title": "GeneralDeductionType",
+    "version": "4.1.1",
+    "title": "DeductionType",
     "description": "This is used to define generic voluntary deductions. e.g. vacation club, charity donations, etc.",
     "type": "object",
     "allOf": [

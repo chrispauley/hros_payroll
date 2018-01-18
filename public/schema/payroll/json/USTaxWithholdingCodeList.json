@@ -1,6 +1,6 @@
 {
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
-    "version": "4.2",
+    "version": "4.1.1",
     "title": "USTaxWithholdingCodeList",
     "description": "A code classifying the withhodling status of US federal taxes.",
     "enum": [

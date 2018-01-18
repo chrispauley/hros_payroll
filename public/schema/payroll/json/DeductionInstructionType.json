@@ -1,18 +1,21 @@
 {
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
-    "version": "4.2.1",
-    "title": "GeneralDeductionInstructionType",
+    "version": "4.1.1",
+    "title": "DeductionInstructionType",
     "description": "Instructions for deductions.",
     "allOf": [
-        { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
+        { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" },
+        { "$ref": "DeductionType.json#" }
     ],
 
     "properties": {
         "id": { "$ref": "../../common/json/base/IdentifierType.json#" },
-        "deductionCycleCode": { "$ref": "../../common/json/base/CodeType.json#" },
+        "deductionCycleCode": {
+            "description": "The frequency at which a deduction is taken.",
+            "$ref": "../../common/json/codelist/PayCycleIntervalCodeList.json#"
+        },
         "totalTransactions": { "type": "number" },
         "processingSequence": { "type": "number" },
-        "generalDeduction": { "$ref": "GeneralDeductionType.json#" },
         "deductionGoal": { "$ref": "DeductionGoalType.json#" }
     }
 }
