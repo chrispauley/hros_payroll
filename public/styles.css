@@ -34,16 +34,24 @@ ul.tech_icon > li:before {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-
-
-.react::before {
-    content:'';
-    background-image: url('img/reactjs.svg');
+.bootstrap::before {
+    content: '';
+    background-image: url('img/bootstrap.svg');
 }
 
-.redux::before {
+.docker::before {
     content:'';
-    background-image: url('img/redux_icon.svg');
+    background-image: url('img/docker.svg');
+}
+
+.docker-hub::before {
+    content:'';
+    background-image: url('img/docker-hub.svg');
+}
+
+.github::before {
+    content:'';
+    background-image: url('img/github-icon.svg');
 }
 
 .node::before {

@@ -1,5 +1,5 @@
 {
-    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "$schema": "http://localhost:3333/schema/common/json/meta/hros.json",
     "version": "4.1.1",
     "title": "PayrollType",
     "description": "Represents the Payroll Specification. Uses one noun type for all use cases.",

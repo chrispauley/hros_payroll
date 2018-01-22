@@ -13,17 +13,23 @@ class DataSelectPanel extends Component {
       pageOfItems: [],
       initialPage: 1
     }
-    console.log("DataSelectPanel props:", this.props.payrollReducer);
+    // console.log("DataSelectPanel props:", this.props.payrollReducer);
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({
-      items: nextProps.payrollReducer.items,
-      pageOfItems: nextProps.payrollReducer.items.slice(0,6) })
+    // console.log('nextProps', nextProps);
+    var {items} = nextProps.payrollReducer;
+    if (items) {
+      this.setState({
+        items,
+        pageOfItems: items.slice(0,6) })
+    }
+    // console.log('state: ', this.state);
   }
 
   onChangePage = (pageOfItems) => {
       // update state with new page of items
+      // console.log('onChangePage pageOfItems:', pageOfItems);
       this.setState({ pageOfItems: pageOfItems });
   }
 
@@ -40,18 +46,19 @@ class DataSelectPanel extends Component {
   }
 
   render() {
-
-    var list = this.state.pageOfItems.map((item, i) => {
-      // console.log("i: ", i, item);
+    var list = null;
+    var { items } = this.props.payrollReducer;
+    if ( items && items.length > 0 ) {
+      list = this.state.items.map((item, i) => {
       return (
         <li key={i}>
           <a href={item.link} onClick={this.handleClick.bind(this)}>
              {item.name}
           </a>
         </li>
-      )
-    });
-
+        )
+      });
+    }
     const { isCollapsed } = this.state;
 
     return (
@@ -69,7 +76,7 @@ class DataSelectPanel extends Component {
               </div>
             </div>
             <div className="panel-footer">
-              <Pagination items={this.state.items} onChangePage={this.onChangePage} />
+              <Pagination items={this.props.payrollReducer.items} onChangePage={this.onChangePage} />
 
             </div>
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import About from './pages/About';
+import AboutPage from './pages/AboutPage';
 import Nav from './pages/Nav'
 import Footer from './pages/Footer'
 
@@ -18,5 +18,5 @@ const footerProps = {
 }
 
 ReactDOM.render (<Nav name={jwtPayload.name}/>, document.querySelector('#top-nav'));
-ReactDOM.render (<Footer {...footerProps}/>, document.querySelector('#footer'));
-ReactDOM.render (<About />, document.querySelector('main'));
+// ReactDOM.render (<Footer {...footerProps}/>, document.querySelector('#footer'));
+ReactDOM.render (<AboutPage />, document.querySelector('main'));

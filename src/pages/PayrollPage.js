@@ -65,7 +65,7 @@ class PayrollPage extends Component {
     if (error) {
       return (
         <div>
-          <DataSelectPanel {...this.props.payrollReducer} onClick={this.handleClick.bind(this)}/>
+          <DataSelectPanel />
           <div className='row'>Error loading process instance.</div>
         </div>
       );

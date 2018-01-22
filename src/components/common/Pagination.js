@@ -19,10 +19,12 @@ class Pagination extends React.Component {
     constructor(props) {
         super(props);
         this.state = { pager: {} };
+        // console.log('Pagination', this.props);
     }
 
     componentWillMount() {
         // set page if items array isn't empty
+        // console.log('componentWillMount');
         if (this.props.items && this.props.items.length) {
             this.setPage(this.props.initialPage);
         }
@@ -30,6 +32,7 @@ class Pagination extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         // reset page if items array has changed
+        // console.log('componentDidUpdate', this.props.items);
         if (this.props.items !== prevProps.items) {
             this.setPage(this.props.initialPage);
         }
@@ -108,9 +111,11 @@ class Pagination extends React.Component {
     }
 
     render() {
+      // console.log('pager', this.state);
         var pager = this.state.pager;
 
         if (!pager.pages || pager.pages.length <= 1) {
+          // console.log('only one page');
             // don't display pager if there is only 1 page
             return null;
         }

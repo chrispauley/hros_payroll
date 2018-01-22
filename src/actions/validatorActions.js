@@ -9,6 +9,10 @@ export const LOAD_SCHEMA_META_FULFILLED = 'LOAD_SCHEMA_META_FULFILLED';
 
 function ajvLoadSchema(uri) {
   console.log('ajvLoadSchema:' + uri);
+  if(uri){
+    // console.log('window.location', window.location);
+    console.log('Modified: ', window.location.origin + '/schema/payroll/json/' + uri);
+  }
   return new Promise((resolve, reject) => {
     $.getJSON(uri)
       .done((json) => resolve(json))
@@ -20,7 +24,8 @@ function ajvLoadSchema(uri) {
 }
 
 export function loadSchema(schemaUrl) {
-  console.log('loadSchema: ' + schemaUrl);
+  // debugger
+  console.log(`debugger: validatorActions.loadSchema(${schemaUrl})`);
   return (dispatch) => {
     dispatch({type: LOAD_SCHEMA, payload: schemaUrl});
 
@@ -45,22 +50,24 @@ export function loadSchema(schemaUrl) {
       // ajv.addSchema()
       // debugger;
       try {
+        console.log('before compileAsync');
         var validate = ajv.compileAsync(schema);
       } catch  (err){
+        console.log('err: ', err);
         dispatch({type: LOAD_SCHEMA_ERROR, payload: err})
       }
 
       console.log('4');
       var errorsArray = ajv.errors;
             // console.log(ajv);
-      // console.log('errorsArray', ajv.errors);
+      console.log('errorsArray', ajv.errors);
 
 
 
     }).catch(function(err) {
       console.log('5 catch');
       // Error :(
-      console.log(err);
+      console.log('catch - ajv.errors', ajv.errors);
       dispatch({type: LOAD_SCHEMA_ERROR,
         payload: {error: 'Could not load.'}})
     });

@@ -57,6 +57,8 @@ export function fetchPayrollInstructionsError(error) {
   return {type: FETCH_SAMPLE_LIST_ERROR, payload: error}
 }
 
+
+// This loads an instance.
 export function getPayrollInstructionInstance(url) {
   // console.log('url: ', url);
   return (dispatch) => {
@@ -64,8 +66,14 @@ export function getPayrollInstructionInstance(url) {
     fetch(url)
        .then((res) => res.json()
        .then((resData) => {
+          const { payrollProcess } = resData;
+          if ( payrollProcess ) {
+            var result = payrollProcess;
+          } else {
+            result = resData;
+          }
           dispatch({type: LOAD_PAYROLL_INSTRUCTION_FULFILLED,
-          payload: resData});
+          payload: result});
           // this.setState({ processInstance: resData });
         })
         .catch(function(err) {

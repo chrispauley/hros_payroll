@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = () => (
+const AboutPage = () => (
   <div className='row' style={{marginTop: '50px'}}>
 
     <div className='jumbotron'>
@@ -65,4 +65,4 @@ const About = () => (
 );
 
 
-export default About;
+export default AboutPage;
