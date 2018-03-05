@@ -1,0 +1,29 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "13",
+        "description": "Diego is from Brazil but has been working in the US for many years."
+    },
+    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "5" }],
+
+    "personName": [{
+        "formattedName": "Diego Sanchez",
+        "given": "Diego",
+        "family": "Sanchez",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0013" }
+    }
+
+}

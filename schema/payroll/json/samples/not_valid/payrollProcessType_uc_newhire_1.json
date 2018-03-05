@@ -1,0 +1,93 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "1",
+        "description": "Mary is a new employee at ABC corporation."
+    },
+    "alternateIds": [{ "schemeId": "uc_newhire", "value": "1" }],
+
+
+    "personName": [{
+        "formattedName": "Mary Smith",
+        "given": "Mary",
+        "family": "Smith",
+        "nameType": "legal"
+    }],
+
+    "personLegal": {
+        "passportId": { "schemeId": "passport", "value": "0123456789" },
+        "id": { "schemeId": "ssn", "value": "123-45-0001" }
+    },
+
+    "workRelationshipLifecycle": {
+        "hire": {
+            "typeHire": "new",
+            "hireDate": "2017-11-01",
+            "dutyEntryDate": "2017-12-01"
+        }
+    },
+
+    "deployment": {
+        "assignmentReasonCode": "Hire",
+
+        "communication": {
+            "address": [{
+                "line": "",
+                "city": "",
+                "countycode": "US",
+                "countrySubDivisions": [{ "type": "state", "value": "" }],
+                "typeCode": "home"
+            }],
+            "phone": [{ "formattedNumber": "", "useCode": "home" }],
+            "email": [{ "address": "mary.smith@example.com", "useCode": "company" }]
+        },
+
+        "job": {
+            "title": "",
+            "id": { "schemeId": "", "value": "" },
+            "jobFunction": "",
+            "planCode": "",
+            "stepCode": "",
+            "gradeCode": "",
+            "jobFunction": "",
+            "description": ""
+        },
+
+        "position": {
+            "title": "",
+            "id": { "schemeId": "", "value": "" },
+            "positionScheduleType": "FullTime",
+            "positionTypeCode": "DirectHire",
+            "remunerationBasisCode": "Saleried"
+        },
+
+        "workLocation": {
+            "id": { "schemeId": "", "value": "" },
+            "name": "",
+            "description": {
+                "languageCode": "en-US",
+                "value": ""
+            },
+            "address": {
+                "line": "",
+                "city": "",
+                "countycode": "US",
+                "countrySubDivisions": [{ "type": "state", "value": "" }],
+                "typeCode": "branch"
+            },
+            "fieldRemoteWorkerIndicator": false,
+            "virtualWorkerIndicator": false,
+            "fullTimeEquivalentRatio": 100
+        }
+    }
+
+}

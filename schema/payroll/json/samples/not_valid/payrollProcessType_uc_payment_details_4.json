@@ -1,0 +1,30 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "12",
+        "description": "Holly's job requires that she travel 70% of the time."
+    },
+    "alternateIds": [{ "schemeId": "uc_payment_details", "value": "4" }],
+
+
+    "personName": [{
+        "formattedName": "Holly Anderson",
+        "given": "Holly",
+        "family": "Anderson",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0012" }
+    }
+
+}

@@ -1,0 +1,92 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "2",
+        "description": "John is a 1st party contractor who is working directly for the company for 6 months."
+    },
+    "alternateIds": [{ "schemeId": "uc_newhire", "value": "2" }],
+
+
+    "personName": [{
+        "formattedName": "John Johnson",
+        "given": "John",
+        "family": "Johnson",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0002" }
+    },
+
+    "workRelationshipLifecycle": {
+        "contract": {
+            "contractNumber": { "schemeId": "contractId", "value": "" },
+            "contactStartDate": "2017-12-01",
+            "workRelationshipType": "contractor",
+            "addendum": ["2018-04-01", "2018-07-01"]
+        }
+    },
+
+    "deployment": {
+        "assignmentReasonCode": "Hire",
+
+        "communication": {
+            "address": [{
+                "line": "",
+                "city": "",
+                "countycode": "US",
+                "countrySubDivisions": [{ "type": "state", "value": "" }],
+                "typeCode": "home"
+            }],
+            "phone": [{ "formattedNumber": "", "useCode": "home" }],
+            "email": [{ "address": "John.Johnson@example.com", "useCode": "company" }]
+        },
+
+        "job": {
+            "title": "",
+            "id": { "schemeId": "", "value": "" },
+            "jobFunction": "",
+            "planCode": "",
+            "stepCode": "",
+            "gradeCode": "",
+            "jobFunction": "",
+            "description": ""
+        },
+
+        "position": {
+            "title": "",
+            "id": { "schemeId": "", "value": "" },
+            "positionScheduleType": "FullTime",
+            "positionTypeCode": "DirectHire",
+            "remunerationBasisCode": "Saleried"
+        },
+
+        "workLocation": {
+            "id": { "schemeId": "", "value": "" },
+            "name": "",
+            "description": {
+                "languageCode": "en-US",
+                "value": ""
+            },
+            "address": {
+                "line": "",
+                "city": "",
+                "countycode": "US",
+                "countrySubDivisions": [{ "type": "state", "value": "" }],
+                "typeCode": "branch"
+            },
+            "fieldRemoteWorkerIndicator": false,
+            "virtualWorkerIndicator": false,
+            "fullTimeEquivalentRatio": 100
+        }
+    }
+}

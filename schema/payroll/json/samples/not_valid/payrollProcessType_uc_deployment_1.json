@@ -1,0 +1,30 @@
+{
+    "dataProtectionPolicy": {
+        "retentionDate": "2017-10-26",
+        "retentionDays": 5,
+        "geoRestrictions": [{
+            "country": "US",
+            "policy": "Read"
+        }]
+    },
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "28",
+        "description": "Hayleigh is a 1st-party contractor in the US. After three months, she is converted to a full-time employee."
+    },
+    "alternateIds": [{ "schemeId": "uc_deployment", "value": "1" }],
+
+
+    "personName": [{
+        "formattedName": "Hayleigh Bowen",
+        "given": "Hayleigh",
+        "family": "Bowen",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0028" }
+    }
+
+}

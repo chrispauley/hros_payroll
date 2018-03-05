@@ -11,7 +11,7 @@
 
         "PayrollDeployment": {
             "description": "Contains a collection of information about the deployment of a payroll payee  within an employment or work context. Deployment details include information about a resource's job, position, work schedule, assignment entry reason, as well as information identifying the organization and/or organizational sub-units associated with the deployment. Indicative Deployment Details, contains the subclass of deployment details relavent to Indicative Data use cases (e.g., provisioning an benefits outsourcer's system).",
-            "allOf": [{ "$ref": "../../common/json/profile/DeploymentType.json#" }],
+            "allOf": [{ "$ref": "../../common/json/work/DeploymentType.json#" }],
             "properties": {
                 "remunerations": {
                     "type": "array",
@@ -24,14 +24,22 @@
 
     },
     "properties": {
-        "personName": {
-            "description": "Allows for a person's name and/or the person's known as name.",
-            "$ref": "../../common/json/person/PersonNameTypeArray.json#"
+        "payee": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "personName": {
+                    "description": "Allows for a person's name and/or the person's known as name.",
+                    "$ref": "../../common/json/person/PersonNameTypeArray.json#"
+                },
+                "personlegal": {
+                    "description": "Includes PersonBase (legalid, birthdate, gender, citizenship, residence country, military status, ethnicity) and PersonLegal (passport, father/mother name, race, birthplace, deathdate, nationality, marital status, visa, religion, student info).",
+                    "$ref": "../../common/json/person/PersonLegalType.json#"
+                }
+            },
+            "required": ["personName"]
         },
-        "personlegal": {
-            "description": "Includes PersonBase (legalid, birthdate, gender, citizenship, residence country, military status, ethnicity) and PersonLegal (passport, father/mother name, race, birthplace, deathdate, nationality, marital status, visa, religion, student info).",
-            "$ref": "../../common/json/person/PersonLegalType.json#"
-        },
+
         "deployment": {
             "description": "Information about the person's position, organization, and work location.",
             "$ref": "#/definitions/PayrollDeployment"
@@ -40,18 +48,24 @@
             "description": "NOTE: This may belong to DeploymentType.",
             "$ref": "../../common/json/profile/WorkRelationshipLifecycleType.json#"
         },
-        "paymentInstruction": {
+        "paymentInstructions": {
             "description": "Instructions for payment method and amount.",
-            "$ref": "PaymentInstructionsType.json#"
+            "type": "array",
+            "items": { "$ref": "PaymentInstructionsType.json#" }
         },
-        "deductionInstruction": {
+        "deductionInstructions": {
             "description": "Instructions for General and Benefits deductions.",
-            "$ref": "DeductionInstructionsType.json#"
+            "type": "array",
+            "items": { "$ref": "DeductionInstructionType.json#" }
+        },
+        "garnishmentInstructions": {
+            "description": "Instructions for Garnishment deductions.",
+            "type": "array",
+            "items": { "$ref": "GarnishmentDeductionType.json#" }
         },
         "statutoryInstruction": {
             "description": "Instructions for statutory deductions including social insurance, taxes, and garnishments.",
             "$ref": "StatutoryInstructionsType.json#"
         }
-    },
-    "required": ["personName"]
+    }
 }

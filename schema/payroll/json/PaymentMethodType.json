@@ -1,0 +1,37 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.1.1",
+    "title": "PaymentMethodType",
+    "description": "Defines how a payment is paid.",
+    "type": "object",
+    "properties": {
+        "methodType": {
+            "description": "The manner is which a payment is made. e.g. Direct Deposit, Check, etc.",
+            "$ref": "../../common/json/base/CodeType.json#"
+        },
+        "accountId": {
+            "description": "An account ID within a bank into which a payroll payment is deposited. The schemeID would include the word 'IBAN' or 'SWIFT' to reference the ID Type.",
+            "$ref": "../../common/json/base/IdentifierType.json#"
+        },
+        "accountType": {
+            "description": "A bank account into which a payment is deposited.",
+            "$ref": "../../common/json/base/CodeType.json#"
+        },
+        "nameOnAccount": {
+            "description": "The name of the person on the bank account",
+            "type": "string"
+        },
+        "bankId": {
+            "description": "This is a number or identifier for a bank used in the context of electronic funds transfer. Usually, only a single BankID needs to be specified in the context of a given transaction. The bankId may have different names in different parts of the world. E.g. BIC in Europe, Routing Number in the US, and Sort Code in UK.",
+            "$ref": "../../common/json/base/IdentifierType.json#"
+        },
+        "countryCode": {
+            "description": "The country code where the bank is located.",
+            "$ref": "../../common/json/codelist/CountryCodeList.json#"
+        },
+        "currencyCode": {
+            "description": "The currency of the payment to be made.",
+            "$ref": "../../common/json/codelist/CurrencyCodeList.json#"
+        }
+    }
+}

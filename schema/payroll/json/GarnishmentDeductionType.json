@@ -1,13 +1,63 @@
 {
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
-    "version": "4.2",
+    "version": "4.1.1",
     "title": "GarnishmentDeductionType",
     "description": "This defines the deduction associated to a garnishment in the context of that which is relevant to payroll processing.",
     "type": "object",
     "allOf": [
-        { "$ref": "GeneralDeductionType.json#" }
+        { "$ref": "DeductionType.json#" }
     ],
     "properties": {
-        "partialGarnishmentAllowedIndicator": { "$ref": "../../common/json/base/IndicatorType.json#" }
+        "partialGarnishmentAllowedIndicator": {
+            "description": "True: If there isn't enough pay to cover the full garnishment, deduct part of the garnishment.",
+            "$ref": "../../common/json/base/IndicatorType.json#"
+        },
+        "issuanceDate": {
+            "description": "The date the garnishment was issued.",
+            "$ref": "../../common/json/base/DateType.json#"
+        },
+        "registrationDate": {
+            "description": "The date the garnishment was registered.",
+            "$ref": "../../common/json/base/DateType.json#"
+        },
+        "jurisdictionCountry": {
+            "description": "The country where the garnishment was issued.",
+            "$ref": "../../common/json/codelist/CountryCodeList.json#"
+        },
+        "jurisdictionCountrySubdivision": {
+            "description": "The country subdivision where the garnishment was issued.",
+            "$ref": "../../common/json/communication/AddressComponentType.json#"
+        },
+        "jurisdictionCity": {
+            "description": "The city where the garnishment was issued.",
+            "type": "string"
+        },
+        "issuerId": {
+            "description": "Identifier of the issuer.",
+            "$ref": "../../common/json/base/IdentifierType.json#"
+        },
+        "serviceChargeAmount": {
+            "description": "TODO: describe serviceChargeAmount.",
+            "$ref": "../../common/json/base/AmountType.json#"
+        },
+        "administratorFeeIndicator": {
+            "description": "TODO: define administratorFeeIndicator.",
+            "$ref": "../../common/json/base/IndicatorType.json#"
+        },
+        "maximumAdministrationFee": {
+            "description": "TODO: describe maximumAdministrationFee.",
+            "$ref": "../../common/json/base/AmountType.json#"
+        },
+
+        "excludedEarningCodes": {
+            "description": "TODO: define excludedEarningCodes.",
+            "type": "array",
+            "items": { "$ref": "../../common/json/base/CodeType.json#" }
+        },
+        "excludedDeductionCodes": {
+            "description": "TODO: define excludedDeductionCodes.",
+            "type": "array",
+            "items": { "$ref": "../../common/json/base/CodeType.json#" }
+        }
     }
 }

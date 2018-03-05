@@ -1,0 +1,23 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.2.1",
+    "title": "DeductionInstructionType",
+    "description": "Instruction for benefits and other deductions.",
+    "allOf": [
+        { "$ref": "DeductionType.json#" }
+    ],
+    "type": "object",
+    "properties": {
+        "deductionGoal": { "$ref": "DeductionGoalType.json#" },
+        "employerContribution": {
+            "description": "TODO: describe or define employeeContribution.",
+            "oneOf": [{
+                "description": "The amount the employer contributes to the deduction type. For example, $10 for certification dues.",
+                "$ref": "../../common/json/base/AmountType.json#"
+            }, {
+                "description": "The percent the employer contributes to the deduction type. For example 4% for retirement.",
+                "$ref": "../../common/json/base/PercentType.json#"
+            }]
+        }
+    }
+}

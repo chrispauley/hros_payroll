@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 182);
+/******/ 	return __webpack_require__(__webpack_require__.s = 184);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -580,7 +580,7 @@ module.exports = getActiveElement;
 
 /***/ }),
 
-/***/ 182:
+/***/ 184:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -594,9 +594,9 @@ var _reactDom = __webpack_require__(21);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _About = __webpack_require__(183);
+var _AboutPage = __webpack_require__(185);
 
-var _About2 = _interopRequireDefault(_About);
+var _AboutPage2 = _interopRequireDefault(_AboutPage);
 
 var _Nav = __webpack_require__(34);
 
@@ -622,12 +622,12 @@ var footerProps = {
 };
 
 _reactDom2.default.render(_react2.default.createElement(_Nav2.default, { name: jwtPayload.name }), document.querySelector('#top-nav'));
-_reactDom2.default.render(_react2.default.createElement(_Footer2.default, footerProps), document.querySelector('#footer'));
-_reactDom2.default.render(_react2.default.createElement(_About2.default, null), document.querySelector('main'));
+// ReactDOM.render (<Footer {...footerProps}/>, document.querySelector('#footer'));
+_reactDom2.default.render(_react2.default.createElement(_AboutPage2.default, null), document.querySelector('main'));
 
 /***/ }),
 
-/***/ 183:
+/***/ 185:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -643,7 +643,7 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var About = function About() {
+var AboutPage = function AboutPage() {
   return _react2.default.createElement(
     'div',
     { className: 'row', style: { marginTop: '50px' } },
@@ -807,7 +807,7 @@ var About = function About() {
   );
 };
 
-exports.default = About;
+exports.default = AboutPage;
 
 /***/ }),
 
@@ -21210,7 +21210,7 @@ var Nav = function (_React$Component) {
                 _react2.default.createElement(
                   "a",
                   { href: "payroll.html" },
-                  "Payment Instructions"
+                  "Payroll Instructions"
                 )
               ),
               _react2.default.createElement(
