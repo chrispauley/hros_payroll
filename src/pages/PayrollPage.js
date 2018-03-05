@@ -20,6 +20,7 @@ import DropLoader from "../components/utils/DropLoader";
 import DataSelectPanel from '../components/common/DataSelectPanel'
 import NounPanel from '../components/noun/NounPanel';
 import PayeePanel from '../components/payee/PayeePanel';
+import DeductionInstructionsPanel from '../components/deductionInstructions/DeductionInstructionsPanel';
 import BenefitInstructionsPanel from '../components/benefitInstructions/BenefitInstructionsPanel';
 import DeploymentPanel from '../components/deployment/DeploymentPanel';
 import GeneralDeductionsPanel from '../components/generalDeductions/GeneralDeductionsPanel';
@@ -74,10 +75,11 @@ class PayrollPage extends Component {
     var {
       documentId,
       payee,
+      deductionInstructions,
       payrollDeployments,
       workRelationshipLifeCycle,
       benefitDeductionInstructions,
-      garnishmentDeductionInstruction,
+      garnishmentInstructions,
       generalDeductionInstructions,
       paymentInstructions,
       deductionInstructions,
@@ -101,20 +103,26 @@ class PayrollPage extends Component {
 
         {payee && (<PayeePanel {...processInstance}/>)}
 
-        {payrollDeployments && (<DeploymentPanel />)}
+        {deductionInstructions && (<DeductionInstructionsPanel {...processInstance} />)}
+
+        {garnishmentInstructions && (<GarnishmentDeductionsPanel {...garnishmentInstructions} />)}
+
+        { paymentInstructions && ( <PaymentInstructionsPanel {...paymentInstructions}/>) }
+
+        {/* {payrollDeployments && (<DeploymentPanel />)} */}
 
         {/* { workRelationshipLifeCycle &&
           (<WorkRelationshipPanel {...processInstance } />) } */}
 
-        { benefitDeductionInstructions && ( <BenefitInstructionsPanel />) }
+        {/* { benefitDeductionInstructions && ( <BenefitInstructionsPanel />) }
 
         { generalDeductionInstructions && (<GeneralDeductionsPanel />)}
 
-        { paymentInstructions && ( <PaymentInstructionsPanel />) }
+
 
         {taxInstructions && (<TaxInstructionsPanel/>)}
 
-        {garnishmentDeductionInstruction && (<GarnishmentDeductionsPanel/>)}
+
 
 
         {/* <DropLoader onChange={this.handleDropFileInput}/> */}

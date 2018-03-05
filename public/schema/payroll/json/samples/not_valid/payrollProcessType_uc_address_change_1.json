@@ -15,29 +15,14 @@
     },
     "alternateIds": [{ "schemeId": "uc_address_change", "value": "1" }],
 
-    "payee": {
-        "personName": [{
-            "formattedName": "Hugo Mills",
-            "given": "Hugo",
-            "family": "Mills",
-            "nameType": "legal"
-        }],
+    "personName": [{
+        "formattedName": "Hugo Mills",
+        "given": "Hugo",
+        "family": "Mills",
+        "nameType": "legal"
+    }],
 
-        "personlegal": {
-            "id": {
-                "schemeId": "ssn",
-                "value": "123-45-0027"
-            }
-        },
-        "communication": {
-            "address": [{
-                "name": "Hugo Mills",
-                "line": "123 Spring Ln",
-                "city": "Easton",
-                "countrySubDivisions": [{ "type": "state", "value": "PA" }],
-                "postalCode": "18040"
-            }]
-        }
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0027" }
     }
-
 }

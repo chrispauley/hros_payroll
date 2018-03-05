@@ -1,0 +1,31 @@
+{
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "schemeLink": "https://github.com/HROpen/Payroll/issues/24",
+        "value": "2",
+        "description": "Bonus Payment of $3,456,78"
+    },
+    "alternateIds": [{ "schemeId": "remuneration", "value": "2" }],
+
+    "personName": [{
+        "formattedName": "Mary Smith",
+        "nameType": "legal"
+    }],
+
+    "deployment": {
+        "remunerations": [{
+            "id": {
+                "value": "1001"
+            },
+            "remunerationRate": {
+                "payRateAmount": {
+                    "currency": "USD",
+                    "value": 35456.78
+                },
+                "payRateUnitTimeCode": "Once"
+            }
+
+        }]
+    }
+}

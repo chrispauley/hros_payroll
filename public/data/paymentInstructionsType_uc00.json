@@ -1,0 +1,92 @@
+{
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "paymentInstructionsType_uc00",
+        "description": "Basic use case for development."
+    },
+
+    "deductionInstructions": [{
+        "validFrom": "2018-02-12",
+        "validTo": "2018-02-12",
+        "id": { "value": "" },
+        "deductionCycleCode": "Month",
+        "typeDeduction": "",
+        "subTypeCode": "",
+        "referenceId": { "value": "" },
+        "requestedAmount": { "currency": "USD", "value": 1.00 },
+        "actualAmount": { "currency": "USD", "value": 1.00 },
+        "originalAmount": { "currency": "USD", "value": 1.00 },
+        "remainingAmount": { "currency": "USD", "value": 1.00 },
+        "arrearsAmount": { "currency": "USD", "value": 1.00 },
+        "percentage": 1,
+        "employerContribution": { "currency": "USD", "value": 10.00 },
+        "basisCode": "",
+        "basis": { "currency": "USD", "value": 1.00 },
+        "deductionGoal": {
+            "id": { "value": "" },
+            "limitAmount": { "currency": "USD", "value": 1.00 },
+            "accrualAdjustmentAmount": { "currency": "USD", "value": 1.00 }
+        }
+    }],
+
+    "garnishmentInstructions": [{
+        "effectiveDate": {
+            "validFrom": "2018-02-12",
+            "validTo": "2018-02-12"
+        },
+        "id": { "value": "" },
+        "deductionCycleCode": "Month",
+        "typeDeduction": "",
+        "subTypeCode": "",
+        "referenceId": { "value": "" },
+        "requestedAmount": { "currency": "USD", "value": 1.00 },
+        "actualAmount": { "currency": "USD", "value": 1.00 },
+        "originalAmount": { "currency": "USD", "value": 1.00 },
+        "remainingAmount": { "currency": "USD", "value": 1.00 },
+        "serviceChargeAmount": { "currency": "USD", "value": 1.00 },
+        "maximumAdministrationFee": { "currency": "USD", "value": 1.00 },
+        "administratorFeeIndicator": true,
+        "percentage": 1,
+
+        "partialGarnishmentAllowedIndicator": true,
+        "issuanceDate": "2018-02-12",
+        "registrationDate": "2018-02-12",
+
+        "jurisdictionCountry": "US",
+        "jurisdictionCountrySubdivision": { "type": "state", "value": "Delaware" },
+        "jurisdictionCity": "Wilmington",
+        "issuerId": { "value": "" },
+        "serviceChargeAmount": { "currency": "USD", "value": 15.00 },
+        "excludedEarningCodes": ["code_one", "code_two"],
+        "excludedDeductionCodes": ["code_A", "code_B"],
+        "receivingParty": {
+            "personName": {
+                "formattedName": "Mary Smith",
+                "nameType": "legal"
+            },
+            "personCommunication": {
+                "address": [{
+                    "formattedAddress": "123 Main St., Wilmington, DE 12345"
+                }]
+            },
+            "organizationName": "",
+            "paymentMethod": {
+                "methodType": "ACH",
+                "accountId": { "schemeId": "Bank of America", "value": "12345678901" },
+                "accountType": "Checking",
+                "bankId": { "schemeId": "RoutingNumber", "value": "123456789" },
+                "countryCode": "US",
+                "currencyCode": "USD",
+                "nameOnAccount": "Mary Smith"
+            }
+        }
+    }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Joe Smith",
+            "nameType": "legal"
+        }]
+    }
+}

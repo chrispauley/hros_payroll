@@ -9,6 +9,7 @@ import {
 
   TOGGLE_SHOW_NOUN,
   TOGGLE_PAYEE,
+  TOGGLE_DEDUCTION_INSTRUCTIONS,
   TOGGLE_SHOW_DEPLOYMENT,
   TOGGLE_PAYMENT_INSTRUCTIONS,
   TOGGLE_SHOW_TAX,
@@ -32,6 +33,7 @@ const initialState = {
 
   showNoun: false,
   showPayee: false,
+  showDeductionInstructions: false,
   showDeployment: false,
   showPaymentInstructions: false,
   showTax: false,
@@ -52,6 +54,11 @@ export function sessionReducer(state = initialState, action) {
       return {
         ...state,
         showPayee: !state.showPayee
+      }
+    case TOGGLE_DEDUCTION_INSTRUCTIONS:
+      return {
+        ...state,
+        showDeductionInstructions: !state.showDeductionInstructions
       }
     case TOGGLE_SHOW_DEPLOYMENT:
       return {

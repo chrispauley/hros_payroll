@@ -14,9 +14,9 @@ class GarnishmentDeductionsPanel extends Component {
       console.log('No processInstance. Why was GarnishmentDeductionsPanel called to render?');
       return null;
     }
-    var {garnishmentDeductionInstruction} = processInstance;
-    if (!garnishmentDeductionInstruction) {
-      console.log('No garnishmentDeductionInstruction. Why was GarnishmentDeductionsPanel called to render?');
+    var {garnishmentInstructions} = processInstance;
+    if (!garnishmentInstructions) {
+      console.log('No garnishmentInstructions. Why was GarnishmentDeductionsPanel called to render?');
       return null;
     }
 
@@ -40,7 +40,7 @@ class GarnishmentDeductionsPanel extends Component {
                 <div className='row'>
                   <div className='col-md-12'>
                     {/* This should be a list of tables. */}
-                    { garnishmentDeductionInstruction && displayValue('garnishmentDeductionInstruction', garnishmentDeductionInstruction)}
+                    { garnishmentInstructions && displayValue('garnishmentInstructions', garnishmentInstructions)}
 
                   </div>
                 </div>

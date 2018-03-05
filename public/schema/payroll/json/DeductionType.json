@@ -4,15 +4,89 @@
     "title": "DeductionType",
     "description": "This is used to define generic voluntary deductions. e.g. vacation club, charity donations, etc.",
     "type": "object",
-    "allOf": [
-        { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
-    ],
     "properties": {
-        "typeDeduction": { "type": "string" },
-        "code": { "$ref": "../../common/json/base/CodeType.json#" },
-        "amount": { "$ref": "../../common/json/base/AmountType.json#" },
-        "percentage": { "$ref": "../../common/json/base/PercentType.json#" },
-        "basisCode": { "$ref": "../../common/json/base/CodeType.json#" },
-        "basis": { "$ref": "../../common/json/base/AmountType.json#" }
+        "id": {
+            "description": "The identifier of the deduction.",
+            "$ref": "../../common/json/base/IdentifierType.json#"
+        },
+        "effectiveDate": {
+            "description": "Effective time of the deduction.",
+            "$ref": "../../common/json/base/EffectiveTimePeriod.json#"
+        },
+        "deductionCycleCode": {
+            "description": "The frequency the deduction should be taken. E.g monthly, weekly, etc.  The information would only be provided where it differs from the person's payroll frequency.  For example, a quarterly union deduction for a weekly based person.",
+            "$ref": "../../common/json/codelist/PayCycleIntervalCodeList.json#"
+        },
+        "totalTransactions": {
+            "description": "The number of all deductions.",
+            "type": "number"
+        },
+        "sequence": {
+            "description": "The order of this deduction within all of the deductions.",
+            "type": "number"
+        },
+        "typeDeduction": {
+            "description": "The type of deduction. E.g. benefit, court order, garnishment, etc.",
+            "type": "string"
+        },
+        "subTypeCode": {
+            "description": "The category within the deduction type.  E.g. for garnishments this could be creditor, child support, etc.  For benefits, this could be medical, car, voluntary insurance.",
+            "$ref": "../../common/json/base/CodeType.json#"
+        },
+        "referenceId": {
+            "description": "The third party reference for the deduction. i.e. court order number, union membership number, etc.",
+            "$ref": "../../common/json/base/IdentifierType.json#"
+        },
+        "requestedAmount": {
+            "description": "The amount to be deducted, if available.",
+            "$ref": "../../common/json/base/AmountType.json#"
+        },
+        "actualAmount": {
+            "description": "The amount actually deducted after processing payroll.",
+            "$ref": "../../common/json/base/AmountType.json#"
+        },
+        "originalBalanceAmount": {
+            "description": "The total amount to be withheld over the life of this deduction.",
+            "$ref": "../../common/json/base/AmountType.json#"
+        },
+        "remainingBalanceAmount": {
+            "description": "The current amount of the deduction after processing payroll.",
+            "$ref": "../../common/json/base/AmountType.json#"
+        },
+        "percentage": {
+            "description": "The percent to be withheld.  For example, an elected 3% retirement deduction.",
+            "$ref": "../../common/json/base/PercentType.json#"
+        },
+        "basisCode": {
+            "description": "TODO: Ask Wendy - describe or define basisCode.",
+            "$ref": "../../common/json/base/CodeType.json#"
+        },
+        "basis": {
+            "description": "TODO: Ask Wendy - describe or define basis in the context of a deduction.",
+            "$ref": "../../common/json/base/AmountType.json#"
+        },
+        "receivingParty": {
+            "description": "TODO: describe or define receivingParty.",
+            "type": "object",
+            "properties": {
+                "personName": {
+                    "NOTE": "Should garnishmentment payment be in the description?",
+                    "description": "The name of the person receiving the garnishment payment.",
+                    "$ref": "../../common/json/person/PersonNameType.json#"
+                },
+                "personCommunication": {
+                    "NOTE": "Should garnishmentment payment be in the description?",
+                    "description": "The phone, address, and/or email of the person receiving the garnishment payment.",
+                    "$ref": "../../common/json/communication/CommunicationType.json#"
+                },
+                "organizationName": {
+                    "description": "The name of the organization receiving payment.",
+                    "type": "string"
+                },
+                "paymentMethod": {
+                    "$ref": "PaymentMethodType.json#"
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,71 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.2.1",
+    "title": "PayrollProcessType",
+    "description": "Provides the information needed to process a payroll.",
+    "type": "object",
+    "allOf": [
+        { "$ref": "../../common/json/base/NounType.json#" }
+    ],
+    "definitions": {
+
+        "PayrollDeployment": {
+            "description": "Contains a collection of information about the deployment of a payroll payee  within an employment or work context. Deployment details include information about a resource's job, position, work schedule, assignment entry reason, as well as information identifying the organization and/or organizational sub-units associated with the deployment. Indicative Deployment Details, contains the subclass of deployment details relavent to Indicative Data use cases (e.g., provisioning an benefits outsourcer's system).",
+            "allOf": [{ "$ref": "../../common/json/work/DeploymentType.json#" }],
+            "properties": {
+                "remunerations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "PayrollRemunerationType.json#"
+                    }
+                }
+            }
+        }
+
+    },
+    "properties": {
+        "payee": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "personName": {
+                    "description": "Allows for a person's name and/or the person's known as name.",
+                    "$ref": "../../common/json/person/PersonNameTypeArray.json#"
+                },
+                "personlegal": {
+                    "description": "Includes PersonBase (legalid, birthdate, gender, citizenship, residence country, military status, ethnicity) and PersonLegal (passport, father/mother name, race, birthplace, deathdate, nationality, marital status, visa, religion, student info).",
+                    "$ref": "../../common/json/person/PersonLegalType.json#"
+                }
+            },
+            "required": ["personName"]
+        },
+
+        "deployment": {
+            "description": "Information about the person's position, organization, and work location.",
+            "$ref": "#/definitions/PayrollDeployment"
+        },
+        "workRelationshipLifecycle": {
+            "description": "NOTE: This may belong to DeploymentType.",
+            "$ref": "../../common/json/profile/WorkRelationshipLifecycleType.json#"
+        },
+        "paymentInstructions": {
+            "description": "Instructions for payment method and amount.",
+            "type": "array",
+            "items": { "$ref": "PaymentInstructionsType.json#" }
+        },
+        "deductionInstructions": {
+            "description": "Instructions for General and Benefits deductions.",
+            "type": "array",
+            "items": { "$ref": "DeductionInstructionType.json#" }
+        },
+        "garnishmentInstructions": {
+            "description": "Instructions for Garnishment deductions.",
+            "type": "array",
+            "items": { "$ref": "GarnishmentDeductionType.json#" }
+        },
+        "statutoryInstruction": {
+            "description": "Instructions for statutory deductions including social insurance, taxes, and garnishments.",
+            "$ref": "StatutoryInstructionsType.json#"
+        }
+    }
+}

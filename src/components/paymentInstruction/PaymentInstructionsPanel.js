@@ -19,15 +19,12 @@ class PaymentInstructionsPanel extends Component {
       return null;
     }
     var {paymentInstructions} = processInstance;
-    if (!paymentInstructions) {
+    if (paymentInstructions === undefined || paymentInstructions.length == 0) {
       console.log('No paymentInstructions. Why was PaymentInstructionsPanel called to render?');
-      return null;
+      // return null;
+    } else
+      { var { validFrom, validTo, } = paymentInstructions[paymentArrayOffset];
     }
-
-    var {
-      validFrom,
-      validTo,
-    } = paymentInstructions[paymentArrayOffset];
 
     return (
 

@@ -8,23 +8,23 @@
         }]
     },
     "documentId": {
-      "schemeAgencyId": "HROPEN",
-      "schemeId": "PayrollUseCase",
-      "value": "17",
-      "description": "Beverly finishes a 1 year fixed term contract on the 14th June 2017 and starts as a full time employee on the 15th June 2017."
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "17",
+        "description": "Beverly finishes a 1 year fixed term contract on the 14th June 2017 and starts as a full time employee on the 15th June 2017."
     },
     "alternateIds": [{ "schemeId": "uc_transfer", "value": "3" }],
 
-    "payee": {
-        "personName": [{
-            "formattedName": "Beverly Garrett",
-            "given": "Beverly",
-            "family": "Garrett",
-            "nameType": "legal"
-        }],
 
-        "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0017"
+    "personName": [{
+        "formattedName": "Beverly Garrett",
+        "given": "Beverly",
+        "family": "Garrett",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0017" }
     }
 
 }

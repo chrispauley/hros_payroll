@@ -31,5 +31,16 @@
         "schemeAgencyId": "HROS Payroll Workgroup",
         "schemeVersionId": "4.0",
         "agencyUri": "https://chrispauley.github.io/hros_payroll/"
-    }]
+    }],
+    "documentId": { "value": "" },
+
+    "paymentInstructions": [],
+
+    "garnishmentInstructions": [],
+
+    "deductionInstructions": [],
+
+    "workRelationshipLifecycle": {},
+
+    "deployment": {}
 }

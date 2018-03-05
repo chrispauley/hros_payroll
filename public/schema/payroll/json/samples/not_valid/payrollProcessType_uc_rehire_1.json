@@ -8,24 +8,23 @@
         }]
     },
     "documentId": {
-      "schemeAgencyId": "HROPEN",
-      "schemeId": "PayrollUseCase",
-      "value": "5",
-      "description": "Simon left the organization on the 10th June 1998 and has now been recruited back and starts his new job 15th April 2017."
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "5",
+        "description": "Simon left the organization on the 10th June 1998 and has now been recruited back and starts his new job 15th April 2017."
     },
     "alternateIds": [{ "schemeId": "uc_rehire", "value": "1" }],
 
-    "payee": {
-        "personName": [{
-            "formattedName": "Simon Phelps",
-            "given": "Simon",
-            "family": "Phelps",
-            "nameType": "legal"
-        }],
 
-        "personlegal": {
-            "id": { "schemeId": "ssn", "value": "123-45-0005" }
-        }
+    "personName": [{
+        "formattedName": "Simon Phelps",
+        "given": "Simon",
+        "family": "Phelps",
+        "nameType": "legal"
+    }],
+
+    "personlegal": {
+        "id": { "schemeId": "ssn", "value": "123-45-0005" }
     }
 
 }

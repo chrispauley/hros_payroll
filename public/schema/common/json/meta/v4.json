@@ -46,7 +46,7 @@
         "multipleOf": {
             "type": "number",
             "minimum": 0,
-            "exclusiveMinimum": 1
+            "exclusiveMinimum": true
         },
         "maximum": {
             "type": "number"

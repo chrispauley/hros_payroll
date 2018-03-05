@@ -23,6 +23,7 @@ const initialState = {
   page: 1,
   processInstance: {},
 
+  deductionInstructionsArrayOffset: 0,
   benefitsArrayOffset: 0,
   generalDeductionArrayOffset: 0,
   garnishmentArrayOffset: 0,

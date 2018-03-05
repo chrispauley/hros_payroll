@@ -1,0 +1,77 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.2.1",
+    "title": "PaymentInstructionsType",
+    "description": "The instructions for payment.",
+    "type": "object",
+    "definitions": {
+        "PaymentMethodType": {
+            "description": "NOTE: provide a description here.",
+            "type": "object",
+            "properties": {
+                "methodType": {
+                    "description": "The manner is which a payment is made. e.g. BankEFT, check, Paypal, payment card, etc.",
+                    "$ref": "../../common/json/base/CodeType.json#"
+                },
+                "accountId": {
+                    "description": "An account ID within a bank into which a payroll payment is deposited. The schemeID would include the word 'IBAN' or 'SWIFT'  to reference the ID Type.",
+                    "$ref": "../../common/json/base/IdentifierType.json#"
+                },
+                "accountType": {
+                    "description": "A bank account into which a payroll payment is deposited. e.g. a checking account used for direct deposit.",
+                    "enum": [
+                        "Checking", "Savings"
+                    ]
+                },
+                "nameOnAccount": {
+                    "description": "The name of the person on the bank account.",
+                    "type": "string"
+                },
+                "bankId": {
+                    "NOTE": "The description should be shorter.",
+                    "description": "This is a number or identifier for a bank used in the context of electronic funds transfer. Usually, only a single BankID needs to be specified in the context of a given transaction. The bankId may have different names in different parts of the world. E.g. BIC in Europe, Routing Number in the US, and Sort Code in UK.",
+                    "$ref": "../../common/json/base/IdentifierType.json#"
+                },
+                "countryCode": {
+                    "description": "The country code where the bank is located.",
+                    "$ref": "../../common/json/codelist/CountryCodeList.json#"
+                },
+                "currencyCode": {
+                    "description": "The currency of the payment to be made.",
+                    "$ref": "../../common/json/codelist/CurrencyCodeList.json#"
+                }
+            }
+        },
+        "PaymentDistributionType": {
+            "description": "NOTE: description needed.",
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "description": "The amount of the payment.  This is only relevant for the secondary account in the event of a partial distribution.",
+                    "$ref": "../../common/json/base/AmountType.json#"
+                },
+                "percentage": {
+                    "description": "The percentage of the payment. This is only relevant for the secondary account in the event of a partial distribution.",
+                    "$ref": "../../common/json/base/PercentType.json#"
+                },
+                "remainingBalanceIndicator": {
+                    "description": "Specifies if the remaining amount should be applied to this account.",
+                    "$ref": "../../common/json/base/IndicatorType.json#"
+                }
+            }
+        }
+    },
+    "properties": {
+        "id": {
+            "description": "Identifies the payment instruction when there is more than one payment instruction.",
+            "$ref": "../../common/json/base/IdentifierType.json#"
+        },
+        "sequence": {
+            "description": "Specifies in what order are the payments processed in the secondary accounts until the remainder is paid into the main account.",
+            "type": "number"
+        },
+
+        "paymentMethod": { "$ref": "#/definitions/PaymentMethodType" },
+        "paymentDistribution": { "$ref": "#/definitions/PaymentDistributionType" }
+    }
+}

@@ -1,13 +1,13 @@
 {
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
-    "version": "4.1.1",
+    "version": "4.2.1",
     "title": "TaxInstructionsType",
     "description": "Instructions for tax deductions.",
     "allOf": [
         { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
     ],
     "definitions": {
-        "USTaxInstructionType": {
+        "USTaxInstructionsType": {
             "description": "",
             "type": "object",
             "allOf": [
@@ -188,7 +188,7 @@
         "deductionCycleCode": { "$ref": "../../common/json/base/CodeType.json#" },
         "totalTransactions": { "type": "number" },
         "processingSequence": { "type": "number" },
-        "USTaxInstruction": { "$ref": "#/definitions/USTaxInstructionType" },
+        "USTaxInstruction": { "$ref": "#/definitions/USTaxInstructionsType" },
         "NLTaxInstruction": { "$ref": "NLTaxInstructionType.json#" }
     }
 }

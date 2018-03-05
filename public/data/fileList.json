@@ -11,27 +11,27 @@
         "publicPath": "data/sample_01.json"
     },
     {
-        "id": 4000,
-        "displayName": "c_newhire_0 - from schema samples",
-        "projectPath": "public/schema/payroll/json/samples/payrollProcess/uc_newhire_0.json",
-        "publicPath": "schema/payroll/json/samples/payrollProcess/uc_newhire_0.json"
+        "id": 3,
+        "displayName": "sample_02",
+        "projectPath": "public/data/sample_02.json",
+        "publicPath": "data/sample_02.json"
+    },
+    {
+        "id": 4,
+        "displayName": "paymentInstructionsType_uc00",
+        "projectPath": "public/data/paymentInstructionsType_uc00.json",
+        "publicPath": "/data/paymentInstructionsType_uc00.json"
     },
     {
         "id": 5,
-        "displayName": "uc_benefits",
-        "projectPath": "public/schema/payroll/json/samples/payrollProcess/uc_benefits_1.json",
-        "publicPath": "schema/payroll/json/samples/payrollProcess/uc_benefits_1.json"
+        "displayName": "payrollProcessType_uc_newhire_0",
+        "projectPath": "public/data/uc_newhire_0.json",
+        "publicPath": "/data/payrollProcessType_uc_newhire_0.json"
     },
     {
         "id": 6,
-        "displayName": "uc_deployment_1a",
-        "projectPath": "public/schema/payroll/json/samples/payrollProcess/uc_deployment_1a.json",
-        "publicPath": "schema/payroll/json/samples/payrollProcess/uc_deployment_1a.json"
-    },
-    {
-        "id": 61,
-        "displayName": "uc_deployment_1b",
-        "projectPath": "public/schema/payroll/json/samples/payrollProcess/uc_deployment_1b.json",
-        "publicPath": "schema/payroll/json/samples/payrollProcess/uc_deployment_1b.json"
+        "displayName": "payrollProcessType_uc01",
+        "projectPath": "public/data/payrollProcessType_uc01.json",
+        "publicPath": "/data/payrollProcessType_uc01.json"
     }
 ]

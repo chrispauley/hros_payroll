@@ -9,6 +9,8 @@ export const TOGGLE_SHOW_SESSIONPROPS = 'TOGGLE_SHOW_SESSIONPROPS';
 export const TOGGLE_SHOW_NOUN = 'TOGGLE_SHOW_NOUN';
 export const TOGGLE_SHOW_SCHEMA = 'TOGGLE_SHOW_SCHEMA';
 export const TOGGLE_PAYEE = 'TOGGLE_PAYEE';
+export const TOGGLE_DEDUCTION_INSTRUCTIONS = 'TOGGLE_DEDUCTION_INSTRUCTIONS';
+
 export const TOGGLE_SHOW_DEPLOYMENT = 'TOGGLE_SHOW_DEPLOYMENT';
 export const TOGGLE_PAYMENT_INSTRUCTIONS = 'TOGGLE_PAYMENT_INSTRUCTIONS';
 export const TOGGLE_SHOW_TAX = 'TOGGLE_SHOW_TAX';
@@ -41,6 +43,9 @@ export function toggle_showNoun() {
 }
 export function toggle_payee() {
   return {type: TOGGLE_PAYEE}
+}
+export function toggle_showDeductionInstructions() {
+  return {type: TOGGLE_DEDUCTION_INSTRUCTIONS}
 }
 export function toggle_showDeployment() {
   return {type: TOGGLE_SHOW_DEPLOYMENT}
