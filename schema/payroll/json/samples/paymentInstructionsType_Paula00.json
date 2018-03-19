@@ -1,0 +1,91 @@
+{
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "paymentInstructionsType_Paula00",
+        "description": "Pension Deduction (The Netherlands)."
+    },
+
+    "deductionInstructions": [{
+        "validFrom": "2018-02-01",
+        "validTo": "",
+        "id": { "value": "" },
+        "deductionCycleCode": "TwoWeeks",
+        "typeDeduction": "",
+        "subTypeCode": "",
+        "referenceId": { "value": "" },
+        "requestedAmount": { "currency": "EUR", "value": 0 },
+        "actualAmount": { "currency": "EUR", "value": 0 },
+        "originalAmount": { "currency": "EUR", "value": 0 },
+        "remainingAmount": { "currency": "EUR", "value": 0 },
+        "arrearsAmount": { "currency": "EUR", "value": 0 },
+        "percentage": 1,
+        "employerAmount": { "currency": "EUR", "value": 0 },
+        "basis": [{ "basisAmount": { "currency": "EUR", "value": 0 } }],
+        "deductionGoal": {
+            "id": { "value": "" },
+            "limitAmount": { "currency": "EUR", "value": 0 },
+            "accrualAdjustmentAmount": { "currency": "EUR", "value": 0 }
+        }
+    }],
+
+    "garnishmentInstructions": [{
+        "effectiveDate": {
+            "validFrom": "2018-02-01",
+            "validTo": "2018-02-01"
+        },
+        "id": { "value": "" },
+        "deductionCycleCode": "Month",
+        "typeDeduction": "",
+        "subTypeCode": "",
+        "referenceId": { "value": "" },
+        "requestedAmount": { "currency": "EUR", "value": 0 },
+        "actualAmount": { "currency": "EUR", "value": 0 },
+        "originalAmount": { "currency": "EUR", "value": 0 },
+        "remainingAmount": { "currency": "EUR", "value": 0 },
+        "serviceChargeAmount": { "currency": "EUR", "value": 0 },
+        "maximumAdministrationFee": { "currency": "EUR", "value": 0 },
+        "administratorFeeIndicator": true,
+        "percentage": 1,
+
+        "partialGarnishmentAllowedIndicator": true,
+        "issuanceDate": "2018-01-19",
+        "registrationDate": "2018-01-20",
+
+        "jurisdictionCountry": "NL",
+        "jurisdictionCountrySubdivision": { "type": "", "value": "" },
+        "jurisdictionCity": "",
+        "issuerId": { "value": "" },
+        "serviceChargeAmount": { "currency": "EUR", "value": 0 },
+        "excludedEarningCodes": [""],
+        "excludedDeductionCodes": [""],
+        "receivingParty": {
+            "personName": {
+                "formattedName": "",
+                "nameType": ""
+            },
+            "personCommunication": {
+                "address": [{
+                    "formattedAddress": ""
+                }]
+            },
+            "organizationName": "StiPP",
+            "paymentMethod": {
+                "methodType": "",
+                "accountId": { "schemeId": "BIC", "value": "CITINL2X" },
+                "accountType": "Checking",
+                "bankId": { "schemeId": "IBAN", "value": "NL34CITI0517381338" },
+                "countryCode": "NL",
+                "currencyCode": "EUR",
+                "nameOnAccount": "Piet Visser"
+            }
+        }
+    }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Jan Janssen",
+            "nameType": "legal"
+        }]
+    }
+}

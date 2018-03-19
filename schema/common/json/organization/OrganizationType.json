@@ -45,7 +45,7 @@
         "geographicResponsibilityCode": { "$ref": "#/definitions/GeographicResponsibilityCodeList" },
         "ownershipType": { "$ref": "#/definitions/OwnershipTypeCodeList" },
         "stockSymbol": { "$ref": "../base/CodeType.json#" },
-        "workEnvironment": { 
+        "workEnvironmentCode": { 
             "description": "Work Environment type e.g., Office, Workshop, Factory, etc",
             "$ref": "../base/CodeType.json#" 
         },

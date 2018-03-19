@@ -2,7 +2,7 @@
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
     "version": "4.1.0",
     "title": "PersonReferenceType",
-    "description": "Reference person data",
+    "description": "A schema to reference to a person.",
     "type": "object",
     "properties": {
         "id": { "$ref": "../base/IdentifierType.json#" },

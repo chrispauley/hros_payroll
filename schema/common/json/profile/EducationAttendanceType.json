@@ -20,11 +20,16 @@
         "EducationDegreeType": {
             "title": "EducationDegreeType",
             "description": "Contains details about the student's degree. A degree is a recognized completion of studies at a school (such as a college or university). A certificate, which may be a diploma or degree, is generally issued in recognition of having completed the course of study.",
-            "allOf": [
-                { "$ref": "../base/EntityType.json#" }
-            ],
             "type": "object",
             "properties": {
+                "id": {
+                    "description": "Identifier for the degree.",
+                    "$ref": "../base/IdentifierType.json#"
+                },
+                "name": {
+                    "description": "Name for the degree.",
+                    "type": "string"
+                },
                 "codes": {
                     "type": "array",
                     "items": { "$ref": "../base/CodeType.json#" }
@@ -37,12 +42,12 @@
                 },
                 "score": { "$ref": "../evaluation/ScoreType.json#" },
                 "academicHonors": { "$ref": "../base/StringTypeArray.json#" },
-                "currentlyAttendingIndicator": {
-                    "description": "Indicator that the person is still attending.",
-                    "$ref": "../base/IndicatorType.json#"
+                "degreeGrantedStatus": {
+                    "description": "Current education degree granted status.",
+                    "$ref": "../codelist/EducationDegreeGrantedStatusCodeList.json#"
                 },
                 "iscedEducationLevelCode": {
-                    "description": "ISCED: International Standard Classification of Education - is the standard classificaiton of the education level of this attendance.",
+                    "description": "ISCED: International Standard Classification of Education - is the standard classification of the education level of this attendance.",
                     "$ref": "../codelist/IscedCodeList.json#"
                 }
             }
@@ -70,9 +75,9 @@
             "type": "array",
             "items": { "$ref": "../base/EntityType.json#" }
         },
-        "iscedEducationLevelCode": {
-            "description": "ISCED: International Standard Classification of Education - is the standard classificaiton of the education level of this attendance.",
-            "$ref": "../codelist/IscedCodeList.json#"
+        "currentlyAttendingIndicator": {
+            "description": "Indicator that the person is still attending.",
+            "$ref": "../base/IndicatorType.json#"
         },
         "goodStandingIndicator": {
             "description": "Indicator that the person is currently in good standing according to the rules of the educational institution.",

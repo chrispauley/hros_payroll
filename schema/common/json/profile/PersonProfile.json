@@ -61,7 +61,7 @@
         "securityCredentials": {
             "description": "The security credentials that the person holds.",
             "type": "array",
-            "items": { "$ref": "SecurityCredentialType.json#" }
+            "items": { "$ref": "CertificationType.json#" }
         },
         "references": {
             "description": "The references of the person.",

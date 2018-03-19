@@ -2,7 +2,7 @@
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
     "version": "4.1.0",
     "title": "PersonType",
-    "description": "Represents full person information",
+    "description": "A schema that represents all of the information of a person.",
     "type": "object",
     "allOf": [
         { "$ref": "PersonBaseType.json#" },

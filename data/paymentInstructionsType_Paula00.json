@@ -1,0 +1,92 @@
+{
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "paymentInstructionsType_Paula00",
+        "description": "Basic use case for development (The Netherlands)."
+    },
+
+    "deductionInstructions": [{
+        "validFrom": "",
+        "validTo": "",
+        "id": { "value": "" },
+        "deductionCycleCode": "Month",
+        "typeDeduction": "",
+        "subTypeCode": "",
+        "referenceId": { "value": "" },
+        "requestedAmount": { "currency": "EUR", "value": 0},
+        "actualAmount": { "currency": "EUR", "value": 0 },
+        "originalAmount": { "currency": "EUR", "value": 0 },
+        "remainingAmount": { "currency": "EUR", "value": 0 },
+        "arrearsAmount": { "currency": "EUR", "value": 0 },
+        "percentage": 1,
+        "employerContribution": { "currency": "EUR", "value": 0 },
+        "basisCode": "",
+        "basis": { "currency": "EUR", "value": 0 },
+        "deductionGoal": {
+            "id": { "value": "" },
+            "limitAmount": { "currency": "EUR", "value":  0},
+            "accrualAdjustmentAmount": { "currency": "EUR", "value": 0 }
+        }
+    }],
+
+    "garnishmentInstructions": [{
+        "effectiveDate": {
+            "validFrom": "",
+            "validTo": ""
+        },
+        "id": { "value": "" },
+        "deductionCycleCode": "",
+        "typeDeduction": "",
+        "subTypeCode": "",
+        "referenceId": { "value": "" },
+        "requestedAmount": { "currency": "EUR", "value": 0},
+        "actualAmount": { "currency": "EUR", "value": 0 },
+        "originalAmount": { "currency": "EUR", "value": 0 },
+        "remainingAmount": { "currency": "EUR", "value": 0},
+        "serviceChargeAmount": { "currency": "EUR", "value": 0 },
+        "maximumAdministrationFee": { "currency": "EUR", "value": 0 },
+        "administratorFeeIndicator": ,
+        "percentage": ,
+
+        "partialGarnishmentAllowedIndicator": ,
+        "issuanceDate": "",
+        "registrationDate": "",
+
+        "jurisdictionCountry": "",
+        "jurisdictionCountrySubdivision": { "type": "", "value": "" },
+        "jurisdictionCity": "",
+        "issuerId": { "value": "" },
+        "serviceChargeAmount": { "currency": "", "value":  },
+        "excludedEarningCodes": [""],
+        "excludedDeductionCodes": [""],
+        "receivingParty": {
+            "personName": {
+                "formattedName": "",
+                "nameType": ""
+            },
+            "personCommunication": {
+                "address": [{
+                    "formattedAddress": "1"
+                }]
+            },
+            "organizationName": "",
+            "paymentMethod": {
+                "methodType": "ACH",
+                "accountId": { "schemeId": "", "value": "" },
+                "accountType": "Checking",
+                "bankId": { "schemeId": "", "value": "" },
+                "countryCode": "",
+                "currencyCode": "",
+                "nameOnAccount": ""
+            }
+        }
+    }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "",
+            "nameType": ""
+        }]
+    }
+}

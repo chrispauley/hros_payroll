@@ -1,0 +1,24 @@
+{
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "paymentInstructionsType_uc00",
+        "description": "Pension Deduction"
+    },
+
+    "deductionInstructions": [{
+        "validFrom": "2018-02-12",
+        "validTo": "2018-02-12",
+        "id": { "value": "1234" },
+        "percentage": 4.5,
+        "employerAmount": { "currency": "USD", "value": 20.00 },
+        "employerPercentage": 3
+    }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Joe Smith",
+            "nameType": "legal"
+        }]
+    }
+}

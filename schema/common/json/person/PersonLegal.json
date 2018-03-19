@@ -18,7 +18,7 @@
             "type": "string"
         },
         "race": {
-            "description": "The identified race(s) of the person.A race is defined as a group of people sharing the same culture, history, language, etc.",
+            "description": "The identified race(s) of the person. A race is defined as a group of people sharing the same culture, history, language, etc.",
             "type": "array",
             "items": { "type": "string" }
         },

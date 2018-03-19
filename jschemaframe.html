@@ -21,8 +21,12 @@
      obj.style.width = 1200+'px';
     //  obj.style.width = obj.contentWindow.document.body.scrollWidth + 'px';
   }
-  function loadMasterDataType(){
-    var newUrl='JSchema/index.htm?#schema=/schema/payroll/json/PayrollMasterDataType.json';
+  function loadPayrollType(){
+    var newUrl='JSchema/index.htm?#schema=/schema/payroll/json/PayrollType.json';
+    document.getElementById('iframeID').src=newUrl;
+  }
+  function loadPayrollProcessTypeType(){
+    var newUrl='JSchema/index.htm?#schema=/schema/payroll/json/PayrollProcessType.json';
     document.getElementById('iframeID').src=newUrl;
   }
 </script>
@@ -40,7 +44,8 @@
       <div class='col-md-12'>
         <div>
             <p className='text-muted'>Please click on this link to load the schema:
-                <a target='_new' onClick='loadMasterDataType()'>PayrollMasterDataType.json</a>
+                <a target='_new' onClick='loadPayrollType()'>PayrollType.json</a>
+                <a target='_new' onClick='loadPayrollProcessTypeType()'>PayrollProcessType.json</a>
             </p>
         </div>
       </div>

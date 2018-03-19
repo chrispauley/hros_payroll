@@ -5,8 +5,14 @@
     "description": "An amount is a number of monetary units specified in a currency.",
     "type": "object",
     "properties": {
-        "value": { "type": "number" },
-        "currency": { "$ref": "../codelist/CurrencyCodeList.json#" }
+        "value": { 
+            "description": "The value of the amount.",
+            "type": "number" 
+        },
+        "currency": { 
+            "description": "The currency of the amount.",
+            "$ref": "../codelist/CurrencyCodeList.json#" 
+        }
     },
     "required": [ "value" ]
 }

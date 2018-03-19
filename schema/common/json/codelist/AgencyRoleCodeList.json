@@ -4,8 +4,8 @@
     "title": "AgencyRoleCodeList",
     "description": "A code classifying the role of an entity or the role with which that entity is associated.",
     "enum": [
-        "customer",
-        "supplier",
-        "requester"
+        "Customer",
+        "Supplier",
+        "Requester"
     ]
 }

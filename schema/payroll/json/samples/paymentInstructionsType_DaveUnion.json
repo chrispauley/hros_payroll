@@ -1,0 +1,46 @@
+{
+    "documentId": {
+        "schemeAgencyId": "HROPEN",
+        "schemeId": "PayrollUseCase",
+        "value": "paymentInstructionsType_DaveUnion",
+        "description": "Union Deduction"
+    },
+
+    "deductionInstructions": [{
+        "validFrom": "2018-02-12",
+        "validTo": "2018-02-12",
+        "id": { "value": "1234" },
+        "deductionCycleCode": "Month",
+        "referenceId": { "value": "5623499 523" },
+        "requestedAmount": { "currency": "USD", "value": 10.00 },
+        "basis": [{ "basisAmount": { "currency": "USD", "value": 1.00 } }],
+        "receivingParty": {
+            "personName": {
+                "formattedName": "Mary Smith",
+                "nameType": "legal"
+            },
+            "personCommunication": {
+                "address": [{
+                    "formattedAddress": "123 Main St., Wilmington, DE 12345"
+                }]
+            },
+            "organizationName": "",
+            "paymentMethod": {
+                "methodType": "ACH",
+                "accountId": { "schemeId": "Bank of America", "value": "12345678901" },
+                "accountType": "Checking",
+                "bankId": { "schemeId": "RoutingNumber", "value": "123456789" },
+                "countryCode": "US",
+                "currencyCode": "USD",
+                "nameOnAccount": "Mary Smith"
+            }
+        }
+    }],
+
+    "payee": {
+        "personName": [{
+            "formattedName": "Joe Smith",
+            "nameType": "legal"
+        }]
+    }
+}

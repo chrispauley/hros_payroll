@@ -9,7 +9,7 @@
     "type": "object",
     "properties": {
         "typeCode": { 
-            "description" : "A code classifying the work location type e.g., Distribution center, Hotel property, Headquarters, Plant, Retail store, Offshore oil rig, Warehouse, Shared service center, Center of excellence",
+            "description" : "A code classifying the work location type e.g., Distribution center, Headquarters, Plant, etc.",
             "$ref": "../base/CodeType.json#" 
         },
         "virtualWorkerIndicator": { "$ref": "../base/IndicatorType.json#" },

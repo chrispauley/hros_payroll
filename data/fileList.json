@@ -1,37 +1,25 @@
 [{
         "id": 1,
-        "displayName": "noun_only",
-        "projectPath": "public/data/noun_only.json",
-        "publicPath": "data/noun_only.json"
+        "displayName": "paymentInstructionsType_DavePension",
+        "projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_DavePension.json",
+        "publicPath": "schema/payroll/json/samples/paymentInstructionsType_DavePension.json"
     },
     {
         "id": 2,
-        "displayName": "sample_01",
-        "projectPath": "public/data/sample_01.json",
-        "publicPath": "data/sample_01.json"
+        "displayName": "paymentInstructionsType_DaveUnion",
+        "projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_DaveUnion.json",
+        "publicPath": "schema/payroll/json/samples/paymentInstructionsType_DaveUnion.json"
     },
     {
         "id": 3,
-        "displayName": "sample_02",
-        "projectPath": "public/data/sample_02.json",
-        "publicPath": "data/sample_02.json"
+        "displayName": "paymentInstructionsType_Paula00.json",
+        "projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_Paula00.json",
+        "publicPath": "schema/payroll/json/samples/paymentInstructionsType_Paula00.json"
     },
     {
         "id": 4,
-        "displayName": "paymentInstructionsType_uc00",
-        "projectPath": "public/data/paymentInstructionsType_uc00.json",
-        "publicPath": "/data/paymentInstructionsType_uc00.json"
-    },
-    {
-        "id": 5,
-        "displayName": "payrollProcessType_uc_newhire_0",
-        "projectPath": "public/data/uc_newhire_0.json",
-        "publicPath": "/data/payrollProcessType_uc_newhire_0.json"
-    },
-    {
-        "id": 6,
-        "displayName": "payrollProcessType_uc01",
-        "projectPath": "public/data/payrollProcessType_uc01.json",
-        "publicPath": "/data/payrollProcessType_uc01.json"
+        "displayName": "paymentInstructionsType_uc00.json",
+        "projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_uc00.json",
+        "publicPath": "schema/payroll/json/samples/paymentInstructionsType_uc00.json"
     }
 ]

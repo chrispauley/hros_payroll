@@ -2,7 +2,7 @@
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
     "version": "4.1.0",
     "title": "Responsible",
-    "description": "Submitter/Approver information for an entity",
+    "description": "The people who are submitters and/or approver information for an entity.",
     "type": "object",
     "properties": {
         "submitters": {

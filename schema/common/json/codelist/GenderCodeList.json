@@ -4,7 +4,7 @@
     "title": "GenderCodeList",
     "description": "Gender code list",
     "enum": [
-        "male",
-        "female"
+        "Male",
+        "Female"
     ]
 }

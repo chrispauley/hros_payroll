@@ -21215,44 +21215,11 @@ var Nav = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "li",
-                { className: "dropdown" },
+                null,
                 _react2.default.createElement(
                   "a",
-                  { href: "", className: "dropdown-toggle",
-                    "data-toggle": "dropdown" },
-                  "Schema ",
-                  _react2.default.createElement("b", { className: "caret" })
-                ),
-                _react2.default.createElement(
-                  "ul",
-                  { className: "dropdown-menu" },
-                  _react2.default.createElement(
-                    "li",
-                    null,
-                    _react2.default.createElement(
-                      "a",
-                      { href: "jschemaframe.html" },
-                      "JSchema"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "li",
-                    null,
-                    _react2.default.createElement(
-                      "a",
-                      { href: "payrollschema.html" },
-                      "Payroll Schema"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "li",
-                    null,
-                    _react2.default.createElement(
-                      "a",
-                      { href: "validatedata.html" },
-                      "Validate Data"
-                    )
-                  )
+                  { href: "jschemaframe.html" },
+                  "JSchema"
                 )
               )
             ),
