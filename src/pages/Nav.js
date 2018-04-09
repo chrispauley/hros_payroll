@@ -50,8 +50,8 @@ class Nav extends React.Component {
                             <li><a href='payroll.html'>StatutoryInstructions</a></li>
                           </ul>
                     </li> */}
-
-                    <li className='dropdown'>
+                    <li><a href='jschemaframe.html'>JSchema</a></li>
+                    {/* <li className='dropdown'>
                       <a href='' className='dropdown-toggle'
                         data-toggle='dropdown'>Schema <b className='caret'></b></a>
                         <ul className='dropdown-menu'>
@@ -60,7 +60,7 @@ class Nav extends React.Component {
                           <li><a href='validatedata.html'>Validate Data</a></li>
                         </ul>
 
-                    </li>
+                    </li> */}
                   </ul>
 
                   <ul className='nav navbar-nav navbar-right'>
