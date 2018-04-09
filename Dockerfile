@@ -3,7 +3,7 @@
 
 
 FROM nginx:alpine
-COPY build /usr/share/nginx/html
+COPY public /usr/share/nginx/html
 
 # RUN rm /etc/nginx/conf.d/*
 RUN chmod -R 775 /usr/share/nginx/html

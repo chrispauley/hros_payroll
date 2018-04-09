@@ -4,7 +4,7 @@
 docker build -t nginx-hrospayroll .
 
 ## Create and run a container
-docker run -d --rm -p 8001:80  --name nginx-hrospayroll-app nginx-hrospayroll
+docker run -d --rm -p 8002:80  --name nginx-hrospayroll-app nginx-hrospayroll
 
 ## To inspect the contents of the running container
 docker exec -it nginx-hrospayroll-app sh
