@@ -18,7 +18,7 @@
             "$ref": "../base/FormattedDateTimeType.json#"
         },
         "current": {
-            "description": "Indicator that the person's history entry is current active (i.e. if education, still at the school. If work history, still working at the organization)",
+            "description": "Indicator that the person's history entry is currently active (i.e. if education, still at the school. If work history, still working at the organization)",
             "$ref": "../base/IndicatorType.json#"
         },
         "attachmentReferences": {

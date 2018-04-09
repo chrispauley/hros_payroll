@@ -2,19 +2,19 @@
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
     "version": "4.1.0",
     "title": "EntityType",
-    "description": "Describe entity with id, name and code",
+    "description": "A description of an entity with id, name and code.",
     "type": "object",
     "properties": {
         "id": {
-            "description": "Recommended usage: unique descriptor which can't be expressed as enumeration",
+            "description": "A unique identifier which cannot be expressed as enumeration",
             "$ref": "IdentifierType.json#"
         },
         "name": {
-            "description": "Recommended usage: free text description for that entity",
+            "description": "Free text description for that entity",
             "type": "string"
         },
         "code": {
-            "description": "Recommended usage: descriptor which can be expressed as enumeration",
+            "description": "A code which can be expressed as enumeration",
             "$ref": "CodeType.json#"
         }
     },

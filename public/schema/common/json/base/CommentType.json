@@ -4,15 +4,30 @@
     "title": "CommentType",
     "description": "A comment to provide additional information concerning the related entity.",
     "allOf": [
-        { "$ref": "Localization.json#" }
+        { "$ref": "LocalizationInclusion.json#" }
     ],
     "type": "object",
     "properties": {
-        "type": { "type": "string" },
-        "author": { "type": "string" },
-        "datetime": { "$ref": "DateTimeType.json#" },
-        "status": { "type": "string" },
-        "note": { "type": "string" }
+        "type": { 
+            "description": "A label describing the type of comment.",
+            "type": "string" 
+        },
+        "author": { 
+            "description": "The name of an author of a comment",
+            "type": "string" 
+        },
+        "datetime": { 
+            "description": "The date and time that the comment was made.",
+            "$ref": "DateTimeType.json#" 
+        },
+        "status": { 
+            "description": "The status of a comment.",
+            "type": "string" 
+        },
+        "note": { 
+            "description": "The comment.",
+            "type": "string" 
+        }
     },
     "required": [ "note" ]
 }

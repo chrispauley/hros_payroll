@@ -4,14 +4,14 @@
     "title": "TaxInstructionsType",
     "description": "Instructions for tax deductions.",
     "allOf": [
-        { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
+        { "$ref": "../../common/json/base/EffectiveTimePeriodType.json#" }
     ],
     "definitions": {
         "USTaxInstructionsType": {
             "description": "",
             "type": "object",
             "allOf": [
-                { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
+                { "$ref": "../../common/json/base/EffectiveTimePeriodType.json#" }
             ],
 
             "countryCode": { "$ref": "../../common/json/codelist/CountryCodeList.json#" },
@@ -58,7 +58,7 @@
             "type": "object",
             "description": "Status Code with effective dates",
             "allOf": [
-                { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
+                { "$ref": "../../common/json/base/EffectiveTimePeriodType.json#" }
             ],
             "properties": {
                 "value": { "$ref": "../../common/json/base/CodeType.json#" }
@@ -77,7 +77,7 @@
             "description": "A US State tax instruction for a payee",
             "type": "object",
             "allOf": [
-                { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
+                { "$ref": "../../common/json/base/EffectiveTimePeriodType.json#" }
             ],
             "properties": {
                 "StateIncomeTax": { "$ref": "#/definitions/StateIncomeTaxType" },
@@ -140,7 +140,7 @@
         "LocalTaxWithholdingInstructionsType": {
             "description": "Payroll Instruction to communicate Local Tax Withholding Deductions",
             "type": "object",
-            "allOf": [{ "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }],
+            "allOf": [{ "$ref": "../../common/json/base/EffectiveTimePeriodType.json#" }],
             "properties": {
                 "localIncomeTaxes": {
                     "type": "array",
@@ -154,7 +154,7 @@
         "LocalIncomeTaxType": {
             "description": "",
             "type": "object",
-            "allOf": [{ "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }],
+            "allOf": [{ "$ref": "../../common/json/base/EffectiveTimePeriodType.json#" }],
             "properties": {
                 "countrySubDivisionCode": { "$ref": "../../common/json/communication/AddressComponentType.json#" },
                 "localCode": { "$ref": "../../common/json/base/CodeType.json#" },

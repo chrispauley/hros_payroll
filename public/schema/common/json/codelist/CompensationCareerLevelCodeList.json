@@ -4,11 +4,11 @@
     "title": "CompensationCareerLevelCodeList",
     "description": "A set of codes classifying the compensation career level codes.",
     "enum": [
-        "Entry level",
-        "Some relevant experience",
+        "EntryLevel",
+        "SomeRelevantExperience",
         "Experienced",
-        "Senior level",
-        "Mastery level",
-        "Industry expert"
+        "SeniorLevel",
+        "MasteryLevel",
+        "IndustryExpert"
     ]
 }

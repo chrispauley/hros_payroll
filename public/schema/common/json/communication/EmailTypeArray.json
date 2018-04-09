@@ -7,7 +7,7 @@
     "items": {
         "allOf": [
             { "$ref": "EmailType.json#" },
-            { "$ref": "CommunicationItem.json#" }
+            { "$ref": "CommunicationItemInclusion.json#" }
         ]
     }
 }

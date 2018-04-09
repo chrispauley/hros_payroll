@@ -22,7 +22,7 @@
         "percentage": 1,
         "employerContribution": { "currency": "USD", "value": 10.00 },
         "basisCode": "",
-        "basis": { "currency": "USD", "value": 1.00 },
+        "basis": [{ "currency": "USD", "value": 1.00 }],
         "deductionGoal": {
             "id": { "value": "" },
             "limitAmount": { "currency": "USD", "value": 1.00 },
@@ -57,7 +57,8 @@
         "jurisdictionCountrySubdivision": { "type": "state", "value": "Delaware" },
         "jurisdictionCity": "Wilmington",
         "issuerId": { "value": "" },
-        "serviceChargeAmount": { "currency": "USD", "value": 15.00 },
+        "ERROR-HERE": "Cannot have 'serviceChargeAmount' twice in the same object.",
+        "_serviceChargeAmount": { "currency": "USD", "value": 15.00 },
         "excludedEarningCodes": ["code_one", "code_two"],
         "excludedDeductionCodes": ["code_A", "code_B"],
         "receivingParty": {

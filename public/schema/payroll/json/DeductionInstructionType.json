@@ -9,15 +9,13 @@
     "type": "object",
     "properties": {
         "deductionGoal": { "$ref": "DeductionGoalType.json#" },
-        "employerContribution": {
-            "description": "TODO: describe or define employeeContribution.",
-            "oneOf": [{
-                "description": "The amount the employer contributes to the deduction type. For example, $10 for certification dues.",
-                "$ref": "../../common/json/base/AmountType.json#"
-            }, {
-                "description": "The percent the employer contributes to the deduction type. For example 4% for retirement.",
-                "$ref": "../../common/json/base/PercentType.json#"
-            }]
+        "employerAmount": {
+            "description": "TODO: describe or define employerAmount.",
+            "$ref": "../../common/json/base/AmountType.json#"
+        },
+        "employerPercentage": {
+            "description": "TODO: describe or define employerPercentage.",
+            "$ref": "../../common/json/base/PercentType.json#"
         }
     }
 }

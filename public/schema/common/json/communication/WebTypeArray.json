@@ -7,7 +7,7 @@
     "items": {
         "allOf": [
             { "$ref": "WebType.json#" },
-            { "$ref": "CommunicationItem.json#" }
+            { "$ref": "CommunicationItemInclusion.json#" }
         ]
     }
 }

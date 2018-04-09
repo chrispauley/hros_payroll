@@ -4,7 +4,7 @@
     "title": "RelationshipTypeCodeList",
     "description": "Values used to describe the type of relationship of a reference.",
     "enum": [
-        "personal",
-        "professional"
+        "Personal",
+        "Professional"
     ]
 }

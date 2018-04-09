@@ -11,7 +11,11 @@
         },
         "effectiveDate": {
             "description": "Effective time of the deduction.",
-            "$ref": "../../common/json/base/EffectiveTimePeriod.json#"
+            "$ref": "../../common/json/base/EffectiveTimePeriodType.json#"
+        },
+        "statusCode": {
+            "description": "The action to be performed, Default is Create. Create - Add a new entry, Update is to add the current vlaues to any existing values.",
+            "$ref": "../../common/json/codelist/ActionCodeList.json#"
         },
         "deductionCycleCode": {
             "description": "The frequency the deduction should be taken. E.g monthly, weekly, etc.  The information would only be provided where it differs from the person's payroll frequency.  For example, a quarterly union deduction for a weekly based person.",
@@ -57,13 +61,19 @@
             "description": "The percent to be withheld.  For example, an elected 3% retirement deduction.",
             "$ref": "../../common/json/base/PercentType.json#"
         },
-        "basisCode": {
-            "description": "TODO: Ask Wendy - describe or define basisCode.",
-            "$ref": "../../common/json/base/CodeType.json#"
-        },
         "basis": {
-            "description": "TODO: Ask Wendy - describe or define basis in the context of a deduction.",
-            "$ref": "../../common/json/base/AmountType.json#"
+            "description": "TODO: describe or define an array of basis.",
+            "type": "array",
+            "items": {
+                "basisId": {
+                    "description": "TODO: describe or define basisId.",
+                    "$ref": "../../common/json/base/IdentifierType.json#"
+                },
+                "basisAmount": {
+                    "description": "TODO: describe or define basisAmount.",
+                    "$ref": "../../common/json/base/AmountType.json#"
+                }
+            }
         },
         "receivingParty": {
             "description": "TODO: describe or define receivingParty.",

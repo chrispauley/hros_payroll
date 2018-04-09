@@ -22,11 +22,11 @@
     "url": "https://github.com/HROpen/Common.git"
   },
   "homepage": "https://github.com/HROpen/Common",
-  "_release": "9420f82add",
+  "_release": "045ebeec19",
   "_resolution": {
     "type": "branch",
     "branch": "WorkRelationshipLifeCycle",
-    "commit": "9420f82addd82da262413794e0abfd6434056e45"
+    "commit": "045ebeec19f2bb5f4a16dcef02f8a0a6d11712ef"
   },
   "_source": "https://github.com/HROpen/Common.git",
   "_target": "WorkRelationshipLifeCycle",

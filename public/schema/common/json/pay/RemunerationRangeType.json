@@ -7,13 +7,7 @@
     "properties": {
         "typeCode": {
             "description": "The type of remuneration (e.g. BasePay, Bonus).",
-            "enum": [
-                "BasePay",
-                "Commission",
-                "Bonus",
-                "ShortTermIncentive",
-                "ShiftPremium"
-            ]
+            "$ref": "../codelist/PayTypeCodeList.json#"
         },
         "referenceAmount": {
             "description": "A reference to an associated monetary amount. A monetary quantity. An attribute is available to express the currency in which the amount is expressed.",

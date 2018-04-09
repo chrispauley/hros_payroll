@@ -5,8 +5,14 @@
     "description": "A quantity is a counted number of non-monetary units, possibly including fractions.",
     "type": "object",
     "properties": {
-        "value": { "type": "number" },
-        "unitCode": { "$ref": "../codelist/UnitCodeList.json#" }
+        "value": { 
+            "description": "The number of quantity.",
+            "type": "number" 
+        },
+        "unitCode": { 
+            "description": "The unit of quantity.",
+            "$ref": "../codelist/UnitCodeList.json#" 
+        }
     },
     "required": [ "value" ]
 }

@@ -4,15 +4,6 @@
     "title": "EmployerHistoryType",
     "description": "The prior and current details of a person's employment, work, or relevant experience such as might be reported within a professional profile, CV, resume, employment application, or similar document. Details of a particular tenure of employment or work with an organization.",
     "definitions": {
-        "ResourceRelationshipCodeList": {
-            "title": "ResourceRelationshipCodeList",
-            "description": "A code classifying a resource's employment relationship with repect to an associated organization within an assignment. In the vast majority of cases, a resource can be classified as either an employee (a \"direct hire\") or a vendor's employee. The \"Vendor Employee\" concept encompasses those self employed and those sourced through a staffing or leasing company. A third value of \"Other\" may be used to fit rare exceptions, such as a customer employee who has a role in a project or process and must be considered in the provisioning of an HR system.",
-            "enum": [
-                "Employee",
-                "VendorEmployee",
-                "Other"
-            ]
-        },
         "PositionHistoryType": {
             "title": "PositionHistoryType",
             "description": "The details about a persons tenure within position.",
@@ -27,11 +18,7 @@
                 },
                 "resourceRelationshipCode": {
                     "description": "The relationship of the person to the organization - an employee or an employee of another company (contract or temporary staffing).",
-                    "$ref": "#/definitions/ResourceRelationshipCodeList"
-                },
-                "vendorEmployeeIndicator": {
-                    "description": "Indicator that this person was a vendor employee for this position.",
-                    "$ref": "../base/IndicatorType.json#"
+                    "$ref": "../codelist/ResourceRelationshipCodeList.json#"
                 },
                 "organization": {
                     "description": "The department, sub-company, office, or other sub-organization to which the person was employed.",

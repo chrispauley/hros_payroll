@@ -23,7 +23,7 @@
         },
         "effectiveTimePeriod": {
             "description": "The time period for which the certificiate is valid and considered active.",
-            "$ref": "../base/EffectiveTimePeriod.json#"
+            "$ref": "../base/EffectiveTimePeriodType.json#"
         },
         "firstIssued": {
             "description": "The original issue date of the certificate. Often this is useful when the certifiates need to be renewed often, and it is important to know how long the certificate has been held.",
@@ -36,7 +36,7 @@
         "attachmentReferences": {
             "description": "References to attachments in the message that provide evidence of the issue or the validity of the license.",
             "type": "array",
-            "items": { "$ref": "../base//AttachmentReferenceType.json#" }
+            "items": { "$ref": "../base/AttachmentReferenceType.json#" }
         },
         "descriptions": { "$ref": "../base/StringTypeArray.json#" }
     }

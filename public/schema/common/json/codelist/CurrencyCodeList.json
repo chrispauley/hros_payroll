@@ -2,7 +2,7 @@
     "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
     "version": "4.1.0",
     "title": "CurrencyCodeList",
-    "description": "ISO3AlphaCurrencyCodeContentType",
+    "description": "ISO 4217 is the International Standard for currency codes. The most recent edition is ISO 4217:2015.",
     "enum": [
         "AED",
         "AFN",
@@ -91,8 +91,6 @@
         "LKR",
         "LRD",
         "LSL",
-        "LTL",
-        "LVL",
         "LYD",
         "MAD",
         "MDL",
@@ -101,7 +99,7 @@
         "MMK",
         "MNT",
         "MOP",
-        "MRO",
+        "MRU",
         "MUR",
         "MVR",
         "MWK",
@@ -139,7 +137,7 @@
         "SOS",
         "SRD",
         "SSP",
-        "STD",
+        "STN",
         "SVC",
         "SYP",
         "SZL",
@@ -156,7 +154,6 @@
         "UGX",
         "USD",
         "USN",
-        "USS",
         "UYI",
         "UYU",
         "UZS",
@@ -173,7 +170,6 @@
         "XBD",
         "XCD",
         "XDR",
-        "XFU",
         "XOF",
         "XPD",
         "XPF",
@@ -275,8 +271,6 @@
         "Sri Lanka Rupee",
         "Liberian Dollar",
         "Loti",
-        "Lithuanian Litas",
-        "Latvian Lats",
         "Libyan Dinar",
         "Moroccan Dirham",
         "Moldovan Leu",
@@ -340,7 +334,6 @@
         "Uganda Shilling",
         "US Dollar",
         "US Dollar (Next day)",
-        "US Dollar (Same day)",
         "Uruguay Peso en Unidades Indexadas (URUIURUI)",
         "Peso Uruguayo",
         "Uzbekistan Sum",
@@ -357,7 +350,6 @@
         "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)",
         "East Caribbean Dollar",
         "SDR (Special Drawing Right)",
-        "UIC-Franc",
         "CFA Franc BCEAO",
         "Palladium",
         "CFP Franc",
@@ -373,9 +365,7 @@
     ],
     "links": [
         {
-            "href": "http://www.unece.org/uncefact/codelist/standard/ISO_ISO3AlphaCurrencyCode_20120831.xsd",
-            "rel": "full",
-            "mediaType": "application/xml"
+            "href": "https://www.iso.org/iso-4217-currency-codes.html"
         }
     ]
 }

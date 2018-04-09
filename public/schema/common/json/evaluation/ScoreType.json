@@ -5,6 +5,6 @@
     "type": "object",
     "allOf": [
         { "$ref": "BaseScoreType.json#" },
-        { "$ref": "../base/EffectiveTimePeriod.json#" }
+        { "$ref": "../base/EffectiveTimePeriodType.json#" }
     ]
 }

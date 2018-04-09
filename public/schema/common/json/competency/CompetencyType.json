@@ -5,7 +5,8 @@
     "description": "Represents competency types in HR Open Standards.",
     "type": "object",
     "properties": {
-        "person": { "$ref": "PersonCompetencyType.json#" },
+        "personCompetency": { "$ref": "PersonCompetencyType.json#" },
+        "positionCompetency": { "$ref": "PositionCompetencyType.json#" },
         "specifiedCompetency": { "$ref": "SpecifiedCompetencyType.json#" }
     }
 }

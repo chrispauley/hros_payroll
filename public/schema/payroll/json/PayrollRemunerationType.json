@@ -5,7 +5,7 @@
     "description": "Provides the information needed to process a payroll.",
     "type": "object",
     "allOf": [
-        { "$ref": "../../common/json/base/EffectiveTimePeriod.json#" }
+        { "$ref": "../../common/json/base/EffectiveTimePeriodType.json#" }
     ],
     "properties": {
         "id": { "$ref": "../../common/json/base/IdentifierType.json#" },

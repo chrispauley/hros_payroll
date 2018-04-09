@@ -7,7 +7,7 @@
     "items": {
         "allOf": [
             { "$ref": "PhoneType.json#" },
-            { "$ref": "CommunicationItem.json#" }
+            { "$ref": "CommunicationItemInclusion.json#" }
         ]
     }
 }

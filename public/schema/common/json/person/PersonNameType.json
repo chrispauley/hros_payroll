@@ -5,7 +5,7 @@
     "description": "A component for capturing summary or fine-grain data comprising a person's name",
     "type": "object",
     "allOf": [
-        { "$ref": "../base/Localization.json#" }
+        { "$ref": "../base/LocalizationInclusion.json#" }
     ],
     "properties": {
         "formattedName": {

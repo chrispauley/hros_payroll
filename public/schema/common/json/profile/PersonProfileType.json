@@ -6,6 +6,6 @@
     "type": "object",
     "allOf": [
         { "$ref": "../person/PersonBaseType.json#" },
-        { "$ref": "PersonProfile.json#" }
+        { "$ref": "PersonProfileInclusion.json#" }
     ]
 }
