@@ -1,25 +1,50 @@
-[{
-        "id": 1,
-        "displayName": "paymentInstructionsType_DavePension",
-        "projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_DavePension.json",
-        "publicPath": "schema/payroll/json/samples/paymentInstructionsType_DavePension.json"
-    },
-    {
-        "id": 2,
-        "displayName": "paymentInstructionsType_DaveUnion",
-        "projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_DaveUnion.json",
-        "publicPath": "schema/payroll/json/samples/paymentInstructionsType_DaveUnion.json"
-    },
-    {
-        "id": 3,
-        "displayName": "paymentInstructionsType_Paula00.json",
-        "projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_Paula00.json",
-        "publicPath": "schema/payroll/json/samples/paymentInstructionsType_Paula00.json"
-    },
-    {
-        "id": 4,
-        "displayName": "paymentInstructionsType_uc00.json",
-        "projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_uc00.json",
-        "publicPath": "schema/payroll/json/samples/paymentInstructionsType_uc00.json"
-    }
+[
+	{
+		"id": 1,
+		"displayName": "paymentInstructionsType_DavePensionAmt",
+		"projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_DavePensionAmt.json",
+		"publicPath": "schema/payroll/json/samples/paymentInstructionsType_DavePensionAmt.json"
+	},
+	{
+		"id": 2,
+		"displayName": "paymentInstructionsType_DavePensionDeleteAndCreate",
+		"projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_DavePensionDeleteAndCreate.json",
+		"publicPath": "schema/payroll/json/samples/paymentInstructionsType_DavePensionDeleteAndCreate.json"
+	},
+	{
+		"id": 3,
+		"displayName": "paymentInstructionsType_DavePensionPerc",
+		"projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_DavePensionPerc.json",
+		"publicPath": "schema/payroll/json/samples/paymentInstructionsType_DavePensionPerc.json"
+	},
+	{
+		"id": 4,
+		"displayName": "paymentInstructionsType_DaveUnion",
+		"projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_DaveUnion.json",
+		"publicPath": "schema/payroll/json/samples/paymentInstructionsType_DaveUnion.json"
+	},
+	{
+		"id": 5,
+		"displayName": "paymentInstructionsType_PaulaGarnishment",
+		"projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_PaulaGarnishment.json",
+		"publicPath": "schema/payroll/json/samples/paymentInstructionsType_PaulaGarnishment.json"
+	},
+	{
+		"id": 6,
+		"displayName": "paymentInstructionsType_PaulaPension",
+		"projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_PaulaPension.json",
+		"publicPath": "schema/payroll/json/samples/paymentInstructionsType_PaulaPension.json"
+	},
+	{
+		"id": 7,
+		"displayName": "paymentInstructionsType_uc00",
+		"projectPath": "public/schema/payroll/json/samples/paymentInstructionsType_uc00.json",
+		"publicPath": "schema/payroll/json/samples/paymentInstructionsType_uc00.json"
+	},
+	{
+		"id": 8,
+		"displayName": "samples",
+		"projectPath": "public/schema/payroll/json/samples/samples.json",
+		"publicPath": "schema/payroll/json/samples/samples.json"
+	}
 ]

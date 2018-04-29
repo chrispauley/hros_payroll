@@ -21,11 +21,11 @@
     "url": "https://github.com/HROpen/Payroll.git"
   },
   "homepage": "https://github.com/HROpen/Payroll",
-  "_release": "74dad705f7",
+  "_release": "4ac497ba31",
   "_resolution": {
     "type": "branch",
     "branch": "Payroll-Draft",
-    "commit": "74dad705f7b7f32156830d5ddc30953654cb7f24"
+    "commit": "4ac497ba3180d18c0ef2a8c70d4ca0f03133851f"
   },
   "_source": "https://github.com/HROpen/Payroll.git",
   "_target": "Payroll-Draft",

@@ -37,18 +37,17 @@
             "$ref": "../../common/json/base/IdentifierType.json#"
         },
         "serviceChargeAmount": {
-            "description": "TODO: describe serviceChargeAmount.",
+            "description": "The actual service charge amount or adminstrative fee levied.",
             "$ref": "../../common/json/base/AmountType.json#"
         },
-        "administratorFeeIndicator": {
-            "description": "TODO: define administratorFeeIndicator.",
+        "serviceChargeFeeIndicator": {
+            "description": "Specifies if a standard administration fee may be charged. If indicator is specified, the amount is not used.",
             "$ref": "../../common/json/base/IndicatorType.json#"
         },
         "maximumAdministrationFee": {
-            "description": "TODO: describe maximumAdministrationFee.",
+            "description": "The maximum service charge amount or administration fee a processor can levy. If amount is specificed, the indicator is not used.",
             "$ref": "../../common/json/base/AmountType.json#"
         },
-
         "excludedEarningCodes": {
             "description": "TODO: define excludedEarningCodes.",
             "type": "array",

@@ -26,7 +26,7 @@
     document.getElementById('iframeID').src=newUrl;
   }
   function loadPayrollProcessTypeType(){
-    var newUrl='JSchema/index.htm?#schema=/schema/payroll/json/PayrollProcessType.json';
+    var newUrl='JSchema/index.htm?#schema=http://payroll.hrsres.com:8006/schema/payroll/json/PayrollProcessType.json';
     document.getElementById('iframeID').src=newUrl;
   }
 </script>
@@ -41,11 +41,24 @@
   <div class='container main-content' style="margin-top: 40px;">
 
     <div class='row'>
-      <div class='col-md-12'>
+      <div class="col-md-4">
+        <h4>As of 2018-04-30</h4>
+      </div>
+    </div>
+    <div class="row well">
+      <div class="col-md-4">
+          <p>Here are your instructions to use the JSchema visualization tool:</p>
+      </div>
+      <div class='col-md-8'>
         <div>
-            <p className='text-muted'>Please click on this link to load the schema:
-                <a target='_new' onClick='loadPayrollType()'>PayrollType.json</a>
+            <p class='text-muted'>
+                <span class='badge'>1</span> Load the schema:
+                <!-- <a target='_new' onClick='loadPayrollType()'>PayrollType.json</a> -->
                 <a target='_new' onClick='loadPayrollProcessTypeType()'>PayrollProcessType.json</a>
+            </p>
+            <p class='text-muted'>
+                <span class='badge'>2</span> Fix the "by URL" to include the URL schema and server. (http://payroll.hrsres.com:8006/schema/payroll/json/PayrollProcessType.json )
+                
             </p>
         </div>
       </div>
@@ -57,12 +70,21 @@
     </div>
 
     <div class='row'>
-        <hr/>
-        <div class='col-md-12'>
-            <p className='text-muted'>This page uses the JSchema web application in an iframe. It doesn't work from the gh-pages branch of the repo because of CORS issues. It does work when it is hosted in a docker container on AWS.
-            </p>
-        </div>
-    </div>
+      <hr/>
+      <div class='col-md-12'>
+          <p class='text-muted'>This page uses the JSchema web application in an iframe. It doesn't work from the gh-pages branch of the repo because of CORS issues. It does work when it is hosted in a docker container on AWS.
+          </p>
+          <p class='text-warning'>
+              To validate samples:
+
+              <ol>
+                  <li>click on the validate button.</li>
+                  <li>Make sure the 'by URL' textbox has a full url (including the http:// and the servername.com:port etc.).</li>
+                  <li>Then you can use drag and drop from your file system. Drag the file onto the text input box that has "enter instance for validation...". </li>
+              </ol>
+          </p>
+      </div>
+  </div>
   </div>
 
   <div id='footer'></div>

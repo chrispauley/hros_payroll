@@ -12,18 +12,24 @@ class Home extends Component {
   }
 
   render() {
-    let sections = null;
-    sections = this.state.sections.map( (section) => {
-      return (displaySection(section))
-    });
+    // let sections = null;
+    // sections = this.state.sections.map( (section) => {
+    //   return (displaySection(section))
+    // });
 
     return  (
       <div className='row' style={{marginTop: '50px'}}>
-        <div className='col-md-12'>
-            <h2>HROS Payroll Instance Viewer - home page </h2>
+        <div className='col-md-6'>
+            <h2>HROS Payroll Instance Viewer</h2>
+            <p>This is a small web application to help HR Open Standards Payroll 
+              Workgroup members to view the schema and to test sample instances 
+              against the schema.
+            </p>
+
         </div>
 
-        { sections && ( <div> {sections} </div>) }
+        
+        
         
       </div>
     )

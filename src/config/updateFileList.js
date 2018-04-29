@@ -30,5 +30,5 @@ newfile = samples.map( (item) => {
 });
 
 
-writeJsonFile('./public/data/newFile.json', newfile);
+writeJsonFile('./public/data/newFile1.json', newfile);
 console.log('Done!');
